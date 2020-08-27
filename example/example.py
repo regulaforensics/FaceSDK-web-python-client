@@ -14,8 +14,8 @@ with open("face2.jpg", "rb") as f:
 
 with MatchingApi(host=api_base_patch) as api:
     images = [
-        CompareRequestFields(index=1, data=face_1_bytes, type=int(ImageSource.LIVE)),
-        CompareRequestFields(index=2, data=face_1_bytes, type=int(ImageSource.DOCUMENT_RFID)),
+        CompareRequestFields(index=1, data=face_1_bytes, type=ImageSource.LIVE),
+        CompareRequestFields(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
         CompareRequestFields(index=3, data=face_2_bytes)
     ]
     compare_request = CompareRequest(images=images)
