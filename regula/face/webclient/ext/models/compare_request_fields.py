@@ -8,7 +8,7 @@ from regula.face.webclient.gen import CompareRequestFields as GenCompareRequestF
 class CompareRequestFields(GenCompareRequestFields):
     def __init__(self, index=None, format=None, type=None, data: Optional[Union[Base64String, bytes]] = None, local_vars_configuration=None):
         if not type:
-            type = int(ImageSource.LIVE)
+            type = ImageSource.LIVE
         if isinstance(data, bytes):
             data = base64.b64encode(data).decode("utf-8")
 

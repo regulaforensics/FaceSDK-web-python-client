@@ -25,14 +25,20 @@ class ImageSource(object):
     Do not edit the class manually.
     """
 
-    """
-    allowed enum values
-    """
-    DOCUMENT_PRINTED = "1"
-    DOCUMENT_RFID = "2"
-    LIVE = "3"
-    DOCUMENT_WITH_LIVE = "4"
-    EXTERNAL = "5"
+    ""
+    DOCUMENT_PRINTED = int("1")
+
+    ""
+    DOCUMENT_RFID = int("2")
+
+    ""
+    LIVE = int("3")
+
+    ""
+    DOCUMENT_WITH_LIVE = int("4")
+
+    ""
+    EXTERNAL = int("5")
 
     allowable_values = [DOCUMENT_PRINTED, DOCUMENT_RFID, LIVE, DOCUMENT_WITH_LIVE, EXTERNAL]  # noqa: E501
 
