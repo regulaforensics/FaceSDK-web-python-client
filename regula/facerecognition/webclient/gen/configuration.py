@@ -20,7 +20,7 @@ import urllib3
 
 import six
 from six.moves import http_client as httplib
-from regula.face.webclient.gen.exceptions import ApiValueError
+from regula.facerecognition.webclient.gen.exceptions import ApiValueError
 
 
 JSON_SCHEMA_VALIDATION_KEYWORDS = {
@@ -132,7 +132,7 @@ class Configuration(object):
         self.logger = {}
         """Logging Settings
         """
-        self.logger["package_logger"] = logging.getLogger("regula.face.webclient.gen")
+        self.logger["package_logger"] = logging.getLogger("regula.facerecognition.webclient.gen")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         """Log format

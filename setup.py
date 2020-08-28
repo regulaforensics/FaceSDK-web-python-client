@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "regula.face.webclient"
-VERSION = "1.0.0"
+NAME = "regula.facerecognition.webclient"
+VERSION = "1.2.0-beta.0"
 # To install the library, run the following
 #
 # python setup.py install

@@ -1,7 +1,7 @@
 from typing import Optional, List
 
-from regula.face.webclient.ext.models.compare_request_fields import CompareRequestFields
-from regula.face.webclient.gen import CompareRequest as GenCompareRequest
+from regula.facerecognition.webclient.ext.models.compare_request_fields import CompareRequestFields
+from regula.facerecognition.webclient.gen import CompareRequest as GenCompareRequest
 
 
 class CompareRequest(GenCompareRequest):

@@ -1,4 +1,4 @@
-from regula.face.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, CompareResponse
+from regula.facerecognition.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, CompareResponse
 
 
 class MatchingApi(GenMatchingApi):

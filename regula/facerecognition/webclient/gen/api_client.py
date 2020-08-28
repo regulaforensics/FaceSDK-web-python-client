@@ -24,10 +24,10 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from regula.face.webclient.gen.configuration import Configuration
-import regula.face.webclient.gen.models
-from regula.face.webclient.gen import rest
-from regula.face.webclient.gen.exceptions import ApiValueError, ApiException
+from regula.facerecognition.webclient.gen.configuration import Configuration
+import regula.facerecognition.webclient.gen.models
+from regula.facerecognition.webclient.gen import rest
+from regula.facerecognition.webclient.gen.exceptions import ApiValueError, ApiException
 
 
 class ApiClient(object):
@@ -308,7 +308,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(regula.face.webclient.gen.models, klass)
+                klass = getattr(regula.facerecognition.webclient.gen.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

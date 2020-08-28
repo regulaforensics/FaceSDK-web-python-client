@@ -1,8 +1,8 @@
 import base64
 from typing import Optional, Union
 
-from regula.face.webclient.ext.common import Base64String
-from regula.face.webclient.gen import CompareRequestFields as GenCompareRequestFields, ImageSource
+from regula.facerecognition.webclient.ext.common import Base64String
+from regula.facerecognition.webclient.gen import CompareRequestFields as GenCompareRequestFields, ImageSource
 
 
 class CompareRequestFields(GenCompareRequestFields):

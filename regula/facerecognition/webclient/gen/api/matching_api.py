@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from regula.face.webclient.gen.api_client import ApiClient
-from regula.face.webclient.gen.exceptions import (  # noqa: F401
+from regula.facerecognition.webclient.gen.api_client import ApiClient
+from regula.facerecognition.webclient.gen.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )

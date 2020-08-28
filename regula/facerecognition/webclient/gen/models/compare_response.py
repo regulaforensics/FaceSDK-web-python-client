@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from regula.face.webclient.gen.configuration import Configuration
+from regula.facerecognition.webclient.gen.configuration import Configuration
 
 
 class CompareResponse(object):
