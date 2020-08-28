@@ -24,7 +24,7 @@ import six
 from six.moves.urllib.parse import urlencode
 import urllib3
 
-from regula.face.webclient.gen.exceptions import ApiException, ApiValueError
+from regula.facerecognition.webclient.gen.exceptions import ApiException, ApiValueError
 
 
 logger = logging.getLogger(__name__)
