@@ -12,6 +12,9 @@ regula/facerecognition/webclient/gen/models/compare_image.py
 regula/facerecognition/webclient/gen/models/compare_image_result.py
 regula/facerecognition/webclient/gen/models/compare_request.py
 regula/facerecognition/webclient/gen/models/compare_response.py
+regula/facerecognition/webclient/gen/models/detect_request.py
+regula/facerecognition/webclient/gen/models/detect_response.py
+regula/facerecognition/webclient/gen/models/detection.py
 regula/facerecognition/webclient/gen/models/image_source.py
 regula/facerecognition/webclient/gen/models/operation_log.py
 regula/facerecognition/webclient/gen/rest.py
