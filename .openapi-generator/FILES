@@ -8,11 +8,10 @@ regula/facerecognition/webclient/gen/api_client.py
 regula/facerecognition/webclient/gen/configuration.py
 regula/facerecognition/webclient/gen/exceptions.py
 regula/facerecognition/webclient/gen/models/__init__.py
+regula/facerecognition/webclient/gen/models/compare_image.py
+regula/facerecognition/webclient/gen/models/compare_image_result.py
 regula/facerecognition/webclient/gen/models/compare_request.py
-regula/facerecognition/webclient/gen/models/compare_request_fields.py
 regula/facerecognition/webclient/gen/models/compare_response.py
-regula/facerecognition/webclient/gen/models/compare_response_fields.py
 regula/facerecognition/webclient/gen/models/image_source.py
 regula/facerecognition/webclient/gen/models/operation_log.py
 regula/facerecognition/webclient/gen/rest.py
-requirements.txt

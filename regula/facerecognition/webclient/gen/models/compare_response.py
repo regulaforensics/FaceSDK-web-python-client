@@ -33,7 +33,7 @@ class CompareResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'results': 'list[CompareResponseFields]'
+        'results': 'list[CompareImageResult]'
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class CompareResponse(object):
 
 
         :return: The results of this CompareResponse.  # noqa: E501
-        :rtype: list[CompareResponseFields]
+        :rtype: list[CompareImageResult]
         """
         return self._results
 
@@ -68,7 +68,7 @@ class CompareResponse(object):
 
 
         :param results: The results of this CompareResponse.  # noqa: E501
-        :type results: list[CompareResponseFields]
+        :type results: list[CompareImageResult]
         """
 
         self._results = results

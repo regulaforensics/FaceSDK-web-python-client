@@ -29,10 +29,10 @@ from regula.facerecognition.webclient.gen.exceptions import ApiKeyError
 from regula.facerecognition.webclient.gen.exceptions import ApiAttributeError
 from regula.facerecognition.webclient.gen.exceptions import ApiException
 # import models into sdk package
+from regula.facerecognition.webclient.gen.models.compare_image import CompareImage
+from regula.facerecognition.webclient.gen.models.compare_image_result import CompareImageResult
 from regula.facerecognition.webclient.gen.models.compare_request import CompareRequest
-from regula.facerecognition.webclient.gen.models.compare_request_fields import CompareRequestFields
 from regula.facerecognition.webclient.gen.models.compare_response import CompareResponse
-from regula.facerecognition.webclient.gen.models.compare_response_fields import CompareResponseFields
 from regula.facerecognition.webclient.gen.models.image_source import ImageSource
 from regula.facerecognition.webclient.gen.models.operation_log import OperationLog
 

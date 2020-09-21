@@ -37,7 +37,7 @@ class MatchingApi(object):
         self.api_client = api_client
 
     def compare(self, compare_request, **kwargs):  # noqa: E501
-        """Compare given persons among themselves and return similarity score for each pair.  # noqa: E501
+        """Compare provided face images in all combinations and return similarity score for each pair.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -66,7 +66,7 @@ class MatchingApi(object):
         return self.compare_with_http_info(compare_request, **kwargs)  # noqa: E501
 
     def compare_with_http_info(self, compare_request, **kwargs):  # noqa: E501
-        """Compare given persons among themselves and return similarity score for each pair.  # noqa: E501
+        """Compare provided face images in all combinations and return similarity score for each pair.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
