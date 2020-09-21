@@ -33,7 +33,7 @@ class CompareRequest(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'images': 'list[CompareRequestFields]'
+        'images': 'list[CompareImage]'
     }
 
     attribute_map = {
@@ -49,8 +49,7 @@ class CompareRequest(object):
         self._images = None
         self.discriminator = None
 
-        if images is not None:
-            self.images = images
+        self.images = images
 
     @property
     def images(self):
@@ -58,7 +57,7 @@ class CompareRequest(object):
 
 
         :return: The images of this CompareRequest.  # noqa: E501
-        :rtype: list[CompareRequestFields]
+        :rtype: list[CompareImage]
         """
         return self._images
 
@@ -68,8 +67,10 @@ class CompareRequest(object):
 
 
         :param images: The images of this CompareRequest.  # noqa: E501
-        :type images: list[CompareRequestFields]
+        :type images: list[CompareImage]
         """
+        if self.local_vars_configuration.client_side_validation and images is None:  # noqa: E501
+            raise ValueError("Invalid value for `images`, must not be `None`")  # noqa: E501
 
         self._images = images
 

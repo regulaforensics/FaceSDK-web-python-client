@@ -9,3 +9,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 tox.ini
+requirements.txt
