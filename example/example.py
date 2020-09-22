@@ -1,6 +1,6 @@
 import os
 
-from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage
+from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage, DetectRequest
 from regula.facerecognition.webclient.gen import ImageSource
 
 api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:8080/api")

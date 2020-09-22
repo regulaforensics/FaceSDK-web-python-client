@@ -1,6 +1,6 @@
 from regula.facerecognition.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, \
     CompareResponse, DetectResponse
-from regula.facerecognition.webclient.ext import CompareRequest, DetectRequest
+from regula.facerecognition.webclient.ext.models import CompareRequest, DetectRequest
 
 
 class MatchingApi(GenMatchingApi):
