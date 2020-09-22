@@ -1,6 +1,6 @@
 import os
 
-from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage
+from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage, DetectRequest
 from regula.facerecognition.webclient.gen import ImageSource
 
 api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:8080/api")
@@ -19,12 +19,22 @@ with MatchingApi(host=api_base_patch) as api:
         CompareImage(index=3, data=face_2_bytes),
     ]
     compare_request = CompareRequest(images=images)
-
     compare_response = api.compare(compare_request)
 
-    print("                                                                 ")
+    print("-----------------------------------------------------------------")
     print("                         Compare Results                         ")
     print("-----------------------------------------------------------------")
     for i in compare_response.results:
         print(f"pair({i.first_index}, {i.second_index}) similarity: {i.similarity}")
+    print("-----------------------------------------------------------------")
+
+    detect_request = DetectRequest(face_1_bytes)
+    detect_response = api.detect(detect_request)
+    print("                         Detect Results                         ")
+    print("-----------------------------------------------------------------")
+    print(f"detector_type: {detect_response.detector_type}")
+    print(f"landmark_type: {detect_response._landmarks_type}")
+    for i in detect_response.detections:
+        print(f"landmarks: {i.landmarks}")
+        print(f"roi: {i.roi}")
     print("-----------------------------------------------------------------")

@@ -1,4 +1,6 @@
-from regula.facerecognition.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, CompareResponse
+from regula.facerecognition.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, \
+    CompareResponse, DetectResponse
+from regula.facerecognition.webclient.ext.models import CompareRequest, DetectRequest
 
 
 class MatchingApi(GenMatchingApi):
@@ -18,5 +20,8 @@ class MatchingApi(GenMatchingApi):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.api_client.close()
 
-    def compare(self, compare_request, **kwargs) -> CompareResponse:
+    def compare(self, compare_request: CompareRequest, **kwargs) -> CompareResponse:
         return super().compare(compare_request, **kwargs)
+
+    def detect(self, detect_request: DetectRequest, **kwargs) -> DetectResponse:
+        return super().detect(detect_request, **kwargs)
