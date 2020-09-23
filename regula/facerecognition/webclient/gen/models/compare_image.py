@@ -34,34 +34,29 @@ class CompareImage(object):
     """
     openapi_types = {
         'index': 'float',
-        'format': 'str',
         'type': 'ImageSource',
         'data': 'str'
     }
 
     attribute_map = {
         'index': 'index',
-        'format': 'format',
         'type': 'type',
         'data': 'data'
     }
 
-    def __init__(self, index=None, format=None, type=None, data=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, index=None, type=None, data=None, local_vars_configuration=None):  # noqa: E501
         """CompareImage - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._index = None
-        self._format = None
         self._type = None
         self._data = None
         self.discriminator = None
 
         if index is not None:
             self.index = index
-        if format is not None:
-            self.format = format
         if type is not None:
             self.type = type
         self.data = data
@@ -86,27 +81,6 @@ class CompareImage(object):
         """
 
         self._index = index
-
-    @property
-    def format(self):
-        """Gets the format of this CompareImage.  # noqa: E501
-
-
-        :return: The format of this CompareImage.  # noqa: E501
-        :rtype: str
-        """
-        return self._format
-
-    @format.setter
-    def format(self, format):
-        """Sets the format of this CompareImage.
-
-
-        :param format: The format of this CompareImage.  # noqa: E501
-        :type format: str
-        """
-
-        self._format = format
 
     @property
     def type(self):
