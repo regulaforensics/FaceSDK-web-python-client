@@ -33,7 +33,7 @@ class Detection(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'landmarks': 'list[list]',
+        'landmarks': 'list[list[float]]',
         'roi': 'list[float]'
     }
 
@@ -64,7 +64,7 @@ class Detection(object):
         Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
 
         :return: The landmarks of this Detection.  # noqa: E501
-        :rtype: list[list]
+        :rtype: list[list[float]]
         """
         return self._landmarks
 
@@ -75,7 +75,7 @@ class Detection(object):
         Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
 
         :param landmarks: The landmarks of this Detection.  # noqa: E501
-        :type landmarks: list[list]
+        :type landmarks: list[list[float]]
         """
 
         self._landmarks = landmarks
