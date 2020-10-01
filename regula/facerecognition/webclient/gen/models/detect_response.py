@@ -87,6 +87,7 @@ class DetectResponse(object):
     def detector_type(self):
         """Gets the detector_type of this DetectResponse.  # noqa: E501
 
+        Internal.  # noqa: E501
 
         :return: The detector_type of this DetectResponse.  # noqa: E501
         :rtype: int
@@ -97,6 +98,7 @@ class DetectResponse(object):
     def detector_type(self, detector_type):
         """Sets the detector_type of this DetectResponse.
 
+        Internal.  # noqa: E501
 
         :param detector_type: The detector_type of this DetectResponse.  # noqa: E501
         :type detector_type: int
@@ -108,6 +110,7 @@ class DetectResponse(object):
     def landmarks_type(self):
         """Gets the landmarks_type of this DetectResponse.  # noqa: E501
 
+        Internal.  # noqa: E501
 
         :return: The landmarks_type of this DetectResponse.  # noqa: E501
         :rtype: int
@@ -118,6 +121,7 @@ class DetectResponse(object):
     def landmarks_type(self, landmarks_type):
         """Sets the landmarks_type of this DetectResponse.
 
+        Internal.  # noqa: E501
 
         :param landmarks_type: The landmarks_type of this DetectResponse.  # noqa: E501
         :type landmarks_type: int

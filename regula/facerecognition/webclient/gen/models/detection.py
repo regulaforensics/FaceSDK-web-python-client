@@ -61,7 +61,7 @@ class Detection(object):
     def landmarks(self):
         """Gets the landmarks of this Detection.  # noqa: E501
 
-        Main coordinates of the detected face.  # noqa: E501
+        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
 
         :return: The landmarks of this Detection.  # noqa: E501
         :rtype: list[list[float]]
@@ -72,7 +72,7 @@ class Detection(object):
     def landmarks(self, landmarks):
         """Sets the landmarks of this Detection.
 
-        Main coordinates of the detected face.  # noqa: E501
+        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
 
         :param landmarks: The landmarks of this Detection.  # noqa: E501
         :type landmarks: list[list[float]]
@@ -84,7 +84,7 @@ class Detection(object):
     def roi(self):
         """Gets the roi of this Detection.  # noqa: E501
 
-        Rectangular area of the detected face.  # noqa: E501
+        Rectangular area of the detected face. First element - X-axis coordinate. Second element - Y-axis coordinate. Third element - rectangular weight. Fourth element - rectangular.  # noqa: E501
 
         :return: The roi of this Detection.  # noqa: E501
         :rtype: list[float]
@@ -95,7 +95,7 @@ class Detection(object):
     def roi(self, roi):
         """Sets the roi of this Detection.
 
-        Rectangular area of the detected face.  # noqa: E501
+        Rectangular area of the detected face. First element - X-axis coordinate. Second element - Y-axis coordinate. Third element - rectangular weight. Fourth element - rectangular.  # noqa: E501
 
         :param roi: The roi of this Detection.  # noqa: E501
         :type roi: list[float]
