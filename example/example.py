@@ -3,7 +3,7 @@ import os
 from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage, DetectRequest
 from regula.facerecognition.webclient.gen import ImageSource
 
-api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:5000/api")
+api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101/api")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
