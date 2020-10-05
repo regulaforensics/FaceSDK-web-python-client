@@ -37,7 +37,7 @@ with open("face2.jpg", "rb") as f:
     face_2_bytes = f.read()
 
 
-with MatchingApi(host="http://0.0.0.0:8080/api") as api:
+with MatchingApi(host="http://0.0.0.0:41101/api") as api:
     images = [
         CompareImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
         CompareImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
