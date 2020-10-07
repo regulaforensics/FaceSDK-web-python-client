@@ -18,8 +18,15 @@ from regula.facerecognition.webclient.gen.models.compare_image import CompareIma
 from regula.facerecognition.webclient.gen.models.compare_image_result import CompareImageResult
 from regula.facerecognition.webclient.gen.models.compare_request import CompareRequest
 from regula.facerecognition.webclient.gen.models.compare_response import CompareResponse
+from regula.facerecognition.webclient.gen.models.depth_liveness import DepthLiveness
+from regula.facerecognition.webclient.gen.models.depth_liveness_item import DepthLivenessItem
 from regula.facerecognition.webclient.gen.models.detect_request import DetectRequest
 from regula.facerecognition.webclient.gen.models.detect_response import DetectResponse
 from regula.facerecognition.webclient.gen.models.detection import Detection
+from regula.facerecognition.webclient.gen.models.face_recognition_result_code import FaceRecognitionResultCode
+from regula.facerecognition.webclient.gen.models.image_liveness import ImageLiveness
+from regula.facerecognition.webclient.gen.models.image_liveness_item import ImageLivenessItem
 from regula.facerecognition.webclient.gen.models.image_source import ImageSource
+from regula.facerecognition.webclient.gen.models.liveness_result_item import LivenessResultItem
+from regula.facerecognition.webclient.gen.models.liveness_status import LivenessStatus
 from regula.facerecognition.webclient.gen.models.operation_log import OperationLog

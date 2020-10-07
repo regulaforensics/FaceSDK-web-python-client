@@ -27,8 +27,7 @@ pipenv install regula.facerecognition.webclient
 ## Example
 Performing request:
 ```python
-from regula.facerecognition.webclient.ext import MatchingApi, CompareRequest, CompareImage, DetectRequest
-from regula.facerecognition.webclient.gen import ImageSource
+from regula.facerecognition.webclient import *
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
