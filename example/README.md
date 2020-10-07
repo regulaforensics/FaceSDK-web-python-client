@@ -71,7 +71,8 @@ index: 0.0
 code: 0.0
 liveness_status: 0
 -----------------------------------------------------------------
-                   Check image liveness result                  
+                   Check image liveness result       
+-----------------------------------------------------------------           
 index: 0.0
 code: 0.0
 liveness_status: 0
