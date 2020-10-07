@@ -35,7 +35,7 @@ class LivenessResultItem(object):
     openapi_types = {
         'face': 'str',
         'liveness_status': 'LivenessStatus',
-        'code': 'float',
+        'code': 'FaceRecognitionResultCode',
         'index': 'float'
     }
 
@@ -119,7 +119,7 @@ class LivenessResultItem(object):
 
 
         :return: The code of this LivenessResultItem.  # noqa: E501
-        :rtype: float
+        :rtype: FaceRecognitionResultCode
         """
         return self._code
 
@@ -129,7 +129,7 @@ class LivenessResultItem(object):
 
 
         :param code: The code of this LivenessResultItem.  # noqa: E501
-        :type code: float
+        :type code: FaceRecognitionResultCode
         """
 
         self._code = code

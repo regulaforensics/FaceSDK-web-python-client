@@ -42,6 +42,7 @@ with ext.Sdk(host=api_base_patch) as sdk:
 
     detect_request = ext.DetectRequest(face_1_bytes)
     detect_response = sdk.matching_api.detect(detect_request)
+
     print("                         Detect Results                          ")
     print("-----------------------------------------------------------------")
     print(f"detector_type: {detect_response.detector_type}")
@@ -52,6 +53,7 @@ with ext.Sdk(host=api_base_patch) as sdk:
     print("-----------------------------------------------------------------")
 
     video_liveness_result = sdk.liveness_api.check_video_liveness(real_video_1_bytes)
+
     print("                   Check video liveness result                   ")
     print("-----------------------------------------------------------------")
     print(f"liveness_status: {video_liveness_result.liveness_status}")
@@ -62,6 +64,7 @@ with ext.Sdk(host=api_base_patch) as sdk:
     )
     depth_liveness = gen.DepthLiveness(images=[depth_liveness_real_item])
     depth_liveness_result = sdk.liveness_api.check_depth_liveness(depth_liveness=depth_liveness)
+
     print("                   Check depth liveness result                   ")
     print("-----------------------------------------------------------------")
     for i in depth_liveness_result:
@@ -73,7 +76,9 @@ with ext.Sdk(host=api_base_patch) as sdk:
     image_liveness_item = ext.ImageLivenessItem(data=real_image_1_bytes)
     image_liveness = gen.ImageLiveness(images=[image_liveness_item])
     sdk.liveness_api.check_image_liveness(image_liveness=image_liveness)
+
     print("                   Check image liveness result                   ")
+    print("-----------------------------------------------------------------")
     for i in depth_liveness_result:
         print(f"index: {i.index}")
         print(f"code: {i.code}")

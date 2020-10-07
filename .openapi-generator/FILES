@@ -18,6 +18,7 @@ regula/facerecognition/webclient/gen/models/depth_liveness_item.py
 regula/facerecognition/webclient/gen/models/detect_request.py
 regula/facerecognition/webclient/gen/models/detect_response.py
 regula/facerecognition/webclient/gen/models/detection.py
+regula/facerecognition/webclient/gen/models/face_recognition_result_code.py
 regula/facerecognition/webclient/gen/models/image_liveness.py
 regula/facerecognition/webclient/gen/models/image_liveness_item.py
 regula/facerecognition/webclient/gen/models/image_source.py
