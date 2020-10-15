@@ -36,14 +36,6 @@ python example.py
 API_BASE_PATH="api_base_path" python example.py
 ```
 
-### Running using Regula Face Recognition web API test SaaS
-
-Execute example:
-```bash
-cd example
-API_BASE_PATH="api_base_path" python example.py
-```
-
 ### Output 
 This sample generates next text output:
 ```text
