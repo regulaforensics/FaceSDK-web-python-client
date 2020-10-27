@@ -10,3 +10,5 @@ setup.py
 test-requirements.txt
 tox.ini
 requirements.txt
+
+regula/facerecognition/webclient/__init__.py
