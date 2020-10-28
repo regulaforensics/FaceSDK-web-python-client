@@ -2,7 +2,7 @@ from regula.facerecognition.webclient.ext.api.matching_api import MatchingApi
 from regula.facerecognition.webclient.gen import ApiClient, Configuration
 
 
-class Sdk:
+class FaceSdk:
     def __init__(self, host=None, debug=None, verify_ssl=False, api_client=None):
         if api_client:
             self.__api_client = api_client

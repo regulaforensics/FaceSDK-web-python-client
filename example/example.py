@@ -10,7 +10,7 @@ with open("face1.jpg", "rb") as f:
 with open("face2.jpg", "rb") as f:
     face_2_bytes = f.read()
 
-with Sdk(host=api_base_patch) as sdk:
+with FaceSdk(host=api_base_patch) as sdk:
     images = [
         CompareImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
         CompareImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
