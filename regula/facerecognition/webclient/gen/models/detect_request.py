@@ -39,7 +39,7 @@ class DetectRequest(object):
 
     attribute_map = {
         'image': 'image',
-        'only_central_face': 'only_central_face'
+        'only_central_face': 'onlyCentralFace'
     }
 
     def __init__(self, image=None, only_central_face=False, local_vars_configuration=None):  # noqa: E501

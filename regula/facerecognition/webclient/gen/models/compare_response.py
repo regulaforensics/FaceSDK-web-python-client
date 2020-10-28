@@ -33,24 +33,50 @@ class CompareResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'code': 'FaceRecognitionResultCode',
         'results': 'list[CompareImageResult]'
     }
 
     attribute_map = {
+        'code': 'code',
         'results': 'results'
     }
 
-    def __init__(self, results=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, results=None, local_vars_configuration=None):  # noqa: E501
         """CompareResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._code = None
         self._results = None
         self.discriminator = None
 
-        if results is not None:
-            self.results = results
+        self.code = code
+        self.results = results
+
+    @property
+    def code(self):
+        """Gets the code of this CompareResponse.  # noqa: E501
+
+
+        :return: The code of this CompareResponse.  # noqa: E501
+        :rtype: FaceRecognitionResultCode
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """Sets the code of this CompareResponse.
+
+
+        :param code: The code of this CompareResponse.  # noqa: E501
+        :type code: FaceRecognitionResultCode
+        """
+        if self.local_vars_configuration.client_side_validation and code is None:  # noqa: E501
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
+
+        self._code = code
 
     @property
     def results(self):
@@ -70,6 +96,8 @@ class CompareResponse(object):
         :param results: The results of this CompareResponse.  # noqa: E501
         :type results: list[CompareImageResult]
         """
+        if self.local_vars_configuration.client_side_validation and results is None:  # noqa: E501
+            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
         self._results = results
 

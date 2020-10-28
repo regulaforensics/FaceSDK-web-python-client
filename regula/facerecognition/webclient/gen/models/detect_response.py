@@ -33,101 +33,73 @@ class DetectResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'detections': 'list[Detection]',
-        'detector_type': 'int',
-        'landmarks_type': 'int'
+        'code': 'FaceRecognitionResultCode',
+        'results': 'DetectResult'
     }
 
     attribute_map = {
-        'detections': 'detections',
-        'detector_type': 'detectorType',
-        'landmarks_type': 'landmarksType'
+        'code': 'code',
+        'results': 'results'
     }
 
-    def __init__(self, detections=None, detector_type=None, landmarks_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, results=None, local_vars_configuration=None):  # noqa: E501
         """DetectResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._detections = None
-        self._detector_type = None
-        self._landmarks_type = None
+        self._code = None
+        self._results = None
         self.discriminator = None
 
-        if detections is not None:
-            self.detections = detections
-        if detector_type is not None:
-            self.detector_type = detector_type
-        if landmarks_type is not None:
-            self.landmarks_type = landmarks_type
+        self.code = code
+        self.results = results
 
     @property
-    def detections(self):
-        """Gets the detections of this DetectResponse.  # noqa: E501
+    def code(self):
+        """Gets the code of this DetectResponse.  # noqa: E501
 
 
-        :return: The detections of this DetectResponse.  # noqa: E501
-        :rtype: list[Detection]
+        :return: The code of this DetectResponse.  # noqa: E501
+        :rtype: FaceRecognitionResultCode
         """
-        return self._detections
+        return self._code
 
-    @detections.setter
-    def detections(self, detections):
-        """Sets the detections of this DetectResponse.
+    @code.setter
+    def code(self, code):
+        """Sets the code of this DetectResponse.
 
 
-        :param detections: The detections of this DetectResponse.  # noqa: E501
-        :type detections: list[Detection]
+        :param code: The code of this DetectResponse.  # noqa: E501
+        :type code: FaceRecognitionResultCode
         """
+        if self.local_vars_configuration.client_side_validation and code is None:  # noqa: E501
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
-        self._detections = detections
+        self._code = code
 
     @property
-    def detector_type(self):
-        """Gets the detector_type of this DetectResponse.  # noqa: E501
+    def results(self):
+        """Gets the results of this DetectResponse.  # noqa: E501
 
-        Internal.  # noqa: E501
 
-        :return: The detector_type of this DetectResponse.  # noqa: E501
-        :rtype: int
+        :return: The results of this DetectResponse.  # noqa: E501
+        :rtype: DetectResult
         """
-        return self._detector_type
+        return self._results
 
-    @detector_type.setter
-    def detector_type(self, detector_type):
-        """Sets the detector_type of this DetectResponse.
+    @results.setter
+    def results(self, results):
+        """Sets the results of this DetectResponse.
 
-        Internal.  # noqa: E501
 
-        :param detector_type: The detector_type of this DetectResponse.  # noqa: E501
-        :type detector_type: int
+        :param results: The results of this DetectResponse.  # noqa: E501
+        :type results: DetectResult
         """
+        if self.local_vars_configuration.client_side_validation and results is None:  # noqa: E501
+            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
-        self._detector_type = detector_type
-
-    @property
-    def landmarks_type(self):
-        """Gets the landmarks_type of this DetectResponse.  # noqa: E501
-
-        Internal.  # noqa: E501
-
-        :return: The landmarks_type of this DetectResponse.  # noqa: E501
-        :rtype: int
-        """
-        return self._landmarks_type
-
-    @landmarks_type.setter
-    def landmarks_type(self, landmarks_type):
-        """Sets the landmarks_type of this DetectResponse.
-
-        Internal.  # noqa: E501
-
-        :param landmarks_type: The landmarks_type of this DetectResponse.  # noqa: E501
-        :type landmarks_type: int
-        """
-
-        self._landmarks_type = landmarks_type
+        self._results = results
 
     def to_dict(self):
         """Returns the model properties as a dict"""

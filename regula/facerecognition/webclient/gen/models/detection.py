@@ -52,10 +52,8 @@ class Detection(object):
         self._roi = None
         self.discriminator = None
 
-        if landmarks is not None:
-            self.landmarks = landmarks
-        if roi is not None:
-            self.roi = roi
+        self.landmarks = landmarks
+        self.roi = roi
 
     @property
     def landmarks(self):
@@ -77,6 +75,8 @@ class Detection(object):
         :param landmarks: The landmarks of this Detection.  # noqa: E501
         :type landmarks: list[list[float]]
         """
+        if self.local_vars_configuration.client_side_validation and landmarks is None:  # noqa: E501
+            raise ValueError("Invalid value for `landmarks`, must not be `None`")  # noqa: E501
 
         self._landmarks = landmarks
 
@@ -100,6 +100,8 @@ class Detection(object):
         :param roi: The roi of this Detection.  # noqa: E501
         :type roi: list[float]
         """
+        if self.local_vars_configuration.client_side_validation and roi is None:  # noqa: E501
+            raise ValueError("Invalid value for `roi`, must not be `None`")  # noqa: E501
 
         self._roi = roi
 
