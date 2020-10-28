@@ -33,8 +33,8 @@ class CompareImageResult(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'first_index': 'float',
-        'second_index': 'float',
+        'first_index': 'int',
+        'second_index': 'int',
         'score': 'float',
         'similarity': 'float',
         'error_code': 'str',
@@ -83,7 +83,7 @@ class CompareImageResult(object):
 
 
         :return: The first_index of this CompareImageResult.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._first_index
 
@@ -93,7 +93,7 @@ class CompareImageResult(object):
 
 
         :param first_index: The first_index of this CompareImageResult.  # noqa: E501
-        :type first_index: float
+        :type first_index: int
         """
 
         self._first_index = first_index
@@ -104,7 +104,7 @@ class CompareImageResult(object):
 
 
         :return: The second_index of this CompareImageResult.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._second_index
 
@@ -114,7 +114,7 @@ class CompareImageResult(object):
 
 
         :param second_index: The second_index of this CompareImageResult.  # noqa: E501
-        :type second_index: float
+        :type second_index: int
         """
 
         self._second_index = second_index

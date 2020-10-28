@@ -47,36 +47,19 @@ API_BASE_PATH="api_base_path" python example.py
 ### Output 
 This sample generates next text output:
 ```text
+(FaceRecognition-web-python-client-86zWXQ0_) alshund@alshund-Inspiron-3543:~/projects/regula/FaceRecognition-web-python-client/example$ python example.py 
 -----------------------------------------------------------------
                          Compare Results                         
 -----------------------------------------------------------------
-pair(1.0, 2.0) similarity: 0.9995848536491394
-pair(1.0, 3.0) similarity: 0.008510462939739227
-pair(2.0, 3.0) similarity: 0.008510462939739227
+pair(1, 2) similarity: 0.9995848536491394
+pair(1, 3) similarity: 0.008510462939739227
+pair(2, 3) similarity: 0.008510462939739227
 -----------------------------------------------------------------
-                         Detect Results                         
+                         Detect Results                          
 -----------------------------------------------------------------
 detector_type: 3
 landmark_type: 2
 landmarks: [[588.0, 342.0], [735.0, 342.0], [668.0, 418.0], [607.0, 502.0], [725.0, 502.0]]
 roi: [508.0, 267.0, 310.0, 310.0]
 -----------------------------------------------------------------
-                   Check video liveness result                  
------------------------------------------------------------------
-liveness_status: 0
------------------------------------------------------------------
-                   Check depth liveness result                  
------------------------------------------------------------------
-index: 0.0
-code: 0.0
-liveness_status: 0
------------------------------------------------------------------
-                   Check image liveness result       
------------------------------------------------------------------           
-index: 0.0
-code: 0.0
-liveness_status: 0
------------------------------------------------------------------
-
-
 ```

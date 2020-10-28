@@ -153,7 +153,7 @@ class MatchingApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/compare', 'POST',
+            '/api/compare', 'POST',
             path_params,
             query_params,
             header_params,
@@ -286,7 +286,7 @@ class MatchingApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/detect', 'POST',
+            '/api/detect', 'POST',
             path_params,
             query_params,
             header_params,

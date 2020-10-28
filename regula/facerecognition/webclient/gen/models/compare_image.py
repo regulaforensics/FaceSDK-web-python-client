@@ -33,7 +33,7 @@ class CompareImage(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'index': 'float',
+        'index': 'int',
         'type': 'ImageSource',
         'data': 'str'
     }
@@ -67,7 +67,7 @@ class CompareImage(object):
 
 
         :return: The index of this CompareImage.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._index
 
@@ -77,7 +77,7 @@ class CompareImage(object):
 
 
         :param index: The index of this CompareImage.  # noqa: E501
-        :type index: float
+        :type index: int
         """
 
         self._index = index

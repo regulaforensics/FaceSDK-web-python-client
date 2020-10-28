@@ -1,5 +1,5 @@
 from regula.facerecognition.webclient.ext.api.matching_api import MatchingApi
-from regula.facerecognition.webclient.gen import ApiClient, Configuration, LivenessApi
+from regula.facerecognition.webclient.gen import ApiClient, Configuration
 
 
 class Sdk:
@@ -14,7 +14,6 @@ class Sdk:
             self.__api_client = ApiClient(configuration=configuration)
 
         self.matching_api = MatchingApi(api_client=self.__api_client)
-        self.liveness_api = LivenessApi(api_client=self.__api_client)
 
     def __enter__(self):
         return self
