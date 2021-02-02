@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     Regula Face Recognition Web API
 
@@ -10,16 +8,13 @@
 """
 
 
-from __future__ import absolute_import
-
 import copy
 import logging
 import multiprocessing
 import sys
 import urllib3
 
-import six
-from six.moves import http_client as httplib
+from http import client as http_client
 from regula.facerecognition.webclient.gen.exceptions import ApiValueError
 
 
@@ -78,6 +73,8 @@ class Configuration(object):
     :param server_operation_variables: Mapping from operation ID to a mapping with
       string values to replace variables in templated server configuration.
       The validation of enums is performed for variables with defined enum values before.
+    :param ssl_ca_cert: str - the path to a file of concatenated CA certificates 
+      in PEM format
 
     """
 
@@ -90,6 +87,7 @@ class Configuration(object):
                  disabled_client_side_validations="",
                  server_index=None, server_variables=None,
                  server_operation_index=None, server_operation_variables=None,
+                 ssl_ca_cert=None,
                  ):
         """Constructor
         """
@@ -155,7 +153,7 @@ class Configuration(object):
            Set this to false to skip verifying SSL certificate when calling API
            from https server.
         """
-        self.ssl_ca_cert = None
+        self.ssl_ca_cert = ssl_ca_cert
         """Set this to customize the certificate file to verify the peer.
         """
         self.cert_file = None
@@ -190,6 +188,9 @@ class Configuration(object):
         """
         # Enable client side validation
         self.client_side_validation = True
+
+        # Options to pass down to the underlying urllib3 socket
+        self.socket_options = None
 
     def __deepcopy__(self, memo):
         cls = self.__class__
@@ -268,7 +269,7 @@ class Configuration(object):
             # then add file handler and remove stream handler.
             self.logger_file_handler = logging.FileHandler(self.__logger_file)
             self.logger_file_handler.setFormatter(self.logger_formatter)
-            for _, logger in six.iteritems(self.logger):
+            for _, logger in self.logger.items():
                 logger.addHandler(self.logger_file_handler)
 
     @property
@@ -290,17 +291,17 @@ class Configuration(object):
         self.__debug = value
         if self.__debug:
             # if debug status is True, turn on debug logging
-            for _, logger in six.iteritems(self.logger):
+            for _, logger in self.logger.items():
                 logger.setLevel(logging.DEBUG)
-            # turn on httplib debug
-            httplib.HTTPConnection.debuglevel = 1
+            # turn on http_client debug
+            http_client.HTTPConnection.debuglevel = 1
         else:
             # if debug status is False, turn off debug logging,
             # setting log level to default `logging.WARNING`
-            for _, logger in six.iteritems(self.logger):
+            for _, logger in self.logger.items():
                 logger.setLevel(logging.WARNING)
-            # turn off httplib debug
-            httplib.HTTPConnection.debuglevel = 0
+            # turn off http_client debug
+            http_client.HTTPConnection.debuglevel = 0
 
     @property
     def logger_format(self):
@@ -384,7 +385,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "http://localhost:41101/",
+                'url': "http://localhost:41101",
                 'description': "Local on-premise installation",
             }
         ]
