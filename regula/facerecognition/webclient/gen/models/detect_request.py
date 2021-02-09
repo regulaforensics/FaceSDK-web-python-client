@@ -34,26 +34,36 @@ class DetectRequest(object):
     """
     openapi_types = {
         'image': 'str',
+        'thumbnails': 'bool',
+        'attributes': 'bool',
         'only_central_face': 'bool'
     }
 
     attribute_map = {
         'image': 'image',
+        'thumbnails': 'thumbnails',
+        'attributes': 'attributes',
         'only_central_face': 'onlyCentralFace'
     }
 
-    def __init__(self, image=None, only_central_face=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, image=None, thumbnails=False, attributes=False, only_central_face=False, local_vars_configuration=None):  # noqa: E501
         """DetectRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._image = None
+        self._thumbnails = None
+        self._attributes = None
         self._only_central_face = None
         self.discriminator = None
 
         if image is not None:
             self.image = image
+        if thumbnails is not None:
+            self.thumbnails = thumbnails
+        if attributes is not None:
+            self.attributes = attributes
         if only_central_face is not None:
             self.only_central_face = only_central_face
 
@@ -79,6 +89,52 @@ class DetectRequest(object):
         """
 
         self._image = image
+
+    @property
+    def thumbnails(self):
+        """Gets the thumbnails of this DetectRequest.  # noqa: E501
+
+        Enable formatted detections' thumbnails in the response  # noqa: E501
+
+        :return: The thumbnails of this DetectRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._thumbnails
+
+    @thumbnails.setter
+    def thumbnails(self, thumbnails):
+        """Sets the thumbnails of this DetectRequest.
+
+        Enable formatted detections' thumbnails in the response  # noqa: E501
+
+        :param thumbnails: The thumbnails of this DetectRequest.  # noqa: E501
+        :type thumbnails: bool
+        """
+
+        self._thumbnails = thumbnails
+
+    @property
+    def attributes(self):
+        """Gets the attributes of this DetectRequest.  # noqa: E501
+
+        Enable face attributions detection, such as age or emotion and etc.  # noqa: E501
+
+        :return: The attributes of this DetectRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._attributes
+
+    @attributes.setter
+    def attributes(self, attributes):
+        """Sets the attributes of this DetectRequest.
+
+        Enable face attributions detection, such as age or emotion and etc.  # noqa: E501
+
+        :param attributes: The attributes of this DetectRequest.  # noqa: E501
+        :type attributes: bool
+        """
+
+        self._attributes = attributes
 
     @property
     def only_central_face(self):
