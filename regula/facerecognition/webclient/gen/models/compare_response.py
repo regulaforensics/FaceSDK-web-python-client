@@ -34,15 +34,17 @@ class CompareResponse(object):
     """
     openapi_types = {
         'code': 'FaceRecognitionResultCode',
-        'results': 'list[CompareImageResult]'
+        'results': 'list[CompareImageResult]',
+        'detections': 'list[CompareImageDetection]'
     }
 
     attribute_map = {
         'code': 'code',
-        'results': 'results'
+        'results': 'results',
+        'detections': 'detections'
     }
 
-    def __init__(self, code=None, results=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, results=None, detections=None, local_vars_configuration=None):  # noqa: E501
         """CompareResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -50,10 +52,12 @@ class CompareResponse(object):
 
         self._code = None
         self._results = None
+        self._detections = None
         self.discriminator = None
 
         self.code = code
         self.results = results
+        self.detections = detections
 
     @property
     def code(self):
@@ -100,6 +104,29 @@ class CompareResponse(object):
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
         self._results = results
+
+    @property
+    def detections(self):
+        """Gets the detections of this CompareResponse.  # noqa: E501
+
+
+        :return: The detections of this CompareResponse.  # noqa: E501
+        :rtype: list[CompareImageDetection]
+        """
+        return self._detections
+
+    @detections.setter
+    def detections(self, detections):
+        """Sets the detections of this CompareResponse.
+
+
+        :param detections: The detections of this CompareResponse.  # noqa: E501
+        :type detections: list[CompareImageDetection]
+        """
+        if self.local_vars_configuration.client_side_validation and detections is None:  # noqa: E501
+            raise ValueError("Invalid value for `detections`, must not be `None`")  # noqa: E501
+
+        self._detections = detections
 
     def to_dict(self):
         """Returns the model properties as a dict"""

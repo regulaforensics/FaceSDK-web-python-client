@@ -8,6 +8,7 @@ regula/facerecognition/webclient/gen/configuration.py
 regula/facerecognition/webclient/gen/exceptions.py
 regula/facerecognition/webclient/gen/models/__init__.py
 regula/facerecognition/webclient/gen/models/compare_image.py
+regula/facerecognition/webclient/gen/models/compare_image_detection.py
 regula/facerecognition/webclient/gen/models/compare_image_result.py
 regula/facerecognition/webclient/gen/models/compare_request.py
 regula/facerecognition/webclient/gen/models/compare_response.py
@@ -17,6 +18,7 @@ regula/facerecognition/webclient/gen/models/detect_response.py
 regula/facerecognition/webclient/gen/models/detect_response_all_of.py
 regula/facerecognition/webclient/gen/models/detect_result.py
 regula/facerecognition/webclient/gen/models/detection.py
+regula/facerecognition/webclient/gen/models/detection_face.py
 regula/facerecognition/webclient/gen/models/face_recognition_result.py
 regula/facerecognition/webclient/gen/models/face_recognition_result_code.py
 regula/facerecognition/webclient/gen/models/image_source.py
