@@ -65,6 +65,7 @@ class CompareImage(object):
     def index(self):
         """Gets the index of this CompareImage.  # noqa: E501
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :return: The index of this CompareImage.  # noqa: E501
         :rtype: int
@@ -75,6 +76,7 @@ class CompareImage(object):
     def index(self, index):
         """Sets the index of this CompareImage.
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :param index: The index of this CompareImage.  # noqa: E501
         :type index: int

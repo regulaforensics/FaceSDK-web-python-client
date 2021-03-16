@@ -53,7 +53,8 @@ class DetectResponse(object):
         self.discriminator = None
 
         self.code = code
-        self.results = results
+        if results is not None:
+            self.results = results
 
     @property
     def code(self):
@@ -96,8 +97,6 @@ class DetectResponse(object):
         :param results: The results of this DetectResponse.  # noqa: E501
         :type results: DetectResult
         """
-        if self.local_vars_configuration.client_side_validation and results is None:  # noqa: E501
-            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
         self._results = results
 

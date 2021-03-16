@@ -33,60 +33,55 @@ class OperationLog(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'success': 'bool',
+        'status_code': 'int',
         'type': 'str',
-        'msg': 'str',
-        'payload': 'object'
+        'msg': 'str'
     }
 
     attribute_map = {
-        'success': 'success',
+        'status_code': 'status_code',
         'type': 'type',
-        'msg': 'msg',
-        'payload': 'payload'
+        'msg': 'msg'
     }
 
-    def __init__(self, success=None, type=None, msg=None, payload=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, status_code=None, type=None, msg=None, local_vars_configuration=None):  # noqa: E501
         """OperationLog - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._success = None
+        self._status_code = None
         self._type = None
         self._msg = None
-        self._payload = None
         self.discriminator = None
 
-        if success is not None:
-            self.success = success
+        if status_code is not None:
+            self.status_code = status_code
         if type is not None:
             self.type = type
         if msg is not None:
             self.msg = msg
-        if payload is not None:
-            self.payload = payload
 
     @property
-    def success(self):
-        """Gets the success of this OperationLog.  # noqa: E501
+    def status_code(self):
+        """Gets the status_code of this OperationLog.  # noqa: E501
 
 
-        :return: The success of this OperationLog.  # noqa: E501
-        :rtype: bool
+        :return: The status_code of this OperationLog.  # noqa: E501
+        :rtype: int
         """
-        return self._success
+        return self._status_code
 
-    @success.setter
-    def success(self, success):
-        """Sets the success of this OperationLog.
+    @status_code.setter
+    def status_code(self, status_code):
+        """Sets the status_code of this OperationLog.
 
 
-        :param success: The success of this OperationLog.  # noqa: E501
-        :type success: bool
+        :param status_code: The status_code of this OperationLog.  # noqa: E501
+        :type status_code: int
         """
 
-        self._success = success
+        self._status_code = status_code
 
     @property
     def type(self):
@@ -129,27 +124,6 @@ class OperationLog(object):
         """
 
         self._msg = msg
-
-    @property
-    def payload(self):
-        """Gets the payload of this OperationLog.  # noqa: E501
-
-
-        :return: The payload of this OperationLog.  # noqa: E501
-        :rtype: object
-        """
-        return self._payload
-
-    @payload.setter
-    def payload(self, payload):
-        """Sets the payload of this OperationLog.
-
-
-        :param payload: The payload of this OperationLog.  # noqa: E501
-        :type payload: object
-        """
-
-        self._payload = payload
 
     def to_dict(self):
         """Returns the model properties as a dict"""

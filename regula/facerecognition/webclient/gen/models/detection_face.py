@@ -71,6 +71,7 @@ class DetectionFace(object):
     def face_index(self):
         """Gets the face_index of this DetectionFace.  # noqa: E501
 
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :return: The face_index of this DetectionFace.  # noqa: E501
         :rtype: int
@@ -81,6 +82,7 @@ class DetectionFace(object):
     def face_index(self, face_index):
         """Sets the face_index of this DetectionFace.
 
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :param face_index: The face_index of this DetectionFace.  # noqa: E501
         :type face_index: int

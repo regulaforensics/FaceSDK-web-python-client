@@ -52,8 +52,10 @@ class CompareResponseAllOf(object):
         self._detections = None
         self.discriminator = None
 
-        self.results = results
-        self.detections = detections
+        if results is not None:
+            self.results = results
+        if detections is not None:
+            self.detections = detections
 
     @property
     def results(self):
@@ -73,8 +75,6 @@ class CompareResponseAllOf(object):
         :param results: The results of this CompareResponseAllOf.  # noqa: E501
         :type results: list[CompareImageResult]
         """
-        if self.local_vars_configuration.client_side_validation and results is None:  # noqa: E501
-            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
         self._results = results
 
@@ -96,8 +96,6 @@ class CompareResponseAllOf(object):
         :param detections: The detections of this CompareResponseAllOf.  # noqa: E501
         :type detections: list[CompareImageDetection]
         """
-        if self.local_vars_configuration.client_side_validation and detections is None:  # noqa: E501
-            raise ValueError("Invalid value for `detections`, must not be `None`")  # noqa: E501
 
         self._detections = detections
 

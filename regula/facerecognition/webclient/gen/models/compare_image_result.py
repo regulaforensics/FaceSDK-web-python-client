@@ -34,40 +34,48 @@ class CompareImageResult(object):
     """
     openapi_types = {
         'first_index': 'int',
+        'first_face_index': 'int',
         'second_index': 'int',
+        'second_face_index': 'int',
         'score': 'float',
         'similarity': 'float',
-        'error_code': 'str',
+        'error_code': 'FaceRecognitionResultCode',
         'error_msg': 'str'
     }
 
     attribute_map = {
         'first_index': 'firstIndex',
+        'first_face_index': 'firstFaceIndex',
         'second_index': 'secondIndex',
+        'second_face_index': 'secondFaceIndex',
         'score': 'score',
         'similarity': 'similarity',
         'error_code': 'errorCode',
         'error_msg': 'errorMsg'
     }
 
-    def __init__(self, first_index=None, second_index=None, score=None, similarity=None, error_code=None, error_msg=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, first_index=None, first_face_index=None, second_index=None, second_face_index=None, score=None, similarity=None, error_code=None, error_msg=None, local_vars_configuration=None):  # noqa: E501
         """CompareImageResult - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._first_index = None
+        self._first_face_index = None
         self._second_index = None
+        self._second_face_index = None
         self._score = None
         self._similarity = None
         self._error_code = None
         self._error_msg = None
         self.discriminator = None
 
-        if first_index is not None:
-            self.first_index = first_index
-        if second_index is not None:
-            self.second_index = second_index
+        self.first_index = first_index
+        if first_face_index is not None:
+            self.first_face_index = first_face_index
+        self.second_index = second_index
+        if second_face_index is not None:
+            self.second_face_index = second_face_index
         if score is not None:
             self.score = score
         if similarity is not None:
@@ -81,6 +89,7 @@ class CompareImageResult(object):
     def first_index(self):
         """Gets the first_index of this CompareImageResult.  # noqa: E501
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :return: The first_index of this CompareImageResult.  # noqa: E501
         :rtype: int
@@ -91,17 +100,44 @@ class CompareImageResult(object):
     def first_index(self, first_index):
         """Sets the first_index of this CompareImageResult.
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :param first_index: The first_index of this CompareImageResult.  # noqa: E501
         :type first_index: int
         """
+        if self.local_vars_configuration.client_side_validation and first_index is None:  # noqa: E501
+            raise ValueError("Invalid value for `first_index`, must not be `None`")  # noqa: E501
 
         self._first_index = first_index
+
+    @property
+    def first_face_index(self):
+        """Gets the first_face_index of this CompareImageResult.  # noqa: E501
+
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
+
+        :return: The first_face_index of this CompareImageResult.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_face_index
+
+    @first_face_index.setter
+    def first_face_index(self, first_face_index):
+        """Sets the first_face_index of this CompareImageResult.
+
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
+
+        :param first_face_index: The first_face_index of this CompareImageResult.  # noqa: E501
+        :type first_face_index: int
+        """
+
+        self._first_face_index = first_face_index
 
     @property
     def second_index(self):
         """Gets the second_index of this CompareImageResult.  # noqa: E501
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :return: The second_index of this CompareImageResult.  # noqa: E501
         :rtype: int
@@ -112,12 +148,38 @@ class CompareImageResult(object):
     def second_index(self, second_index):
         """Sets the second_index of this CompareImageResult.
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :param second_index: The second_index of this CompareImageResult.  # noqa: E501
         :type second_index: int
         """
+        if self.local_vars_configuration.client_side_validation and second_index is None:  # noqa: E501
+            raise ValueError("Invalid value for `second_index`, must not be `None`")  # noqa: E501
 
         self._second_index = second_index
+
+    @property
+    def second_face_index(self):
+        """Gets the second_face_index of this CompareImageResult.  # noqa: E501
+
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
+
+        :return: The second_face_index of this CompareImageResult.  # noqa: E501
+        :rtype: int
+        """
+        return self._second_face_index
+
+    @second_face_index.setter
+    def second_face_index(self, second_face_index):
+        """Sets the second_face_index of this CompareImageResult.
+
+        Faces index used to identify faces in scope of one photo.  # noqa: E501
+
+        :param second_face_index: The second_face_index of this CompareImageResult.  # noqa: E501
+        :type second_face_index: int
+        """
+
+        self._second_face_index = second_face_index
 
     @property
     def score(self):
@@ -167,7 +229,7 @@ class CompareImageResult(object):
 
 
         :return: The error_code of this CompareImageResult.  # noqa: E501
-        :rtype: str
+        :rtype: FaceRecognitionResultCode
         """
         return self._error_code
 
@@ -177,7 +239,7 @@ class CompareImageResult(object):
 
 
         :param error_code: The error_code of this CompareImageResult.  # noqa: E501
-        :type error_code: str
+        :type error_code: FaceRecognitionResultCode
         """
 
         self._error_code = error_code

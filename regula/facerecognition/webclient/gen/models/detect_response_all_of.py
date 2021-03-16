@@ -49,7 +49,8 @@ class DetectResponseAllOf(object):
         self._results = None
         self.discriminator = None
 
-        self.results = results
+        if results is not None:
+            self.results = results
 
     @property
     def results(self):
@@ -69,8 +70,6 @@ class DetectResponseAllOf(object):
         :param results: The results of this DetectResponseAllOf.  # noqa: E501
         :type results: DetectResult
         """
-        if self.local_vars_configuration.client_side_validation and results is None:  # noqa: E501
-            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
 
         self._results = results
 

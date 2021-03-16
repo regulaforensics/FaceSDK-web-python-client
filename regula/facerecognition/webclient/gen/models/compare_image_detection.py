@@ -35,7 +35,7 @@ class CompareImageDetection(object):
     openapi_types = {
         'faces': 'list[DetectionFace]',
         'image_index': 'int',
-        'status': 'int'
+        'status': 'FaceRecognitionResultCode'
     }
 
     attribute_map = {
@@ -57,10 +57,8 @@ class CompareImageDetection(object):
 
         if faces is not None:
             self.faces = faces
-        if image_index is not None:
-            self.image_index = image_index
-        if status is not None:
-            self.status = status
+        self.image_index = image_index
+        self.status = status
 
     @property
     def faces(self):
@@ -87,6 +85,7 @@ class CompareImageDetection(object):
     def image_index(self):
         """Gets the image_index of this CompareImageDetection.  # noqa: E501
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :return: The image_index of this CompareImageDetection.  # noqa: E501
         :rtype: int
@@ -97,10 +96,13 @@ class CompareImageDetection(object):
     def image_index(self, image_index):
         """Sets the image_index of this CompareImageDetection.
 
+        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
 
         :param image_index: The image_index of this CompareImageDetection.  # noqa: E501
         :type image_index: int
         """
+        if self.local_vars_configuration.client_side_validation and image_index is None:  # noqa: E501
+            raise ValueError("Invalid value for `image_index`, must not be `None`")  # noqa: E501
 
         self._image_index = image_index
 
@@ -110,7 +112,7 @@ class CompareImageDetection(object):
 
 
         :return: The status of this CompareImageDetection.  # noqa: E501
-        :rtype: int
+        :rtype: FaceRecognitionResultCode
         """
         return self._status
 
@@ -120,8 +122,10 @@ class CompareImageDetection(object):
 
 
         :param status: The status of this CompareImageDetection.  # noqa: E501
-        :type status: int
+        :type status: FaceRecognitionResultCode
         """
+        if self.local_vars_configuration.client_side_validation and status is None:  # noqa: E501
+            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
 
