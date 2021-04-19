@@ -1,14 +1,14 @@
-# Regula Face Recognition web API Python 3.5+ client
+# Regula Face SDK web API Python 3.5+ client
 
-[![OpenAPI](https://img.shields.io/badge/OpenAPI-defs-8c0a56?style=flat-square)](https://github.com/regulaforensics/FaceRecognition-web-openapi)
+[![OpenAPI](https://img.shields.io/badge/OpenAPI-defs-8c0a56?style=flat-square)](https://github.com/regulaforensics/FaceSDK-web-openapi)
 [![documentation](https://img.shields.io/badge/docs-en-f6858d?style=flat-square)](https://support.regulaforensics.com/hc/en-us/articles/115000916306-Documentation)
-[![live](https://img.shields.io/badge/live-demo-0a8c42?style=flat-square)](https://api.regulaforensics.com/)
+[![live](https://img.shields.io/badge/live-demo-0a8c42?style=flat-square)](https://faceapi.regulaforensics.com/)
 
 Face recognition as easy as reading two bytes.
 
 If you have any problems with or questions about this client, please contact us
-through a [GitHub issue](https://github.com/regulaforensics/FaceRecognition-web-python-client/issues).
-You are invited to contribute [new features, fixes, or updates](https://github.com/regulaforensics/FaceRecognition-web-python-client/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22), large or small; 
+through a [GitHub issue](https://github.com/regulaforensics/FaceSDK-web-python-client/issues).
+You are invited to contribute [new features, fixes, or updates](https://github.com/regulaforensics/FaceSDK-web-python-client/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22), large or small; 
 We are always thrilled to receive pull requests, and do our best to process them as fast as we can.
 See [dev guide](./dev.md)
 
