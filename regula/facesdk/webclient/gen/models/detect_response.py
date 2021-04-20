@@ -33,7 +33,7 @@ class DetectResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'code': 'FaceRecognitionResultCode',
+        'code': 'FaceSDKResultCode',
         'results': 'DetectResult'
     }
 
@@ -62,7 +62,7 @@ class DetectResponse(object):
 
 
         :return: The code of this DetectResponse.  # noqa: E501
-        :rtype: FaceRecognitionResultCode
+        :rtype: FaceSDKResultCode
         """
         return self._code
 
@@ -72,7 +72,7 @@ class DetectResponse(object):
 
 
         :param code: The code of this DetectResponse.  # noqa: E501
-        :type code: FaceRecognitionResultCode
+        :type code: FaceSDKResultCode
         """
         if self.local_vars_configuration.client_side_validation and code is None:  # noqa: E501
             raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501

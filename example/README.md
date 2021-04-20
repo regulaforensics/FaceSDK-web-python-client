@@ -40,7 +40,7 @@ API_BASE_PATH="api_base_path" python example.py
 This sample generates next text output:
 ```text
 -----------------------------------------------------------------
-                         Compare Results                         
+                         Matching Results                         
 -----------------------------------------------------------------
 pair(1, 2) similarity: 0.9995848536491394
 pair(1, 3) similarity: 0.008510462939739227

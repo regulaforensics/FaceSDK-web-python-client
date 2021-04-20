@@ -12,17 +12,17 @@ with open("face2.jpg", "rb") as f:
 
 with FaceSdk(host=api_base_patch) as sdk:
     images = [
-        CompareImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
-        CompareImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
-        CompareImage(index=3, data=face_2_bytes),
+        MatchImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
+        MatchImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
+        MatchImage(index=3, data=face_2_bytes),
     ]
-    compare_request = CompareRequest(images=images, thumbnails=True)
-    compare_response = sdk.matching_api.compare(compare_request)
+    match_request = MatchRequest(images=images, thumbnails=True)
+    match_response = sdk.matching_api.match(match_request)
 
     print("-----------------------------------------------------------------")
-    print("                         Compare Results                         ")
+    print("                         Matching Results                        ")
     print("-----------------------------------------------------------------")
-    for comparison in compare_response.results:
+    for comparison in match_response.results:
         print(f"pair({comparison.first_index}, {comparison.second_index}) similarity: {comparison.similarity}")
     print("-----------------------------------------------------------------")
 

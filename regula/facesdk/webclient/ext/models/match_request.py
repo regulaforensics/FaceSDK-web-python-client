@@ -1,13 +1,13 @@
 from typing import List, Union
 
 from regula.facesdk.webclient.ext.common import Base64String
-from regula.facesdk.webclient.ext.models.compare_image import CompareImage
-from regula.facesdk.webclient.gen import CompareRequest as GenCompareRequest, ApiValueError
+from regula.facesdk.webclient.ext.models.match_image import MatchImage
+from regula.facesdk.webclient.gen import MatchRequest as GenMatchRequest, ApiValueError
 
 
-class CompareRequest(GenCompareRequest):
+class MatchRequest(GenMatchRequest):
     def __init__(
-            self, images: List[Union[CompareImage, Base64String, bytes]], thumbnails=False,
+            self, images: List[Union[MatchImage, Base64String, bytes]], thumbnails=False,
             local_vars_configuration=None
     ):
         if not images:
@@ -15,10 +15,10 @@ class CompareRequest(GenCompareRequest):
 
         input_images = []
         for index, item in enumerate(images):
-            if isinstance(item, CompareImage):
+            if isinstance(item, MatchImage):
                 input_images.append(item)
             else:
-                input_images.append(CompareImage(index, None, item, local_vars_configuration))
+                input_images.append(MatchImage(index, None, item, local_vars_configuration))
 
         super().__init__(
             images=input_images, local_vars_configuration=local_vars_configuration, thumbnails=thumbnails
