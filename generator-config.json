@@ -1,4 +1,4 @@
 {
-  "packageName": "regula.facerecognition.webclient.gen",
-  "extPackageName": "regula.facerecognition.webclient.ext"
+  "packageName": "regula.facesdk.webclient.gen",
+  "extPackageName": "regula.facesdk.webclient.ext"
 }

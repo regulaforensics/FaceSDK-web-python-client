@@ -1,6 +1,6 @@
 import os
 
-from regula.facerecognition.webclient import *
+from regula.facesdk.webclient import *
 
 api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
 

@@ -1,4 +1,4 @@
-# Regula Face Recognition web API Python 3.5+ client
+# Regula FaceSDK web API Python 3.5+ client
 
 :warning: NOTE: for some systems `python3` and `pip3` commands should be used, instead of `python` and `pip`.
 
@@ -16,8 +16,8 @@ pip --version
 
 Cloning example:
 ```bash
-git clone https://github.com/regulaforensics/FaceRecognition-web-python-client.git
-cd FaceRecognition-web-python-client
+git clone https://github.com/regulaforensics/FaceSDK-web-python-client.git
+cd FaceSDK-web-python-client
 ```
 
 Setup project and download dependencies:
@@ -25,21 +25,20 @@ Setup project and download dependencies:
 pip install -e ./
 ```
 
-### Running with local Regula Face Recognition web API installation
+### Running with local Regula FaceSDK web API installation
 
 Assuming you have successfully launched instance, use next line command to run example:
 ```bash
 cd example
 python example.py
 
-# If Regula Face Recognition web API is running not on localhost, specify host via env variable:
+# If Regula FaceSDK web API is running not on localhost, specify host via env variable:
 API_BASE_PATH="api_base_path" python example.py
 ```
 
 ### Output 
 This sample generates next text output:
 ```text
-(FaceRecognition-web-python-client-86zWXQ0_) alshund@alshund-Inspiron-3543:~/projects/regula/FaceRecognition-web-python-client/example$ python example.py 
 -----------------------------------------------------------------
                          Compare Results                         
 -----------------------------------------------------------------
