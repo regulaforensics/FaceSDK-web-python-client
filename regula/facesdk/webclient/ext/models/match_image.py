@@ -1,10 +1,10 @@
 from typing import Union
 
 from regula.facesdk.webclient.ext.common import Base64String, bytes_to_base64
-from regula.facesdk.webclient.gen import ApiValueError, CompareImage as GenCompareImage, ImageSource
+from regula.facesdk.webclient.gen import ApiValueError, MatchImage as GenMatchImage, ImageSource
 
 
-class CompareImage(GenCompareImage):
+class MatchImage(GenMatchImage):
     def __init__(self, index=None, type=None, data: Union[Base64String, bytes] = None, local_vars_configuration=None):
         if not data:
             raise ApiValueError(f"compare image {index} data: expected <not empty>")

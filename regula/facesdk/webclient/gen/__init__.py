@@ -29,20 +29,19 @@ from regula.facesdk.webclient.gen.exceptions import ApiKeyError
 from regula.facesdk.webclient.gen.exceptions import ApiAttributeError
 from regula.facesdk.webclient.gen.exceptions import ApiException
 # import models into sdk package
-from regula.facesdk.webclient.gen.models.compare_image import CompareImage
-from regula.facesdk.webclient.gen.models.compare_image_detection import CompareImageDetection
-from regula.facesdk.webclient.gen.models.compare_image_result import CompareImageResult
-from regula.facesdk.webclient.gen.models.compare_request import CompareRequest
-from regula.facesdk.webclient.gen.models.compare_response import CompareResponse
-from regula.facesdk.webclient.gen.models.compare_response_all_of import CompareResponseAllOf
 from regula.facesdk.webclient.gen.models.detect_request import DetectRequest
 from regula.facesdk.webclient.gen.models.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.models.detect_response_all_of import DetectResponseAllOf
 from regula.facesdk.webclient.gen.models.detect_result import DetectResult
 from regula.facesdk.webclient.gen.models.detection import Detection
 from regula.facesdk.webclient.gen.models.detection_face import DetectionFace
-from regula.facesdk.webclient.gen.models.face_recognition_result import FaceRecognitionResult
-from regula.facesdk.webclient.gen.models.face_recognition_result_code import FaceRecognitionResultCode
+from regula.facesdk.webclient.gen.models.face_sdk_result import FaceSDKResult
+from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
 from regula.facesdk.webclient.gen.models.image_source import ImageSource
-from regula.facesdk.webclient.gen.models.operation_log import OperationLog
+from regula.facesdk.webclient.gen.models.match_image import MatchImage
+from regula.facesdk.webclient.gen.models.match_image_detection import MatchImageDetection
+from regula.facesdk.webclient.gen.models.match_image_result import MatchImageResult
+from regula.facesdk.webclient.gen.models.match_request import MatchRequest
+from regula.facesdk.webclient.gen.models.match_response import MatchResponse
+from regula.facesdk.webclient.gen.models.match_response_all_of import MatchResponseAllOf
 

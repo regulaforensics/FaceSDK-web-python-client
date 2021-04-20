@@ -1,6 +1,6 @@
 from regula.facesdk.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, \
-    CompareResponse, DetectResponse
-from regula.facesdk.webclient.ext.models import CompareRequest, DetectRequest
+    DetectResponse, MatchResponse
+from regula.facesdk.webclient.ext.models import MatchRequest, DetectRequest
 
 
 class MatchingApi(GenMatchingApi):
@@ -20,8 +20,12 @@ class MatchingApi(GenMatchingApi):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.api_client.close()
 
-    def compare(self, compare_request: CompareRequest, **kwargs) -> CompareResponse:
-        return super().compare(compare_request, **kwargs)
+    def match(self, match_request: MatchRequest, **kwargs) -> MatchResponse:
+        return super().match(match_request, **kwargs)
+
+    # deprecated use match
+    def compare(self, compare_request: MatchRequest, **kwargs) -> MatchResponse:
+        return super().match(compare_request, **kwargs)
 
     def detect(self, detect_request: DetectRequest, **kwargs) -> DetectResponse:
         return super().detect(detect_request, **kwargs)

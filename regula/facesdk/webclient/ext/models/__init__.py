@@ -1,3 +1,6 @@
-from regula.facesdk.webclient.ext.models.compare_request import CompareRequest
-from regula.facesdk.webclient.ext.models.compare_image import CompareImage
+from regula.facesdk.webclient.ext.models.match_request import MatchRequest
+from regula.facesdk.webclient.ext.models.match_image import MatchImage
 from regula.facesdk.webclient.ext.models.detect_request import DetectRequest
+
+CompareRequest = MatchRequest
+CompareImage = MatchImage
