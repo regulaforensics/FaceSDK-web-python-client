@@ -13,21 +13,21 @@ We are always thrilled to receive pull requests, and do our best to process them
 See [dev guide](./dev.md)
 
 ## Install package
-`regula.facerecognition.webclient` is on the Python Package Index (PyPI):
+`regula.facesdk.webclient` is on the Python Package Index (PyPI):
 
 ```bash
-pip install regula.facerecognition.webclient
+pip install regula.facesdk.webclient
 ```
 
 Or using `pipenv`
 ```bash
-pipenv install regula.facerecognition.webclient
+pipenv install regula.facesdk.webclient
 ```
 
 ## Example
 Performing request:
 ```python
-from regula.facerecognition.webclient import *
+from regula.facesdk.webclient import *
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
