@@ -22,7 +22,7 @@ setup(
         "future==0.18.2",
         "python-dateutil==2.8.1",
         "six==1.15.0",
-        "urllib3==1.26.4",
+        "urllib3==1.26.5",
     ],
     packages=find_packages(exclude=["test", "tests", "example"]),
     include_package_data=True,
