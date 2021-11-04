@@ -3,6 +3,10 @@ import base64
 import requests
 
 
+# SEE API DOCS
+# openapi https://github.com/regulaforensics/FaceSDK-web-openapi/blob/master/index-identification-module.yml
+# compiled into html open api https://github.com/regulaforensics/FaceSDK-web-openapi/releases
+
 def get_file_as_base64(file_path: str) -> str:
     with open(file_path, "rb") as f:
         file_as_binary = f.read()
