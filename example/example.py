@@ -2,7 +2,7 @@ import os
 
 from regula.facesdk.webclient import *
 
-api_base_patch = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
+api_base_path = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
@@ -10,7 +10,7 @@ with open("face1.jpg", "rb") as f:
 with open("face2.jpg", "rb") as f:
     face_2_bytes = f.read()
 
-with FaceSdk(host=api_base_patch) as sdk:
+with FaceSdk(host=api_base_path) as sdk:
     images = [
         MatchImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
         MatchImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
