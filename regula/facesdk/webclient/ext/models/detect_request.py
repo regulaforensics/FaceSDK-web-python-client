@@ -8,7 +8,7 @@ class DetectRequest(GetDetectRequest):
     def __init__(
             self, image: Union[Base64String, bytes],
             only_central_face=False, attributes=False, thumbnails=False,
-            local_vars_configuration=None
+            local_vars_configuration=None, tag=None
     ):
         if not image:
             raise ApiValueError(f"image: expected <not empty> - obtained <{image}>", "image")
@@ -18,5 +18,5 @@ class DetectRequest(GetDetectRequest):
 
         super().__init__(
             image=image, only_central_face=only_central_face, attributes=attributes, thumbnails=thumbnails,
-            local_vars_configuration=local_vars_configuration
+            local_vars_configuration=local_vars_configuration, tag=tag
         )

@@ -2,7 +2,7 @@ import os
 
 from regula.facesdk.webclient import *
 
-api_base_path = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
+api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com/")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
