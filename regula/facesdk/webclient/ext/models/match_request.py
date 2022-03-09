@@ -8,7 +8,7 @@ from regula.facesdk.webclient.gen import MatchRequest as GenMatchRequest, ApiVal
 class MatchRequest(GenMatchRequest):
     def __init__(
             self, images: List[Union[MatchImage, Base64String, bytes]], thumbnails=False,
-            local_vars_configuration=None
+            local_vars_configuration=None, tag=None
     ):
         if not images:
             raise ApiValueError(f"compare request images: expected size <more than 1>")
@@ -21,5 +21,6 @@ class MatchRequest(GenMatchRequest):
                 input_images.append(MatchImage(index, None, item, local_vars_configuration))
 
         super().__init__(
-            images=input_images, local_vars_configuration=local_vars_configuration, thumbnails=thumbnails
+            images=input_images, local_vars_configuration=local_vars_configuration, thumbnails=thumbnails,
+            tag=tag
         )
