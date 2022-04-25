@@ -33,37 +33,70 @@ class Detection(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'crop': 'str',
         'attributes': 'dict(str, object)',
         'landmarks': 'list[list[float]]',
+        'quality': 'DetectionQuality',
         'roi': 'list[float]',
         'thumbnail': 'str'
     }
 
     attribute_map = {
+        'crop': 'crop',
         'attributes': 'attributes',
         'landmarks': 'landmarks',
+        'quality': 'quality',
         'roi': 'roi',
         'thumbnail': 'thumbnail'
     }
 
-    def __init__(self, attributes=None, landmarks=None, roi=None, thumbnail=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, crop=None, attributes=None, landmarks=None, quality=None, roi=None, thumbnail=None, local_vars_configuration=None):  # noqa: E501
         """Detection - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._crop = None
         self._attributes = None
         self._landmarks = None
+        self._quality = None
         self._roi = None
         self._thumbnail = None
         self.discriminator = None
 
+        if crop is not None:
+            self.crop = crop
         if attributes is not None:
             self.attributes = attributes
         self.landmarks = landmarks
+        if quality is not None:
+            self.quality = quality
         self.roi = roi
         if thumbnail is not None:
             self.thumbnail = thumbnail
+
+    @property
+    def crop(self):
+        """Gets the crop of this Detection.  # noqa: E501
+
+        Base64 encoded image  # noqa: E501
+
+        :return: The crop of this Detection.  # noqa: E501
+        :rtype: str
+        """
+        return self._crop
+
+    @crop.setter
+    def crop(self, crop):
+        """Sets the crop of this Detection.
+
+        Base64 encoded image  # noqa: E501
+
+        :param crop: The crop of this Detection.  # noqa: E501
+        :type crop: str
+        """
+
+        self._crop = crop
 
     @property
     def attributes(self):
@@ -110,6 +143,27 @@ class Detection(object):
             raise ValueError("Invalid value for `landmarks`, must not be `None`")  # noqa: E501
 
         self._landmarks = landmarks
+
+    @property
+    def quality(self):
+        """Gets the quality of this Detection.  # noqa: E501
+
+
+        :return: The quality of this Detection.  # noqa: E501
+        :rtype: DetectionQuality
+        """
+        return self._quality
+
+    @quality.setter
+    def quality(self, quality):
+        """Sets the quality of this Detection.
+
+
+        :param quality: The quality of this Detection.  # noqa: E501
+        :type quality: DetectionQuality
+        """
+
+        self._quality = quality
 
     @property
     def roi(self):
