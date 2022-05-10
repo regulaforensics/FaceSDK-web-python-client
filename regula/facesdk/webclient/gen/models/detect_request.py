@@ -34,6 +34,7 @@ class DetectRequest(object):
     """
     openapi_types = {
         'tag': 'str',
+        'quality': 'QualityRequest',
         'image': 'str',
         'thumbnails': 'bool',
         'attributes': 'bool',
@@ -42,19 +43,21 @@ class DetectRequest(object):
 
     attribute_map = {
         'tag': 'tag',
+        'quality': 'quality',
         'image': 'image',
         'thumbnails': 'thumbnails',
         'attributes': 'attributes',
         'only_central_face': 'onlyCentralFace'
     }
 
-    def __init__(self, tag=None, image=None, thumbnails=False, attributes=False, only_central_face=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, quality=None, image=None, thumbnails=False, attributes=False, only_central_face=False, local_vars_configuration=None):  # noqa: E501
         """DetectRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._tag = None
+        self._quality = None
         self._image = None
         self._thumbnails = None
         self._attributes = None
@@ -63,6 +66,8 @@ class DetectRequest(object):
 
         if tag is not None:
             self.tag = tag
+        if quality is not None:
+            self.quality = quality
         if image is not None:
             self.image = image
         if thumbnails is not None:
@@ -92,6 +97,27 @@ class DetectRequest(object):
         """
 
         self._tag = tag
+
+    @property
+    def quality(self):
+        """Gets the quality of this DetectRequest.  # noqa: E501
+
+
+        :return: The quality of this DetectRequest.  # noqa: E501
+        :rtype: QualityRequest
+        """
+        return self._quality
+
+    @quality.setter
+    def quality(self, quality):
+        """Sets the quality of this DetectRequest.
+
+
+        :param quality: The quality of this DetectRequest.  # noqa: E501
+        :type quality: QualityRequest
+        """
+
+        self._quality = quality
 
     @property
     def image(self):
