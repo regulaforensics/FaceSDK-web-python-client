@@ -1,58 +1,45 @@
 import base64
+import os
 
-import requests
+from regula.facesdk.webclient import *
+
+api_base_path = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
+
+with open("face1.jpg", "rb") as f:
+    face_1_bytes = f.read()
+
+with open("face2.jpg", "rb") as f:
+    face_2_bytes = f.read()
+
+sdk = FaceSdk(api_base_path)
+
+person1_id = sdk.person_api.create_person(PersonFields("person1", {})).id
+person2_id = sdk.person_api.create_person(PersonFields("person2", {})).id
+
+sdk.person_api.add_image_to_person(person1_id, face_1_bytes)
+sdk.person_api.add_image_to_person(person2_id, face_2_bytes)
+
+person1 = sdk.person_api.get_person(person1_id)
+person2 = sdk.person_api.get_person(person2_id)
+
+group = sdk.group_api.create_group("group1")
+
+sdk.group_api.update_persons_in_group(group.id, UpdateGroup([int(person1.id), int(person2.id)]))
+
+result = sdk.search_api.search(
+    SearchRequest(
+        group_ids=[int(group.id)],
+        image=ImageFields(
+                content_type="",
+                content=base64.b64encode(face_1_bytes).decode("utf-8")
+            )
+        )
+)
+
+print(f"Person #1 {int(person1.id)} {person1.name}")
+print(f"Person #2 {int(person2.id)} {person2.name}")
+print(f"Group {int(group.id)} {group.name}")
+print(result)
 
 
-# SEE API DOCS
-# openapi https://github.com/regulaforensics/FaceSDK-web-openapi/blob/master/index-identification-module.yml
-# compiled into html open api https://github.com/regulaforensics/FaceSDK-web-openapi/releases
 
-def get_file_as_base64(file_path: str) -> str:
-    with open(file_path, "rb") as f:
-        file_as_binary = f.read()
-    return base64.b64encode(file_as_binary).decode("utf-8")
-
-
-host_url = "http://0.0.0.0:41101/api"
-
-# create "storage" as folder in filesystem of where service is running
-# do it once, and them reuse
-#
-# Storage is a uri location, where service store images of person.
-# Thus, you can split for further processing or other needs your photo catalog.
-# Can be multiple storages per application.
-# During person creation, you can specify which storage to use for saving photos.
-# Main property of storage is __uri__, allowing to use not only local filesystem, but other remote staff, for example aws s3 buckets etc. (Currently on filesystem is supported).
-# Each person can have only one storage.
-storage_to_create = {
-    "uri": "appdata/photo-catalog"
-}
-storage_id = int(requests.post(host_url + "/storage", json=storage_to_create).json())
-
-# create person
-#################################
-person_to_create = {
-    "name": "Ivan Ivanov",
-    "metadata": {
-        "customerCustomField": 1
-    },
-    "storage_id": storage_id
-}
-person = requests.post(host_url + "/persons", json=person_to_create).json()
-
-# add image to person
-#################################
-image_to_attach_to_person = {
-    "image": {
-        "content": get_file_as_base64("face1.jpg")
-    }
-}
-image = requests.post(f'{host_url}/persons/{person["id"]}/images', json=image_to_attach_to_person).json()
-
-# search person by image
-#################################
-search_data = {
-    "image": get_file_as_base64("face1.jpg")
-}
-search_result = requests.post(host_url + "/search", json=search_data).json()
-print(search_result)
