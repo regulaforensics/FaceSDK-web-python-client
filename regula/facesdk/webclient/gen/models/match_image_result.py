@@ -34,9 +34,9 @@ class MatchImageResult(object):
     """
     openapi_types = {
         'first_index': 'int',
-        'first_face_index': 'int',
+        'first_face_index': 'float',
         'second_index': 'int',
-        'second_face_index': 'int',
+        'second_face_index': 'float',
         'score': 'float',
         'similarity': 'float',
         'error_code': 'FaceSDKResultCode',
@@ -117,7 +117,7 @@ class MatchImageResult(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :return: The first_face_index of this MatchImageResult.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._first_face_index
 
@@ -128,7 +128,7 @@ class MatchImageResult(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :param first_face_index: The first_face_index of this MatchImageResult.  # noqa: E501
-        :type first_face_index: int
+        :type first_face_index: float
         """
 
         self._first_face_index = first_face_index
@@ -165,7 +165,7 @@ class MatchImageResult(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :return: The second_face_index of this MatchImageResult.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._second_face_index
 
@@ -176,7 +176,7 @@ class MatchImageResult(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :param second_face_index: The second_face_index of this MatchImageResult.  # noqa: E501
-        :type second_face_index: int
+        :type second_face_index: float
         """
 
         self._second_face_index = second_face_index
