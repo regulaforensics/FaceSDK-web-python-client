@@ -33,7 +33,7 @@ class DetectionFace(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'face_index': 'int',
+        'face_index': 'float',
         'landmarks': 'list[list[float]]',
         'roi': 'list[float]',
         'thumbnail': 'str'
@@ -74,7 +74,7 @@ class DetectionFace(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :return: The face_index of this DetectionFace.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._face_index
 
@@ -85,7 +85,7 @@ class DetectionFace(object):
         Faces index used to identify faces in scope of one photo.  # noqa: E501
 
         :param face_index: The face_index of this DetectionFace.  # noqa: E501
-        :type face_index: int
+        :type face_index: float
         """
 
         self._face_index = face_index
