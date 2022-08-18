@@ -34,7 +34,7 @@ class SearchPerson(object):
     """
     openapi_types = {
         'name': 'str',
-        'metadata': 'Dict',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'id': 'float',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -104,7 +104,7 @@ class SearchPerson(object):
 
 
         :return: The metadata of this SearchPerson.  # noqa: E501
-        :rtype: Dict
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
         """
         return self._metadata
 
@@ -114,7 +114,7 @@ class SearchPerson(object):
 
 
         :param metadata: The metadata of this SearchPerson.  # noqa: E501
-        :type metadata: Dict
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
         """
 
         self._metadata = metadata

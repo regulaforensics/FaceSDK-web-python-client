@@ -98,7 +98,7 @@ class ModelSerDe:
                 return [self.deserialize_raw(sub_data, sub_kls)
                         for sub_data in data]
 
-            if klass == 'Dict':
+            if klass == '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}':
                 return data
 
             # convert str to class
