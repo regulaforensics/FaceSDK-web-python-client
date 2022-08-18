@@ -34,7 +34,7 @@ class PersonFields(object):
     """
     openapi_types = {
         'name': 'str',
-        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'metadata': 'Dict',
     }
 
     attribute_map = {
@@ -84,7 +84,7 @@ class PersonFields(object):
 
 
         :return: The metadata of this PersonFields.  # noqa: E501
-        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :rtype: Dict
         """
         return self._metadata
 
@@ -94,7 +94,7 @@ class PersonFields(object):
 
 
         :param metadata: The metadata of this PersonFields.  # noqa: E501
-        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :type metadata: Dict
         """
 
         self._metadata = metadata

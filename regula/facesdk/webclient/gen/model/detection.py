@@ -33,7 +33,7 @@ class Detection(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'attributes': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'attributes': 'Dict',
         'landmarks': '[[float]]',
         'roi': 'FaceRectangular',
         'thumbnail': 'str',
@@ -71,7 +71,7 @@ class Detection(object):
 
 
         :return: The attributes of this Detection.  # noqa: E501
-        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :rtype: Dict
         """
         return self._attributes
 
@@ -81,7 +81,7 @@ class Detection(object):
 
 
         :param attributes: The attributes of this Detection.  # noqa: E501
-        :type attributes: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :type attributes: Dict
         """
 
         self._attributes = attributes

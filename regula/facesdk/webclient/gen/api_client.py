@@ -103,10 +103,8 @@ class ModelSerDe:
                 return [self.deserialize_raw(sub_data, sub_kls)
                         for sub_data in data]
 
-            if klass.startswith('{'):
-                sub_kls = re.match(r'\{([^,]*), (.*)\)', klass).group(2)
-                return {k: self.deserialize_raw(v, sub_kls)
-                        for k, v in six.iteritems(data)}
+            if klass == 'Dict':
+                return data
 
             # convert str to class
             if klass in self.NATIVE_TYPES_MAPPING:

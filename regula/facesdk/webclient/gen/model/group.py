@@ -34,7 +34,7 @@ class Group(object):
     """
     openapi_types = {
         'name': 'str',
-        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'metadata': 'Dict',
         'id': 'float',
         'created_at': 'datetime',
     }
@@ -94,7 +94,7 @@ class Group(object):
 
 
         :return: The metadata of this Group.  # noqa: E501
-        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :rtype: Dict
         """
         return self._metadata
 
@@ -104,7 +104,7 @@ class Group(object):
 
 
         :param metadata: The metadata of this Group.  # noqa: E501
-        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :type metadata: Dict
         """
 
         self._metadata = metadata
