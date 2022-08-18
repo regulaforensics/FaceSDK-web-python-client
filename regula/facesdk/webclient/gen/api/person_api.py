@@ -36,19 +36,19 @@ class PersonApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def add_image_to_person(self, person_id, inline_object, **kwargs):  # noqa: E501
+    def add_image_to_person(self, person_id, image_fields, **kwargs):  # noqa: E501
         """Add person image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.add_image_to_person(person_id, inline_object, async_req=True)
+        >>> thread = api.add_image_to_person(person_id, image_fields, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person id (required)
         :type person_id: float
-        :param inline_object: (required)
-        :type inline_object: InlineObject
+        :param image_fields: Image to add (required)
+        :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -65,21 +65,21 @@ class PersonApi(object):
         :rtype: Image
         """
         kwargs['_return_http_data_only'] = True
-        return self.add_image_to_person_with_http_info(person_id, inline_object, **kwargs)  # noqa: E501
+        return self.add_image_to_person_with_http_info(person_id, image_fields, **kwargs)  # noqa: E501
 
-    def add_image_to_person_with_http_info(self, person_id, inline_object, **kwargs):  # noqa: E501
+    def add_image_to_person_with_http_info(self, person_id, image_fields, **kwargs):  # noqa: E501
         """Add person image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.add_image_to_person_with_http_info(person_id, inline_object, async_req=True)
+        >>> thread = api.add_image_to_person_with_http_info(person_id, image_fields, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person id (required)
         :type person_id: float
-        :param inline_object: (required)
-        :type inline_object: InlineObject
+        :param image_fields: Image to add (required)
+        :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -106,8 +106,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id',
-            'inline_object'
+            'person_id'
+            'image_fields'
         ]
         all_params.extend(
             [
@@ -131,10 +131,10 @@ class PersonApi(object):
         if self.api_client.client_side_validation and ('person_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['person_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `person_id` when calling `add_image_to_person`")  # noqa: E501
-        # verify the required parameter 'inline_object' is set
-        if self.api_client.client_side_validation and ('inline_object' not in local_var_params or  # noqa: E501
-                                                        local_var_params['inline_object'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `inline_object` when calling `add_image_to_person`")  # noqa: E501
+        # verify the required parameter 'image_fields' is set
+        if self.api_client.client_side_validation and ('image_fields' not in local_var_params or  # noqa: E501
+                                                        local_var_params['image_fields'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `image_fields` when calling `add_image_to_person`")  # noqa: E501
 
         collection_formats = {}
 
@@ -150,11 +150,11 @@ class PersonApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object' in local_var_params:
-            body_params = local_var_params['inline_object']
+        if 'image_fields' in local_var_params:
+            body_params = local_var_params['image_fields']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['applications/json', 'application/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -383,7 +383,7 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id',
+            'image_id'
             'person_id'
         ]
         all_params.extend(
@@ -610,7 +610,7 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: Model1persons1personId1groups
+        :rtype: GroupPage
         """
         kwargs['_return_http_data_only'] = True
         return self.get_all_groups_by_person_id_with_http_info(page, size, person_id, **kwargs)  # noqa: E501
@@ -650,14 +650,14 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(Model1persons1personId1groups, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(GroupPage, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
 
         all_params = [
-            'page',
-            'size',
+            'page'
+            'size'
             'person_id'
         ]
         all_params.extend(
@@ -724,7 +724,7 @@ class PersonApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Model1persons1personId1groups',  # noqa: E501
+            response_type='GroupPage',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -807,8 +807,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'page',
-            'size',
+            'page'
+            'size'
             'person_id'
         ]
         all_params.extend(
@@ -958,8 +958,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'page',
-            'size',
+            'page'
+            'size'
             'name'
         ]
         all_params.extend(
@@ -1009,7 +1009,7 @@ class PersonApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['applications/json', 'application/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
@@ -1057,7 +1057,7 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: file
+        :rtype: file_type
         """
         kwargs['_return_http_data_only'] = True
         return self.get_image_of_person_with_http_info(image_id, person_id, **kwargs)  # noqa: E501
@@ -1095,13 +1095,13 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(file, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(file_type, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
 
         all_params = [
-            'image_id',
+            'image_id'
             'person_id'
         ]
         all_params.extend(
@@ -1149,7 +1149,7 @@ class PersonApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json', 'image/*'])  # noqa: E501
+            ['application/json''image/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
@@ -1162,7 +1162,7 @@ class PersonApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='file',  # noqa: E501
+            response_type='file_type',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1370,7 +1370,7 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id',
+            'person_id'
             'person_fields'
         ]
         all_params.extend(

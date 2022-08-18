@@ -2,7 +2,8 @@ from typing import List, Union
 
 from regula.facesdk.webclient.ext.common import Base64String
 from regula.facesdk.webclient.ext.models.match_image import MatchImage
-from regula.facesdk.webclient.gen import MatchRequest as GenMatchRequest, ApiValueError
+from regula.facesdk.webclient.gen import ApiValueError
+from regula.facesdk.webclient.gen.models import MatchRequest as GenMatchRequest
 
 
 class MatchRequest(GenMatchRequest):

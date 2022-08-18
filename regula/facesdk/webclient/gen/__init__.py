@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # flake8: noqa
 
 """
@@ -12,64 +10,18 @@
 """
 
 
-from __future__ import absolute_import
-
 __version__ = "1.0.0"
-
-# import apis into sdk package
-from regula.facesdk.webclient.gen.api.group_api import GroupApi
-from regula.facesdk.webclient.gen.api.matching_api import MatchingApi
-from regula.facesdk.webclient.gen.api.person_api import PersonApi
-from regula.facesdk.webclient.gen.api.search_api import SearchApi
 
 # import ApiClient
 from regula.facesdk.webclient.gen.api_client import ApiClient
+
+# import Configuration
 from regula.facesdk.webclient.gen.configuration import Configuration
+
+# import exceptions
 from regula.facesdk.webclient.gen.exceptions import OpenApiException
+from regula.facesdk.webclient.gen.exceptions import ApiAttributeError
 from regula.facesdk.webclient.gen.exceptions import ApiTypeError
 from regula.facesdk.webclient.gen.exceptions import ApiValueError
 from regula.facesdk.webclient.gen.exceptions import ApiKeyError
-from regula.facesdk.webclient.gen.exceptions import ApiAttributeError
 from regula.facesdk.webclient.gen.exceptions import ApiException
-# import models into sdk package
-from regula.facesdk.webclient.gen.models.detect_request import DetectRequest
-from regula.facesdk.webclient.gen.models.detect_response import DetectResponse
-from regula.facesdk.webclient.gen.models.detect_response_all_of import DetectResponseAllOf
-from regula.facesdk.webclient.gen.models.detect_result import DetectResult
-from regula.facesdk.webclient.gen.models.detection import Detection
-from regula.facesdk.webclient.gen.models.detection_face import DetectionFace
-from regula.facesdk.webclient.gen.models.face_sdk_result import FaceSDKResult
-from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
-from regula.facesdk.webclient.gen.models.group import Group
-from regula.facesdk.webclient.gen.models.group_all_of import GroupAllOf
-from regula.facesdk.webclient.gen.models.group_page import GroupPage
-from regula.facesdk.webclient.gen.models.group_page_all_of import GroupPageAllOf
-from regula.facesdk.webclient.gen.models.group_to_create import GroupToCreate
-from regula.facesdk.webclient.gen.models.image import Image
-from regula.facesdk.webclient.gen.models.image_fields import ImageFields
-from regula.facesdk.webclient.gen.models.image_page import ImagePage
-from regula.facesdk.webclient.gen.models.image_page_all_of import ImagePageAllOf
-from regula.facesdk.webclient.gen.models.image_source import ImageSource
-from regula.facesdk.webclient.gen.models.inline_object import InlineObject
-from regula.facesdk.webclient.gen.models.match_image import MatchImage
-from regula.facesdk.webclient.gen.models.match_image_detection import MatchImageDetection
-from regula.facesdk.webclient.gen.models.match_image_result import MatchImageResult
-from regula.facesdk.webclient.gen.models.match_request import MatchRequest
-from regula.facesdk.webclient.gen.models.match_response import MatchResponse
-from regula.facesdk.webclient.gen.models.match_response_all_of import MatchResponseAllOf
-from regula.facesdk.webclient.gen.models.operation_log import OperationLog
-from regula.facesdk.webclient.gen.models.page import Page
-from regula.facesdk.webclient.gen.models.person import Person
-from regula.facesdk.webclient.gen.models.person_all_of import PersonAllOf
-from regula.facesdk.webclient.gen.models.person_fields import PersonFields
-from regula.facesdk.webclient.gen.models.persons_page import PersonsPage
-from regula.facesdk.webclient.gen.models.persons_page_all_of import PersonsPageAllOf
-from regula.facesdk.webclient.gen.models.recognize_image import RecognizeImage
-from regula.facesdk.webclient.gen.models.recognize_image_all_of import RecognizeImageAllOf
-from regula.facesdk.webclient.gen.models.search_person import SearchPerson
-from regula.facesdk.webclient.gen.models.search_person_all_of import SearchPersonAllOf
-from regula.facesdk.webclient.gen.models.search_request import SearchRequest
-from regula.facesdk.webclient.gen.models.search_result import SearchResult
-from regula.facesdk.webclient.gen.models.search_result_all_of import SearchResultAllOf
-from regula.facesdk.webclient.gen.models.update_group import UpdateGroup
-

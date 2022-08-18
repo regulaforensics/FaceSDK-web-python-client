@@ -1,4 +1,4 @@
-from regula.facesdk.webclient import MatchingApi
+from regula.facesdk.webclient.ext.api import MatchingApi
 from regula.facesdk.webclient.ext.api import PersonApi
 from regula.facesdk.webclient.ext.api.group_api import GroupApi
 from regula.facesdk.webclient.ext.api.search_api import SearchApi

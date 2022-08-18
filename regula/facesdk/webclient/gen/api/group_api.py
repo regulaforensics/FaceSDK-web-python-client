@@ -372,8 +372,8 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'page',
-            'size',
+            'page'
+            'size'
             'name'
         ]
         all_params.extend(
@@ -473,7 +473,7 @@ class GroupApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: Model1groups1groupId1persons
+        :rtype: PersonsPage
         """
         kwargs['_return_http_data_only'] = True
         return self.get_all_persons_by_group_id_with_http_info(page, size, group_id, **kwargs)  # noqa: E501
@@ -513,14 +513,14 @@ class GroupApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(Model1groups1groupId1persons, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PersonsPage, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
 
         all_params = [
-            'page',
-            'size',
+            'page'
+            'size'
             'group_id'
         ]
         all_params.extend(
@@ -587,7 +587,7 @@ class GroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Model1groups1groupId1persons',  # noqa: E501
+            response_type='PersonsPage',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -736,7 +736,7 @@ class GroupApi(object):
 
         :param group_id: Group id (required)
         :type group_id: float
-        :param group_to_create: Metadata (required)
+        :param group_to_create: Update group (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -767,7 +767,7 @@ class GroupApi(object):
 
         :param group_id: Group id (required)
         :type group_id: float
-        :param group_to_create: Metadata (required)
+        :param group_to_create: Update group (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -795,7 +795,7 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id',
+            'group_id'
             'group_to_create'
         ]
         all_params.extend(
@@ -939,7 +939,7 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id',
+            'group_id'
             'update_group'
         ]
         all_params.extend(

@@ -1,4 +1,9 @@
-from regula.facesdk.webclient import GroupApi as GenGroupApi, ApiClient, GroupToCreate, Group, GroupPage, UpdateGroup
+from regula.facesdk.webclient.gen import ApiClient
+from regula.facesdk.webclient.gen.api.group_api import GroupApi as GenGroupApi
+from regula.facesdk.webclient.gen.model.group import Group
+from regula.facesdk.webclient.gen.model.group_page import GroupPage
+from regula.facesdk.webclient.gen.model.group_to_create import GroupToCreate
+from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
 
 
 class GroupApi(GenGroupApi):

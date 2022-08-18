@@ -1,4 +1,7 @@
-from regula.facesdk.webclient import SearchApi as GenSearchApi, ApiClient, SearchRequest, SearchResult
+from regula.facesdk.webclient.gen import ApiClient
+from regula.facesdk.webclient.gen.api.search_api import SearchApi as GenSearchApi
+from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.search_result import SearchResult
 
 
 class SearchApi(GenSearchApi):

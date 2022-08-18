@@ -1,7 +1,13 @@
 import base64
 
-from regula.facesdk.webclient import PersonApi as GenPersonApi, ApiClient, InlineObject, Image, PersonsPage, ImagePage, \
-    PersonFields, Person, ImageFields
+from regula.facesdk.webclient.gen import ApiClient
+from regula.facesdk.webclient.gen.api.person_api import PersonApi as GenPersonApi
+from regula.facesdk.webclient.gen.model.image import Image
+from regula.facesdk.webclient.gen.model.image_fields import ImageFields
+from regula.facesdk.webclient.gen.model.image_page import ImagePage
+from regula.facesdk.webclient.gen.model.person import Person
+from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 
 
 class PersonApi(GenPersonApi):
@@ -10,7 +16,7 @@ class PersonApi(GenPersonApi):
 
     def add_image_to_person(self, person_id: int, content: bytes, content_type: str = None, **kwargs) -> Image:
         base_image = base64.b64encode(content).decode("UTF-8")
-        image = InlineObject(ImageFields(content_type, base_image))
+        image = ImageFields(content_type, base_image)
         return super().add_image_to_person(person_id, image, **kwargs)
 
     def create_person(self, person_fields: PersonFields, **kwargs) -> Person:
