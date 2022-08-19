@@ -34,8 +34,8 @@ class GroupPage(object):
     """
     openapi_types = {
         'items': '[Group]',
-        'page': 'float',
-        'total_pages': 'float',
+        'page': 'int',
+        'total_pages': 'int',
     }
 
     attribute_map = {
@@ -89,7 +89,7 @@ class GroupPage(object):
 
 
         :return: The page of this GroupPage.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._page
 
@@ -99,7 +99,7 @@ class GroupPage(object):
 
 
         :param page: The page of this GroupPage.  # noqa: E501
-        :type page: float
+        :type page: int
         """
 
         self._page = page
@@ -110,7 +110,7 @@ class GroupPage(object):
 
 
         :return: The total_pages of this GroupPage.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._total_pages
 
@@ -120,7 +120,7 @@ class GroupPage(object):
 
 
         :param total_pages: The total_pages of this GroupPage.  # noqa: E501
-        :type total_pages: float
+        :type total_pages: int
         """
 
         self._total_pages = total_pages

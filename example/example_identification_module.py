@@ -1,9 +1,12 @@
-import base64
 import os
 
-from regula.facesdk.webclient import *
+from regula.facesdk.webclient.ext import FaceSdk
+from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsImage
+from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
 
-api_base_path = os.getenv("API_BASE_PATH", "http://0.0.0.0:41101")
+api_base_path = os.getenv("API_BASE_PATH", "http://revenger.local:41101")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
@@ -29,9 +32,9 @@ sdk.group_api.update_persons_in_group(group.id, UpdateGroup([int(person1.id), in
 result = sdk.search_api.search(
     SearchRequest(
         group_ids=[int(group.id)],
-        image=ImageFields(
+        image=ImageFieldsImage(
                 content_type="",
-                content=base64.b64encode(face_1_bytes).decode("utf-8")
+                content=face_1_bytes
             )
         )
 )

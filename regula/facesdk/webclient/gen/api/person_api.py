@@ -46,7 +46,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param image_fields: Image to add (required)
         :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
@@ -77,7 +77,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param image_fields: Image to add (required)
         :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
@@ -323,9 +323,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param image_id: Image id (required)
-        :type image_id: float
+        :type image_id: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -354,9 +354,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param image_id: Image id (required)
-        :type image_id: float
+        :type image_id: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -463,7 +463,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -492,7 +492,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -592,11 +592,11 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -625,11 +625,11 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -743,11 +743,11 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -776,11 +776,11 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -894,9 +894,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param name: Person name keywords
         :type name: str
         :param async_req: Whether to execute the request asynchronously.
@@ -927,9 +927,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param name: Person name keywords
         :type name: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1041,9 +1041,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param image_id: Image id (required)
-        :type image_id: float
+        :type image_id: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1072,9 +1072,9 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param image_id: Image id (required)
-        :type image_id: float
+        :type image_id: int
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1181,7 +1181,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1210,7 +1210,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1310,7 +1310,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param person_fields: Metadata (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.
@@ -1341,7 +1341,7 @@ class PersonApi(object):
         >>> result = thread.get()
 
         :param person_id: Person id (required)
-        :type person_id: float
+        :type person_id: int
         :param person_fields: Metadata (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.

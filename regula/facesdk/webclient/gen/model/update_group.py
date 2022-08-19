@@ -33,8 +33,8 @@ class UpdateGroup(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'add_items': '[float]',
-        'remove_items': '[float]',
+        'add_items': '[int]',
+        'remove_items': '[int]',
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class UpdateGroup(object):
 
 
         :return: The add_items of this UpdateGroup.  # noqa: E501
-        :rtype: [float]
+        :rtype: [int]
         """
         return self._add_items
 
@@ -73,7 +73,7 @@ class UpdateGroup(object):
 
 
         :param add_items: The add_items of this UpdateGroup.  # noqa: E501
-        :type add_items: [float]
+        :type add_items: [int]
         """
 
         self._add_items = add_items
@@ -84,7 +84,7 @@ class UpdateGroup(object):
 
 
         :return: The remove_items of this UpdateGroup.  # noqa: E501
-        :rtype: [float]
+        :rtype: [int]
         """
         return self._remove_items
 
@@ -94,7 +94,7 @@ class UpdateGroup(object):
 
 
         :param remove_items: The remove_items of this UpdateGroup.  # noqa: E501
-        :type remove_items: [float]
+        :type remove_items: [int]
         """
 
         self._remove_items = remove_items

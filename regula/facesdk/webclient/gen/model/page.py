@@ -33,8 +33,8 @@ class Page(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'page': 'float',
-        'total_pages': 'float',
+        'page': 'int',
+        'total_pages': 'int',
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class Page(object):
 
 
         :return: The page of this Page.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._page
 
@@ -73,7 +73,7 @@ class Page(object):
 
 
         :param page: The page of this Page.  # noqa: E501
-        :type page: float
+        :type page: int
         """
 
         self._page = page
@@ -84,7 +84,7 @@ class Page(object):
 
 
         :return: The total_pages of this Page.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._total_pages
 
@@ -94,7 +94,7 @@ class Page(object):
 
 
         :param total_pages: The total_pages of this Page.  # noqa: E501
-        :type total_pages: float
+        :type total_pages: int
         """
 
         self._total_pages = total_pages

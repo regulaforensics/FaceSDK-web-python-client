@@ -33,8 +33,8 @@ class GroupAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'float',
-        'created_at': 'datetime',
+        'id': 'int',
+        'created_at': 'str',
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class GroupAllOf(object):
 
 
         :return: The id of this GroupAllOf.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -73,7 +73,7 @@ class GroupAllOf(object):
 
 
         :param id: The id of this GroupAllOf.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -84,7 +84,7 @@ class GroupAllOf(object):
 
 
         :return: The created_at of this GroupAllOf.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -94,7 +94,7 @@ class GroupAllOf(object):
 
 
         :param created_at: The created_at of this GroupAllOf.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at

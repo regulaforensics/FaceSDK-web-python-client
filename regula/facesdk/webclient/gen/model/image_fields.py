@@ -33,71 +33,45 @@ class ImageFields(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'content_type': 'str',
-        'content': 'file_type',
+        'image': 'ImageFieldsImage',
     }
 
     attribute_map = {
-        'content_type': 'content_type',
-        'content': 'content',
+        'image': 'image',
     }
 
-    def __init__(self, content_type=None, content=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, image=None, local_vars_configuration=None):  # noqa: E501
         """ImageFields - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._content_type = None
-        self._content = None
+        self._image = None
         self.discriminator = None
 
-        if content_type is not None:
-            self.content_type = content_type
-        if content is not None:
-            self.content = content
+        if image is not None:
+            self.image = image
 
     @property
-    def content_type(self):
-        """Gets the content_type of this ImageFields.  # noqa: E501
+    def image(self):
+        """Gets the image of this ImageFields.  # noqa: E501
 
 
-        :return: The content_type of this ImageFields.  # noqa: E501
-        :rtype: str
+        :return: The image of this ImageFields.  # noqa: E501
+        :rtype: ImageFieldsImage
         """
-        return self._content_type
+        return self._image
 
-    @content_type.setter
-    def content_type(self, content_type):
-        """Sets the content_type of this ImageFields.
-
-
-        :param content_type: The content_type of this ImageFields.  # noqa: E501
-        :type content_type: str
-        """
-
-        self._content_type = content_type
-
-    @property
-    def content(self):
-        """Gets the content of this ImageFields.  # noqa: E501
+    @image.setter
+    def image(self, image):
+        """Sets the image of this ImageFields.
 
 
-        :return: The content of this ImageFields.  # noqa: E501
-        :rtype: file_type
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """Sets the content of this ImageFields.
-
-
-        :param content: The content of this ImageFields.  # noqa: E501
-        :type content: file_type
+        :param image: The image of this ImageFields.  # noqa: E501
+        :type image: ImageFieldsImage
         """
 
-        self._content = content
+        self._image = image
 
     def to_dict(self):
         """Returns the model properties as a dict"""

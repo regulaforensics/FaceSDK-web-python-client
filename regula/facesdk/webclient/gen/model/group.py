@@ -35,8 +35,8 @@ class Group(object):
     openapi_types = {
         'name': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
-        'id': 'float',
-        'created_at': 'datetime',
+        'id': 'int',
+        'created_at': 'str',
     }
 
     attribute_map = {
@@ -115,7 +115,7 @@ class Group(object):
 
 
         :return: The id of this Group.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -125,7 +125,7 @@ class Group(object):
 
 
         :param id: The id of this Group.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -136,7 +136,7 @@ class Group(object):
 
 
         :return: The created_at of this Group.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -146,7 +146,7 @@ class Group(object):
 
 
         :param created_at: The created_at of this Group.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at

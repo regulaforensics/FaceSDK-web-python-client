@@ -33,10 +33,10 @@ class SearchRequest(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'limit': 'float',
+        'limit': 'int',
         'threshold': 'float',
-        'group_ids': '[float]',
-        'image': 'ImageFields',
+        'group_ids': '[int]',
+        'image': 'ImageFieldsImage',
     }
 
     attribute_map = {
@@ -73,7 +73,7 @@ class SearchRequest(object):
 
 
         :return: The limit of this SearchRequest.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._limit
 
@@ -83,7 +83,7 @@ class SearchRequest(object):
 
 
         :param limit: The limit of this SearchRequest.  # noqa: E501
-        :type limit: float
+        :type limit: int
         """
 
         self._limit = limit
@@ -115,7 +115,7 @@ class SearchRequest(object):
 
 
         :return: The group_ids of this SearchRequest.  # noqa: E501
-        :rtype: [float]
+        :rtype: [int]
         """
         return self._group_ids
 
@@ -125,7 +125,7 @@ class SearchRequest(object):
 
 
         :param group_ids: The group_ids of this SearchRequest.  # noqa: E501
-        :type group_ids: [float]
+        :type group_ids: [int]
         """
 
         self._group_ids = group_ids
@@ -136,7 +136,7 @@ class SearchRequest(object):
 
 
         :return: The image of this SearchRequest.  # noqa: E501
-        :rtype: ImageFields
+        :rtype: ImageFieldsImage
         """
         return self._image
 
@@ -146,7 +146,7 @@ class SearchRequest(object):
 
 
         :param image: The image of this SearchRequest.  # noqa: E501
-        :type image: ImageFields
+        :type image: ImageFieldsImage
         """
 
         self._image = image

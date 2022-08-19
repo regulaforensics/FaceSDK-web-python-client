@@ -35,11 +35,11 @@ class SearchResult(object):
     openapi_types = {
         'name': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
-        'id': 'float',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
+        'id': 'int',
+        'created_at': 'str',
+        'updated_at': 'str',
         'images': '[RecognizeImage]',
-        'code': 'float',
+        'code': 'int',
     }
 
     attribute_map = {
@@ -130,7 +130,7 @@ class SearchResult(object):
 
 
         :return: The id of this SearchResult.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -140,7 +140,7 @@ class SearchResult(object):
 
 
         :param id: The id of this SearchResult.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -151,7 +151,7 @@ class SearchResult(object):
 
 
         :return: The created_at of this SearchResult.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -161,7 +161,7 @@ class SearchResult(object):
 
 
         :param created_at: The created_at of this SearchResult.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at
@@ -172,7 +172,7 @@ class SearchResult(object):
 
 
         :return: The updated_at of this SearchResult.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._updated_at
 
@@ -182,7 +182,7 @@ class SearchResult(object):
 
 
         :param updated_at: The updated_at of this SearchResult.  # noqa: E501
-        :type updated_at: datetime
+        :type updated_at: str
         """
 
         self._updated_at = updated_at
@@ -214,7 +214,7 @@ class SearchResult(object):
 
 
         :return: The code of this SearchResult.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._code
 
@@ -224,7 +224,7 @@ class SearchResult(object):
 
 
         :param code: The code of this SearchResult.  # noqa: E501
-        :type code: float
+        :type code: int
         """
 
         self._code = code

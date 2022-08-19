@@ -33,9 +33,9 @@ class RecognizeImage(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'float',
+        'id': 'int',
         'content_type': 'str',
-        'created_at': 'datetime',
+        'created_at': 'str',
         'path': 'str',
         'url': 'str',
         'similarity': 'float',
@@ -83,7 +83,7 @@ class RecognizeImage(object):
 
 
         :return: The id of this RecognizeImage.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -93,7 +93,7 @@ class RecognizeImage(object):
 
 
         :param id: The id of this RecognizeImage.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -125,7 +125,7 @@ class RecognizeImage(object):
 
 
         :return: The created_at of this RecognizeImage.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -135,7 +135,7 @@ class RecognizeImage(object):
 
 
         :param created_at: The created_at of this RecognizeImage.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at

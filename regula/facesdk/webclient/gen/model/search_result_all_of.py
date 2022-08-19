@@ -33,7 +33,7 @@ class SearchResultAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'code': 'float',
+        'code': 'int',
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class SearchResultAllOf(object):
 
 
         :return: The code of this SearchResultAllOf.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._code
 
@@ -68,7 +68,7 @@ class SearchResultAllOf(object):
 
 
         :param code: The code of this SearchResultAllOf.  # noqa: E501
-        :type code: float
+        :type code: int
         """
 
         self._code = code

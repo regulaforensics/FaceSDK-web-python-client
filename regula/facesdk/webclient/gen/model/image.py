@@ -33,9 +33,9 @@ class Image(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'float',
+        'id': 'int',
         'content_type': 'str',
-        'created_at': 'datetime',
+        'created_at': 'str',
         'path': 'str',
         'url': 'str',
     }
@@ -78,7 +78,7 @@ class Image(object):
 
 
         :return: The id of this Image.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -88,7 +88,7 @@ class Image(object):
 
 
         :param id: The id of this Image.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -120,7 +120,7 @@ class Image(object):
 
 
         :return: The created_at of this Image.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -130,7 +130,7 @@ class Image(object):
 
 
         :param created_at: The created_at of this Image.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at

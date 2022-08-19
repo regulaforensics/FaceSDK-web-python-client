@@ -25,6 +25,7 @@ from regula.facesdk.webclient.gen.model.group_page_all_of import GroupPageAllOf
 from regula.facesdk.webclient.gen.model.group_to_create import GroupToCreate
 from regula.facesdk.webclient.gen.model.image import Image
 from regula.facesdk.webclient.gen.model.image_fields import ImageFields
+from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsImage
 from regula.facesdk.webclient.gen.model.image_page import ImagePage
 from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
@@ -46,6 +47,7 @@ from regula.facesdk.webclient.gen.model.recognize_image_all_of import RecognizeI
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.search_request_all_of import SearchRequestAllOf
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
 from regula.facesdk.webclient.gen.model.search_result_all_of import SearchResultAllOf
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup

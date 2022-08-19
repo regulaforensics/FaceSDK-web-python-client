@@ -33,7 +33,7 @@ class OperationLog(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'status_code': 'float',
+        'status_code': 'int',
         'type': 'str',
         'msg': 'str',
     }
@@ -68,7 +68,7 @@ class OperationLog(object):
 
 
         :return: The status_code of this OperationLog.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._status_code
 
@@ -78,7 +78,7 @@ class OperationLog(object):
 
 
         :param status_code: The status_code of this OperationLog.  # noqa: E501
-        :type status_code: float
+        :type status_code: int
         """
 
         self._status_code = status_code

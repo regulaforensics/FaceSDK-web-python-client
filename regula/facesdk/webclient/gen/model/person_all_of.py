@@ -33,9 +33,9 @@ class PersonAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'float',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
+        'id': 'int',
+        'created_at': 'str',
+        'updated_at': 'str',
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class PersonAllOf(object):
 
 
         :return: The id of this PersonAllOf.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -78,7 +78,7 @@ class PersonAllOf(object):
 
 
         :param id: The id of this PersonAllOf.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -89,7 +89,7 @@ class PersonAllOf(object):
 
 
         :return: The created_at of this PersonAllOf.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -99,7 +99,7 @@ class PersonAllOf(object):
 
 
         :param created_at: The created_at of this PersonAllOf.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at
@@ -110,7 +110,7 @@ class PersonAllOf(object):
 
 
         :return: The updated_at of this PersonAllOf.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._updated_at
 
@@ -120,7 +120,7 @@ class PersonAllOf(object):
 
 
         :param updated_at: The updated_at of this PersonAllOf.  # noqa: E501
-        :type updated_at: datetime
+        :type updated_at: str
         """
 
         self._updated_at = updated_at

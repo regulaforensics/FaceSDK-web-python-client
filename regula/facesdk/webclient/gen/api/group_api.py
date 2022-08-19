@@ -179,7 +179,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -208,7 +208,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -308,9 +308,9 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param name: Group name keywords
         :type name: str
         :param async_req: Whether to execute the request asynchronously.
@@ -341,9 +341,9 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param name: Group name keywords
         :type name: str
         :param async_req: Whether to execute the request asynchronously.
@@ -455,11 +455,11 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -488,11 +488,11 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param page: Current page (required)
-        :type page: float
+        :type page: int
         :param size: Page size (required)
-        :type size: float
+        :type size: int
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -606,7 +606,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -635,7 +635,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -735,7 +735,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param group_to_create: Update group (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
@@ -766,7 +766,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param group_to_create: Update group (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
@@ -879,7 +879,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param update_group: Person ids to add or remove (required)
         :type update_group: UpdateGroup
         :param async_req: Whether to execute the request asynchronously.
@@ -910,7 +910,7 @@ class GroupApi(object):
         >>> result = thread.get()
 
         :param group_id: Group id (required)
-        :type group_id: float
+        :type group_id: int
         :param update_group: Person ids to add or remove (required)
         :type update_group: UpdateGroup
         :param async_req: Whether to execute the request asynchronously.

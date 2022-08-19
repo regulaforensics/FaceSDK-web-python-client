@@ -35,9 +35,9 @@ class Person(object):
     openapi_types = {
         'name': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
-        'id': 'float',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
+        'id': 'int',
+        'created_at': 'str',
+        'updated_at': 'str',
     }
 
     attribute_map = {
@@ -120,7 +120,7 @@ class Person(object):
 
 
         :return: The id of this Person.  # noqa: E501
-        :rtype: float
+        :rtype: int
         """
         return self._id
 
@@ -130,7 +130,7 @@ class Person(object):
 
 
         :param id: The id of this Person.  # noqa: E501
-        :type id: float
+        :type id: int
         """
 
         self._id = id
@@ -141,7 +141,7 @@ class Person(object):
 
 
         :return: The created_at of this Person.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._created_at
 
@@ -151,7 +151,7 @@ class Person(object):
 
 
         :param created_at: The created_at of this Person.  # noqa: E501
-        :type created_at: datetime
+        :type created_at: str
         """
 
         self._created_at = created_at
@@ -162,7 +162,7 @@ class Person(object):
 
 
         :return: The updated_at of this Person.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._updated_at
 
@@ -172,7 +172,7 @@ class Person(object):
 
 
         :param updated_at: The updated_at of this Person.  # noqa: E501
-        :type updated_at: datetime
+        :type updated_at: str
         """
 
         self._updated_at = updated_at
