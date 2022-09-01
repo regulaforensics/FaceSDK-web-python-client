@@ -71,6 +71,7 @@ class Group(object):
     def name(self):
         """Gets the name of this Group.  # noqa: E501
 
+        Group to create name.  # noqa: E501
 
         :return: The name of this Group.  # noqa: E501
         :rtype: str
@@ -81,6 +82,7 @@ class Group(object):
     def name(self, name):
         """Sets the name of this Group.
 
+        Group to create name.  # noqa: E501
 
         :param name: The name of this Group.  # noqa: E501
         :type name: str
@@ -92,6 +94,7 @@ class Group(object):
     def metadata(self):
         """Gets the metadata of this Group.  # noqa: E501
 
+        A free-form object containing group's extended attributes.  # noqa: E501
 
         :return: The metadata of this Group.  # noqa: E501
         :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -102,6 +105,7 @@ class Group(object):
     def metadata(self, metadata):
         """Sets the metadata of this Group.
 
+        A free-form object containing group's extended attributes.  # noqa: E501
 
         :param metadata: The metadata of this Group.  # noqa: E501
         :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -113,6 +117,7 @@ class Group(object):
     def id(self):
         """Gets the id of this Group.  # noqa: E501
 
+        Group ID.  # noqa: E501
 
         :return: The id of this Group.  # noqa: E501
         :rtype: int
@@ -123,6 +128,7 @@ class Group(object):
     def id(self, id):
         """Sets the id of this Group.
 
+        Group ID.  # noqa: E501
 
         :param id: The id of this Group.  # noqa: E501
         :type id: int
@@ -134,6 +140,7 @@ class Group(object):
     def created_at(self):
         """Gets the created_at of this Group.  # noqa: E501
 
+        Group creation date.  # noqa: E501
 
         :return: The created_at of this Group.  # noqa: E501
         :rtype: str
@@ -144,6 +151,7 @@ class Group(object):
     def created_at(self, created_at):
         """Sets the created_at of this Group.
 
+        Group creation date.  # noqa: E501
 
         :param created_at: The created_at of this Group.  # noqa: E501
         :type created_at: str

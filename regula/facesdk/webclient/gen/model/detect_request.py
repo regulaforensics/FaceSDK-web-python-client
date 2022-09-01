@@ -34,6 +34,7 @@ class DetectRequest(object):
     """
     openapi_types = {
         'tag': 'str',
+        'process_param': 'ProcessParam',
         'image': 'str',
         'thumbnails': 'bool',
         'attributes': 'bool',
@@ -42,19 +43,21 @@ class DetectRequest(object):
 
     attribute_map = {
         'tag': 'tag',
+        'process_param': 'processParam',
         'image': 'image',
         'thumbnails': 'thumbnails',
         'attributes': 'attributes',
         'only_central_face': 'onlyCentralFace',
     }
 
-    def __init__(self, tag=None, image=None, thumbnails=False, attributes=False, only_central_face=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, process_param=None, image=None, thumbnails=False, attributes=False, only_central_face=False, local_vars_configuration=None):  # noqa: E501
         """DetectRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._tag = None
+        self._process_param = None
         self._image = None
         self._thumbnails = None
         self._attributes = None
@@ -63,6 +66,8 @@ class DetectRequest(object):
 
         if tag is not None:
             self.tag = tag
+        if process_param is not None:
+            self.process_param = process_param
         if image is not None:
             self.image = image
         if thumbnails is not None:
@@ -94,10 +99,31 @@ class DetectRequest(object):
         self._tag = tag
 
     @property
+    def process_param(self):
+        """Gets the process_param of this DetectRequest.  # noqa: E501
+
+
+        :return: The process_param of this DetectRequest.  # noqa: E501
+        :rtype: ProcessParam
+        """
+        return self._process_param
+
+    @process_param.setter
+    def process_param(self, process_param):
+        """Sets the process_param of this DetectRequest.
+
+
+        :param process_param: The process_param of this DetectRequest.  # noqa: E501
+        :type process_param: ProcessParam
+        """
+
+        self._process_param = process_param
+
+    @property
     def image(self):
         """Gets the image of this DetectRequest.  # noqa: E501
 
-        Base64 encoded image  # noqa: E501
+        Base64 encoded image.  # noqa: E501
 
         :return: The image of this DetectRequest.  # noqa: E501
         :rtype: str
@@ -108,7 +134,7 @@ class DetectRequest(object):
     def image(self, image):
         """Sets the image of this DetectRequest.
 
-        Base64 encoded image  # noqa: E501
+        Base64 encoded image.  # noqa: E501
 
         :param image: The image of this DetectRequest.  # noqa: E501
         :type image: str
@@ -120,7 +146,7 @@ class DetectRequest(object):
     def thumbnails(self):
         """Gets the thumbnails of this DetectRequest.  # noqa: E501
 
-        Enable formatted detections' thumbnails in the response  # noqa: E501
+        Whether to return the cropped portrains with the detected faces.  # noqa: E501
 
         :return: The thumbnails of this DetectRequest.  # noqa: E501
         :rtype: bool
@@ -131,7 +157,7 @@ class DetectRequest(object):
     def thumbnails(self, thumbnails):
         """Sets the thumbnails of this DetectRequest.
 
-        Enable formatted detections' thumbnails in the response  # noqa: E501
+        Whether to return the cropped portrains with the detected faces.  # noqa: E501
 
         :param thumbnails: The thumbnails of this DetectRequest.  # noqa: E501
         :type thumbnails: bool
@@ -143,7 +169,7 @@ class DetectRequest(object):
     def attributes(self):
         """Gets the attributes of this DetectRequest.  # noqa: E501
 
-        Enable face attributions detection, such as age or emotion and etc.  # noqa: E501
+        Whether to evaluate attributes, such as age and emotions.  # noqa: E501
 
         :return: The attributes of this DetectRequest.  # noqa: E501
         :rtype: bool
@@ -154,7 +180,7 @@ class DetectRequest(object):
     def attributes(self, attributes):
         """Sets the attributes of this DetectRequest.
 
-        Enable face attributions detection, such as age or emotion and etc.  # noqa: E501
+        Whether to evaluate attributes, such as age and emotions.  # noqa: E501
 
         :param attributes: The attributes of this DetectRequest.  # noqa: E501
         :type attributes: bool
@@ -166,7 +192,7 @@ class DetectRequest(object):
     def only_central_face(self):
         """Gets the only_central_face of this DetectRequest.  # noqa: E501
 
-        True - main face; false - all faces.  # noqa: E501
+        Whether to detect the only central face (true) or all the faces (false).  # noqa: E501
 
         :return: The only_central_face of this DetectRequest.  # noqa: E501
         :rtype: bool
@@ -177,7 +203,7 @@ class DetectRequest(object):
     def only_central_face(self, only_central_face):
         """Sets the only_central_face of this DetectRequest.
 
-        True - main face; false - all faces.  # noqa: E501
+        Whether to detect the only central face (true) or all the faces (false).  # noqa: E501
 
         :param only_central_face: The only_central_face of this DetectRequest.  # noqa: E501
         :type only_central_face: bool

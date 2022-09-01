@@ -66,6 +66,7 @@ class SearchRequestAllOf(object):
     def limit(self):
         """Gets the limit of this SearchRequestAllOf.  # noqa: E501
 
+        The number of returned Persons limit.  # noqa: E501
 
         :return: The limit of this SearchRequestAllOf.  # noqa: E501
         :rtype: int
@@ -76,6 +77,7 @@ class SearchRequestAllOf(object):
     def limit(self, limit):
         """Sets the limit of this SearchRequestAllOf.
 
+        The number of returned Persons limit.  # noqa: E501
 
         :param limit: The limit of this SearchRequestAllOf.  # noqa: E501
         :type limit: int
@@ -87,6 +89,7 @@ class SearchRequestAllOf(object):
     def threshold(self):
         """Gets the threshold of this SearchRequestAllOf.  # noqa: E501
 
+        Similarity threshold.  # noqa: E501
 
         :return: The threshold of this SearchRequestAllOf.  # noqa: E501
         :rtype: float
@@ -97,6 +100,7 @@ class SearchRequestAllOf(object):
     def threshold(self, threshold):
         """Sets the threshold of this SearchRequestAllOf.
 
+        Similarity threshold.  # noqa: E501
 
         :param threshold: The threshold of this SearchRequestAllOf.  # noqa: E501
         :type threshold: float
@@ -108,6 +112,7 @@ class SearchRequestAllOf(object):
     def group_ids(self):
         """Gets the group_ids of this SearchRequestAllOf.  # noqa: E501
 
+        The IDs of the groups in which the search is performed.  # noqa: E501
 
         :return: The group_ids of this SearchRequestAllOf.  # noqa: E501
         :rtype: [int]
@@ -118,6 +123,7 @@ class SearchRequestAllOf(object):
     def group_ids(self, group_ids):
         """Sets the group_ids of this SearchRequestAllOf.
 
+        The IDs of the groups in which the search is performed.  # noqa: E501
 
         :param group_ids: The group_ids of this SearchRequestAllOf.  # noqa: E501
         :type group_ids: [int]

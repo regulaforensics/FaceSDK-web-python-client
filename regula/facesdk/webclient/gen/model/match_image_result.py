@@ -89,7 +89,7 @@ class MatchImageResult(object):
     def first_index(self):
         """Gets the first_index of this MatchImageResult.  # noqa: E501
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :return: The first_index of this MatchImageResult.  # noqa: E501
         :rtype: int
@@ -100,7 +100,7 @@ class MatchImageResult(object):
     def first_index(self, first_index):
         """Sets the first_index of this MatchImageResult.
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :param first_index: The first_index of this MatchImageResult.  # noqa: E501
         :type first_index: int
@@ -137,7 +137,7 @@ class MatchImageResult(object):
     def second_index(self):
         """Gets the second_index of this MatchImageResult.  # noqa: E501
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :return: The second_index of this MatchImageResult.  # noqa: E501
         :rtype: int
@@ -148,7 +148,7 @@ class MatchImageResult(object):
     def second_index(self, second_index):
         """Sets the second_index of this MatchImageResult.
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :param second_index: The second_index of this MatchImageResult.  # noqa: E501
         :type second_index: int

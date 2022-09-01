@@ -66,6 +66,7 @@ class GroupPage(object):
     def items(self):
         """Gets the items of this GroupPage.  # noqa: E501
 
+        The array of Groups that are found during the search.  # noqa: E501
 
         :return: The items of this GroupPage.  # noqa: E501
         :rtype: [Group]
@@ -76,6 +77,7 @@ class GroupPage(object):
     def items(self, items):
         """Sets the items of this GroupPage.
 
+        The array of Groups that are found during the search.  # noqa: E501
 
         :param items: The items of this GroupPage.  # noqa: E501
         :type items: [Group]

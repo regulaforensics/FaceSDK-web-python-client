@@ -66,6 +66,7 @@ class PersonAllOf(object):
     def id(self):
         """Gets the id of this PersonAllOf.  # noqa: E501
 
+        Person ID.  # noqa: E501
 
         :return: The id of this PersonAllOf.  # noqa: E501
         :rtype: int
@@ -76,6 +77,7 @@ class PersonAllOf(object):
     def id(self, id):
         """Sets the id of this PersonAllOf.
 
+        Person ID.  # noqa: E501
 
         :param id: The id of this PersonAllOf.  # noqa: E501
         :type id: int
@@ -87,6 +89,7 @@ class PersonAllOf(object):
     def created_at(self):
         """Gets the created_at of this PersonAllOf.  # noqa: E501
 
+        Person creation date.  # noqa: E501
 
         :return: The created_at of this PersonAllOf.  # noqa: E501
         :rtype: str
@@ -97,6 +100,7 @@ class PersonAllOf(object):
     def created_at(self, created_at):
         """Sets the created_at of this PersonAllOf.
 
+        Person creation date.  # noqa: E501
 
         :param created_at: The created_at of this PersonAllOf.  # noqa: E501
         :type created_at: str
@@ -108,6 +112,7 @@ class PersonAllOf(object):
     def updated_at(self):
         """Gets the updated_at of this PersonAllOf.  # noqa: E501
 
+        Person update date.  # noqa: E501
 
         :return: The updated_at of this PersonAllOf.  # noqa: E501
         :rtype: str
@@ -118,6 +123,7 @@ class PersonAllOf(object):
     def updated_at(self, updated_at):
         """Sets the updated_at of this PersonAllOf.
 
+        Person update date.  # noqa: E501
 
         :param updated_at: The updated_at of this PersonAllOf.  # noqa: E501
         :type updated_at: str

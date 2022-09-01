@@ -45,7 +45,7 @@ class GroupApi(object):
         >>> thread = api.create_group(group_to_create, async_req=True)
         >>> result = thread.get()
 
-        :param group_to_create: Group to create (required)
+        :param group_to_create: Request body for the group to create. (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -74,7 +74,7 @@ class GroupApi(object):
         >>> thread = api.create_group_with_http_info(group_to_create, async_req=True)
         >>> result = thread.get()
 
-        :param group_to_create: Group to create (required)
+        :param group_to_create: Request body for the group to create. (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -178,7 +178,7 @@ class GroupApi(object):
         >>> thread = api.delete_group(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -207,7 +207,7 @@ class GroupApi(object):
         >>> thread = api.delete_group_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -307,12 +307,10 @@ class GroupApi(object):
         >>> thread = api.get_all_groups(page, size, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param name: Group name keywords
-        :type name: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -340,12 +338,10 @@ class GroupApi(object):
         >>> thread = api.get_all_groups_with_http_info(page, size, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param name: Group name keywords
-        :type name: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -374,7 +370,6 @@ class GroupApi(object):
         all_params = [
             'page'
             'size'
-            'name'
         ]
         all_params.extend(
             [
@@ -412,8 +407,6 @@ class GroupApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] is not None:  # noqa: E501
             query_params.append(('size', local_var_params['size']))  # noqa: E501
-        if 'name' in local_var_params and local_var_params['name'] is not None:  # noqa: E501
-            query_params.append(('name', local_var_params['name']))  # noqa: E501
 
         header_params = {}
 
@@ -454,11 +447,11 @@ class GroupApi(object):
         >>> thread = api.get_all_persons_by_group_id(page, size, group_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -487,11 +480,11 @@ class GroupApi(object):
         >>> thread = api.get_all_persons_by_group_id_with_http_info(page, size, group_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -605,7 +598,7 @@ class GroupApi(object):
         >>> thread = api.get_group(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -634,7 +627,7 @@ class GroupApi(object):
         >>> thread = api.get_group_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -734,9 +727,9 @@ class GroupApi(object):
         >>> thread = api.update_group(group_id, group_to_create, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
-        :param group_to_create: Update group (required)
+        :param group_to_create: Request body for the group to update. (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -765,9 +758,9 @@ class GroupApi(object):
         >>> thread = api.update_group_with_http_info(group_id, group_to_create, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
-        :param group_to_create: Update group (required)
+        :param group_to_create: Request body for the group to update. (required)
         :type group_to_create: GroupToCreate
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -878,9 +871,9 @@ class GroupApi(object):
         >>> thread = api.update_persons_in_group(group_id, update_group, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
-        :param update_group: Person ids to add or remove (required)
+        :param update_group: Request body for person IDs to add or remove. (required)
         :type update_group: UpdateGroup
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -909,9 +902,9 @@ class GroupApi(object):
         >>> thread = api.update_persons_in_group_with_http_info(group_id, update_group, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: Group id (required)
+        :param group_id: Group ID. (required)
         :type group_id: int
-        :param update_group: Person ids to add or remove (required)
+        :param update_group: Request body for person IDs to add or remove. (required)
         :type update_group: UpdateGroup
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

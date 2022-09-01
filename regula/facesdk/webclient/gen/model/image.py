@@ -76,6 +76,7 @@ class Image(object):
     def id(self):
         """Gets the id of this Image.  # noqa: E501
 
+        Response image ID.  # noqa: E501
 
         :return: The id of this Image.  # noqa: E501
         :rtype: int
@@ -86,6 +87,7 @@ class Image(object):
     def id(self, id):
         """Sets the id of this Image.
 
+        Response image ID.  # noqa: E501
 
         :param id: The id of this Image.  # noqa: E501
         :type id: int
@@ -97,6 +99,7 @@ class Image(object):
     def content_type(self):
         """Gets the content_type of this Image.  # noqa: E501
 
+        The original media type of the returned image.  # noqa: E501
 
         :return: The content_type of this Image.  # noqa: E501
         :rtype: str
@@ -107,6 +110,7 @@ class Image(object):
     def content_type(self, content_type):
         """Sets the content_type of this Image.
 
+        The original media type of the returned image.  # noqa: E501
 
         :param content_type: The content_type of this Image.  # noqa: E501
         :type content_type: str
@@ -118,6 +122,7 @@ class Image(object):
     def created_at(self):
         """Gets the created_at of this Image.  # noqa: E501
 
+        The returned image creation date.  # noqa: E501
 
         :return: The created_at of this Image.  # noqa: E501
         :rtype: str
@@ -128,6 +133,7 @@ class Image(object):
     def created_at(self, created_at):
         """Sets the created_at of this Image.
 
+        The returned image creation date.  # noqa: E501
 
         :param created_at: The created_at of this Image.  # noqa: E501
         :type created_at: str
@@ -139,6 +145,7 @@ class Image(object):
     def path(self):
         """Gets the path of this Image.  # noqa: E501
 
+        The returned image S3 path.  # noqa: E501
 
         :return: The path of this Image.  # noqa: E501
         :rtype: str
@@ -149,6 +156,7 @@ class Image(object):
     def path(self, path):
         """Sets the path of this Image.
 
+        The returned image S3 path.  # noqa: E501
 
         :param path: The path of this Image.  # noqa: E501
         :type path: str
@@ -160,6 +168,7 @@ class Image(object):
     def url(self):
         """Gets the url of this Image.  # noqa: E501
 
+        The returned image URL.  # noqa: E501
 
         :return: The url of this Image.  # noqa: E501
         :rtype: str
@@ -170,6 +179,7 @@ class Image(object):
     def url(self, url):
         """Sets the url of this Image.
 
+        The returned image URL.  # noqa: E501
 
         :param url: The url of this Image.  # noqa: E501
         :type url: str

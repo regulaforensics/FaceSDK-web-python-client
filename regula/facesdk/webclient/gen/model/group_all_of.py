@@ -61,6 +61,7 @@ class GroupAllOf(object):
     def id(self):
         """Gets the id of this GroupAllOf.  # noqa: E501
 
+        Group ID.  # noqa: E501
 
         :return: The id of this GroupAllOf.  # noqa: E501
         :rtype: int
@@ -71,6 +72,7 @@ class GroupAllOf(object):
     def id(self, id):
         """Sets the id of this GroupAllOf.
 
+        Group ID.  # noqa: E501
 
         :param id: The id of this GroupAllOf.  # noqa: E501
         :type id: int
@@ -82,6 +84,7 @@ class GroupAllOf(object):
     def created_at(self):
         """Gets the created_at of this GroupAllOf.  # noqa: E501
 
+        Group creation date.  # noqa: E501
 
         :return: The created_at of this GroupAllOf.  # noqa: E501
         :rtype: str
@@ -92,6 +95,7 @@ class GroupAllOf(object):
     def created_at(self, created_at):
         """Sets the created_at of this GroupAllOf.
 
+        Group creation date.  # noqa: E501
 
         :param created_at: The created_at of this GroupAllOf.  # noqa: E501
         :type created_at: str

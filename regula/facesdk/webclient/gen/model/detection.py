@@ -33,37 +33,70 @@ class Detection(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'crop': 'str',
         'attributes': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'landmarks': '[[float]]',
+        'quality': 'DetectionQuality',
         'roi': 'FaceRectangular',
         'thumbnail': 'str',
     }
 
     attribute_map = {
+        'crop': 'crop',
         'attributes': 'attributes',
         'landmarks': 'landmarks',
+        'quality': 'quality',
         'roi': 'roi',
         'thumbnail': 'thumbnail',
     }
 
-    def __init__(self, attributes=None, landmarks=None, roi=None, thumbnail=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, crop=None, attributes=None, landmarks=None, quality=None, roi=None, thumbnail=None, local_vars_configuration=None):  # noqa: E501
         """Detection - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._crop = None
         self._attributes = None
         self._landmarks = None
+        self._quality = None
         self._roi = None
         self._thumbnail = None
         self.discriminator = None
 
+        if crop is not None:
+            self.crop = crop
         if attributes is not None:
             self.attributes = attributes
         self.landmarks = landmarks
+        if quality is not None:
+            self.quality = quality
         self.roi = roi
         if thumbnail is not None:
             self.thumbnail = thumbnail
+
+    @property
+    def crop(self):
+        """Gets the crop of this Detection.  # noqa: E501
+
+        Base64 encoded image.  # noqa: E501
+
+        :return: The crop of this Detection.  # noqa: E501
+        :rtype: str
+        """
+        return self._crop
+
+    @crop.setter
+    def crop(self, crop):
+        """Sets the crop of this Detection.
+
+        Base64 encoded image.  # noqa: E501
+
+        :param crop: The crop of this Detection.  # noqa: E501
+        :type crop: str
+        """
+
+        self._crop = crop
 
     @property
     def attributes(self):
@@ -90,7 +123,7 @@ class Detection(object):
     def landmarks(self):
         """Gets the landmarks of this Detection.  # noqa: E501
 
-        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
+        Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.  # noqa: E501
 
         :return: The landmarks of this Detection.  # noqa: E501
         :rtype: [[float]]
@@ -101,7 +134,7 @@ class Detection(object):
     def landmarks(self, landmarks):
         """Sets the landmarks of this Detection.
 
-        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
+        Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.  # noqa: E501
 
         :param landmarks: The landmarks of this Detection.  # noqa: E501
         :type landmarks: [[float]]
@@ -110,6 +143,27 @@ class Detection(object):
             raise ValueError("Invalid value for `landmarks`, must not be `None`")  # noqa: E501
 
         self._landmarks = landmarks
+
+    @property
+    def quality(self):
+        """Gets the quality of this Detection.  # noqa: E501
+
+
+        :return: The quality of this Detection.  # noqa: E501
+        :rtype: DetectionQuality
+        """
+        return self._quality
+
+    @quality.setter
+    def quality(self, quality):
+        """Sets the quality of this Detection.
+
+
+        :param quality: The quality of this Detection.  # noqa: E501
+        :type quality: DetectionQuality
+        """
+
+        self._quality = quality
 
     @property
     def roi(self):
@@ -138,7 +192,7 @@ class Detection(object):
     def thumbnail(self):
         """Gets the thumbnail of this Detection.  # noqa: E501
 
-        Formatted base64 face detection image.  # noqa: E501
+        Base64 of the cropped portrait.  # noqa: E501
 
         :return: The thumbnail of this Detection.  # noqa: E501
         :rtype: str
@@ -149,7 +203,7 @@ class Detection(object):
     def thumbnail(self, thumbnail):
         """Sets the thumbnail of this Detection.
 
-        Formatted base64 face detection image.  # noqa: E501
+        Base64 of the cropped portrait.  # noqa: E501
 
         :param thumbnail: The thumbnail of this Detection.  # noqa: E501
         :type thumbnail: str

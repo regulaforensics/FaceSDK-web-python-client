@@ -61,6 +61,7 @@ class UpdateGroup(object):
     def add_items(self):
         """Gets the add_items of this UpdateGroup.  # noqa: E501
 
+        Add items.  # noqa: E501
 
         :return: The add_items of this UpdateGroup.  # noqa: E501
         :rtype: [int]
@@ -71,6 +72,7 @@ class UpdateGroup(object):
     def add_items(self, add_items):
         """Sets the add_items of this UpdateGroup.
 
+        Add items.  # noqa: E501
 
         :param add_items: The add_items of this UpdateGroup.  # noqa: E501
         :type add_items: [int]
@@ -82,6 +84,7 @@ class UpdateGroup(object):
     def remove_items(self):
         """Gets the remove_items of this UpdateGroup.  # noqa: E501
 
+        Remove items.  # noqa: E501
 
         :return: The remove_items of this UpdateGroup.  # noqa: E501
         :rtype: [int]
@@ -92,6 +95,7 @@ class UpdateGroup(object):
     def remove_items(self, remove_items):
         """Sets the remove_items of this UpdateGroup.
 
+        Remove items.  # noqa: E501
 
         :param remove_items: The remove_items of this UpdateGroup.  # noqa: E501
         :type remove_items: [int]

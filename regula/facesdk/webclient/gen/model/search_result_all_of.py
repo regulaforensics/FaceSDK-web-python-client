@@ -56,6 +56,7 @@ class SearchResultAllOf(object):
     def code(self):
         """Gets the code of this SearchResultAllOf.  # noqa: E501
 
+        The search result code.  # noqa: E501
 
         :return: The code of this SearchResultAllOf.  # noqa: E501
         :rtype: int
@@ -66,6 +67,7 @@ class SearchResultAllOf(object):
     def code(self, code):
         """Sets the code of this SearchResultAllOf.
 
+        The search result code.  # noqa: E501
 
         :param code: The code of this SearchResultAllOf.  # noqa: E501
         :type code: int

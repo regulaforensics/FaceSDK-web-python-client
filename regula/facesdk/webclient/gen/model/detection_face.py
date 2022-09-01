@@ -94,7 +94,7 @@ class DetectionFace(object):
     def landmarks(self):
         """Gets the landmarks of this DetectionFace.  # noqa: E501
 
-        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
+        Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.  # noqa: E501
 
         :return: The landmarks of this DetectionFace.  # noqa: E501
         :rtype: [[float]]
@@ -105,7 +105,7 @@ class DetectionFace(object):
     def landmarks(self, landmarks):
         """Sets the landmarks of this DetectionFace.
 
-        Main coordinates of the detected face (eyes, nose, lips, ears and etc.).  # noqa: E501
+        Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.  # noqa: E501
 
         :param landmarks: The landmarks of this DetectionFace.  # noqa: E501
         :type landmarks: [[float]]
@@ -138,7 +138,7 @@ class DetectionFace(object):
     def thumbnail(self):
         """Gets the thumbnail of this DetectionFace.  # noqa: E501
 
-        Formatted base64 face detection image.  # noqa: E501
+        Base64 of the cropped portrait.  # noqa: E501
 
         :return: The thumbnail of this DetectionFace.  # noqa: E501
         :rtype: str
@@ -149,7 +149,7 @@ class DetectionFace(object):
     def thumbnail(self, thumbnail):
         """Sets the thumbnail of this DetectionFace.
 
-        Formatted base64 face detection image.  # noqa: E501
+        Base64 of the cropped portrait.  # noqa: E501
 
         :param thumbnail: The thumbnail of this DetectionFace.  # noqa: E501
         :type thumbnail: str

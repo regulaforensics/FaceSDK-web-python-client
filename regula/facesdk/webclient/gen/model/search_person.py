@@ -81,6 +81,7 @@ class SearchPerson(object):
     def name(self):
         """Gets the name of this SearchPerson.  # noqa: E501
 
+        Person name.  # noqa: E501
 
         :return: The name of this SearchPerson.  # noqa: E501
         :rtype: str
@@ -91,6 +92,7 @@ class SearchPerson(object):
     def name(self, name):
         """Sets the name of this SearchPerson.
 
+        Person name.  # noqa: E501
 
         :param name: The name of this SearchPerson.  # noqa: E501
         :type name: str
@@ -102,6 +104,7 @@ class SearchPerson(object):
     def metadata(self):
         """Gets the metadata of this SearchPerson.  # noqa: E501
 
+        A free-form object containing person's extended attributes.  # noqa: E501
 
         :return: The metadata of this SearchPerson.  # noqa: E501
         :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -112,6 +115,7 @@ class SearchPerson(object):
     def metadata(self, metadata):
         """Sets the metadata of this SearchPerson.
 
+        A free-form object containing person's extended attributes.  # noqa: E501
 
         :param metadata: The metadata of this SearchPerson.  # noqa: E501
         :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -123,6 +127,7 @@ class SearchPerson(object):
     def id(self):
         """Gets the id of this SearchPerson.  # noqa: E501
 
+        Person ID.  # noqa: E501
 
         :return: The id of this SearchPerson.  # noqa: E501
         :rtype: int
@@ -133,6 +138,7 @@ class SearchPerson(object):
     def id(self, id):
         """Sets the id of this SearchPerson.
 
+        Person ID.  # noqa: E501
 
         :param id: The id of this SearchPerson.  # noqa: E501
         :type id: int
@@ -144,6 +150,7 @@ class SearchPerson(object):
     def created_at(self):
         """Gets the created_at of this SearchPerson.  # noqa: E501
 
+        Person creation date.  # noqa: E501
 
         :return: The created_at of this SearchPerson.  # noqa: E501
         :rtype: str
@@ -154,6 +161,7 @@ class SearchPerson(object):
     def created_at(self, created_at):
         """Sets the created_at of this SearchPerson.
 
+        Person creation date.  # noqa: E501
 
         :param created_at: The created_at of this SearchPerson.  # noqa: E501
         :type created_at: str
@@ -165,6 +173,7 @@ class SearchPerson(object):
     def updated_at(self):
         """Gets the updated_at of this SearchPerson.  # noqa: E501
 
+        Person update date.  # noqa: E501
 
         :return: The updated_at of this SearchPerson.  # noqa: E501
         :rtype: str
@@ -175,6 +184,7 @@ class SearchPerson(object):
     def updated_at(self, updated_at):
         """Sets the updated_at of this SearchPerson.
 
+        Person update date.  # noqa: E501
 
         :param updated_at: The updated_at of this SearchPerson.  # noqa: E501
         :type updated_at: str

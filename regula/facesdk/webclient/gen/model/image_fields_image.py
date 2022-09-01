@@ -61,6 +61,7 @@ class ImageFieldsImage(object):
     def content_type(self):
         """Gets the content_type of this ImageFieldsImage.  # noqa: E501
 
+        The original media type of the uploaded image.  # noqa: E501
 
         :return: The content_type of this ImageFieldsImage.  # noqa: E501
         :rtype: str
@@ -71,6 +72,7 @@ class ImageFieldsImage(object):
     def content_type(self, content_type):
         """Sets the content_type of this ImageFieldsImage.
 
+        The original media type of the uploaded image.  # noqa: E501
 
         :param content_type: The content_type of this ImageFieldsImage.  # noqa: E501
         :type content_type: str
@@ -82,6 +84,7 @@ class ImageFieldsImage(object):
     def content(self):
         """Gets the content of this ImageFieldsImage.  # noqa: E501
 
+        Base64 encoded image.  # noqa: E501
 
         :return: The content of this ImageFieldsImage.  # noqa: E501
         :rtype: str
@@ -92,6 +95,7 @@ class ImageFieldsImage(object):
     def content(self, content):
         """Sets the content of this ImageFieldsImage.
 
+        Base64 encoded image.  # noqa: E501
 
         :param content: The content of this ImageFieldsImage.  # noqa: E501
         :type content: str

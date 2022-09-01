@@ -45,9 +45,9 @@ class PersonApi(object):
         >>> thread = api.add_image_to_person(person_id, image_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
-        :param image_fields: Image to add (required)
+        :param image_fields: Image to add. (required)
         :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -76,9 +76,9 @@ class PersonApi(object):
         >>> thread = api.add_image_to_person_with_http_info(person_id, image_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
-        :param image_fields: Image to add (required)
+        :param image_fields: Image to add. (required)
         :type image_fields: ImageFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -189,7 +189,7 @@ class PersonApi(object):
         >>> thread = api.create_person(person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_fields: Future person (required)
+        :param person_fields: (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -218,7 +218,7 @@ class PersonApi(object):
         >>> thread = api.create_person_with_http_info(person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_fields: Future person (required)
+        :param person_fields: (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -322,9 +322,9 @@ class PersonApi(object):
         >>> thread = api.delete_image_of_person(image_id, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param image_id: Image id (required)
+        :param image_id: Image ID. (required)
         :type image_id: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -353,9 +353,9 @@ class PersonApi(object):
         >>> thread = api.delete_image_of_person_with_http_info(image_id, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param image_id: Image id (required)
+        :param image_id: Image ID. (required)
         :type image_id: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -462,7 +462,7 @@ class PersonApi(object):
         >>> thread = api.delete_person(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -491,7 +491,7 @@ class PersonApi(object):
         >>> thread = api.delete_person_with_http_info(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -591,11 +591,11 @@ class PersonApi(object):
         >>> thread = api.get_all_groups_by_person_id(page, size, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -624,11 +624,11 @@ class PersonApi(object):
         >>> thread = api.get_all_groups_by_person_id_with_http_info(page, size, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -742,11 +742,11 @@ class PersonApi(object):
         >>> thread = api.get_all_images_by_person_id(page, size, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -775,11 +775,11 @@ class PersonApi(object):
         >>> thread = api.get_all_images_by_person_id_with_http_info(page, size, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -893,12 +893,10 @@ class PersonApi(object):
         >>> thread = api.get_all_persons(page, size, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param name: Person name keywords
-        :type name: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -926,12 +924,10 @@ class PersonApi(object):
         >>> thread = api.get_all_persons_with_http_info(page, size, async_req=True)
         >>> result = thread.get()
 
-        :param page: Current page (required)
+        :param page: The page number to get a list of persons or groups. (required)
         :type page: int
-        :param size: Page size (required)
+        :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
-        :param name: Person name keywords
-        :type name: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -960,7 +956,6 @@ class PersonApi(object):
         all_params = [
             'page'
             'size'
-            'name'
         ]
         all_params.extend(
             [
@@ -998,8 +993,6 @@ class PersonApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] is not None:  # noqa: E501
             query_params.append(('size', local_var_params['size']))  # noqa: E501
-        if 'name' in local_var_params and local_var_params['name'] is not None:  # noqa: E501
-            query_params.append(('name', local_var_params['name']))  # noqa: E501
 
         header_params = {}
 
@@ -1040,9 +1033,9 @@ class PersonApi(object):
         >>> thread = api.get_image_of_person(image_id, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param image_id: Image id (required)
+        :param image_id: Image ID. (required)
         :type image_id: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1071,9 +1064,9 @@ class PersonApi(object):
         >>> thread = api.get_image_of_person_with_http_info(image_id, person_id, async_req=True)
         >>> result = thread.get()
 
-        :param image_id: Image id (required)
+        :param image_id: Image ID. (required)
         :type image_id: int
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1180,7 +1173,7 @@ class PersonApi(object):
         >>> thread = api.get_person(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1209,7 +1202,7 @@ class PersonApi(object):
         >>> thread = api.get_person_with_http_info(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1309,9 +1302,9 @@ class PersonApi(object):
         >>> thread = api.update_person(person_id, person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
-        :param person_fields: Metadata (required)
+        :param person_fields: Request body for the Person to update. (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1340,9 +1333,9 @@ class PersonApi(object):
         >>> thread = api.update_person_with_http_info(person_id, person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param person_id: Person id (required)
+        :param person_id: Person ID. (required)
         :type person_id: int
-        :param person_fields: Metadata (required)
+        :param person_fields: Request body for the Person to update. (required)
         :type person_fields: PersonFields
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

@@ -9,12 +9,19 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from regula.facesdk.webclient.gen.model.crop import Crop
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
 from regula.facesdk.webclient.gen.model.detect_result import DetectResult
 from regula.facesdk.webclient.gen.model.detection import Detection
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
+from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
+from regula.facesdk.webclient.gen.model.face_align_type_quality import FaceAlignTypeQuality
+from regula.facesdk.webclient.gen.model.face_image_quality_groups import FaceImageQualityGroups
+from regula.facesdk.webclient.gen.model.face_quality_config_name import FaceQualityConfigName
+from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualityScenarios
+from regula.facesdk.webclient.gen.model.face_quality_status import FaceQualityStatus
 from regula.facesdk.webclient.gen.model.face_rectangular import FaceRectangular
 from regula.facesdk.webclient.gen.model.face_sdk_result import FaceSDKResult
 from regula.facesdk.webclient.gen.model.face_sdk_result_code import FaceSDKResultCode
@@ -36,12 +43,20 @@ from regula.facesdk.webclient.gen.model.match_request import MatchRequest
 from regula.facesdk.webclient.gen.model.match_response import MatchResponse
 from regula.facesdk.webclient.gen.model.match_response_all_of import MatchResponseAllOf
 from regula.facesdk.webclient.gen.model.operation_log import OperationLog
+from regula.facesdk.webclient.gen.model.output_image_params import OutputImageParams
 from regula.facesdk.webclient.gen.model.page import Page
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_all_of import PersonAllOf
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.persons_page_all_of import PersonsPageAllOf
+from regula.facesdk.webclient.gen.model.process_param import ProcessParam
+from regula.facesdk.webclient.gen.model.quality_config import QualityConfig
+from regula.facesdk.webclient.gen.model.quality_config_list import QualityConfigList
+from regula.facesdk.webclient.gen.model.quality_detail import QualityDetail
+from regula.facesdk.webclient.gen.model.quality_details_groups import QualityDetailsGroups
+from regula.facesdk.webclient.gen.model.quality_request import QualityRequest
+from regula.facesdk.webclient.gen.model.rgb import RGB
 from regula.facesdk.webclient.gen.model.recognize_image import RecognizeImage
 from regula.facesdk.webclient.gen.model.recognize_image_all_of import RecognizeImageAllOf
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson

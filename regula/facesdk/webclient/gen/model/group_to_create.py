@@ -61,6 +61,7 @@ class GroupToCreate(object):
     def name(self):
         """Gets the name of this GroupToCreate.  # noqa: E501
 
+        Group to create name.  # noqa: E501
 
         :return: The name of this GroupToCreate.  # noqa: E501
         :rtype: str
@@ -71,6 +72,7 @@ class GroupToCreate(object):
     def name(self, name):
         """Sets the name of this GroupToCreate.
 
+        Group to create name.  # noqa: E501
 
         :param name: The name of this GroupToCreate.  # noqa: E501
         :type name: str
@@ -82,6 +84,7 @@ class GroupToCreate(object):
     def metadata(self):
         """Gets the metadata of this GroupToCreate.  # noqa: E501
 
+        A free-form object containing group's extended attributes.  # noqa: E501
 
         :return: The metadata of this GroupToCreate.  # noqa: E501
         :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -92,6 +95,7 @@ class GroupToCreate(object):
     def metadata(self, metadata):
         """Sets the metadata of this GroupToCreate.
 
+        A free-form object containing group's extended attributes.  # noqa: E501
 
         :param metadata: The metadata of this GroupToCreate.  # noqa: E501
         :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}

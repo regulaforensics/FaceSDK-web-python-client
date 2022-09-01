@@ -36,15 +36,19 @@ class DetectResult(object):
         'detections': '[Detection]',
         'detector_type': 'int',
         'landmarks_type': 'int',
+        'scenario': 'FaceQualityScenarios',
+        'timer': 'float',
     }
 
     attribute_map = {
         'detections': 'detections',
         'detector_type': 'detectorType',
         'landmarks_type': 'landmarksType',
+        'scenario': 'scenario',
+        'timer': 'timer',
     }
 
-    def __init__(self, detections=None, detector_type=None, landmarks_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, detections=None, detector_type=None, landmarks_type=None, scenario=None, timer=None, local_vars_configuration=None):  # noqa: E501
         """DetectResult - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +57,8 @@ class DetectResult(object):
         self._detections = None
         self._detector_type = None
         self._landmarks_type = None
+        self._scenario = None
+        self._timer = None
         self.discriminator = None
 
         self.detections = detections
@@ -60,6 +66,10 @@ class DetectResult(object):
             self.detector_type = detector_type
         if landmarks_type is not None:
             self.landmarks_type = landmarks_type
+        if scenario is not None:
+            self.scenario = scenario
+        if timer is not None:
+            self.timer = timer
 
     @property
     def detections(self):
@@ -129,6 +139,48 @@ class DetectResult(object):
         """
 
         self._landmarks_type = landmarks_type
+
+    @property
+    def scenario(self):
+        """Gets the scenario of this DetectResult.  # noqa: E501
+
+
+        :return: The scenario of this DetectResult.  # noqa: E501
+        :rtype: FaceQualityScenarios
+        """
+        return self._scenario
+
+    @scenario.setter
+    def scenario(self, scenario):
+        """Sets the scenario of this DetectResult.
+
+
+        :param scenario: The scenario of this DetectResult.  # noqa: E501
+        :type scenario: FaceQualityScenarios
+        """
+
+        self._scenario = scenario
+
+    @property
+    def timer(self):
+        """Gets the timer of this DetectResult.  # noqa: E501
+
+
+        :return: The timer of this DetectResult.  # noqa: E501
+        :rtype: float
+        """
+        return self._timer
+
+    @timer.setter
+    def timer(self, timer):
+        """Sets the timer of this DetectResult.
+
+
+        :param timer: The timer of this DetectResult.  # noqa: E501
+        :type timer: float
+        """
+
+        self._timer = timer
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,18 +31,17 @@ sdk.group_api.update_persons_in_group(group.id, UpdateGroup([int(person1.id), in
 
 result = sdk.search_api.search(
     SearchRequest(
-        group_ids=[int(group.id)],
+        group_ids=[],
         image=ImageFieldsImage(
-                content_type="",
-                content=face_1_bytes
-            )
-        )
+            content_type="",
+            content=face_1_bytes
+        ),
+        limit=10,
+        threshold=0.8
+    ),
 )
 
 print(f"Person #1 {int(person1.id)} {person1.name}")
 print(f"Person #2 {int(person2.id)} {person2.name}")
 print(f"Group {int(group.id)} {group.name}")
 print(result)
-
-
-

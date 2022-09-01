@@ -61,6 +61,7 @@ class PersonFields(object):
     def name(self):
         """Gets the name of this PersonFields.  # noqa: E501
 
+        Person name.  # noqa: E501
 
         :return: The name of this PersonFields.  # noqa: E501
         :rtype: str
@@ -71,6 +72,7 @@ class PersonFields(object):
     def name(self, name):
         """Sets the name of this PersonFields.
 
+        Person name.  # noqa: E501
 
         :param name: The name of this PersonFields.  # noqa: E501
         :type name: str
@@ -82,6 +84,7 @@ class PersonFields(object):
     def metadata(self):
         """Gets the metadata of this PersonFields.  # noqa: E501
 
+        A free-form object containing person's extended attributes.  # noqa: E501
 
         :return: The metadata of this PersonFields.  # noqa: E501
         :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
@@ -92,6 +95,7 @@ class PersonFields(object):
     def metadata(self, metadata):
         """Sets the metadata of this PersonFields.
 
+        A free-form object containing person's extended attributes.  # noqa: E501
 
         :param metadata: The metadata of this PersonFields.  # noqa: E501
         :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}

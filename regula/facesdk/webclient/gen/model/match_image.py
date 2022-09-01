@@ -65,7 +65,7 @@ class MatchImage(object):
     def index(self):
         """Gets the index of this MatchImage.  # noqa: E501
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :return: The index of this MatchImage.  # noqa: E501
         :rtype: int
@@ -76,7 +76,7 @@ class MatchImage(object):
     def index(self, index):
         """Sets the index of this MatchImage.
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :param index: The index of this MatchImage.  # noqa: E501
         :type index: int
@@ -109,7 +109,7 @@ class MatchImage(object):
     def data(self):
         """Gets the data of this MatchImage.  # noqa: E501
 
-        Base64 encoded image  # noqa: E501
+        Base64 encoded image.  # noqa: E501
 
         :return: The data of this MatchImage.  # noqa: E501
         :rtype: str
@@ -120,7 +120,7 @@ class MatchImage(object):
     def data(self, data):
         """Sets the data of this MatchImage.
 
-        Base64 encoded image  # noqa: E501
+        Base64 encoded image.  # noqa: E501
 
         :param data: The data of this MatchImage.  # noqa: E501
         :type data: str

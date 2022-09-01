@@ -37,7 +37,7 @@ class SearchApi(object):
         self.api_client = api_client
 
     def search(self, search_request, **kwargs):  # noqa: E501
-        """Find person by image in groups scope  # noqa: E501
+        """Find person by image in groups.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -45,7 +45,7 @@ class SearchApi(object):
         >>> thread = api.search(search_request, async_req=True)
         >>> result = thread.get()
 
-        :param search_request: Search argument (required)
+        :param search_request: (required)
         :type search_request: SearchRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -66,7 +66,7 @@ class SearchApi(object):
         return self.search_with_http_info(search_request, **kwargs)  # noqa: E501
 
     def search_with_http_info(self, search_request, **kwargs):  # noqa: E501
-        """Find person by image in groups scope  # noqa: E501
+        """Find person by image in groups.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -74,7 +74,7 @@ class SearchApi(object):
         >>> thread = api.search_with_http_info(search_request, async_req=True)
         >>> result = thread.get()
 
-        :param search_request: Search argument (required)
+        :param search_request: (required)
         :type search_request: SearchRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

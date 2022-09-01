@@ -85,7 +85,7 @@ class MatchImageDetection(object):
     def image_index(self):
         """Gets the image_index of this MatchImageDetection.  # noqa: E501
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :return: The image_index of this MatchImageDetection.  # noqa: E501
         :rtype: int
@@ -96,7 +96,7 @@ class MatchImageDetection(object):
     def image_index(self, image_index):
         """Sets the image_index of this MatchImageDetection.
 
-        Image index used to identify input photos between themselves. If not specified, than input list index is used  # noqa: E501
+        Image index used to identify input photos between themselves. If not specified, than input list index is used.  # noqa: E501
 
         :param image_index: The image_index of this MatchImageDetection.  # noqa: E501
         :type image_index: int
