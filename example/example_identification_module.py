@@ -1,58 +1,47 @@
-import base64
+import os
 
-import requests
+from regula.facesdk.webclient.ext import FaceSdk
+from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsImage
+from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
 
+api_base_path = os.getenv("API_BASE_PATH", "http://127.0.0.0:41101")
 
-# SEE API DOCS
-# openapi https://github.com/regulaforensics/FaceSDK-web-openapi/blob/master/index-identification-module.yml
-# compiled into html open api https://github.com/regulaforensics/FaceSDK-web-openapi/releases
+with open("face1.jpg", "rb") as f:
+    face_1_bytes = f.read()
 
-def get_file_as_base64(file_path: str) -> str:
-    with open(file_path, "rb") as f:
-        file_as_binary = f.read()
-    return base64.b64encode(file_as_binary).decode("utf-8")
+with open("face2.jpg", "rb") as f:
+    face_2_bytes = f.read()
 
+sdk = FaceSdk(api_base_path)
 
-host_url = "http://0.0.0.0:41101/api"
+person1_id = sdk.person_api.create_person(PersonFields("person1", {})).id
+person2_id = sdk.person_api.create_person(PersonFields("person2", {})).id
 
-# create "storage" as folder in filesystem of where service is running
-# do it once, and them reuse
-#
-# Storage is a uri location, where service store images of person.
-# Thus, you can split for further processing or other needs your photo catalog.
-# Can be multiple storages per application.
-# During person creation, you can specify which storage to use for saving photos.
-# Main property of storage is __uri__, allowing to use not only local filesystem, but other remote staff, for example aws s3 buckets etc. (Currently on filesystem is supported).
-# Each person can have only one storage.
-storage_to_create = {
-    "uri": "appdata/photo-catalog"
-}
-storage_id = int(requests.post(host_url + "/storage", json=storage_to_create).json())
+sdk.person_api.add_image_to_person(person1_id, face_1_bytes)
+sdk.person_api.add_image_to_person(person2_id, face_2_bytes)
 
-# create person
-#################################
-person_to_create = {
-    "name": "Ivan Ivanov",
-    "metadata": {
-        "customerCustomField": 1
-    },
-    "storage_id": storage_id
-}
-person = requests.post(host_url + "/persons", json=person_to_create).json()
+person1 = sdk.person_api.get_person(person1_id)
+person2 = sdk.person_api.get_person(person2_id)
 
-# add image to person
-#################################
-image_to_attach_to_person = {
-    "image": {
-        "content": get_file_as_base64("face1.jpg")
-    }
-}
-image = requests.post(f'{host_url}/persons/{person["id"]}/images', json=image_to_attach_to_person).json()
+group = sdk.group_api.create_group("group1")
 
-# search person by image
-#################################
-search_data = {
-    "image": get_file_as_base64("face1.jpg")
-}
-search_result = requests.post(host_url + "/search", json=search_data).json()
-print(search_result)
+sdk.group_api.update_persons_in_group(group.id, UpdateGroup([int(person1.id), int(person2.id)]))
+
+result = sdk.search_api.search(
+    SearchRequest(
+        group_ids=[],
+        image=ImageFieldsImage(
+            content_type="",
+            content=face_1_bytes
+        ),
+        limit=10,
+        threshold=0.8
+    ),
+)
+
+print(f"Person #1 {int(person1.id)} {person1.name}")
+print(f"Person #2 {int(person2.id)} {person2.name}")
+print(f"Group {int(group.id)} {group.name}")
+print(result)

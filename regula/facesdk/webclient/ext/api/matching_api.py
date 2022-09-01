@@ -1,6 +1,8 @@
-from regula.facesdk.webclient.gen import MatchingApi as GenMatchingApi, Configuration, ApiClient, \
-    DetectResponse, MatchResponse
+from regula.facesdk.webclient.gen import Configuration, ApiClient
+from regula.facesdk.webclient.gen.apis import MatchingApi as GenMatchingApi
 from regula.facesdk.webclient.ext.models import MatchRequest, DetectRequest
+from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
+from regula.facesdk.webclient.gen.model.match_response import MatchResponse
 
 
 class MatchingApi(GenMatchingApi):

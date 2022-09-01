@@ -25,7 +25,7 @@ import six
 from six.moves.urllib.parse import quote
 
 from regula.facesdk.webclient.gen.configuration import Configuration
-import regula.facesdk.webclient.gen.models
+import regula.facesdk.webclient.gen.model
 from regula.facesdk.webclient.gen import rest
 from regula.facesdk.webclient.gen.exceptions import ApiValueError, ApiException
 
@@ -98,15 +98,13 @@ class ModelSerDe:
             return None
 
         if type(klass) == str:
-            if klass.startswith('list['):
-                sub_kls = re.match(r'list\[(.*)\]', klass).group(1)
+            if klass.startswith('['):
+                sub_kls = re.match(r'\[(.*)\]', klass).group(1)
                 return [self.deserialize_raw(sub_data, sub_kls)
                         for sub_data in data]
 
-            if klass.startswith('dict('):
-                sub_kls = re.match(r'dict\(([^,]*), (.*)\)', klass).group(2)
-                return {k: self.deserialize_raw(v, sub_kls)
-                        for k, v in six.iteritems(data)}
+            if klass == '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}':
+                return data
 
             # convert str to class
             if klass in self.NATIVE_TYPES_MAPPING:

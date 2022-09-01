@@ -1,6 +1,8 @@
 import os
 
-from regula.facesdk.webclient import *
+from regula.facesdk.webclient import MatchImage, MatchRequest
+from regula.facesdk.webclient.ext import FaceSdk, DetectRequest
+from regula.facesdk.webclient.gen.model.image_source import ImageSource
 
 api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com/")
 
