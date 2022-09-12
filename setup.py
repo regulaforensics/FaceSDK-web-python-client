@@ -18,7 +18,7 @@ setup(
     url="https://mobile.regulaforensics.com",
     keywords=["face recognition", "facesdk", "regulaforensics", "regula",],
     install_requires=[
-        "certifi==2020.12.5",
+        "certifi==2022.6.15.1",
         "future==0.18.2",
         "python-dateutil==2.8.1",
         "six==1.15.0",
