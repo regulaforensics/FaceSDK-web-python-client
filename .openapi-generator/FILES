@@ -66,7 +66,6 @@ regula/facesdk/webclient/gen/model/search_person_all_of.py
 regula/facesdk/webclient/gen/model/search_request.py
 regula/facesdk/webclient/gen/model/search_request_all_of.py
 regula/facesdk/webclient/gen/model/search_result.py
-regula/facesdk/webclient/gen/model/search_result_all_of.py
 regula/facesdk/webclient/gen/model/update_group.py
 regula/facesdk/webclient/gen/model_utils.py
 regula/facesdk/webclient/gen/models/__init__.py

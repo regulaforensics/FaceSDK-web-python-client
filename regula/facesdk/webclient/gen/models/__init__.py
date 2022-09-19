@@ -64,5 +64,4 @@ from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPerson
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
 from regula.facesdk.webclient.gen.model.search_request_all_of import SearchRequestAllOf
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
-from regula.facesdk.webclient.gen.model.search_result_all_of import SearchResultAllOf
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
