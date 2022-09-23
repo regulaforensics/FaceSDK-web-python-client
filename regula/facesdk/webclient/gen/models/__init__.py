@@ -17,11 +17,11 @@ from regula.facesdk.webclient.gen.model.detect_result import DetectResult
 from regula.facesdk.webclient.gen.model.detection import Detection
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
 from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
-from regula.facesdk.webclient.gen.model.face_align_type_quality import FaceAlignTypeQuality
+from regula.facesdk.webclient.gen.model.face_image_quality_align_type import FaceImageQualityAlignType
 from regula.facesdk.webclient.gen.model.face_image_quality_groups import FaceImageQualityGroups
+from regula.facesdk.webclient.gen.model.face_image_quality_status import FaceImageQualityStatus
 from regula.facesdk.webclient.gen.model.face_quality_config_name import FaceQualityConfigName
 from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualityScenarios
-from regula.facesdk.webclient.gen.model.face_quality_status import FaceQualityStatus
 from regula.facesdk.webclient.gen.model.face_rectangular import FaceRectangular
 from regula.facesdk.webclient.gen.model.face_sdk_result import FaceSDKResult
 from regula.facesdk.webclient.gen.model.face_sdk_result_code import FaceSDKResultCode
