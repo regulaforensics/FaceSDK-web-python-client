@@ -3,6 +3,7 @@ from regula.facesdk.webclient.gen.api.group_api import GroupApi as GenGroupApi
 from regula.facesdk.webclient.gen.model.group import Group
 from regula.facesdk.webclient.gen.model.group_page import GroupPage
 from regula.facesdk.webclient.gen.model.group_to_create import GroupToCreate
+from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
 
 
@@ -22,7 +23,7 @@ class GroupApi(GenGroupApi):
     def get_all_groups(self, page: int, size: int, **kwargs) -> GroupPage:
         return super().get_all_groups(page, size, **kwargs)
 
-    def get_all_persons_by_group_id(self, page: int, size: int, group_id: int, **kwargs) -> Group:
+    def get_all_persons_by_group_id(self, page: int, size: int, group_id: int, **kwargs) -> PersonsPage:
         return super().get_all_persons_by_group_id(page, size, group_id, **kwargs)
 
     def get_group(self, group_id: int, **kwargs) -> Group:
