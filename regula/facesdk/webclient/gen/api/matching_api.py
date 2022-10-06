@@ -47,6 +47,8 @@ class MatchingApi(object):
 
         :param detect_request: (required)
         :type detect_request: DetectRequest
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -76,6 +78,8 @@ class MatchingApi(object):
 
         :param detect_request: (required)
         :type detect_request: DetectRequest
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -103,6 +107,7 @@ class MatchingApi(object):
 
         all_params = [
             'detect_request'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -134,6 +139,8 @@ class MatchingApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -180,6 +187,8 @@ class MatchingApi(object):
 
         :param match_request: (required)
         :type match_request: MatchRequest
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -209,6 +218,8 @@ class MatchingApi(object):
 
         :param match_request: (required)
         :type match_request: MatchRequest
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -236,6 +247,7 @@ class MatchingApi(object):
 
         all_params = [
             'match_request'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -267,6 +279,8 @@ class MatchingApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

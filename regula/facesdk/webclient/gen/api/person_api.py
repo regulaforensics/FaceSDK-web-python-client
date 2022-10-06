@@ -49,6 +49,8 @@ class PersonApi(object):
         :type person_id: int
         :param image_fields: Image to add. (required)
         :type image_fields: ImageFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -80,6 +82,8 @@ class PersonApi(object):
         :type person_id: int
         :param image_fields: Image to add. (required)
         :type image_fields: ImageFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -108,6 +112,7 @@ class PersonApi(object):
         all_params = [
             'person_id'
             'image_fields'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -145,6 +150,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -191,6 +198,8 @@ class PersonApi(object):
 
         :param person_fields: (required)
         :type person_fields: PersonFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,6 +229,8 @@ class PersonApi(object):
 
         :param person_fields: (required)
         :type person_fields: PersonFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -247,6 +258,7 @@ class PersonApi(object):
 
         all_params = [
             'person_fields'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -278,6 +290,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -326,6 +340,8 @@ class PersonApi(object):
         :type image_id: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -357,6 +373,8 @@ class PersonApi(object):
         :type image_id: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -385,6 +403,7 @@ class PersonApi(object):
         all_params = [
             'image_id'
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -424,6 +443,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -464,6 +485,8 @@ class PersonApi(object):
 
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -493,6 +516,8 @@ class PersonApi(object):
 
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -520,6 +545,7 @@ class PersonApi(object):
 
         all_params = [
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -553,6 +579,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -597,6 +625,8 @@ class PersonApi(object):
         :type size: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -630,6 +660,8 @@ class PersonApi(object):
         :type size: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -659,6 +691,7 @@ class PersonApi(object):
             'page'
             'size'
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -704,6 +737,8 @@ class PersonApi(object):
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -748,6 +783,8 @@ class PersonApi(object):
         :type size: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -781,6 +818,8 @@ class PersonApi(object):
         :type size: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -810,6 +849,7 @@ class PersonApi(object):
             'page'
             'size'
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -855,6 +895,8 @@ class PersonApi(object):
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -897,6 +939,8 @@ class PersonApi(object):
         :type page: int
         :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -928,6 +972,8 @@ class PersonApi(object):
         :type page: int
         :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -956,6 +1002,7 @@ class PersonApi(object):
         all_params = [
             'page'
             'size'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -995,6 +1042,8 @@ class PersonApi(object):
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1037,6 +1086,8 @@ class PersonApi(object):
         :type image_id: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1068,6 +1119,8 @@ class PersonApi(object):
         :type image_id: int
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1096,6 +1149,7 @@ class PersonApi(object):
         all_params = [
             'image_id'
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -1135,6 +1189,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1175,6 +1231,8 @@ class PersonApi(object):
 
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1204,6 +1262,8 @@ class PersonApi(object):
 
         :param person_id: Person ID. (required)
         :type person_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1231,6 +1291,7 @@ class PersonApi(object):
 
         all_params = [
             'person_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -1264,6 +1325,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1306,6 +1369,8 @@ class PersonApi(object):
         :type person_id: int
         :param person_fields: Request body for the Person to update. (required)
         :type person_fields: PersonFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1337,6 +1402,8 @@ class PersonApi(object):
         :type person_id: int
         :param person_fields: Request body for the Person to update. (required)
         :type person_fields: PersonFields
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1365,6 +1432,7 @@ class PersonApi(object):
         all_params = [
             'person_id'
             'person_fields'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -1402,6 +1470,8 @@ class PersonApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
