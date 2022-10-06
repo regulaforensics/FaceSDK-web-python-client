@@ -47,6 +47,8 @@ class GroupApi(object):
 
         :param group_to_create: Request body for the group to create. (required)
         :type group_to_create: GroupToCreate
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -76,6 +78,8 @@ class GroupApi(object):
 
         :param group_to_create: Request body for the group to create. (required)
         :type group_to_create: GroupToCreate
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -103,6 +107,7 @@ class GroupApi(object):
 
         all_params = [
             'group_to_create'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -134,6 +139,8 @@ class GroupApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -180,6 +187,8 @@ class GroupApi(object):
 
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -209,6 +218,8 @@ class GroupApi(object):
 
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -236,6 +247,7 @@ class GroupApi(object):
 
         all_params = [
             'group_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -269,6 +281,8 @@ class GroupApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -311,6 +325,8 @@ class GroupApi(object):
         :type page: int
         :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -342,6 +358,8 @@ class GroupApi(object):
         :type page: int
         :param size: The page size with a list of persons or groups, items. (required)
         :type size: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -370,6 +388,7 @@ class GroupApi(object):
         all_params = [
             'page'
             'size'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -409,6 +428,8 @@ class GroupApi(object):
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -453,6 +474,8 @@ class GroupApi(object):
         :type size: int
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -486,6 +509,8 @@ class GroupApi(object):
         :type size: int
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -515,6 +540,7 @@ class GroupApi(object):
             'page'
             'size'
             'group_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -560,6 +586,8 @@ class GroupApi(object):
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -600,6 +628,8 @@ class GroupApi(object):
 
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -629,6 +659,8 @@ class GroupApi(object):
 
         :param group_id: Group ID. (required)
         :type group_id: int
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -656,6 +688,7 @@ class GroupApi(object):
 
         all_params = [
             'group_id'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -689,6 +722,8 @@ class GroupApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -731,6 +766,8 @@ class GroupApi(object):
         :type group_id: int
         :param group_to_create: Request body for the group to update. (required)
         :type group_to_create: GroupToCreate
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -762,6 +799,8 @@ class GroupApi(object):
         :type group_id: int
         :param group_to_create: Request body for the group to update. (required)
         :type group_to_create: GroupToCreate
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -790,6 +829,7 @@ class GroupApi(object):
         all_params = [
             'group_id'
             'group_to_create'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -827,6 +867,8 @@ class GroupApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -875,6 +917,8 @@ class GroupApi(object):
         :type group_id: int
         :param update_group: Request body for person IDs to add or remove. (required)
         :type update_group: UpdateGroup
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -906,6 +950,8 @@ class GroupApi(object):
         :type group_id: int
         :param update_group: Request body for person IDs to add or remove. (required)
         :type update_group: UpdateGroup
+        :param x_request_id:
+        :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -934,6 +980,7 @@ class GroupApi(object):
         all_params = [
             'group_id'
             'update_group'
+            'x_request_id'
         ]
         all_params.extend(
             [
@@ -971,6 +1018,8 @@ class GroupApi(object):
         query_params = []
 
         header_params = {}
+        if 'x_request_id' in local_var_params:
+            header_params['X-RequestID'] = local_var_params['x_request_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
