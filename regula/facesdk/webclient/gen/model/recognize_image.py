@@ -36,21 +36,27 @@ class RecognizeImage(object):
         'id': 'int',
         'content_type': 'str',
         'created_at': 'str',
+        'updated_at': 'str',
         'path': 'str',
         'url': 'str',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'similarity': 'float',
+        'distance': 'float',
     }
 
     attribute_map = {
         'id': 'id',
         'content_type': 'content_type',
         'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'path': 'path',
         'url': 'url',
+        'metadata': 'metadata',
         'similarity': 'similarity',
+        'distance': 'distance',
     }
 
-    def __init__(self, id=None, content_type=None, created_at=None, path=None, url=None, similarity=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, content_type=None, created_at=None, updated_at=None, path=None, url=None, metadata=None, similarity=None, distance=None, local_vars_configuration=None):  # noqa: E501
         """RecognizeImage - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,9 +65,12 @@ class RecognizeImage(object):
         self._id = None
         self._content_type = None
         self._created_at = None
+        self._updated_at = None
         self._path = None
         self._url = None
+        self._metadata = None
         self._similarity = None
+        self._distance = None
         self.discriminator = None
 
         if id is not None:
@@ -70,12 +79,18 @@ class RecognizeImage(object):
             self.content_type = content_type
         if created_at is not None:
             self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         if path is not None:
             self.path = path
         if url is not None:
             self.url = url
+        if metadata is not None:
+            self.metadata = metadata
         if similarity is not None:
             self.similarity = similarity
+        if distance is not None:
+            self.distance = distance
 
     @property
     def id(self):
@@ -147,6 +162,29 @@ class RecognizeImage(object):
         self._created_at = created_at
 
     @property
+    def updated_at(self):
+        """Gets the updated_at of this RecognizeImage.  # noqa: E501
+
+        The returned image update date.  # noqa: E501
+
+        :return: The updated_at of this RecognizeImage.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this RecognizeImage.
+
+        The returned image update date.  # noqa: E501
+
+        :param updated_at: The updated_at of this RecognizeImage.  # noqa: E501
+        :type updated_at: str
+        """
+
+        self._updated_at = updated_at
+
+    @property
     def path(self):
         """Gets the path of this RecognizeImage.  # noqa: E501
 
@@ -193,6 +231,29 @@ class RecognizeImage(object):
         self._url = url
 
     @property
+    def metadata(self):
+        """Gets the metadata of this RecognizeImage.  # noqa: E501
+
+        A free-form object containing person's extended attributes.  # noqa: E501
+
+        :return: The metadata of this RecognizeImage.  # noqa: E501
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this RecognizeImage.
+
+        A free-form object containing person's extended attributes.  # noqa: E501
+
+        :param metadata: The metadata of this RecognizeImage.  # noqa: E501
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+
+        self._metadata = metadata
+
+    @property
     def similarity(self):
         """Gets the similarity of this RecognizeImage.  # noqa: E501
 
@@ -214,6 +275,29 @@ class RecognizeImage(object):
         """
 
         self._similarity = similarity
+
+    @property
+    def distance(self):
+        """Gets the distance of this RecognizeImage.  # noqa: E501
+
+        The similarity distance score: the lower the distance, the higher the face's similarity.  # noqa: E501
+
+        :return: The distance of this RecognizeImage.  # noqa: E501
+        :rtype: float
+        """
+        return self._distance
+
+    @distance.setter
+    def distance(self, distance):
+        """Sets the distance of this RecognizeImage.
+
+        The similarity distance score: the lower the distance, the higher the face's similarity.  # noqa: E501
+
+        :param distance: The distance of this RecognizeImage.  # noqa: E501
+        :type distance: float
+        """
+
+        self._distance = distance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

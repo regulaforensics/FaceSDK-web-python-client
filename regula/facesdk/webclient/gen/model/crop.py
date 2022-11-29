@@ -113,7 +113,7 @@ class Crop(object):
     def size(self):
         """Gets the size of this Crop.  # noqa: E501
 
-        The resize value in case type matches this value. It it doesn't, no resize is done.  # noqa: E501
+        The resize value in case type matches this value. If it doesn't, no resize is done.  # noqa: E501
 
         :return: The size of this Crop.  # noqa: E501
         :rtype: [int]
@@ -124,7 +124,7 @@ class Crop(object):
     def size(self, size):
         """Sets the size of this Crop.
 
-        The resize value in case type matches this value. It it doesn't, no resize is done.  # noqa: E501
+        The resize value in case type matches this value. If it doesn't, no resize is done.  # noqa: E501
 
         :param size: The size of this Crop.  # noqa: E501
         :type size: [int]
