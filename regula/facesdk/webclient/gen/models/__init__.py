@@ -36,6 +36,12 @@ from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsIma
 from regula.facesdk.webclient.gen.model.image_page import ImagePage
 from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
+from regula.facesdk.webclient.gen.model.match_and_search_request import MatchAndSearchRequest
+from regula.facesdk.webclient.gen.model.match_and_search_request_all_of import MatchAndSearchRequestAllOf
+from regula.facesdk.webclient.gen.model.match_and_search_request_all_of_images import MatchAndSearchRequestAllOfImages
+from regula.facesdk.webclient.gen.model.match_and_search_response import MatchAndSearchResponse
+from regula.facesdk.webclient.gen.model.match_and_search_response_all_of import MatchAndSearchResponseAllOf
+from regula.facesdk.webclient.gen.model.match_and_search_response_all_of_detections import MatchAndSearchResponseAllOfDetections
 from regula.facesdk.webclient.gen.model.match_image import MatchImage
 from regula.facesdk.webclient.gen.model.match_image_detection import MatchImageDetection
 from regula.facesdk.webclient.gen.model.match_image_result import MatchImageResult
@@ -48,6 +54,8 @@ from regula.facesdk.webclient.gen.model.page import Page
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_all_of import PersonAllOf
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImages
+from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.persons_page_all_of import PersonsPageAllOf
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
@@ -59,9 +67,9 @@ from regula.facesdk.webclient.gen.model.quality_request import QualityRequest
 from regula.facesdk.webclient.gen.model.rgb import RGB
 from regula.facesdk.webclient.gen.model.recognize_image import RecognizeImage
 from regula.facesdk.webclient.gen.model.recognize_image_all_of import RecognizeImageAllOf
+from regula.facesdk.webclient.gen.model.search_parameters import SearchParameters
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
-from regula.facesdk.webclient.gen.model.search_request_all_of import SearchRequestAllOf
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup

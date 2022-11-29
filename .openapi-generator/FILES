@@ -38,6 +38,12 @@ regula/facesdk/webclient/gen/model/image_fields_image.py
 regula/facesdk/webclient/gen/model/image_page.py
 regula/facesdk/webclient/gen/model/image_page_all_of.py
 regula/facesdk/webclient/gen/model/image_source.py
+regula/facesdk/webclient/gen/model/match_and_search_request.py
+regula/facesdk/webclient/gen/model/match_and_search_request_all_of.py
+regula/facesdk/webclient/gen/model/match_and_search_request_all_of_images.py
+regula/facesdk/webclient/gen/model/match_and_search_response.py
+regula/facesdk/webclient/gen/model/match_and_search_response_all_of.py
+regula/facesdk/webclient/gen/model/match_and_search_response_all_of_detections.py
 regula/facesdk/webclient/gen/model/match_image.py
 regula/facesdk/webclient/gen/model/match_image_detection.py
 regula/facesdk/webclient/gen/model/match_image_result.py
@@ -50,6 +56,8 @@ regula/facesdk/webclient/gen/model/page.py
 regula/facesdk/webclient/gen/model/person.py
 regula/facesdk/webclient/gen/model/person_all_of.py
 regula/facesdk/webclient/gen/model/person_fields.py
+regula/facesdk/webclient/gen/model/person_with_images.py
+regula/facesdk/webclient/gen/model/person_with_images_all_of.py
 regula/facesdk/webclient/gen/model/persons_page.py
 regula/facesdk/webclient/gen/model/persons_page_all_of.py
 regula/facesdk/webclient/gen/model/process_param.py
@@ -61,10 +69,10 @@ regula/facesdk/webclient/gen/model/quality_request.py
 regula/facesdk/webclient/gen/model/recognize_image.py
 regula/facesdk/webclient/gen/model/recognize_image_all_of.py
 regula/facesdk/webclient/gen/model/rgb.py
+regula/facesdk/webclient/gen/model/search_parameters.py
 regula/facesdk/webclient/gen/model/search_person.py
 regula/facesdk/webclient/gen/model/search_person_all_of.py
 regula/facesdk/webclient/gen/model/search_request.py
-regula/facesdk/webclient/gen/model/search_request_all_of.py
 regula/facesdk/webclient/gen/model/search_result.py
 regula/facesdk/webclient/gen/model/update_group.py
 regula/facesdk/webclient/gen/model_utils.py
