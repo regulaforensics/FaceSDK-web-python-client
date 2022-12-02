@@ -27,6 +27,8 @@ regula/facesdk/webclient/gen/model/face_quality_scenarios.py
 regula/facesdk/webclient/gen/model/face_rectangular.py
 regula/facesdk/webclient/gen/model/face_sdk_result.py
 regula/facesdk/webclient/gen/model/face_sdk_result_code.py
+regula/facesdk/webclient/gen/model/faces_response.py
+regula/facesdk/webclient/gen/model/faces_response_all_of.py
 regula/facesdk/webclient/gen/model/group.py
 regula/facesdk/webclient/gen/model/group_all_of.py
 regula/facesdk/webclient/gen/model/group_page.py

@@ -33,60 +33,39 @@ class MatchAndSearchResponseAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'detections': '[MatchAndSearchResponseAllOfDetections]',
-        'results': 'MatchImageResult',
+        'results': '[MatchImageResult]',
         'elapsed_time': 'float',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'detections': '[MatchAndSearchResponseAllOfDetections]',
     }
 
     attribute_map = {
-        'detections': 'detections',
         'results': 'results',
         'elapsed_time': 'elapsedTime',
         'metadata': 'metadata',
+        'detections': 'detections',
     }
 
-    def __init__(self, detections=None, results=None, elapsed_time=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, results=None, elapsed_time=None, metadata=None, detections=None, local_vars_configuration=None):  # noqa: E501
         """MatchAndSearchResponseAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._detections = None
         self._results = None
         self._elapsed_time = None
         self._metadata = None
+        self._detections = None
         self.discriminator = None
 
-        if detections is not None:
-            self.detections = detections
         if results is not None:
             self.results = results
         if elapsed_time is not None:
             self.elapsed_time = elapsed_time
         if metadata is not None:
             self.metadata = metadata
-
-    @property
-    def detections(self):
-        """Gets the detections of this MatchAndSearchResponseAllOf.  # noqa: E501
-
-
-        :return: The detections of this MatchAndSearchResponseAllOf.  # noqa: E501
-        :rtype: [MatchAndSearchResponseAllOfDetections]
-        """
-        return self._detections
-
-    @detections.setter
-    def detections(self, detections):
-        """Sets the detections of this MatchAndSearchResponseAllOf.
-
-
-        :param detections: The detections of this MatchAndSearchResponseAllOf.  # noqa: E501
-        :type detections: [MatchAndSearchResponseAllOfDetections]
-        """
-
-        self._detections = detections
+        if detections is not None:
+            self.detections = detections
 
     @property
     def results(self):
@@ -94,7 +73,7 @@ class MatchAndSearchResponseAllOf(object):
 
 
         :return: The results of this MatchAndSearchResponseAllOf.  # noqa: E501
-        :rtype: MatchImageResult
+        :rtype: [MatchImageResult]
         """
         return self._results
 
@@ -104,7 +83,7 @@ class MatchAndSearchResponseAllOf(object):
 
 
         :param results: The results of this MatchAndSearchResponseAllOf.  # noqa: E501
-        :type results: MatchImageResult
+        :type results: [MatchImageResult]
         """
 
         self._results = results
@@ -152,6 +131,27 @@ class MatchAndSearchResponseAllOf(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def detections(self):
+        """Gets the detections of this MatchAndSearchResponseAllOf.  # noqa: E501
+
+
+        :return: The detections of this MatchAndSearchResponseAllOf.  # noqa: E501
+        :rtype: [MatchAndSearchResponseAllOfDetections]
+        """
+        return self._detections
+
+    @detections.setter
+    def detections(self, detections):
+        """Sets the detections of this MatchAndSearchResponseAllOf.
+
+
+        :param detections: The detections of this MatchAndSearchResponseAllOf.  # noqa: E501
+        :type detections: [MatchAndSearchResponseAllOfDetections]
+        """
+
+        self._detections = detections
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -25,6 +25,8 @@ from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualit
 from regula.facesdk.webclient.gen.model.face_rectangular import FaceRectangular
 from regula.facesdk.webclient.gen.model.face_sdk_result import FaceSDKResult
 from regula.facesdk.webclient.gen.model.face_sdk_result_code import FaceSDKResultCode
+from regula.facesdk.webclient.gen.model.faces_response import FacesResponse
+from regula.facesdk.webclient.gen.model.faces_response_all_of import FacesResponseAllOf
 from regula.facesdk.webclient.gen.model.group import Group
 from regula.facesdk.webclient.gen.model.group_all_of import GroupAllOf
 from regula.facesdk.webclient.gen.model.group_page import GroupPage

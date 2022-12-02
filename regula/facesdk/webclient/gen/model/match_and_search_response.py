@@ -34,42 +34,42 @@ class MatchAndSearchResponse(object):
     """
     openapi_types = {
         'code': 'FaceSDKResultCode',
-        'detections': '[MatchAndSearchResponseAllOfDetections]',
-        'results': 'MatchImageResult',
+        'results': '[MatchImageResult]',
         'elapsed_time': 'float',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'detections': '[MatchAndSearchResponseAllOfDetections]',
     }
 
     attribute_map = {
         'code': 'code',
-        'detections': 'detections',
         'results': 'results',
         'elapsed_time': 'elapsedTime',
         'metadata': 'metadata',
+        'detections': 'detections',
     }
 
-    def __init__(self, code=None, detections=None, results=None, elapsed_time=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, results=None, elapsed_time=None, metadata=None, detections=None, local_vars_configuration=None):  # noqa: E501
         """MatchAndSearchResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._code = None
-        self._detections = None
         self._results = None
         self._elapsed_time = None
         self._metadata = None
+        self._detections = None
         self.discriminator = None
 
         self.code = code
-        if detections is not None:
-            self.detections = detections
         if results is not None:
             self.results = results
         if elapsed_time is not None:
             self.elapsed_time = elapsed_time
         if metadata is not None:
             self.metadata = metadata
+        if detections is not None:
+            self.detections = detections
 
     @property
     def code(self):
@@ -95,33 +95,12 @@ class MatchAndSearchResponse(object):
         self._code = code
 
     @property
-    def detections(self):
-        """Gets the detections of this MatchAndSearchResponse.  # noqa: E501
-
-
-        :return: The detections of this MatchAndSearchResponse.  # noqa: E501
-        :rtype: [MatchAndSearchResponseAllOfDetections]
-        """
-        return self._detections
-
-    @detections.setter
-    def detections(self, detections):
-        """Sets the detections of this MatchAndSearchResponse.
-
-
-        :param detections: The detections of this MatchAndSearchResponse.  # noqa: E501
-        :type detections: [MatchAndSearchResponseAllOfDetections]
-        """
-
-        self._detections = detections
-
-    @property
     def results(self):
         """Gets the results of this MatchAndSearchResponse.  # noqa: E501
 
 
         :return: The results of this MatchAndSearchResponse.  # noqa: E501
-        :rtype: MatchImageResult
+        :rtype: [MatchImageResult]
         """
         return self._results
 
@@ -131,7 +110,7 @@ class MatchAndSearchResponse(object):
 
 
         :param results: The results of this MatchAndSearchResponse.  # noqa: E501
-        :type results: MatchImageResult
+        :type results: [MatchImageResult]
         """
 
         self._results = results
@@ -179,6 +158,27 @@ class MatchAndSearchResponse(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def detections(self):
+        """Gets the detections of this MatchAndSearchResponse.  # noqa: E501
+
+
+        :return: The detections of this MatchAndSearchResponse.  # noqa: E501
+        :rtype: [MatchAndSearchResponseAllOfDetections]
+        """
+        return self._detections
+
+    @detections.setter
+    def detections(self, detections):
+        """Sets the detections of this MatchAndSearchResponse.
+
+
+        :param detections: The detections of this MatchAndSearchResponse.  # noqa: E501
+        :type detections: [MatchAndSearchResponseAllOfDetections]
+        """
+
+        self._detections = detections
 
     def to_dict(self):
         """Returns the model properties as a dict"""
