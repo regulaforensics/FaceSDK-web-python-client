@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="regula.facesdk.webclient",
-    version=os.getenv("PACKAGE_VERSION_TO_PUBLISH", "unknown"),
+    version=os.getenv("PACKAGE_VERSION_TO_PUBLISH", "5.1dev"),
     python_requires=">=3.5",
     description="Regula's FaceSDK web python client",
     long_description=long_description,
