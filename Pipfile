@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 certifi = "==2022.6.15.1"
-future = "*"
 six = ">=1.10"
 python-dateutil = ">=2.5.3"
 urllib3 = ">=1.15.1"
+vistir = ">=0.4.0, <=0.6.1"
 
 [dev-packages]
 setuptools = ">=21.0.0"
@@ -16,3 +16,6 @@ pipenv-setup = "*"
 wheel = "*"
 twine = "*"
 chardet = "*"
+
+[requires]
+python_version = "3.8"

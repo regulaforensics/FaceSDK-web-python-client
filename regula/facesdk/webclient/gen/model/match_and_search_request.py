@@ -115,7 +115,7 @@ class MatchAndSearchRequest(object):
     def threshold(self):
         """Gets the threshold of this MatchAndSearchRequest.  # noqa: E501
 
-        The similarity distance threshold.  # noqa: E501
+        The similarity distance threshold, should be between 0.0 and 2.0, where 0.0 is for returning results for only the most similar persons and 2.0 is for all the persons, even the dissimilar ones. If not set, the default 1.0 value is used.  # noqa: E501
 
         :return: The threshold of this MatchAndSearchRequest.  # noqa: E501
         :rtype: float
@@ -126,7 +126,7 @@ class MatchAndSearchRequest(object):
     def threshold(self, threshold):
         """Sets the threshold of this MatchAndSearchRequest.
 
-        The similarity distance threshold.  # noqa: E501
+        The similarity distance threshold, should be between 0.0 and 2.0, where 0.0 is for returning results for only the most similar persons and 2.0 is for all the persons, even the dissimilar ones. If not set, the default 1.0 value is used.  # noqa: E501
 
         :param threshold: The threshold of this MatchAndSearchRequest.  # noqa: E501
         :type threshold: float
