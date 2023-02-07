@@ -15,6 +15,7 @@
 
 # Import APIs into API package:
 from regula.facesdk.webclient.gen.api.group_api import GroupApi
+from regula.facesdk.webclient.gen.api.liveness_api import LivenessApi
 from regula.facesdk.webclient.gen.api.matching_api import MatchingApi
 from regula.facesdk.webclient.gen.api.person_api import PersonApi
 from regula.facesdk.webclient.gen.api.search_api import SearchApi

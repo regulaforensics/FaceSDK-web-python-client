@@ -3,6 +3,7 @@ regula/facesdk/__init__.py
 regula/facesdk/webclient/gen/__init__.py
 regula/facesdk/webclient/gen/api/__init__.py
 regula/facesdk/webclient/gen/api/group_api.py
+regula/facesdk/webclient/gen/api/liveness_api.py
 regula/facesdk/webclient/gen/api/matching_api.py
 regula/facesdk/webclient/gen/api/person_api.py
 regula/facesdk/webclient/gen/api/search_api.py
