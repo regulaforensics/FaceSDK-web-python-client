@@ -16,7 +16,7 @@ setup(
     author="Regula Forensics, Inc.",
     author_email="support@regulaforensics.com",
     url="https://mobile.regulaforensics.com",
-    keywords=["face recognition", "facesdk", "regulaforensics", "regula",],
+    keywords=["face recognition", "facesdk", "regulaforensics", "regula"],
     install_requires=[
         "certifi==2022.12.7",
         "python-dateutil==2.8.1",
