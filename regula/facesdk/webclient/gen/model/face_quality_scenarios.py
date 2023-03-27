@@ -26,6 +26,9 @@ class FaceQualityScenarios(object):
     """
 
     ""
+    OLD_MODE = "OldMode"
+
+    ""
     QUALITY_FULL = "QualityFull"
 
     ""
@@ -46,7 +49,7 @@ class FaceQualityScenarios(object):
     ""
     THUMBNAIL = "Thumbnail"
 
-    allowable_values = [QUALITY_FULL, QUALITY_ICAO, QUALITY_VISA_SCHENGEN, QUALITY_VISA_USA, CROP_CENTRAL_FACE, CROP_ALL_FACES, THUMBNAIL]  # noqa: E501
+    allowable_values = [OLD_MODE, QUALITY_FULL, QUALITY_ICAO, QUALITY_VISA_SCHENGEN, QUALITY_VISA_USA, CROP_CENTRAL_FACE, CROP_ALL_FACES, THUMBNAIL]  # noqa: E501
 
     """
     Attributes:
