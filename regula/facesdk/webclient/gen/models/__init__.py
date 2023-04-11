@@ -38,7 +38,6 @@ from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsIma
 from regula.facesdk.webclient.gen.model.image_page import ImagePage
 from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
-from regula.facesdk.webclient.gen.model.liveness_transaction import LivenessTransaction
 from regula.facesdk.webclient.gen.model.match_and_search_request import MatchAndSearchRequest
 from regula.facesdk.webclient.gen.model.match_and_search_request_all_of import MatchAndSearchRequestAllOf
 from regula.facesdk.webclient.gen.model.match_and_search_request_all_of_images import MatchAndSearchRequestAllOfImages
@@ -75,5 +74,5 @@ from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
-from regula.facesdk.webclient.gen.model.transaction_config import TransactionConfig
+from regula.facesdk.webclient.gen.model.transaction_info import TransactionInfo
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
