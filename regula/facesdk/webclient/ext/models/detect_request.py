@@ -18,6 +18,6 @@ class DetectRequest(GetDetectRequest):
             image = bytes_to_base64(image)
 
         super().__init__(
-            image=image, only_central_face=only_central_face, attributes=attributes, thumbnails=thumbnails,
+            image=image, attributes=attributes, thumbnails=thumbnails,
             local_vars_configuration=local_vars_configuration, tag=tag
         )
