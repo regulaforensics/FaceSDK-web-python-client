@@ -11,12 +11,14 @@
 
 from regula.facesdk.webclient.gen.model.crop import Crop
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
+from regula.facesdk.webclient.gen.model.detect_request_attributes import DetectRequestAttributes
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
 from regula.facesdk.webclient.gen.model.detect_result import DetectResult
 from regula.facesdk.webclient.gen.model.detection import Detection
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
 from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
+from regula.facesdk.webclient.gen.model.face_attribute import FaceAttribute
 from regula.facesdk.webclient.gen.model.face_image_quality_align_type import FaceImageQualityAlignType
 from regula.facesdk.webclient.gen.model.face_image_quality_groups import FaceImageQualityGroups
 from regula.facesdk.webclient.gen.model.face_image_quality_status import FaceImageQualityStatus
@@ -55,6 +57,7 @@ from regula.facesdk.webclient.gen.model.output_image_params import OutputImagePa
 from regula.facesdk.webclient.gen.model.page import Page
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_all_of import PersonAllOf
+from regula.facesdk.webclient.gen.model.person_created_response import PersonCreatedResponse
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImages
 from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf
@@ -69,7 +72,11 @@ from regula.facesdk.webclient.gen.model.quality_request import QualityRequest
 from regula.facesdk.webclient.gen.model.rgb import RGB
 from regula.facesdk.webclient.gen.model.recognize_image import RecognizeImage
 from regula.facesdk.webclient.gen.model.recognize_image_all_of import RecognizeImageAllOf
+from regula.facesdk.webclient.gen.model.resize_options import ResizeOptions
+from regula.facesdk.webclient.gen.model.search_bad_params import SearchBadParams
+from regula.facesdk.webclient.gen.model.search_detection import SearchDetection
 from regula.facesdk.webclient.gen.model.search_parameters import SearchParameters
+from regula.facesdk.webclient.gen.model.search_parameters_create_person import SearchParametersCreatePerson
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
