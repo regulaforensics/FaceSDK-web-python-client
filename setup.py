@@ -26,3 +26,4 @@ setup(
     packages=find_packages(exclude=["test", "tests", "example"]),
     include_package_data=True,
 )
+
