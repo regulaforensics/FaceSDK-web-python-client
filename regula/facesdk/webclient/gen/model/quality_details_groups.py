@@ -34,7 +34,7 @@ class QualityDetailsGroups(object):
     """
     openapi_types = {
         'group_id': 'FaceImageQualityGroups',
-        'name': 'FaceImageQualityGroups',
+        'name': 'FaceImageQualityGroupsStrings',
         'total_count': 'int',
         'compliant_count': 'int',
     }
@@ -94,7 +94,7 @@ class QualityDetailsGroups(object):
 
 
         :return: The name of this QualityDetailsGroups.  # noqa: E501
-        :rtype: FaceImageQualityGroups
+        :rtype: FaceImageQualityGroupsStrings
         """
         return self._name
 
@@ -104,7 +104,7 @@ class QualityDetailsGroups(object):
 
 
         :param name: The name of this QualityDetailsGroups.  # noqa: E501
-        :type name: FaceImageQualityGroups
+        :type name: FaceImageQualityGroupsStrings
         """
 
         self._name = name

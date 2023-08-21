@@ -117,7 +117,7 @@ class ImageFieldsImage(object):
     def image_url(self):
         """Gets the image_url of this ImageFieldsImage.  # noqa: E501
 
-        Image URL, can be a link to Amazon S3, Google Storage, File System, or HTTP(S).  # noqa: E501
+        Image URL.  # noqa: E501
 
         :return: The image_url of this ImageFieldsImage.  # noqa: E501
         :rtype: str
@@ -128,7 +128,7 @@ class ImageFieldsImage(object):
     def image_url(self, image_url):
         """Sets the image_url of this ImageFieldsImage.
 
-        Image URL, can be a link to Amazon S3, Google Storage, File System, or HTTP(S).  # noqa: E501
+        Image URL.  # noqa: E501
 
         :param image_url: The image_url of this ImageFieldsImage.  # noqa: E501
         :type image_url: str

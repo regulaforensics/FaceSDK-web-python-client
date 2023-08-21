@@ -188,7 +188,7 @@ class TransactionInfo(object):
     def video(self):
         """Gets the video of this TransactionInfo.  # noqa: E501
 
-        An S3 link to the session video.  # noqa: E501
+        Link to the session video.  # noqa: E501
 
         :return: The video of this TransactionInfo.  # noqa: E501
         :rtype: str
@@ -199,7 +199,7 @@ class TransactionInfo(object):
     def video(self, video):
         """Sets the video of this TransactionInfo.
 
-        An S3 link to the session video.  # noqa: E501
+        Link to the session video.  # noqa: E501
 
         :param video: The video of this TransactionInfo.  # noqa: E501
         :type video: str
@@ -257,7 +257,7 @@ class TransactionInfo(object):
     def portrait(self):
         """Gets the portrait of this TransactionInfo.  # noqa: E501
 
-        S3 link to the portrait.  # noqa: E501
+        Link to the portrait.  # noqa: E501
 
         :return: The portrait of this TransactionInfo.  # noqa: E501
         :rtype: str
@@ -268,7 +268,7 @@ class TransactionInfo(object):
     def portrait(self, portrait):
         """Sets the portrait of this TransactionInfo.
 
-        S3 link to the portrait.  # noqa: E501
+        Link to the portrait.  # noqa: E501
 
         :param portrait: The portrait of this TransactionInfo.  # noqa: E501
         :type portrait: str
