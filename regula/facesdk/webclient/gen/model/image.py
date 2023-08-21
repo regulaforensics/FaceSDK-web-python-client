@@ -178,7 +178,7 @@ class Image(object):
     def path(self):
         """Gets the path of this Image.  # noqa: E501
 
-        Returned image S3 path.  # noqa: E501
+        Returned image path.  # noqa: E501
 
         :return: The path of this Image.  # noqa: E501
         :rtype: str
@@ -189,7 +189,7 @@ class Image(object):
     def path(self, path):
         """Sets the path of this Image.
 
-        Returned image S3 path.  # noqa: E501
+        Returned image path.  # noqa: E501
 
         :param path: The path of this Image.  # noqa: E501
         :type path: str
