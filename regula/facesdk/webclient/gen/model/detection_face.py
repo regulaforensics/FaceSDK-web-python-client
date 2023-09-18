@@ -38,6 +38,7 @@ class DetectionFace(object):
         'rotation_angle': 'float',
         'roi': 'FaceRectangular',
         'thumbnail': 'str',
+        'crop': 'str',
     }
 
     attribute_map = {
@@ -46,9 +47,10 @@ class DetectionFace(object):
         'rotation_angle': 'rotationAngle',
         'roi': 'roi',
         'thumbnail': 'thumbnail',
+        'crop': 'crop',
     }
 
-    def __init__(self, face_index=None, landmarks=None, rotation_angle=None, roi=None, thumbnail=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, face_index=None, landmarks=None, rotation_angle=None, roi=None, thumbnail=None, crop=None, local_vars_configuration=None):  # noqa: E501
         """DetectionFace - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +61,7 @@ class DetectionFace(object):
         self._rotation_angle = None
         self._roi = None
         self._thumbnail = None
+        self._crop = None
         self.discriminator = None
 
         if face_index is not None:
@@ -71,6 +74,8 @@ class DetectionFace(object):
             self.roi = roi
         if thumbnail is not None:
             self.thumbnail = thumbnail
+        if crop is not None:
+            self.crop = crop
 
     @property
     def face_index(self):
@@ -184,6 +189,27 @@ class DetectionFace(object):
         """
 
         self._thumbnail = thumbnail
+
+    @property
+    def crop(self):
+        """Gets the crop of this DetectionFace.  # noqa: E501
+
+
+        :return: The crop of this DetectionFace.  # noqa: E501
+        :rtype: str
+        """
+        return self._crop
+
+    @crop.setter
+    def crop(self, crop):
+        """Sets the crop of this DetectionFace.
+
+
+        :param crop: The crop of this DetectionFace.  # noqa: E501
+        :type crop: str
+        """
+
+        self._crop = crop
 
     def to_dict(self):
         """Returns the model properties as a dict"""

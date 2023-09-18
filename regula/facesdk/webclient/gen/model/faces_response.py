@@ -38,6 +38,7 @@ class FacesResponse(object):
         'rotation_angle': 'float',
         'roi': 'FaceRectangular',
         'thumbnail': 'str',
+        'crop': 'str',
         'persons': '[PersonWithImages]',
     }
 
@@ -47,10 +48,11 @@ class FacesResponse(object):
         'rotation_angle': 'rotationAngle',
         'roi': 'roi',
         'thumbnail': 'thumbnail',
+        'crop': 'crop',
         'persons': 'persons',
     }
 
-    def __init__(self, face_index=None, landmarks=None, rotation_angle=None, roi=None, thumbnail=None, persons=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, face_index=None, landmarks=None, rotation_angle=None, roi=None, thumbnail=None, crop=None, persons=None, local_vars_configuration=None):  # noqa: E501
         """FacesResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class FacesResponse(object):
         self._rotation_angle = None
         self._roi = None
         self._thumbnail = None
+        self._crop = None
         self._persons = None
         self.discriminator = None
 
@@ -74,6 +77,8 @@ class FacesResponse(object):
             self.roi = roi
         if thumbnail is not None:
             self.thumbnail = thumbnail
+        if crop is not None:
+            self.crop = crop
         if persons is not None:
             self.persons = persons
 
@@ -187,6 +192,27 @@ class FacesResponse(object):
         """
 
         self._thumbnail = thumbnail
+
+    @property
+    def crop(self):
+        """Gets the crop of this FacesResponse.  # noqa: E501
+
+
+        :return: The crop of this FacesResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._crop
+
+    @crop.setter
+    def crop(self, crop):
+        """Sets the crop of this FacesResponse.
+
+
+        :param crop: The crop of this FacesResponse.  # noqa: E501
+        :type crop: str
+        """
+
+        self._crop = crop
 
     @property
     def persons(self):
