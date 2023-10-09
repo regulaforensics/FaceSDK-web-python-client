@@ -51,8 +51,6 @@ from regula.facesdk.webclient.gen.model.match_image import MatchImage
 from regula.facesdk.webclient.gen.model.match_image_detection import MatchImageDetection
 from regula.facesdk.webclient.gen.model.match_image_result import MatchImageResult
 from regula.facesdk.webclient.gen.model.match_request import MatchRequest
-from regula.facesdk.webclient.gen.model.match_request_output_image_params import MatchRequestOutputImageParams
-from regula.facesdk.webclient.gen.model.match_request_output_image_params_crop import MatchRequestOutputImageParamsCrop
 from regula.facesdk.webclient.gen.model.match_response import MatchResponse
 from regula.facesdk.webclient.gen.model.match_response_all_of import MatchResponseAllOf
 from regula.facesdk.webclient.gen.model.operation_log import OperationLog
