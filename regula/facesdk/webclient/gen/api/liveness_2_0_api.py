@@ -46,7 +46,7 @@ class Liveness20Api(object):
         >>> result = thread.get()
 
         :param transaction_id: ID of the current liveness transaction. (required)
-        :type transaction_id: int
+        :type transaction_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -75,7 +75,7 @@ class Liveness20Api(object):
         >>> result = thread.get()
 
         :param transaction_id: ID of the current liveness transaction. (required)
-        :type transaction_id: int
+        :type transaction_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

@@ -33,7 +33,7 @@ class Image(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'int',
+        'id': 'str',
         'content_type': 'str',
         'created_at': 'str',
         'updated_at': 'str',
@@ -89,7 +89,7 @@ class Image(object):
         Response image ID. The list is sorted by decreasing ID value.  # noqa: E501
 
         :return: The id of this Image.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -100,7 +100,7 @@ class Image(object):
         Response image ID. The list is sorted by decreasing ID value.  # noqa: E501
 
         :param id: The id of this Image.  # noqa: E501
-        :type id: int
+        :type id: str
         """
 
         self._id = id
