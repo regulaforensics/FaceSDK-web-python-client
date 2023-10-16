@@ -36,17 +36,15 @@ class MatchRequest(object):
         'tag': 'str',
         'thumbnails': 'bool',
         'images': '[MatchImage]',
-        'output_image_params': 'MatchRequestOutputImageParams',
     }
 
     attribute_map = {
         'tag': 'tag',
         'thumbnails': 'thumbnails',
         'images': 'images',
-        'output_image_params': 'outputImageParams',
     }
 
-    def __init__(self, tag=None, thumbnails=False, images=None, output_image_params=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, thumbnails=False, images=None, local_vars_configuration=None):  # noqa: E501
         """MatchRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,7 +53,6 @@ class MatchRequest(object):
         self._tag = None
         self._thumbnails = None
         self._images = None
-        self._output_image_params = None
         self.discriminator = None
 
         if tag is not None:
@@ -63,8 +60,6 @@ class MatchRequest(object):
         if thumbnails is not None:
             self.thumbnails = thumbnails
         self.images = images
-        if output_image_params is not None:
-            self.output_image_params = output_image_params
 
     @property
     def tag(self):
@@ -136,27 +131,6 @@ class MatchRequest(object):
             raise ValueError("Invalid value for `images`, must not be `None`")  # noqa: E501
 
         self._images = images
-
-    @property
-    def output_image_params(self):
-        """Gets the output_image_params of this MatchRequest.  # noqa: E501
-
-
-        :return: The output_image_params of this MatchRequest.  # noqa: E501
-        :rtype: MatchRequestOutputImageParams
-        """
-        return self._output_image_params
-
-    @output_image_params.setter
-    def output_image_params(self, output_image_params):
-        """Sets the output_image_params of this MatchRequest.
-
-
-        :param output_image_params: The output_image_params of this MatchRequest.  # noqa: E501
-        :type output_image_params: MatchRequestOutputImageParams
-        """
-
-        self._output_image_params = output_image_params
 
     def to_dict(self):
         """Returns the model properties as a dict"""
