@@ -50,7 +50,7 @@ class ImageFields(object):
         'limit': 'limit',
     }
 
-    def __init__(self, tag=None, image=None, output_image_params=None, detect_all=False, threshold=None, limit=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, image=None, tag=None, output_image_params=None, detect_all=False, threshold=None, limit=None, local_vars_configuration=None):  # noqa: E501
         """ImageFields - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()

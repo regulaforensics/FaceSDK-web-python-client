@@ -14,7 +14,7 @@ class GroupApi(GenGroupApi):
     def create_group(self, group_name: str, metadata=None, **kwargs) -> Group:
         if metadata is None:
             metadata = {}
-        group_to_create = GroupToCreate(group_name, metadata)
+        group_to_create = GroupToCreate(name=group_name, metadata=metadata)
         return super().create_group(group_to_create, **kwargs)
 
     def delete_group(self, group_id: str, **kwargs) -> None:
