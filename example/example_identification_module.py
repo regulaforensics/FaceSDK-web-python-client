@@ -19,8 +19,8 @@ with open("face2.jpg", "rb") as f:
 
 sdk = FaceSdk(api_base_path)
 
-person1_id = sdk.person_api.create_person(PersonFields("person1", {})).id
-person2_id = sdk.person_api.create_person(PersonFields("person2", {})).id
+person1_id = sdk.person_api.create_person(PersonFields(name="person1", metadata={})).id
+person2_id = sdk.person_api.create_person(PersonFields(name="person2", metadata={})).id
 
 sdk.person_api.add_image_to_person(person1_id, face_1_bytes)
 sdk.person_api.add_image_to_person(person2_id, face_2_bytes)
@@ -30,7 +30,7 @@ person2 = sdk.person_api.get_person(person2_id)
 
 group = sdk.group_api.create_group("group1")
 
-sdk.group_api.update_persons_in_group(group.id, UpdateGroup([int(person1.id), int(person2.id)]))
+sdk.group_api.update_persons_in_group(group.id, UpdateGroup([person1.id, person2.id]))
 
 result = sdk.search_api.search(
     SearchRequest(
@@ -44,9 +44,9 @@ result = sdk.search_api.search(
     ),
 )
 
-print(f"Person #1 {int(person1.id)} {person1.name}")
-print(f"Person #2 {int(person2.id)} {person2.name}")
-print(f"Group {int(group.id)} {group.name}")
+print(f"Person #1 {person1.id} {person1.name}")
+print(f"Person #2 {person2.id} {person2.name}")
+print(f"Group {group.id} {group.name}")
 print(result)
 
 match_and_search = sdk.matching_api.match_and_search(
