@@ -31,8 +31,6 @@ class MatchingApi(GenMatchingApi):
                          limit: int = 100, threshold: float = 1.0) -> MatchAndSearchResponse:
         body = MatchAndSearchRequest(
             images=images,
-            limit=limit,
-            threshold=1.0,
             group_ids=group_ids
         )
         return super().match_and_search(body)
