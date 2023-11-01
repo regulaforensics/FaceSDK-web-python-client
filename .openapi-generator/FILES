@@ -20,6 +20,8 @@ regula/facesdk/webclient/gen/model/detect_response.py
 regula/facesdk/webclient/gen/model/detect_response_all_of.py
 regula/facesdk/webclient/gen/model/detect_result.py
 regula/facesdk/webclient/gen/model/detection.py
+regula/facesdk/webclient/gen/model/detection_attributes.py
+regula/facesdk/webclient/gen/model/detection_attributes_details.py
 regula/facesdk/webclient/gen/model/detection_face.py
 regula/facesdk/webclient/gen/model/detection_quality.py
 regula/facesdk/webclient/gen/model/face_attribute.py

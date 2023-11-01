@@ -34,7 +34,7 @@ class Detection(object):
     """
     openapi_types = {
         'crop': 'str',
-        'attributes': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'attributes': 'DetectionAttributes',
         'landmarks': '[[int]]',
         'quality': 'DetectionQuality',
         'roi': 'FaceRectangular',
@@ -104,7 +104,7 @@ class Detection(object):
 
 
         :return: The attributes of this Detection.  # noqa: E501
-        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :rtype: DetectionAttributes
         """
         return self._attributes
 
@@ -114,7 +114,7 @@ class Detection(object):
 
 
         :param attributes: The attributes of this Detection.  # noqa: E501
-        :type attributes: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        :type attributes: DetectionAttributes
         """
 
         self._attributes = attributes
