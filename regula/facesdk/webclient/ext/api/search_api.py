@@ -12,5 +12,6 @@ class SearchApi(GenSearchApi):
 
     def search(self, search_request: SearchRequest, **kwargs) -> SearchResult:
         image = search_request.image
-        search_request.image.content = base64.b64encode(image.content).decode("utf-8") if image else None
+        if image is not None:
+            search_request.image.content = base64.b64encode(image.content).decode("utf-8")
         return super().search(search_request, **kwargs)
