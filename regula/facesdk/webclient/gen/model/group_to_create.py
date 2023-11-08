@@ -54,13 +54,12 @@ class GroupToCreate(object):
         self._name = None
         self._metadata = None
         self.discriminator = None
+        self.metadata = metadata if metadata else {}
 
         if tag is not None:
             self.tag = tag
         if name is not None:
             self.name = name
-        if metadata is not None:
-            self.metadata = metadata
 
     @property
     def tag(self):
