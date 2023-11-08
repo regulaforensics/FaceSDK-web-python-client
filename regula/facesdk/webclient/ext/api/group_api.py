@@ -30,6 +30,8 @@ class GroupApi(GenGroupApi):
         return super().get_group(group_id, **kwargs)
 
     def update_group(self, group_id: str, group_to_create: GroupToCreate, **kwargs) -> None:
+        if "metadata" not in kwargs:
+            kwargs['metadata'] = {}
         return super().update_group(group_id, group_to_create, **kwargs)
 
     def update_persons_in_group(self, group_id: str, update_group: UpdateGroup, **kwargs) -> None:
