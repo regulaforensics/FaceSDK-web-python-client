@@ -57,13 +57,12 @@ class PersonFields(object):
         self._metadata = None
         self._groups = None
         self.discriminator = None
+        self.metadata = metadata if metadata else {}
 
         if tag is not None:
             self.tag = tag
         if name is not None:
             self.name = name
-        if metadata is not None:
-            self.metadata = metadata
         if groups is not None:
             self.groups = groups
 
