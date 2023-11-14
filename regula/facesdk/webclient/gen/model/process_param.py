@@ -69,7 +69,7 @@ class ProcessParam(object):
             self.output_image_params = output_image_params
         if quality is not None:
             self.quality = quality
-        if attributes is not None:
+        if attributes:
             self.attributes = attributes
 
     @property
