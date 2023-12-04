@@ -11,11 +11,11 @@
 
 from regula.facesdk.webclient.gen.model.crop import Crop
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
-from regula.facesdk.webclient.gen.model.detect_request_attributes import DetectRequestAttributes
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
 from regula.facesdk.webclient.gen.model.detect_result import DetectResult
 from regula.facesdk.webclient.gen.model.detection import Detection
+from regula.facesdk.webclient.gen.model.detection_attributes import DetectionAttributes
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
 from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
 from regula.facesdk.webclient.gen.model.face_attribute import FaceAttribute
@@ -65,6 +65,7 @@ from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonW
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.persons_page_all_of import PersonsPageAllOf
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
+from regula.facesdk.webclient.gen.model.process_param_attributes import ProcessParamAttributes
 from regula.facesdk.webclient.gen.model.quality_config import QualityConfig
 from regula.facesdk.webclient.gen.model.quality_config_list import QualityConfigList
 from regula.facesdk.webclient.gen.model.quality_detail import QualityDetail
