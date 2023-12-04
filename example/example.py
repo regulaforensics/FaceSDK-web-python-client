@@ -28,7 +28,7 @@ with FaceSdk(host=api_base_path) as sdk:
         print(f"pair({comparison.first_index}, {comparison.second_index}) similarity: {comparison.similarity}")
     print("-----------------------------------------------------------------")
 
-    detect_request = DetectRequest(image=face_1_bytes, attributes=True)
+    detect_request = DetectRequest(image=face_1_bytes)
     detect_response = sdk.matching_api.detect(detect_request)
     detect_results = detect_response.results
 
