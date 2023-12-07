@@ -37,7 +37,7 @@ class ProcessParam(object):
         'only_central_face': 'bool',
         'output_image_params': 'OutputImageParams',
         'quality': 'QualityRequest',
-        'attributes': 'bool',
+        'attributes': 'ProcessParamAttributes',
     }
 
     attribute_map = {
@@ -48,7 +48,7 @@ class ProcessParam(object):
         'attributes': 'attributes',
     }
 
-    def __init__(self, scenario=None, only_central_face=None, output_image_params=None, quality=None, attributes=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, scenario=None, only_central_face=None, output_image_params=None, quality=None, attributes=None, local_vars_configuration=None):  # noqa: E501
         """ProcessParam - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,7 +69,7 @@ class ProcessParam(object):
             self.output_image_params = output_image_params
         if quality is not None:
             self.quality = quality
-        if attributes:
+        if attributes is not None:
             self.attributes = attributes
 
     @property
@@ -162,10 +162,9 @@ class ProcessParam(object):
     def attributes(self):
         """Gets the attributes of this ProcessParam.  # noqa: E501
 
-        Whether to evaluate attributes, such as age and emotions.  # noqa: E501
 
         :return: The attributes of this ProcessParam.  # noqa: E501
-        :rtype: bool
+        :rtype: ProcessParamAttributes
         """
         return self._attributes
 
@@ -173,10 +172,9 @@ class ProcessParam(object):
     def attributes(self, attributes):
         """Sets the attributes of this ProcessParam.
 
-        Whether to evaluate attributes, such as age and emotions.  # noqa: E501
 
         :param attributes: The attributes of this ProcessParam.  # noqa: E501
-        :type attributes: bool
+        :type attributes: ProcessParamAttributes
         """
 
         self._attributes = attributes

@@ -34,7 +34,7 @@ class SearchParameters(object):
     """
     openapi_types = {
         'create_person': 'SearchParametersCreatePerson',
-        'group_ids': '[int]',
+        'group_ids': '[str]',
     }
 
     attribute_map = {
@@ -85,7 +85,7 @@ class SearchParameters(object):
         IDs of the groups in which the search is performed.  # noqa: E501
 
         :return: The group_ids of this SearchParameters.  # noqa: E501
-        :rtype: [int]
+        :rtype: [str]
         """
         return self._group_ids
 
@@ -96,7 +96,7 @@ class SearchParameters(object):
         IDs of the groups in which the search is performed.  # noqa: E501
 
         :param group_ids: The group_ids of this SearchParameters.  # noqa: E501
-        :type group_ids: [int]
+        :type group_ids: [str]
         """
 
         self._group_ids = group_ids
