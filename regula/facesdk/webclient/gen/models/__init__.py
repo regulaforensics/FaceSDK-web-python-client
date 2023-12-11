@@ -16,6 +16,7 @@ from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
 from regula.facesdk.webclient.gen.model.detect_result import DetectResult
 from regula.facesdk.webclient.gen.model.detection import Detection
+from regula.facesdk.webclient.gen.model.detection_attributes import DetectionAttributes
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
 from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
 from regula.facesdk.webclient.gen.model.face_attribute import FaceAttribute
