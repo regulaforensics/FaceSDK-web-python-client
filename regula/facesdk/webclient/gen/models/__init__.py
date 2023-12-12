@@ -18,7 +18,6 @@ from regula.facesdk.webclient.gen.model.detection import Detection
 from regula.facesdk.webclient.gen.model.detection_attributes import DetectionAttributes
 from regula.facesdk.webclient.gen.model.detection_face import DetectionFace
 from regula.facesdk.webclient.gen.model.detection_quality import DetectionQuality
-from regula.facesdk.webclient.gen.model.face_attribute import FaceAttribute
 from regula.facesdk.webclient.gen.model.face_image_quality_align_type import FaceImageQualityAlignType
 from regula.facesdk.webclient.gen.model.face_image_quality_groups import FaceImageQualityGroups
 from regula.facesdk.webclient.gen.model.face_image_quality_groups_strings import FaceImageQualityGroupsStrings
