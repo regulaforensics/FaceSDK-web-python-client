@@ -16,10 +16,12 @@ class PersonApi(GenPersonApi):
 
     def add_image_to_person(self, person_id: str, content: bytes, content_type: str = None, **kwargs) -> Image:
         base_image = base64.b64encode(content).decode("UTF-8")
-        image = ImageFields(ImageFieldsImage(content_type, base_image))
+        image = ImageFields(image=ImageFieldsImage(content_type, base_image))
         return super().add_image_to_person(person_id, image, **kwargs)
 
     def create_person(self, person_fields: PersonFields, **kwargs) -> Person:
+        if person_fields.metadata is None:
+            person_fields.metadata = {}
         return super().create_person(person_fields, **kwargs)
 
     def delete_image_of_person(self, image_id: str, person_id: str, **kwargs) -> None:
