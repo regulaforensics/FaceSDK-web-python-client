@@ -33,7 +33,7 @@ class QualityConfig(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'FaceAttribute',
+        'name': 'FaceQualityConfigName',
         'range': '[float]',
     }
 
@@ -63,7 +63,7 @@ class QualityConfig(object):
 
 
         :return: The name of this QualityConfig.  # noqa: E501
-        :rtype: FaceAttribute
+        :rtype: FaceQualityConfigName
         """
         return self._name
 
@@ -73,7 +73,7 @@ class QualityConfig(object):
 
 
         :param name: The name of this QualityConfig.  # noqa: E501
-        :type name: FaceAttribute
+        :type name: FaceQualityConfigName
         """
 
         self._name = name
