@@ -37,7 +37,6 @@ class DetectRequest(object):
         'process_param': 'ProcessParam',
         'image': 'str',
         'thumbnails': 'bool',
-        'attributes': 'DetectRequestAttributes',
     }
 
     attribute_map = {
@@ -45,10 +44,9 @@ class DetectRequest(object):
         'process_param': 'processParam',
         'image': 'image',
         'thumbnails': 'thumbnails',
-        'attributes': 'attributes',
     }
 
-    def __init__(self, tag=None, process_param=None, image=None, thumbnails=False, attributes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, process_param=None, image=None, thumbnails=False, local_vars_configuration=None):  # noqa: E501
         """DetectRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,7 +56,6 @@ class DetectRequest(object):
         self._process_param = None
         self._image = None
         self._thumbnails = None
-        self._attributes = None
         self.discriminator = None
 
         if tag is not None:
@@ -69,8 +66,6 @@ class DetectRequest(object):
             self.image = image
         if thumbnails is not None:
             self.thumbnails = thumbnails
-        if attributes is not None:
-            self.attributes = attributes
 
     @property
     def tag(self):
@@ -161,27 +156,6 @@ class DetectRequest(object):
         """
 
         self._thumbnails = thumbnails
-
-    @property
-    def attributes(self):
-        """Gets the attributes of this DetectRequest.  # noqa: E501
-
-
-        :return: The attributes of this DetectRequest.  # noqa: E501
-        :rtype: DetectRequestAttributes
-        """
-        return self._attributes
-
-    @attributes.setter
-    def attributes(self, attributes):
-        """Sets the attributes of this DetectRequest.
-
-
-        :param attributes: The attributes of this DetectRequest.  # noqa: E501
-        :type attributes: DetectRequestAttributes
-        """
-
-        self._attributes = attributes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
