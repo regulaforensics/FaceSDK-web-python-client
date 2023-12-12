@@ -20,6 +20,8 @@ class PersonApi(GenPersonApi):
         return super().add_image_to_person(person_id, image, **kwargs)
 
     def create_person(self, person_fields: PersonFields, **kwargs) -> Person:
+        if person_fields.metadata is None:
+            person_fields.metadata = {}
         return super().create_person(person_fields, **kwargs)
 
     def delete_image_of_person(self, image_id: str, person_id: str, **kwargs) -> None:
