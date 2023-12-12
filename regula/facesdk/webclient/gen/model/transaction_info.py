@@ -38,8 +38,7 @@ class TransactionInfo(object):
         'tag': 'str',
         'transaction_id': 'str',
         'video': 'str',
-        'images': '[str]',
-        'estimated_age': 'int',
+        'age': 'int',
         'portrait': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
     }
@@ -50,13 +49,12 @@ class TransactionInfo(object):
         'tag': 'tag',
         'transaction_id': 'transactionId',
         'video': 'video',
-        'images': 'images',
-        'estimated_age': 'estimatedAge',
+        'age': 'age',
         'portrait': 'portrait',
         'metadata': 'metadata',
     }
 
-    def __init__(self, code=None, status=None, tag=None, transaction_id=None, video=None, images=None, estimated_age=None, portrait=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, status=None, tag=None, transaction_id=None, video=None, age=None, portrait=None, metadata=None, local_vars_configuration=None):  # noqa: E501
         """TransactionInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,8 +65,7 @@ class TransactionInfo(object):
         self._tag = None
         self._transaction_id = None
         self._video = None
-        self._images = None
-        self._estimated_age = None
+        self._age = None
         self._portrait = None
         self._metadata = None
         self.discriminator = None
@@ -83,10 +80,8 @@ class TransactionInfo(object):
             self.transaction_id = transaction_id
         if video is not None:
             self.video = video
-        if images is not None:
-            self.images = images
-        if estimated_age is not None:
-            self.estimated_age = estimated_age
+        if age is not None:
+            self.age = age
         if portrait is not None:
             self.portrait = portrait
         if metadata is not None:
@@ -208,50 +203,27 @@ class TransactionInfo(object):
         self._video = video
 
     @property
-    def images(self):
-        """Gets the images of this TransactionInfo.  # noqa: E501
-
-        List of base64 images  # noqa: E501
-
-        :return: The images of this TransactionInfo.  # noqa: E501
-        :rtype: [str]
-        """
-        return self._images
-
-    @images.setter
-    def images(self, images):
-        """Sets the images of this TransactionInfo.
-
-        List of base64 images  # noqa: E501
-
-        :param images: The images of this TransactionInfo.  # noqa: E501
-        :type images: [str]
-        """
-
-        self._images = images
-
-    @property
-    def estimated_age(self):
-        """Gets the estimated_age of this TransactionInfo.  # noqa: E501
+    def age(self):
+        """Gets the age of this TransactionInfo.  # noqa: E501
 
         Approximate age with an accuracy of +/-3 years.  # noqa: E501
 
-        :return: The estimated_age of this TransactionInfo.  # noqa: E501
+        :return: The age of this TransactionInfo.  # noqa: E501
         :rtype: int
         """
-        return self._estimated_age
+        return self._age
 
-    @estimated_age.setter
-    def estimated_age(self, estimated_age):
-        """Sets the estimated_age of this TransactionInfo.
+    @age.setter
+    def age(self, age):
+        """Sets the age of this TransactionInfo.
 
         Approximate age with an accuracy of +/-3 years.  # noqa: E501
 
-        :param estimated_age: The estimated_age of this TransactionInfo.  # noqa: E501
-        :type estimated_age: int
+        :param age: The age of this TransactionInfo.  # noqa: E501
+        :type age: int
         """
 
-        self._estimated_age = estimated_age
+        self._age = age
 
     @property
     def portrait(self):

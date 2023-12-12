@@ -8,7 +8,7 @@ from regula.facesdk.webclient.gen.models import DetectRequest as GetDetectReques
 class DetectRequest(GetDetectRequest):
     def __init__(
             self, image: Union[Base64String, bytes],
-            only_central_face=False, attributes=False, thumbnails=False,
+            only_central_face=False, thumbnails=False,
             local_vars_configuration=None, tag=None
     ):
         if not image:
@@ -18,6 +18,6 @@ class DetectRequest(GetDetectRequest):
             image = bytes_to_base64(image)
 
         super().__init__(
-            image=image, attributes=attributes, thumbnails=thumbnails,
+            image=image, thumbnails=thumbnails,
             local_vars_configuration=local_vars_configuration, tag=tag
         )
