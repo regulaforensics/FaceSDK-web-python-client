@@ -3,7 +3,7 @@ from regula.facesdk.webclient.gen.model.search_request import SearchRequest
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 import regula
 
-from misc.paths_and_urls import *
+from tests.misc.paths_and_urls import *
 import pytest
 
 test_name = "test"
@@ -78,8 +78,8 @@ def test_get_person_images(group_and_person_setup):
     response = facesdk.person_api.get_all_images_by_person_id(page=1, size=1, person_id=person_id)
     response_dict = create_dictionary(response)
     assert 'items' in response_dict, "'items' key not found in the response dictionary"
-    assert "id" in response_dict["items"], 'id of photo not found'
-    assert "path" in response_dict["items"], 'path of photo not found'
+    assert "id" in response_dict["items"][0], 'id of photo not found'
+    assert "path" in response_dict["items"][0], 'path of photo not found'
 
 
 def test_person_groups(group_and_person_setup):

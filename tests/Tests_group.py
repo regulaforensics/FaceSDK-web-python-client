@@ -1,7 +1,7 @@
 from regula.facesdk.webclient.gen.model.group_to_create import GroupToCreate
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
-from misc.paths_and_urls import *
+from tests.misc.paths_and_urls import *
 import pytest
 
 test_group_name = "test"

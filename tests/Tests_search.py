@@ -4,7 +4,7 @@ from regula.facesdk.webclient.gen.model.resize_options import ResizeOptions
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 from regula.facesdk.webclient.gen.model.crop import Crop
-from misc.paths_and_urls import *
+from tests.misc.paths_and_urls import *
 import pytest
 
 base_metadata = {'description': 'This is a test group'}

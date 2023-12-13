@@ -1,6 +1,6 @@
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
 from regula.facesdk.webclient import MatchImage, MatchRequest
-from misc.paths_and_urls import *
+from tests.misc.paths_and_urls import *
 
 
 def validate_response(response, expected_detections_count, expected_first, expected_second=None):

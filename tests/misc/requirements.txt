@@ -1,5 +1,14 @@
-pytest
+pytest~=7.4.3
 requests
 allure-pytest
-regula.facesdk.webclient
 pytest-reportportal
+certifi==2023.7.22
+six>=1.10
+python-dateutil>=2.5.3
+urllib3>=1.26.18
+vistir>=0.4.0,<=0.6.1
+setuptools>=21.0.0
+pipenv-setup
+wheel
+twine
+chardet

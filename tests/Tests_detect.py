@@ -4,7 +4,7 @@ from regula.facesdk.webclient.gen.model.quality_request import QualityRequest
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 from regula.facesdk.webclient.gen.model.crop import Crop
-from misc.paths_and_urls import *
+from tests.misc.paths_and_urls import *
 import pytest
 import base64
 
@@ -75,13 +75,12 @@ def test_outputImageParams(facesdk, detect_setup):
 
 
 def test_quality(facesdk, detect_setup):
-    attributes = DetectRequestAttributes(config=[{'name': 'Age', 'range': [5, 45]}])
     quality_request = QualityRequest(
         background_match_color=[128, 128, 128],
         config=[{"name": "Roll", "range": [-5, 5]}]
     )
     params = ProcessParam(quality=quality_request)
-    request = DetectRequest(image=detect_setup[1], process_param=params, attributes=attributes)
+    request = DetectRequest(image=detect_setup[1], process_param=params)
     response = create_dictionary(facesdk.matching_api.detect(request))
     basic_assertions(response)
     detection = response['results']['detections'][0]
@@ -101,8 +100,3 @@ def test_attributes(facesdk, detect_setup):
     assert attribute_details[0]['name'] == 'Age'
     assert 5 <= attribute_details[0]['value'][0] <= 45
     assert 5 <= attribute_details[0]['value'][1] <= 45
-
-
-def test_without_attributes(facesdk, detect_setup):
-    request = DetectRequest(image=detect_setup[0])
-    facesdk.matching_api.detect(request)
