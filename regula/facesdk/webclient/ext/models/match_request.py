@@ -28,7 +28,7 @@ class MatchRequest(GenMatchRequest):
         super().__init__(
             images=input_images,
             local_vars_configuration=local_vars_configuration,
-            # output_image_params=output_image_params,
+            output_image_params=output_image_params,
             thumbnails=thumbnails,
             tag=tag
         )
