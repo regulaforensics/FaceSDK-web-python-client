@@ -13,6 +13,8 @@ regula/facesdk/webclient/gen/apis/__init__.py
 regula/facesdk/webclient/gen/configuration.py
 regula/facesdk/webclient/gen/exceptions.py
 regula/facesdk/webclient/gen/model/__init__.py
+regula/facesdk/webclient/gen/model/attribute_config.py
+regula/facesdk/webclient/gen/model/attribute_config_list.py
 regula/facesdk/webclient/gen/model/crop.py
 regula/facesdk/webclient/gen/model/detect_request.py
 regula/facesdk/webclient/gen/model/detect_response.py
@@ -22,6 +24,7 @@ regula/facesdk/webclient/gen/model/detection.py
 regula/facesdk/webclient/gen/model/detection_attributes.py
 regula/facesdk/webclient/gen/model/detection_face.py
 regula/facesdk/webclient/gen/model/detection_quality.py
+regula/facesdk/webclient/gen/model/face_attribute.py
 regula/facesdk/webclient/gen/model/face_image_quality_align_type.py
 regula/facesdk/webclient/gen/model/face_image_quality_groups.py
 regula/facesdk/webclient/gen/model/face_image_quality_groups_strings.py
