@@ -66,7 +66,6 @@ regula/facesdk/webclient/gen/model/output_image_params.py
 regula/facesdk/webclient/gen/model/page.py
 regula/facesdk/webclient/gen/model/person.py
 regula/facesdk/webclient/gen/model/person_all_of.py
-regula/facesdk/webclient/gen/model/person_created_response.py
 regula/facesdk/webclient/gen/model/person_fields.py
 regula/facesdk/webclient/gen/model/person_with_images.py
 regula/facesdk/webclient/gen/model/person_with_images_all_of.py
