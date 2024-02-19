@@ -35,14 +35,26 @@ class SearchResult(object):
     openapi_types = {
         'code': 'int',
         'persons': '[SearchPerson]',
+        'id': 'str, none_type',
+        'created_at': 'str, none_type',
+        'updated_at': 'str, none_type',
+        'groups': '[str], none_type',
+        'name': 'str, none_type',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type',
     }
 
     attribute_map = {
         'code': 'code',
         'persons': 'persons',
+        'id': 'id',
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
+        'groups': 'groups',
+        'name': 'name',
+        'metadata': 'metadata',
     }
 
-    def __init__(self, code=None, persons=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, persons=None, id=None, created_at=None, updated_at=None, groups=None, name=None, metadata=None, local_vars_configuration=None):  # noqa: E501
         """SearchResult - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -50,18 +62,30 @@ class SearchResult(object):
 
         self._code = None
         self._persons = None
+        self._id = None
+        self._created_at = None
+        self._updated_at = None
+        self._groups = None
+        self._name = None
+        self._metadata = None
         self.discriminator = None
 
         if code is not None:
             self.code = code
         if persons is not None:
             self.persons = persons
+        self.id = id
+        self.created_at = created_at
+        self.updated_at = updated_at
+        self.groups = groups
+        self.name = name
+        self.metadata = metadata
 
     @property
     def code(self):
         """Gets the code of this SearchResult.  # noqa: E501
 
-        Search result code.  # noqa: E501
+        Result code. It is returned only with response 200.  # noqa: E501
 
         :return: The code of this SearchResult.  # noqa: E501
         :rtype: int
@@ -72,7 +96,7 @@ class SearchResult(object):
     def code(self, code):
         """Sets the code of this SearchResult.
 
-        Search result code.  # noqa: E501
+        Result code. It is returned only with response 200.  # noqa: E501
 
         :param code: The code of this SearchResult.  # noqa: E501
         :type code: int
@@ -84,7 +108,7 @@ class SearchResult(object):
     def persons(self):
         """Gets the persons of this SearchResult.  # noqa: E501
 
-        Person data.  # noqa: E501
+        Array of Person images. It is returned only with response 200.  # noqa: E501
 
         :return: The persons of this SearchResult.  # noqa: E501
         :rtype: [SearchPerson]
@@ -95,13 +119,151 @@ class SearchResult(object):
     def persons(self, persons):
         """Sets the persons of this SearchResult.
 
-        Person data.  # noqa: E501
+        Array of Person images. It is returned only with response 200.  # noqa: E501
 
         :param persons: The persons of this SearchResult.  # noqa: E501
         :type persons: [SearchPerson]
         """
 
         self._persons = persons
+
+    @property
+    def id(self):
+        """Gets the id of this SearchResult.  # noqa: E501
+
+        Person ID. The list of persons is sorted by decreasing ID value.  # noqa: E501
+
+        :return: The id of this SearchResult.  # noqa: E501
+        :rtype: str, none_type
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this SearchResult.
+
+        Person ID. The list of persons is sorted by decreasing ID value.  # noqa: E501
+
+        :param id: The id of this SearchResult.  # noqa: E501
+        :type id: str, none_type
+        """
+
+        self._id = id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this SearchResult.  # noqa: E501
+
+        Person creation date.  # noqa: E501
+
+        :return: The created_at of this SearchResult.  # noqa: E501
+        :rtype: str, none_type
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this SearchResult.
+
+        Person creation date.  # noqa: E501
+
+        :param created_at: The created_at of this SearchResult.  # noqa: E501
+        :type created_at: str, none_type
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this SearchResult.  # noqa: E501
+
+        Person update date.  # noqa: E501
+
+        :return: The updated_at of this SearchResult.  # noqa: E501
+        :rtype: str, none_type
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this SearchResult.
+
+        Person update date.  # noqa: E501
+
+        :param updated_at: The updated_at of this SearchResult.  # noqa: E501
+        :type updated_at: str, none_type
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def groups(self):
+        """Gets the groups of this SearchResult.  # noqa: E501
+
+        List of groups this person belongs to.  # noqa: E501
+
+        :return: The groups of this SearchResult.  # noqa: E501
+        :rtype: [str], none_type
+        """
+        return self._groups
+
+    @groups.setter
+    def groups(self, groups):
+        """Sets the groups of this SearchResult.
+
+        List of groups this person belongs to.  # noqa: E501
+
+        :param groups: The groups of this SearchResult.  # noqa: E501
+        :type groups: [str], none_type
+        """
+
+        self._groups = groups
+
+    @property
+    def name(self):
+        """Gets the name of this SearchResult.  # noqa: E501
+
+        Person name.  # noqa: E501
+
+        :return: The name of this SearchResult.  # noqa: E501
+        :rtype: str, none_type
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this SearchResult.
+
+        Person name.  # noqa: E501
+
+        :param name: The name of this SearchResult.  # noqa: E501
+        :type name: str, none_type
+        """
+
+        self._name = name
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this SearchResult.  # noqa: E501
+
+        A free-form object containing person's extended attributes. Available when a person is being created  # noqa: E501
+
+        :return: The metadata of this SearchResult.  # noqa: E501
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this SearchResult.
+
+        A free-form object containing person's extended attributes. Available when a person is being created  # noqa: E501
+
+        :param metadata: The metadata of this SearchResult.  # noqa: E501
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type
+        """
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""
