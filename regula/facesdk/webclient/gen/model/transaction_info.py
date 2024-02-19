@@ -38,7 +38,7 @@ class TransactionInfo(object):
         'tag': 'str',
         'transaction_id': 'str',
         'video': 'str',
-        'age': 'int',
+        'age': '[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]',
         'portrait': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
     }
@@ -209,7 +209,7 @@ class TransactionInfo(object):
         Approximate age with an accuracy of +/-3 years.  # noqa: E501
 
         :return: The age of this TransactionInfo.  # noqa: E501
-        :rtype: int
+        :rtype: [{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]
         """
         return self._age
 
@@ -220,7 +220,7 @@ class TransactionInfo(object):
         Approximate age with an accuracy of +/-3 years.  # noqa: E501
 
         :param age: The age of this TransactionInfo.  # noqa: E501
-        :type age: int
+        :type age: [{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]
         """
 
         self._age = age

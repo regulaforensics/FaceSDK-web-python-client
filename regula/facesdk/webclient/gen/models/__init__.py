@@ -62,7 +62,6 @@ from regula.facesdk.webclient.gen.model.output_image_params import OutputImagePa
 from regula.facesdk.webclient.gen.model.page import Page
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_all_of import PersonAllOf
-from regula.facesdk.webclient.gen.model.person_created_response import PersonCreatedResponse
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
 from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImages
 from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf

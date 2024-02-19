@@ -35,18 +35,16 @@ class MatchAndSearchRequest(object):
     openapi_types = {
         'tag': 'str',
         'images': '[MatchAndSearchRequestAllOfImages]',
-        'create_person': 'SearchParametersCreatePerson',
         'group_ids': '[str]',
     }
 
     attribute_map = {
         'tag': 'tag',
         'images': 'images',
-        'create_person': 'createPerson',
         'group_ids': 'groupIds',
     }
 
-    def __init__(self, tag=None, images=None, create_person=None, group_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, images=None, group_ids=None, local_vars_configuration=None):  # noqa: E501
         """MatchAndSearchRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,7 +52,6 @@ class MatchAndSearchRequest(object):
 
         self._tag = None
         self._images = None
-        self._create_person = None
         self._group_ids = None
         self.discriminator = None
 
@@ -62,8 +59,6 @@ class MatchAndSearchRequest(object):
             self.tag = tag
         if images is not None:
             self.images = images
-        if create_person is not None:
-            self.create_person = create_person
         if group_ids is not None:
             self.group_ids = group_ids
 
@@ -112,27 +107,6 @@ class MatchAndSearchRequest(object):
         """
 
         self._images = images
-
-    @property
-    def create_person(self):
-        """Gets the create_person of this MatchAndSearchRequest.  # noqa: E501
-
-
-        :return: The create_person of this MatchAndSearchRequest.  # noqa: E501
-        :rtype: SearchParametersCreatePerson
-        """
-        return self._create_person
-
-    @create_person.setter
-    def create_person(self, create_person):
-        """Sets the create_person of this MatchAndSearchRequest.
-
-
-        :param create_person: The create_person of this MatchAndSearchRequest.  # noqa: E501
-        :type create_person: SearchParametersCreatePerson
-        """
-
-        self._create_person = create_person
 
     @property
     def group_ids(self):

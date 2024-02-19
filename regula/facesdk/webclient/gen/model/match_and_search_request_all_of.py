@@ -35,14 +35,16 @@ class MatchAndSearchRequestAllOf(object):
     openapi_types = {
         'tag': 'str',
         'images': '[MatchAndSearchRequestAllOfImages]',
+        'group_ids': '[str]',
     }
 
     attribute_map = {
         'tag': 'tag',
         'images': 'images',
+        'group_ids': 'groupIds',
     }
 
-    def __init__(self, tag=None, images=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, images=None, group_ids=None, local_vars_configuration=None):  # noqa: E501
         """MatchAndSearchRequestAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -50,12 +52,15 @@ class MatchAndSearchRequestAllOf(object):
 
         self._tag = None
         self._images = None
+        self._group_ids = None
         self.discriminator = None
 
         if tag is not None:
             self.tag = tag
         if images is not None:
             self.images = images
+        if group_ids is not None:
+            self.group_ids = group_ids
 
     @property
     def tag(self):
@@ -102,6 +107,29 @@ class MatchAndSearchRequestAllOf(object):
         """
 
         self._images = images
+
+    @property
+    def group_ids(self):
+        """Gets the group_ids of this MatchAndSearchRequestAllOf.  # noqa: E501
+
+        IDs of the groups in which the search is performed.  # noqa: E501
+
+        :return: The group_ids of this MatchAndSearchRequestAllOf.  # noqa: E501
+        :rtype: [str]
+        """
+        return self._group_ids
+
+    @group_ids.setter
+    def group_ids(self, group_ids):
+        """Sets the group_ids of this MatchAndSearchRequestAllOf.
+
+        IDs of the groups in which the search is performed.  # noqa: E501
+
+        :param group_ids: The group_ids of this MatchAndSearchRequestAllOf.  # noqa: E501
+        :type group_ids: [str]
+        """
+
+        self._group_ids = group_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""
