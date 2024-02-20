@@ -36,15 +36,17 @@ class OperationLog(object):
         'status_code': 'int',
         'type': 'str',
         'msg': 'str',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
     }
 
     attribute_map = {
         'status_code': 'statusCode',
         'type': 'type',
         'msg': 'msg',
+        'metadata': 'metadata',
     }
 
-    def __init__(self, status_code=None, type=None, msg=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, status_code=None, type=None, msg=None, metadata=None, local_vars_configuration=None):  # noqa: E501
         """OperationLog - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +55,7 @@ class OperationLog(object):
         self._status_code = None
         self._type = None
         self._msg = None
+        self._metadata = None
         self.discriminator = None
 
         if status_code is not None:
@@ -61,6 +64,8 @@ class OperationLog(object):
             self.type = type
         if msg is not None:
             self.msg = msg
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def status_code(self):
@@ -130,6 +135,29 @@ class OperationLog(object):
         """
 
         self._msg = msg
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this OperationLog.  # noqa: E501
+
+        A free-form object containing group's extended attributes.  # noqa: E501
+
+        :return: The metadata of this OperationLog.  # noqa: E501
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this OperationLog.
+
+        A free-form object containing group's extended attributes.  # noqa: E501
+
+        :param metadata: The metadata of this OperationLog.  # noqa: E501
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

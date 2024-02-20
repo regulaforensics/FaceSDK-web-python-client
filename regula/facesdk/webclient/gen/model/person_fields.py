@@ -55,8 +55,7 @@ class PersonFields(object):
         self._groups = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
         if metadata is not None:
             self.metadata = metadata
         if groups is not None:
@@ -82,6 +81,8 @@ class PersonFields(object):
         :param name: The name of this PersonFields.  # noqa: E501
         :type name: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

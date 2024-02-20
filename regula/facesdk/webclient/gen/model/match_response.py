@@ -36,15 +36,17 @@ class MatchResponse(object):
         'code': 'FaceSDKResultCode',
         'detections': '[MatchImageDetection]',
         'results': '[MatchImageResult]',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
     }
 
     attribute_map = {
         'code': 'code',
         'detections': 'detections',
         'results': 'results',
+        'metadata': 'metadata',
     }
 
-    def __init__(self, code=None, detections=None, results=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, detections=None, results=None, metadata=None, local_vars_configuration=None):  # noqa: E501
         """MatchResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +55,7 @@ class MatchResponse(object):
         self._code = None
         self._detections = None
         self._results = None
+        self._metadata = None
         self.discriminator = None
 
         self.code = code
@@ -60,6 +63,8 @@ class MatchResponse(object):
             self.detections = detections
         if results is not None:
             self.results = results
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def code(self):
@@ -129,6 +134,29 @@ class MatchResponse(object):
         """
 
         self._results = results
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this MatchResponse.  # noqa: E501
+
+        A free-form object containing person's extended attributes.  # noqa: E501
+
+        :return: The metadata of this MatchResponse.  # noqa: E501
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this MatchResponse.
+
+        A free-form object containing person's extended attributes.  # noqa: E501
+
+        :param metadata: The metadata of this MatchResponse.  # noqa: E501
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
+        """
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

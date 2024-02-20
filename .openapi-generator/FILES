@@ -13,6 +13,9 @@ regula/facesdk/webclient/gen/apis/__init__.py
 regula/facesdk/webclient/gen/configuration.py
 regula/facesdk/webclient/gen/exceptions.py
 regula/facesdk/webclient/gen/model/__init__.py
+regula/facesdk/webclient/gen/model/add_image_to_person_request.py
+regula/facesdk/webclient/gen/model/add_image_to_person_request_image.py
+regula/facesdk/webclient/gen/model/add_image_to_person_response.py
 regula/facesdk/webclient/gen/model/attribute_config.py
 regula/facesdk/webclient/gen/model/attribute_config_list.py
 regula/facesdk/webclient/gen/model/crop.py
@@ -40,10 +43,10 @@ regula/facesdk/webclient/gen/model/group.py
 regula/facesdk/webclient/gen/model/group_all_of.py
 regula/facesdk/webclient/gen/model/group_page.py
 regula/facesdk/webclient/gen/model/group_page_all_of.py
+regula/facesdk/webclient/gen/model/group_response.py
 regula/facesdk/webclient/gen/model/group_to_create.py
 regula/facesdk/webclient/gen/model/image.py
 regula/facesdk/webclient/gen/model/image_fields.py
-regula/facesdk/webclient/gen/model/image_fields_image.py
 regula/facesdk/webclient/gen/model/image_page.py
 regula/facesdk/webclient/gen/model/image_page_all_of.py
 regula/facesdk/webclient/gen/model/image_source.py
@@ -67,6 +70,7 @@ regula/facesdk/webclient/gen/model/page.py
 regula/facesdk/webclient/gen/model/person.py
 regula/facesdk/webclient/gen/model/person_all_of.py
 regula/facesdk/webclient/gen/model/person_fields.py
+regula/facesdk/webclient/gen/model/person_to_update_fields.py
 regula/facesdk/webclient/gen/model/person_with_images.py
 regula/facesdk/webclient/gen/model/person_with_images_all_of.py
 regula/facesdk/webclient/gen/model/persons_page.py

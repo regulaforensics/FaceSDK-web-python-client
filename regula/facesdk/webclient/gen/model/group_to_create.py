@@ -57,10 +57,8 @@ class GroupToCreate(object):
 
         if tag is not None:
             self.tag = tag
-        if name is not None:
-            self.name = name
-        if metadata is not None:
-            self.metadata = metadata
+        self.name = name
+        self.metadata = metadata
 
     @property
     def tag(self):
@@ -105,6 +103,8 @@ class GroupToCreate(object):
         :param name: The name of this GroupToCreate.  # noqa: E501
         :type name: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -128,6 +128,8 @@ class GroupToCreate(object):
         :param metadata: The metadata of this GroupToCreate.  # noqa: E501
         :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
         """
+        if self.local_vars_configuration.client_side_validation and metadata is None:  # noqa: E501
+            raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501
 
         self._metadata = metadata
 
