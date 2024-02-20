@@ -312,18 +312,18 @@ class GroupApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_all_groups(self, page, size, **kwargs):  # noqa: E501
+    def get_all_groups(self, **kwargs):  # noqa: E501
         """Get groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_groups(page, size, async_req=True)
+        >>> thread = api.get_all_groups(async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
+        :param page: The page number to get a list of persons or groups.
         :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
+        :param size: The page size with a list of persons or groups, items.
         :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
@@ -343,20 +343,20 @@ class GroupApi(object):
         :rtype: GroupPage
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_all_groups_with_http_info(page, size, **kwargs)  # noqa: E501
+        return self.get_all_groups_with_http_info(**kwargs)  # noqa: E501
 
-    def get_all_groups_with_http_info(self, page, size, **kwargs):  # noqa: E501
+    def get_all_groups_with_http_info(self, **kwargs):  # noqa: E501
         """Get groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_groups_with_http_info(page, size, async_req=True)
+        >>> thread = api.get_all_groups_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
+        :param page: The page number to get a list of persons or groups.
         :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
+        :param size: The page size with a list of persons or groups, items.
         :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
@@ -408,14 +408,6 @@ class GroupApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'page' is set
-        if self.api_client.client_side_validation and ('page' not in local_var_params or  # noqa: E501
-                                                        local_var_params['page'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `page` when calling `get_all_groups`")  # noqa: E501
-        # verify the required parameter 'size' is set
-        if self.api_client.client_side_validation and ('size' not in local_var_params or  # noqa: E501
-                                                        local_var_params['size'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `size` when calling `get_all_groups`")  # noqa: E501
 
         collection_formats = {}
 
@@ -459,21 +451,21 @@ class GroupApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_all_persons_by_group_id(self, page, size, group_id, **kwargs):  # noqa: E501
+    def get_all_persons_by_group_id(self, group_id, **kwargs):  # noqa: E501
         """Get group persons  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_persons_by_group_id(page, size, group_id, async_req=True)
+        >>> thread = api.get_all_persons_by_group_id(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param group_id: Group ID. (required)
         :type group_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -492,23 +484,23 @@ class GroupApi(object):
         :rtype: PersonsPage
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_all_persons_by_group_id_with_http_info(page, size, group_id, **kwargs)  # noqa: E501
+        return self.get_all_persons_by_group_id_with_http_info(group_id, **kwargs)  # noqa: E501
 
-    def get_all_persons_by_group_id_with_http_info(self, page, size, group_id, **kwargs):  # noqa: E501
+    def get_all_persons_by_group_id_with_http_info(self, group_id, **kwargs):  # noqa: E501
         """Get group persons  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_persons_by_group_id_with_http_info(page, size, group_id, async_req=True)
+        >>> thread = api.get_all_persons_by_group_id_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param group_id: Group ID. (required)
         :type group_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -537,9 +529,9 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
+            'group_id'
             'page'
             'size'
-            'group_id'
             'x_request_id'
         ]
         all_params.extend(
@@ -560,14 +552,6 @@ class GroupApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'page' is set
-        if self.api_client.client_side_validation and ('page' not in local_var_params or  # noqa: E501
-                                                        local_var_params['page'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `page` when calling `get_all_persons_by_group_id`")  # noqa: E501
-        # verify the required parameter 'size' is set
-        if self.api_client.client_side_validation and ('size' not in local_var_params or  # noqa: E501
-                                                        local_var_params['size'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `size` when calling `get_all_persons_by_group_id`")  # noqa: E501
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501

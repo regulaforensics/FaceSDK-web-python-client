@@ -36,7 +36,7 @@ class SearchRequest(object):
         'create_person': 'SearchParametersCreatePerson',
         'group_ids': '[str]',
         'tag': 'str',
-        'image': 'ImageFieldsImage',
+        'image': 'AddImageToPersonRequestImage',
         'output_image_params': 'OutputImageParams',
         'detect_all': 'bool',
         'threshold': 'float',
@@ -160,7 +160,7 @@ class SearchRequest(object):
 
 
         :return: The image of this SearchRequest.  # noqa: E501
-        :rtype: ImageFieldsImage
+        :rtype: AddImageToPersonRequestImage
         """
         return self._image
 
@@ -170,7 +170,7 @@ class SearchRequest(object):
 
 
         :param image: The image of this SearchRequest.  # noqa: E501
-        :type image: ImageFieldsImage
+        :type image: AddImageToPersonRequestImage
         """
 
         self._image = image

@@ -9,6 +9,9 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from regula.facesdk.webclient.gen.model.add_image_to_person_request import AddImageToPersonRequest
+from regula.facesdk.webclient.gen.model.add_image_to_person_request_image import AddImageToPersonRequestImage
+from regula.facesdk.webclient.gen.model.add_image_to_person_response import AddImageToPersonResponse
 from regula.facesdk.webclient.gen.model.attribute_config import AttributeConfig
 from regula.facesdk.webclient.gen.model.attribute_config_list import AttributeConfigList
 from regula.facesdk.webclient.gen.model.crop import Crop
@@ -36,10 +39,10 @@ from regula.facesdk.webclient.gen.model.group import Group
 from regula.facesdk.webclient.gen.model.group_all_of import GroupAllOf
 from regula.facesdk.webclient.gen.model.group_page import GroupPage
 from regula.facesdk.webclient.gen.model.group_page_all_of import GroupPageAllOf
+from regula.facesdk.webclient.gen.model.group_response import GroupResponse
 from regula.facesdk.webclient.gen.model.group_to_create import GroupToCreate
 from regula.facesdk.webclient.gen.model.image import Image
 from regula.facesdk.webclient.gen.model.image_fields import ImageFields
-from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsImage
 from regula.facesdk.webclient.gen.model.image_page import ImagePage
 from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
@@ -63,6 +66,7 @@ from regula.facesdk.webclient.gen.model.page import Page
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_all_of import PersonAllOf
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.person_to_update_fields import PersonToUpdateFields
 from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImages
 from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage

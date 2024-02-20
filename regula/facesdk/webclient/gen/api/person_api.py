@@ -36,19 +36,19 @@ class PersonApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def add_image_to_person(self, person_id, image_fields, **kwargs):  # noqa: E501
+    def add_image_to_person(self, person_id, add_image_to_person_request, **kwargs):  # noqa: E501
         """Add person image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.add_image_to_person(person_id, image_fields, async_req=True)
+        >>> thread = api.add_image_to_person(person_id, add_image_to_person_request, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person ID. (required)
         :type person_id: str
-        :param image_fields: Image to add. (required)
-        :type image_fields: ImageFields
+        :param add_image_to_person_request: Image to add. (required)
+        :type add_image_to_person_request: AddImageToPersonRequest
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -64,24 +64,24 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: Image
+        :rtype: AddImageToPersonResponse
         """
         kwargs['_return_http_data_only'] = True
-        return self.add_image_to_person_with_http_info(person_id, image_fields, **kwargs)  # noqa: E501
+        return self.add_image_to_person_with_http_info(person_id, add_image_to_person_request, **kwargs)  # noqa: E501
 
-    def add_image_to_person_with_http_info(self, person_id, image_fields, **kwargs):  # noqa: E501
+    def add_image_to_person_with_http_info(self, person_id, add_image_to_person_request, **kwargs):  # noqa: E501
         """Add person image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.add_image_to_person_with_http_info(person_id, image_fields, async_req=True)
+        >>> thread = api.add_image_to_person_with_http_info(person_id, add_image_to_person_request, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person ID. (required)
         :type person_id: str
-        :param image_fields: Image to add. (required)
-        :type image_fields: ImageFields
+        :param add_image_to_person_request: Image to add. (required)
+        :type add_image_to_person_request: AddImageToPersonRequest
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -104,14 +104,14 @@ class PersonApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(Image, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(AddImageToPersonResponse, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
 
         all_params = [
             'person_id'
-            'image_fields'
+            'add_image_to_person_request'
             'x_request_id'
         ]
         all_params.extend(
@@ -136,10 +136,10 @@ class PersonApi(object):
         if self.api_client.client_side_validation and ('person_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['person_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `person_id` when calling `add_image_to_person`")  # noqa: E501
-        # verify the required parameter 'image_fields' is set
-        if self.api_client.client_side_validation and ('image_fields' not in local_var_params or  # noqa: E501
-                                                        local_var_params['image_fields'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `image_fields` when calling `add_image_to_person`")  # noqa: E501
+        # verify the required parameter 'add_image_to_person_request' is set
+        if self.api_client.client_side_validation and ('add_image_to_person_request' not in local_var_params or  # noqa: E501
+                                                        local_var_params['add_image_to_person_request'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `add_image_to_person_request` when calling `add_image_to_person`")  # noqa: E501
 
         collection_formats = {}
 
@@ -157,8 +157,8 @@ class PersonApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'image_fields' in local_var_params:
-            body_params = local_var_params['image_fields']
+        if 'add_image_to_person_request' in local_var_params:
+            body_params = local_var_params['add_image_to_person_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -178,7 +178,7 @@ class PersonApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Image',  # noqa: E501
+            response_type='AddImageToPersonResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -610,21 +610,21 @@ class PersonApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_all_groups_by_person_id(self, page, size, person_id, **kwargs):  # noqa: E501
+    def get_all_groups_by_person_id(self, person_id, **kwargs):  # noqa: E501
         """Get person groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_groups_by_person_id(page, size, person_id, async_req=True)
+        >>> thread = api.get_all_groups_by_person_id(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param person_id: Person ID. (required)
         :type person_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -643,23 +643,23 @@ class PersonApi(object):
         :rtype: GroupPage
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_all_groups_by_person_id_with_http_info(page, size, person_id, **kwargs)  # noqa: E501
+        return self.get_all_groups_by_person_id_with_http_info(person_id, **kwargs)  # noqa: E501
 
-    def get_all_groups_by_person_id_with_http_info(self, page, size, person_id, **kwargs):  # noqa: E501
+    def get_all_groups_by_person_id_with_http_info(self, person_id, **kwargs):  # noqa: E501
         """Get person groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_groups_by_person_id_with_http_info(page, size, person_id, async_req=True)
+        >>> thread = api.get_all_groups_by_person_id_with_http_info(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param person_id: Person ID. (required)
         :type person_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -688,9 +688,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
+            'person_id'
             'page'
             'size'
-            'person_id'
             'x_request_id'
         ]
         all_params.extend(
@@ -711,14 +711,6 @@ class PersonApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'page' is set
-        if self.api_client.client_side_validation and ('page' not in local_var_params or  # noqa: E501
-                                                        local_var_params['page'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `page` when calling `get_all_groups_by_person_id`")  # noqa: E501
-        # verify the required parameter 'size' is set
-        if self.api_client.client_side_validation and ('size' not in local_var_params or  # noqa: E501
-                                                        local_var_params['size'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `size` when calling `get_all_groups_by_person_id`")  # noqa: E501
         # verify the required parameter 'person_id' is set
         if self.api_client.client_side_validation and ('person_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['person_id'] is None):  # noqa: E501
@@ -768,21 +760,21 @@ class PersonApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_all_images_by_person_id(self, page, size, person_id, **kwargs):  # noqa: E501
+    def get_all_images_by_person_id(self, person_id, **kwargs):  # noqa: E501
         """Get person images  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_images_by_person_id(page, size, person_id, async_req=True)
+        >>> thread = api.get_all_images_by_person_id(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param person_id: Person ID. (required)
         :type person_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -801,23 +793,23 @@ class PersonApi(object):
         :rtype: ImagePage
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_all_images_by_person_id_with_http_info(page, size, person_id, **kwargs)  # noqa: E501
+        return self.get_all_images_by_person_id_with_http_info(person_id, **kwargs)  # noqa: E501
 
-    def get_all_images_by_person_id_with_http_info(self, page, size, person_id, **kwargs):  # noqa: E501
+    def get_all_images_by_person_id_with_http_info(self, person_id, **kwargs):  # noqa: E501
         """Get person images  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_all_images_by_person_id_with_http_info(page, size, person_id, async_req=True)
+        >>> thread = api.get_all_images_by_person_id_with_http_info(person_id, async_req=True)
         >>> result = thread.get()
 
-        :param page: The page number to get a list of persons or groups. (required)
-        :type page: int
-        :param size: The page size with a list of persons or groups, items. (required)
-        :type size: int
         :param person_id: Person ID. (required)
         :type person_id: str
+        :param page: The page number to get a list of persons or groups.
+        :type page: int
+        :param size: The page size with a list of persons or groups, items.
+        :type size: int
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -846,9 +838,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
+            'person_id'
             'page'
             'size'
-            'person_id'
             'x_request_id'
         ]
         all_params.extend(
@@ -869,14 +861,6 @@ class PersonApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'page' is set
-        if self.api_client.client_side_validation and ('page' not in local_var_params or  # noqa: E501
-                                                        local_var_params['page'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `page` when calling `get_all_images_by_person_id`")  # noqa: E501
-        # verify the required parameter 'size' is set
-        if self.api_client.client_side_validation and ('size' not in local_var_params or  # noqa: E501
-                                                        local_var_params['size'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `size` when calling `get_all_images_by_person_id`")  # noqa: E501
         # verify the required parameter 'person_id' is set
         if self.api_client.client_side_validation and ('person_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['person_id'] is None):  # noqa: E501
@@ -1209,19 +1193,19 @@ class PersonApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def update_person(self, person_id, person_fields, **kwargs):  # noqa: E501
+    def update_person(self, person_id, person_to_update_fields, **kwargs):  # noqa: E501
         """Update person  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_person(person_id, person_fields, async_req=True)
+        >>> thread = api.update_person(person_id, person_to_update_fields, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person ID. (required)
         :type person_id: str
-        :param person_fields: Request body for the Person to update. (required)
-        :type person_fields: PersonFields
+        :param person_to_update_fields: Request body for the Person to update. (required)
+        :type person_to_update_fields: PersonToUpdateFields
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1240,21 +1224,21 @@ class PersonApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_person_with_http_info(person_id, person_fields, **kwargs)  # noqa: E501
+        return self.update_person_with_http_info(person_id, person_to_update_fields, **kwargs)  # noqa: E501
 
-    def update_person_with_http_info(self, person_id, person_fields, **kwargs):  # noqa: E501
+    def update_person_with_http_info(self, person_id, person_to_update_fields, **kwargs):  # noqa: E501
         """Update person  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_person_with_http_info(person_id, person_fields, async_req=True)
+        >>> thread = api.update_person_with_http_info(person_id, person_to_update_fields, async_req=True)
         >>> result = thread.get()
 
         :param person_id: Person ID. (required)
         :type person_id: str
-        :param person_fields: Request body for the Person to update. (required)
-        :type person_fields: PersonFields
+        :param person_to_update_fields: Request body for the Person to update. (required)
+        :type person_to_update_fields: PersonToUpdateFields
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1284,7 +1268,7 @@ class PersonApi(object):
 
         all_params = [
             'person_id'
-            'person_fields'
+            'person_to_update_fields'
             'x_request_id'
         ]
         all_params.extend(
@@ -1309,10 +1293,10 @@ class PersonApi(object):
         if self.api_client.client_side_validation and ('person_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['person_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `person_id` when calling `update_person`")  # noqa: E501
-        # verify the required parameter 'person_fields' is set
-        if self.api_client.client_side_validation and ('person_fields' not in local_var_params or  # noqa: E501
-                                                        local_var_params['person_fields'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `person_fields` when calling `update_person`")  # noqa: E501
+        # verify the required parameter 'person_to_update_fields' is set
+        if self.api_client.client_side_validation and ('person_to_update_fields' not in local_var_params or  # noqa: E501
+                                                        local_var_params['person_to_update_fields'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `person_to_update_fields` when calling `update_person`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1330,8 +1314,8 @@ class PersonApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'person_fields' in local_var_params:
-            body_params = local_var_params['person_fields']
+        if 'person_to_update_fields' in local_var_params:
+            body_params = local_var_params['person_to_update_fields']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
