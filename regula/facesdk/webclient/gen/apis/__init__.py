@@ -6,7 +6,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from .api.diagnostics_api import DiagnosticsApi
+#   from .api.diagnostic_api import DiagnosticApi
 #
 # or import this package, but before doing it, use:
 #
@@ -14,9 +14,8 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
-from regula.facesdk.webclient.gen.api.diagnostics_api import DiagnosticsApi
-from regula.facesdk.webclient.gen.api.group_api import GroupApi
-from regula.facesdk.webclient.gen.api.liveness_2_0_api import Liveness20Api
-from regula.facesdk.webclient.gen.api.matching_api import MatchingApi
-from regula.facesdk.webclient.gen.api.person_api import PersonApi
-from regula.facesdk.webclient.gen.api.search_api import SearchApi
+from regula.facesdk.webclient.gen.api.diagnostic_api import DiagnosticApi
+from regula.facesdk.webclient.gen.api.face_comparison_api import FaceComparisonApi
+from regula.facesdk.webclient.gen.api.face_detection_api import FaceDetectionApi
+from regula.facesdk.webclient.gen.api.face_identification_api import FaceIdentificationApi
+from regula.facesdk.webclient.gen.api.liveness_assessment_api import LivenessAssessmentApi
