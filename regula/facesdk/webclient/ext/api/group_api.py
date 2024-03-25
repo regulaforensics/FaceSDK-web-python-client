@@ -20,11 +20,11 @@ class GroupApi(GenGroupApi):
     def delete_group(self, group_id: str, **kwargs) -> None:
         return super().delete_group(group_id, **kwargs)
 
-    def get_all_groups(self, page: int, size: int, **kwargs) -> GroupPage:
-        return super().get_all_groups(page, size, **kwargs)
+    def get_all_groups(self, **kwargs) -> GroupPage:
+        return super().get_all_groups(**kwargs)
 
-    def get_all_persons_by_group_id(self, page: int, size: int, group_id: str, **kwargs) -> PersonsPage:
-        return super().get_all_persons_by_group_id(page, size, group_id, **kwargs)
+    def get_all_persons_by_group_id(self, group_id: str, **kwargs) -> PersonsPage:
+        return super().get_all_persons_by_group_id(group_id, **kwargs)
 
     def get_group(self, group_id: str, **kwargs) -> Group:
         return super().get_group(group_id, **kwargs)
