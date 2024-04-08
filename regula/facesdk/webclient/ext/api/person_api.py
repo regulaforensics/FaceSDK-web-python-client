@@ -30,11 +30,11 @@ class PersonApi(GenPersonApi):
     def delete_person(self, person_id: str, **kwargs) -> None:
         return super().delete_person(person_id, **kwargs)
 
-    def get_all_groups_by_person_id(self, page: int, size: int, person_id: str, **kwargs):
-        return super().get_all_groups_by_person_id(page, size, person_id)
+    def get_all_groups_by_person_id(self, person_id: str, **kwargs):
+        return super().get_all_groups_by_person_id(person_id)
 
-    def get_all_images_by_person_id(self, page: int, size: int, person_id: str, **kwargs) -> ImagePage:
-        return super().get_all_images_by_person_id(page, size, person_id, **kwargs)
+    def get_all_images_by_person_id(self, person_id: str, **kwargs) -> ImagePage:
+        return super().get_all_images_by_person_id(person_id, **kwargs)
 
     def get_image_of_person(self, image_id: str, person_id: str, **kwargs):
         return super().get_image_of_person(image_id, person_id, **kwargs)
