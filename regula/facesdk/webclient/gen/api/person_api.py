@@ -110,9 +110,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id'
-            'add_image_to_person_request'
-            'x_request_id'
+            'person_id',
+            'add_image_to_person_request',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -257,8 +257,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_fields'
-            'x_request_id'
+            'person_fields',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -401,9 +401,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'person_id'
-            'x_request_id'
+            'image_id',
+            'person_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -544,8 +544,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id'
-            'x_request_id'
+            'person_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -688,10 +688,10 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id'
-            'page'
-            'size'
-            'x_request_id'
+            'person_id',
+            'page',
+            'size',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -984,9 +984,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'person_id'
-            'x_request_id'
+            'image_id',
+            'person_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -1127,8 +1127,8 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id'
-            'x_request_id'
+            'person_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -1267,9 +1267,9 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id'
-            'person_to_update_fields'
-            'x_request_id'
+            'person_id',
+            'person_to_update_fields',
+            'x_request_id',
         ]
         all_params.extend(
             [
