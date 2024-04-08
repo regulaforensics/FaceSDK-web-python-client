@@ -102,7 +102,7 @@ class Liveness20Api(object):
         local_var_params = locals()
 
         all_params = [
-            'transaction_id'
+            'transaction_id',
         ]
         all_params.extend(
             [

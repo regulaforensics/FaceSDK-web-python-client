@@ -106,8 +106,8 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_to_create'
-            'x_request_id'
+            'group_to_create',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -246,8 +246,8 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'x_request_id'
+            'group_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -386,9 +386,9 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'page'
-            'size'
-            'x_request_id'
+            'page',
+            'size',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -671,8 +671,8 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'x_request_id'
+            'group_id',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -811,9 +811,9 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'group_to_create'
-            'x_request_id'
+            'group_id',
+            'group_to_create',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -962,9 +962,9 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'update_group'
-            'x_request_id'
+            'group_id',
+            'update_group',
+            'x_request_id',
         ]
         all_params.extend(
             [

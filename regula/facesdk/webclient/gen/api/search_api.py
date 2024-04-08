@@ -106,8 +106,8 @@ class SearchApi(object):
         local_var_params = locals()
 
         all_params = [
-            'search_request'
-            'x_request_id'
+            'search_request',
+            'x_request_id',
         ]
         all_params.extend(
             [

@@ -108,8 +108,8 @@ class MatchingApi(object):
         local_var_params = locals()
 
         all_params = [
-            'detect_request'
-            'x_request_id'
+            'detect_request',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -250,8 +250,8 @@ class MatchingApi(object):
         local_var_params = locals()
 
         all_params = [
-            'match_request'
-            'x_request_id'
+            'match_request',
+            'x_request_id',
         ]
         all_params.extend(
             [
@@ -392,8 +392,8 @@ class MatchingApi(object):
         local_var_params = locals()
 
         all_params = [
-            'match_and_search_request'
-            'x_request_id'
+            'match_and_search_request',
+            'x_request_id',
         ]
         all_params.extend(
             [

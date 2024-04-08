@@ -102,7 +102,7 @@ class DiagnosticsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'x_request_id'
+            'x_request_id',
         ]
         all_params.extend(
             [
