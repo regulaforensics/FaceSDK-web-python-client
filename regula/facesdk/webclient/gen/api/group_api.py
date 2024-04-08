@@ -529,10 +529,10 @@ class GroupApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'page'
-            'size'
-            'x_request_id'
+            'group_id',
+            'page',
+            'size',
+            'x_request_id',
         ]
         all_params.extend(
             [
