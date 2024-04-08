@@ -838,10 +838,10 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'person_id',
-            'page',
-            'size',
-            'x_request_id',
+            'person_id'
+            'page'
+            'size'
+            'x_request_id'
         ]
         all_params.extend(
             [

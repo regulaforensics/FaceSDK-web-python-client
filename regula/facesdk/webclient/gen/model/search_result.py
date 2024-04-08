@@ -40,7 +40,7 @@ class SearchResult(object):
         'updated_at': 'str, none_type',
         'groups': '[str], none_type',
         'name': 'str, none_type',
-        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type',
+        'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
     }
 
     attribute_map = {
@@ -79,7 +79,8 @@ class SearchResult(object):
         self.updated_at = updated_at
         self.groups = groups
         self.name = name
-        self.metadata = metadata
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def code(self):
@@ -249,7 +250,7 @@ class SearchResult(object):
         A free-form object containing person's extended attributes. Available when a person is being created  # noqa: E501
 
         :return: The metadata of this SearchResult.  # noqa: E501
-        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type
+        :rtype: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
         """
         return self._metadata
 
@@ -260,7 +261,7 @@ class SearchResult(object):
         A free-form object containing person's extended attributes. Available when a person is being created  # noqa: E501
 
         :param metadata: The metadata of this SearchResult.  # noqa: E501
-        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type
+        :type metadata: {str: (bool, date, datetime, dict, float, int, list, str, none_type)}
         """
 
         self._metadata = metadata
