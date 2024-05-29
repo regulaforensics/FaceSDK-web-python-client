@@ -2,6 +2,7 @@ import os
 
 from regula.facesdk.webclient import MatchImage, MatchRequest
 from regula.facesdk.webclient.ext import FaceSdk, DetectRequest
+from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualityScenarios
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 
@@ -46,7 +47,7 @@ with FaceSdk(host=api_base_path) as sdk:
     detect_image_quality_request = DetectRequest(
         image=face_1_bytes,
         process_param=ProcessParam(
-            scenario="QualityICAO",
+            scenario=FaceQualityScenarios.QUALITY_ICAO,
             only_central_face=True
         )
     )
