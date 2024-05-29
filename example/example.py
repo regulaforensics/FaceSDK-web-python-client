@@ -3,6 +3,7 @@ import os
 from regula.facesdk.webclient import MatchImage, MatchRequest
 from regula.facesdk.webclient.ext import FaceSdk, DetectRequest
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
+from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 
 api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com/")
 
@@ -40,4 +41,23 @@ with FaceSdk(host=api_base_path) as sdk:
         print(f"landmarks: {detection.landmarks}")
         print(f"roi: {detection.roi}")
         print(f"attributes: {detection.attributes}")
+    print("-----------------------------------------------------------------")
+
+    detect_image_quality_request = DetectRequest(
+        image=face_1_bytes,
+        process_param=ProcessParam(
+            scenario="QualityICAO",
+            only_central_face=True
+        )
+    )
+    detect_image_quality_response = sdk.matching_api.detect(detect_image_quality_request)
+    detect_image_quality_result = detect_image_quality_response.results
+    print("                   Detect Image Quality Results                  ")
+    print("-----------------------------------------------------------------")
+    print(f"Code: {detect_image_quality_response.code}")
+    print(f"Scenario: {detect_image_quality_result.scenario}")
+    for detection in detect_image_quality_result.detections:
+        print(f"Landmarks: {detection.landmarks}")
+        print(f"Quality: [{type(detection).__name__}], count: {len(detection.quality.details)}")
+        print(f"Attributes: {detection.attributes}")
     print("-----------------------------------------------------------------")
