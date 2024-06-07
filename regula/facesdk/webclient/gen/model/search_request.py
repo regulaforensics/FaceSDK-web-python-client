@@ -35,6 +35,7 @@ class SearchRequest(object):
     openapi_types = {
         'create_person': 'SearchParametersCreatePerson',
         'group_ids': '[str]',
+        'filter': 'FilterSearchRequest',
         'tag': 'str',
         'image': 'AddImageToPersonRequestImage',
         'output_image_params': 'OutputImageParams',
@@ -46,6 +47,7 @@ class SearchRequest(object):
     attribute_map = {
         'create_person': 'createPerson',
         'group_ids': 'groupIds',
+        'filter': 'filter',
         'tag': 'tag',
         'image': 'image',
         'output_image_params': 'outputImageParams',
@@ -54,7 +56,7 @@ class SearchRequest(object):
         'limit': 'limit',
     }
 
-    def __init__(self, create_person=None, group_ids=None, tag=None, image=None, output_image_params=None, detect_all=False, threshold=None, limit=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, create_person=None, group_ids=None, filter=None, tag=None, image=None, output_image_params=None, detect_all=False, threshold=None, limit=None, local_vars_configuration=None):  # noqa: E501
         """SearchRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class SearchRequest(object):
 
         self._create_person = None
         self._group_ids = None
+        self._filter = None
         self._tag = None
         self._image = None
         self._output_image_params = None
@@ -74,6 +77,8 @@ class SearchRequest(object):
             self.create_person = create_person
         if group_ids is not None:
             self.group_ids = group_ids
+        if filter is not None:
+            self.filter = filter
         if tag is not None:
             self.tag = tag
         if image is not None:
@@ -130,6 +135,27 @@ class SearchRequest(object):
         """
 
         self._group_ids = group_ids
+
+    @property
+    def filter(self):
+        """Gets the filter of this SearchRequest.  # noqa: E501
+
+
+        :return: The filter of this SearchRequest.  # noqa: E501
+        :rtype: FilterSearchRequest
+        """
+        return self._filter
+
+    @filter.setter
+    def filter(self, filter):
+        """Sets the filter of this SearchRequest.
+
+
+        :param filter: The filter of this SearchRequest.  # noqa: E501
+        :type filter: FilterSearchRequest
+        """
+
+        self._filter = filter
 
     @property
     def tag(self):

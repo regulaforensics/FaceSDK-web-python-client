@@ -33,34 +33,62 @@ class PersonToUpdateFields(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'external_id': 'str',
         'name': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'groups': '[str]',
     }
 
     attribute_map = {
+        'external_id': 'externalId',
         'name': 'name',
         'metadata': 'metadata',
         'groups': 'groups',
     }
 
-    def __init__(self, name=None, metadata=None, groups=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, external_id=None, name=None, metadata=None, groups=None, local_vars_configuration=None):  # noqa: E501
         """PersonToUpdateFields - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._external_id = None
         self._name = None
         self._metadata = None
         self._groups = None
         self.discriminator = None
 
+        if external_id is not None:
+            self.external_id = external_id
         if name is not None:
             self.name = name
         if metadata is not None:
             self.metadata = metadata
         if groups is not None:
             self.groups = groups
+
+    @property
+    def external_id(self):
+        """Gets the external_id of this PersonToUpdateFields.  # noqa: E501
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :return: The external_id of this PersonToUpdateFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        """Sets the external_id of this PersonToUpdateFields.
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :param external_id: The external_id of this PersonToUpdateFields.  # noqa: E501
+        :type external_id: str
+        """
+
+        self._external_id = external_id
 
     @property
     def name(self):

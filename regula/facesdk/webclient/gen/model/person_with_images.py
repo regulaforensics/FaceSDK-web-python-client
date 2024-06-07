@@ -35,6 +35,7 @@ class PersonWithImages(object):
     openapi_types = {
         'images': '[RecognizeImage]',
         'name': 'str',
+        'external_id': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'groups': '[str]',
         'id': 'str',
@@ -45,6 +46,7 @@ class PersonWithImages(object):
     attribute_map = {
         'images': 'images',
         'name': 'name',
+        'external_id': 'externalId',
         'metadata': 'metadata',
         'groups': 'groups',
         'id': 'id',
@@ -52,7 +54,7 @@ class PersonWithImages(object):
         'updated_at': 'updatedAt',
     }
 
-    def __init__(self, images=None, name=None, metadata=None, groups=None, id=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, images=None, name=None, external_id=None, metadata=None, groups=None, id=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """PersonWithImages - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class PersonWithImages(object):
 
         self._images = None
         self._name = None
+        self._external_id = None
         self._metadata = None
         self._groups = None
         self._id = None
@@ -70,6 +73,8 @@ class PersonWithImages(object):
         if images is not None:
             self.images = images
         self.name = name
+        if external_id is not None:
+            self.external_id = external_id
         if metadata is not None:
             self.metadata = metadata
         if groups is not None:
@@ -128,6 +133,29 @@ class PersonWithImages(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def external_id(self):
+        """Gets the external_id of this PersonWithImages.  # noqa: E501
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :return: The external_id of this PersonWithImages.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        """Sets the external_id of this PersonWithImages.
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :param external_id: The external_id of this PersonWithImages.  # noqa: E501
+        :type external_id: str
+        """
+
+        self._external_id = external_id
 
     @property
     def metadata(self):

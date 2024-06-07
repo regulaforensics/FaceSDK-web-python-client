@@ -34,6 +34,7 @@ class SearchPerson(object):
     """
     openapi_types = {
         'name': 'str',
+        'external_id': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
         'groups': '[str]',
         'id': 'str',
@@ -45,6 +46,7 @@ class SearchPerson(object):
 
     attribute_map = {
         'name': 'name',
+        'external_id': 'externalId',
         'metadata': 'metadata',
         'groups': 'groups',
         'id': 'id',
@@ -54,13 +56,14 @@ class SearchPerson(object):
         'images': 'images',
     }
 
-    def __init__(self, name=None, metadata=None, groups=None, id=None, created_at=None, updated_at=None, detection=None, images=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, external_id=None, metadata=None, groups=None, id=None, created_at=None, updated_at=None, detection=None, images=None, local_vars_configuration=None):  # noqa: E501
         """SearchPerson - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
+        self._external_id = None
         self._metadata = None
         self._groups = None
         self._id = None
@@ -71,6 +74,8 @@ class SearchPerson(object):
         self.discriminator = None
 
         self.name = name
+        if external_id is not None:
+            self.external_id = external_id
         if metadata is not None:
             self.metadata = metadata
         if groups is not None:
@@ -110,6 +115,29 @@ class SearchPerson(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def external_id(self):
+        """Gets the external_id of this SearchPerson.  # noqa: E501
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :return: The external_id of this SearchPerson.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        """Sets the external_id of this SearchPerson.
+
+        Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.  # noqa: E501
+
+        :param external_id: The external_id of this SearchPerson.  # noqa: E501
+        :type external_id: str
+        """
+
+        self._external_id = external_id
 
     @property
     def metadata(self):

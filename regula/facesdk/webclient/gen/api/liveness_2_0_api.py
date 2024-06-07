@@ -37,8 +37,9 @@ class Liveness20Api(object):
         self.api_client = api_client
 
     def get_liveness_transaction_info(self, transaction_id, **kwargs):  # noqa: E501
-        """Liveness assessment  # noqa: E501
+        """liveness check  # noqa: E501
 
+        To verify the presence of a real person in front of a camera, use the GET `/api/v2/liveness` endpoint. When starting, you can specify `tag` which all attempts to read liveness will be bound to. If left unspecified, the application automatically generates one. The calling application returns `tag` and `transactionId`. One session may include many transactions, and from a transaction ID it is clear which session it belongs to.  When specifying `tag`, note that only Latin uppercase and lowercase letters, digits, and symbols `-` and `_` are allowed. The maximum supported number of characters is 127.  The metadata (device model, screen data, frame size, app ID and version, OS version, platform, SDK version, etc.), a person's selfie and video of the liveness detection session are stored on the backend at: `faceapi-session/year={year}/month={month}/day={day}/hour={hour}/minute={minute}/{tag}/transactionId`  By default, liveness checks operate with eventual consistency. This means that when you submit a request and receive a response, the associated data (like the selfie and session video) may be saved after the response is sent. If this doesn't meet your requirements, you can switch to strong consistency; refer to the [Architecture page](https://docs.regulaforensics.com/develop/face-sdk/overview/architecture/#consistency-models) for details.  To access the liveness transaction data, use GET `/api/v2/liveness?transactionId={transactionId}`.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -66,8 +67,9 @@ class Liveness20Api(object):
         return self.get_liveness_transaction_info_with_http_info(transaction_id, **kwargs)  # noqa: E501
 
     def get_liveness_transaction_info_with_http_info(self, transaction_id, **kwargs):  # noqa: E501
-        """Liveness assessment  # noqa: E501
+        """liveness check  # noqa: E501
 
+        To verify the presence of a real person in front of a camera, use the GET `/api/v2/liveness` endpoint. When starting, you can specify `tag` which all attempts to read liveness will be bound to. If left unspecified, the application automatically generates one. The calling application returns `tag` and `transactionId`. One session may include many transactions, and from a transaction ID it is clear which session it belongs to.  When specifying `tag`, note that only Latin uppercase and lowercase letters, digits, and symbols `-` and `_` are allowed. The maximum supported number of characters is 127.  The metadata (device model, screen data, frame size, app ID and version, OS version, platform, SDK version, etc.), a person's selfie and video of the liveness detection session are stored on the backend at: `faceapi-session/year={year}/month={month}/day={day}/hour={hour}/minute={minute}/{tag}/transactionId`  By default, liveness checks operate with eventual consistency. This means that when you submit a request and receive a response, the associated data (like the selfie and session video) may be saved after the response is sent. If this doesn't meet your requirements, you can switch to strong consistency; refer to the [Architecture page](https://docs.regulaforensics.com/develop/face-sdk/overview/architecture/#consistency-models) for details.  To access the liveness transaction data, use GET `/api/v2/liveness?transactionId={transactionId}`.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

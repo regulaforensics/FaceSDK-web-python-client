@@ -41,6 +41,7 @@ class TransactionInfo(object):
         'age': '[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]',
         'portrait': 'str',
         'metadata': '{str: (bool, date, datetime, dict, float, int, list, str, none_type)}',
+        'type': 'LivenessType',
     }
 
     attribute_map = {
@@ -52,9 +53,10 @@ class TransactionInfo(object):
         'age': 'age',
         'portrait': 'portrait',
         'metadata': 'metadata',
+        'type': 'type',
     }
 
-    def __init__(self, code=None, status=None, tag=None, transaction_id=None, video=None, age=None, portrait=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, code=None, status=None, tag=None, transaction_id=None, video=None, age=None, portrait=None, metadata=None, type=None, local_vars_configuration=None):  # noqa: E501
         """TransactionInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -68,6 +70,7 @@ class TransactionInfo(object):
         self._age = None
         self._portrait = None
         self._metadata = None
+        self._type = None
         self.discriminator = None
 
         if code is not None:
@@ -86,12 +89,14 @@ class TransactionInfo(object):
             self.portrait = portrait
         if metadata is not None:
             self.metadata = metadata
+        if type is not None:
+            self.type = type
 
     @property
     def code(self):
         """Gets the code of this TransactionInfo.  # noqa: E501
 
-        Result code, one of the FaceSDKResultCode enum values. See the enum: https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/  # noqa: E501
+        Result code, see the [FaceSDKResultCode enum](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/).  # noqa: E501
 
         :return: The code of this TransactionInfo.  # noqa: E501
         :rtype: int
@@ -102,7 +107,7 @@ class TransactionInfo(object):
     def code(self, code):
         """Sets the code of this TransactionInfo.
 
-        Result code, one of the FaceSDKResultCode enum values. See the enum: https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/  # noqa: E501
+        Result code, see the [FaceSDKResultCode enum](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/).  # noqa: E501
 
         :param code: The code of this TransactionInfo.  # noqa: E501
         :type code: int
@@ -114,7 +119,7 @@ class TransactionInfo(object):
     def status(self):
         """Gets the status of this TransactionInfo.  # noqa: E501
 
-        Whether the liveness detection is confirmed (0) or not (1).  # noqa: E501
+        Whether the liveness detection is confirmed `0` or not `1`.  # noqa: E501
 
         :return: The status of this TransactionInfo.  # noqa: E501
         :rtype: int
@@ -125,7 +130,7 @@ class TransactionInfo(object):
     def status(self, status):
         """Sets the status of this TransactionInfo.
 
-        Whether the liveness detection is confirmed (0) or not (1).  # noqa: E501
+        Whether the liveness detection is confirmed `0` or not `1`.  # noqa: E501
 
         :param status: The status of this TransactionInfo.  # noqa: E501
         :type status: int
@@ -270,6 +275,27 @@ class TransactionInfo(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def type(self):
+        """Gets the type of this TransactionInfo.  # noqa: E501
+
+
+        :return: The type of this TransactionInfo.  # noqa: E501
+        :rtype: LivenessType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this TransactionInfo.
+
+
+        :param type: The type of this TransactionInfo.  # noqa: E501
+        :type type: LivenessType
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""
