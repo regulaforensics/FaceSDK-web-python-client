@@ -39,6 +39,8 @@ regula/facesdk/webclient/gen/model/face_sdk_result.py
 regula/facesdk/webclient/gen/model/face_sdk_result_code.py
 regula/facesdk/webclient/gen/model/faces_response.py
 regula/facesdk/webclient/gen/model/faces_response_all_of.py
+regula/facesdk/webclient/gen/model/filter_op.py
+regula/facesdk/webclient/gen/model/filter_search_request.py
 regula/facesdk/webclient/gen/model/group.py
 regula/facesdk/webclient/gen/model/group_all_of.py
 regula/facesdk/webclient/gen/model/group_page.py
@@ -50,6 +52,7 @@ regula/facesdk/webclient/gen/model/image_fields.py
 regula/facesdk/webclient/gen/model/image_page.py
 regula/facesdk/webclient/gen/model/image_page_all_of.py
 regula/facesdk/webclient/gen/model/image_source.py
+regula/facesdk/webclient/gen/model/liveness_type.py
 regula/facesdk/webclient/gen/model/match_and_search_request.py
 regula/facesdk/webclient/gen/model/match_and_search_request_all_of.py
 regula/facesdk/webclient/gen/model/match_and_search_request_all_of_images.py
