@@ -6,7 +6,7 @@ from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualit
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 
-api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com/")
+api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
