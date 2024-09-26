@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - stable
       - develop
 
 jobs:
