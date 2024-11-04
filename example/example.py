@@ -21,7 +21,7 @@ with FaceSdk(host=api_base_path) as sdk:
         MatchImage(index=3, data=face_2_bytes),
     ]
     match_request = MatchRequest(images=images, thumbnails=True)
-    match_response = sdk.matching_api.match(match_request)
+    match_response = sdk.match_api.match(match_request)
 
     print("-----------------------------------------------------------------")
     print("                         Matching Results                        ")
@@ -31,7 +31,7 @@ with FaceSdk(host=api_base_path) as sdk:
     print("-----------------------------------------------------------------")
 
     detect_request = DetectRequest(image=face_1_bytes)
-    detect_response = sdk.matching_api.detect(detect_request)
+    detect_response = sdk.match_api.detect(detect_request)
     detect_results = detect_response.results
 
     print("                         Detect Results                          ")
@@ -51,7 +51,7 @@ with FaceSdk(host=api_base_path) as sdk:
             only_central_face=True
         )
     )
-    detect_image_quality_response = sdk.matching_api.detect(detect_image_quality_request)
+    detect_image_quality_response = sdk.match_api.detect(detect_image_quality_request)
     detect_image_quality_result = detect_image_quality_response.results
     print("                   Detect Image Quality Results                  ")
     print("-----------------------------------------------------------------")
