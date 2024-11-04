@@ -2,10 +2,10 @@ regula/__init__.py
 regula/facesdk/__init__.py
 regula/facesdk/webclient/gen/__init__.py
 regula/facesdk/webclient/gen/api/__init__.py
-regula/facesdk/webclient/gen/api/diagnostics_api.py
 regula/facesdk/webclient/gen/api/group_api.py
+regula/facesdk/webclient/gen/api/healthcheck_api.py
 regula/facesdk/webclient/gen/api/liveness_2_0_api.py
-regula/facesdk/webclient/gen/api/matching_api.py
+regula/facesdk/webclient/gen/api/match_api.py
 regula/facesdk/webclient/gen/api/person_api.py
 regula/facesdk/webclient/gen/api/search_api.py
 regula/facesdk/webclient/gen/api_client.py
@@ -27,6 +27,7 @@ regula/facesdk/webclient/gen/model/detection.py
 regula/facesdk/webclient/gen/model/detection_attributes.py
 regula/facesdk/webclient/gen/model/detection_face.py
 regula/facesdk/webclient/gen/model/detection_quality.py
+regula/facesdk/webclient/gen/model/device_info.py
 regula/facesdk/webclient/gen/model/face_attribute.py
 regula/facesdk/webclient/gen/model/face_image_quality_align_type.py
 regula/facesdk/webclient/gen/model/face_image_quality_groups.py
