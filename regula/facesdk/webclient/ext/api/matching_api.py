@@ -1,7 +1,7 @@
 from typing import List
 
 from regula.facesdk.webclient.gen import Configuration, ApiClient
-from regula.facesdk.webclient.gen.apis import MatchingApi as GenMatchingApi
+from regula.facesdk.webclient.gen.apis import MatchApi as GenMatchApi
 from regula.facesdk.webclient.ext.models import MatchRequest, DetectRequest
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.match_and_search_request import MatchAndSearchRequest
@@ -10,7 +10,7 @@ from regula.facesdk.webclient.gen.model.match_and_search_response import MatchAn
 from regula.facesdk.webclient.gen.model.match_response import MatchResponse
 
 
-class MatchingApi(GenMatchingApi):
+class MatchApi(GenMatchApi):
     def __init__(self, host=None, debug=False, verify_ssl=False, api_client=None):
         if api_client:
             super().__init__(api_client)
