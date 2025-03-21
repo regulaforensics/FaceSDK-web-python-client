@@ -4,6 +4,7 @@
 [![documentation](https://img.shields.io/badge/docs-en-f6858d?style=flat-square)](https://support.regulaforensics.com/hc/en-us/articles/115000916306-Documentation)
 [![live](https://img.shields.io/badge/live-demo-0a8c42?style=flat-square)](https://faceapi.regulaforensics.com/)
 
+## ⚠️ Warning: Package Name Changed
 ## Package name has been changed from `regula.facesdk.webclient` to `regula_facesdk_webclient`
 
 Face recognition as easy as reading two bytes.
