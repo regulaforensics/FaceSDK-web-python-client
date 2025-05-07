@@ -31,7 +31,9 @@ pipenv install regula_facesdk_webclient
 Performing request:
 
 ```python
-from regula_facesdk_webclient import *
+from regula.facesdk.webclient import MatchImage, MatchRequest
+from regula.facesdk.webclient.ext import FaceSdk, DetectRequest
+from regula.facesdk.webclient.gen.model.image_source import ImageSource
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
@@ -39,17 +41,17 @@ with open("face1.jpg", "rb") as f:
 with open("face2.jpg", "rb") as f:
     face_2_bytes = f.read()
 
-with MatchingApi(host="http://0.0.0.0:41101/api") as api:
+with FaceSdk(host="http://0.0.0.0:41101") as sdk:
     images = [
         MatchImage(index=1, data=face_1_bytes, type=ImageSource.LIVE),
         MatchImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
         MatchImage(index=3, data=face_2_bytes)
     ]
-    match_request = MatchRequest(images=images)
-    match_response = api.match(match_request)
+    match_request = MatchRequest(images=images, thumbnails=True)
+    match_response = sdk.match_api.match(match_request)
 
-    detect_request = DetectRequest(face_1_bytes)
-    detect_response = api.detect(detect_request)
+    detect_request = DetectRequest(image=face_1_bytes)
+    detect_response = sdk.match_api.detect(detect_request)
 ```
 
 You can find more detailed guide and run this sample in [example](./example) folder.
