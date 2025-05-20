@@ -49,7 +49,7 @@ print(f"Person #2 {person2.id} {person2.name}")
 print(f"Group {group.id} {group.name}")
 print(result)
 
-match_and_search = sdk.matching_api.match_and_search(
+match_and_search = sdk.match_api.match_and_search(
     images=[MatchAndSearchRequestAllOfImages(base64.b64encode(face_1_bytes).decode("UTF-8"), ImageSource.LIVE),
             MatchAndSearchRequestAllOfImages(base64.b64encode(face_2_bytes).decode("UTF-8"), ImageSource.LIVE)],
     group_ids=[group.id]

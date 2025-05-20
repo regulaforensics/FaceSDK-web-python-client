@@ -1,4 +1,4 @@
-from regula.facesdk.webclient.ext.api import MatchingApi
+from regula.facesdk.webclient.ext.api import MatchApi
 from regula.facesdk.webclient.ext.api import PersonApi
 from regula.facesdk.webclient.ext.api.group_api import GroupApi
 from regula.facesdk.webclient.ext.api.search_api import SearchApi
@@ -16,7 +16,7 @@ class FaceSdk:
 
             self.__api_client = ApiClient(configuration=configuration)
 
-        self.matching_api = MatchingApi(api_client=self.__api_client)
+        self.match_api = MatchApi(api_client=self.__api_client)
         self.person_api = PersonApi(api_client=self.__api_client)
         self.group_api = GroupApi(api_client=self.__api_client)
         self.search_api = SearchApi(api_client=self.__api_client)
