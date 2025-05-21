@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 setup(
     name="regula_facesdk_webclient",
     version=os.getenv("PACKAGE_VERSION_TO_PUBLISH", "6.2dev"),
-    python_requires=">=3.5",
+    python_requires=">=3.8",
     description="Regula's FaceSDK web python client",
     long_description=long_description,
     long_description_content_type="text/markdown",

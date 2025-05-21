@@ -1,9 +1,9 @@
-# Regula FaceSDK web API Python 3.5+ client
+# Regula FaceSDK web API Python 3.8+ client
 
 :warning: NOTE: for some systems `python3` and `pip3` commands should be used, instead of `python` and `pip`.
 
 Requirements:
-- installed python 3.5 or higher
+- installed python 3.8 or higher
 - installed [pip](https://pip.pypa.io/en/stable/installing/)
 
 Verify Python and pip versions:
