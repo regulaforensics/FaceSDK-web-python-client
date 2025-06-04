@@ -1,4 +1,4 @@
-# Regula Face SDK web API Python 3.5+ client
+# Regula Face SDK web API Python 3.9+ client
 
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-defs-8c0a56?style=flat-square)](https://github.com/regulaforensics/FaceSDK-web-openapi)
 [![documentation](https://img.shields.io/badge/docs-en-f6858d?style=flat-square)](https://support.regulaforensics.com/hc/en-us/articles/115000916306-Documentation)
