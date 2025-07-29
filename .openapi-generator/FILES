@@ -19,6 +19,8 @@ regula/facesdk/webclient/gen/model/add_image_to_person_response.py
 regula/facesdk/webclient/gen/model/attribute_config.py
 regula/facesdk/webclient/gen/model/attribute_config_list.py
 regula/facesdk/webclient/gen/model/crop.py
+regula/facesdk/webclient/gen/model/detect_attributes_details.py
+regula/facesdk/webclient/gen/model/detect_details_meta.py
 regula/facesdk/webclient/gen/model/detect_request.py
 regula/facesdk/webclient/gen/model/detect_response.py
 regula/facesdk/webclient/gen/model/detect_response_all_of.py
@@ -77,6 +79,8 @@ regula/facesdk/webclient/gen/model/person_with_images.py
 regula/facesdk/webclient/gen/model/person_with_images_all_of.py
 regula/facesdk/webclient/gen/model/persons_page.py
 regula/facesdk/webclient/gen/model/persons_page_all_of.py
+regula/facesdk/webclient/gen/model/persons_request.py
+regula/facesdk/webclient/gen/model/persons_request_all_of.py
 regula/facesdk/webclient/gen/model/process_param.py
 regula/facesdk/webclient/gen/model/process_param_attributes.py
 regula/facesdk/webclient/gen/model/quality_config.py
