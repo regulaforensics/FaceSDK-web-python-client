@@ -20,7 +20,7 @@ with FaceSdk(host=api_base_path) as sdk:
         MatchImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
         MatchImage(index=3, data=face_2_bytes),
     ]
-    match_request = MatchRequest(images=images, thumbnails=True)
+    match_request = MatchRequest(images=images)
     match_response = sdk.match_api.match(match_request)
 
     print("-----------------------------------------------------------------")

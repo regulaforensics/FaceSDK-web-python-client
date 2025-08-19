@@ -8,6 +8,7 @@ from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsIma
 from regula.facesdk.webclient.gen.model.image_page import ImagePage
 from regula.facesdk.webclient.gen.model.person import Person
 from regula.facesdk.webclient.gen.model.person_fields import PersonFields
+from regula.facesdk.webclient.gen.model.persons_request import PersonsRequest
 
 
 class PersonApi(GenPersonApi):
@@ -19,7 +20,7 @@ class PersonApi(GenPersonApi):
         image = ImageFields(image=ImageFieldsImage(content_type, base_image))
         return super().add_image_to_person(person_id, image, **kwargs)
 
-    def create_person(self, person_fields: PersonFields, **kwargs) -> Person:
+    def create_person(self, person_fields: PersonsRequest, **kwargs) -> Person:
         if person_fields.metadata is None:
             person_fields.metadata = {}
         return super().create_person(person_fields, **kwargs)

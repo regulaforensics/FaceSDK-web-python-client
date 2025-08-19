@@ -15,6 +15,8 @@ from regula.facesdk.webclient.gen.model.add_image_to_person_response import AddI
 from regula.facesdk.webclient.gen.model.attribute_config import AttributeConfig
 from regula.facesdk.webclient.gen.model.attribute_config_list import AttributeConfigList
 from regula.facesdk.webclient.gen.model.crop import Crop
+from regula.facesdk.webclient.gen.model.detect_attributes_details import DetectAttributesDetails
+from regula.facesdk.webclient.gen.model.detect_details_meta import DetectDetailsMeta
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
@@ -73,6 +75,8 @@ from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImag
 from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.persons_page_all_of import PersonsPageAllOf
+from regula.facesdk.webclient.gen.model.persons_request import PersonsRequest
+from regula.facesdk.webclient.gen.model.persons_request_all_of import PersonsRequestAllOf
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 from regula.facesdk.webclient.gen.model.process_param_attributes import ProcessParamAttributes
 from regula.facesdk.webclient.gen.model.quality_config import QualityConfig
