@@ -10,7 +10,6 @@ class MatchRequest(GenMatchRequest):
     def __init__(
             self,
             images: List[Union[MatchImage, Base64String, bytes]],
-            thumbnails=False,
             local_vars_configuration=None,
             output_image_params=None,
             tag=None
@@ -29,6 +28,5 @@ class MatchRequest(GenMatchRequest):
             images=input_images,
             local_vars_configuration=local_vars_configuration,
             output_image_params=output_image_params,
-            thumbnails=thumbnails,
             tag=tag
         )
