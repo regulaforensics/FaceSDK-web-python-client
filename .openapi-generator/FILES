@@ -57,8 +57,7 @@ regula/facesdk/webclient/gen/model/image_page_all_of.py
 regula/facesdk/webclient/gen/model/image_source.py
 regula/facesdk/webclient/gen/model/liveness_type.py
 regula/facesdk/webclient/gen/model/match_and_search_request.py
-regula/facesdk/webclient/gen/model/match_and_search_request_all_of.py
-regula/facesdk/webclient/gen/model/match_and_search_request_all_of_images.py
+regula/facesdk/webclient/gen/model/match_and_search_request_images.py
 regula/facesdk/webclient/gen/model/match_and_search_response.py
 regula/facesdk/webclient/gen/model/match_and_search_response_all_of.py
 regula/facesdk/webclient/gen/model/match_and_search_response_all_of_detections.py
