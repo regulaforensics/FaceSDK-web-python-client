@@ -34,8 +34,10 @@ class MatchAndSearchRequest(object):
     """
     openapi_types = {
         'tag': 'str',
-        'images': '[MatchAndSearchRequestAllOfImages]',
+        'images': '[MatchAndSearchRequestImages]',
         'group_ids': '[str]',
+        'threshold': 'float',
+        'limit': 'int',
         'tenant': 'str',
         'env': 'str',
     }
@@ -44,11 +46,13 @@ class MatchAndSearchRequest(object):
         'tag': 'tag',
         'images': 'images',
         'group_ids': 'groupIds',
+        'threshold': 'threshold',
+        'limit': 'limit',
         'tenant': 'tenant',
         'env': 'env',
     }
 
-    def __init__(self, tag=None, images=None, group_ids=None, tenant=None, env=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, images=None, group_ids=None, threshold=None, limit=None, tenant=None, env=None, local_vars_configuration=None):  # noqa: E501
         """MatchAndSearchRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +61,8 @@ class MatchAndSearchRequest(object):
         self._tag = None
         self._images = None
         self._group_ids = None
+        self._threshold = None
+        self._limit = None
         self._tenant = None
         self._env = None
         self.discriminator = None
@@ -67,6 +73,10 @@ class MatchAndSearchRequest(object):
             self.images = images
         if group_ids is not None:
             self.group_ids = group_ids
+        if threshold is not None:
+            self.threshold = threshold
+        if limit is not None:
+            self.limit = limit
         if tenant is not None:
             self.tenant = tenant
         if env is not None:
@@ -102,7 +112,7 @@ class MatchAndSearchRequest(object):
         Person's images.  # noqa: E501
 
         :return: The images of this MatchAndSearchRequest.  # noqa: E501
-        :rtype: [MatchAndSearchRequestAllOfImages]
+        :rtype: [MatchAndSearchRequestImages]
         """
         return self._images
 
@@ -113,7 +123,7 @@ class MatchAndSearchRequest(object):
         Person's images.  # noqa: E501
 
         :param images: The images of this MatchAndSearchRequest.  # noqa: E501
-        :type images: [MatchAndSearchRequestAllOfImages]
+        :type images: [MatchAndSearchRequestImages]
         """
 
         self._images = images
@@ -140,6 +150,52 @@ class MatchAndSearchRequest(object):
         """
 
         self._group_ids = group_ids
+
+    @property
+    def threshold(self):
+        """Gets the threshold of this MatchAndSearchRequest.  # noqa: E501
+
+        The similarity threshold.  # noqa: E501
+
+        :return: The threshold of this MatchAndSearchRequest.  # noqa: E501
+        :rtype: float
+        """
+        return self._threshold
+
+    @threshold.setter
+    def threshold(self, threshold):
+        """Sets the threshold of this MatchAndSearchRequest.
+
+        The similarity threshold.  # noqa: E501
+
+        :param threshold: The threshold of this MatchAndSearchRequest.  # noqa: E501
+        :type threshold: float
+        """
+
+        self._threshold = threshold
+
+    @property
+    def limit(self):
+        """Gets the limit of this MatchAndSearchRequest.  # noqa: E501
+
+        The maximum number of results to be returned.  # noqa: E501
+
+        :return: The limit of this MatchAndSearchRequest.  # noqa: E501
+        :rtype: int
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """Sets the limit of this MatchAndSearchRequest.
+
+        The maximum number of results to be returned.  # noqa: E501
+
+        :param limit: The limit of this MatchAndSearchRequest.  # noqa: E501
+        :type limit: int
+        """
+
+        self._limit = limit
 
     @property
     def tenant(self):

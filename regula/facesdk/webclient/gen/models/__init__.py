@@ -53,8 +53,7 @@ from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
 from regula.facesdk.webclient.gen.model.liveness_type import LivenessType
 from regula.facesdk.webclient.gen.model.match_and_search_request import MatchAndSearchRequest
-from regula.facesdk.webclient.gen.model.match_and_search_request_all_of import MatchAndSearchRequestAllOf
-from regula.facesdk.webclient.gen.model.match_and_search_request_all_of_images import MatchAndSearchRequestAllOfImages
+from regula.facesdk.webclient.gen.model.match_and_search_request_images import MatchAndSearchRequestImages
 from regula.facesdk.webclient.gen.model.match_and_search_response import MatchAndSearchResponse
 from regula.facesdk.webclient.gen.model.match_and_search_response_all_of import MatchAndSearchResponseAllOf
 from regula.facesdk.webclient.gen.model.match_and_search_response_all_of_detections import MatchAndSearchResponseAllOfDetections
