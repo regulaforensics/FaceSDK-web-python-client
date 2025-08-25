@@ -323,7 +323,7 @@ class MatchApi(object):
     def match_and_search(self, match_and_search_request, **kwargs):  # noqa: E501
         """match and search (1:1 + 1:N)  # noqa: E501
 
-        To compare several images from a document and look up a person in the database in one request, use POST `/api/match_and_search`. In this case, the calculation of the descriptor will be performed only once, as opposed to using two requests for the same operation. If only one person is identified, match is not performed and only search is carried out.  # noqa: E501
+        To compare several images from a document and look up a person in the database in one request, use POST `/api/match_and_search`. In this case, the calculation of the descriptor will be performed only once, as opposed to using two requests for the same operation. At least two photos are required. If, after processing two or more photos, only one face is detected across them, the match step is skipped, and only the search is carried out.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -355,7 +355,7 @@ class MatchApi(object):
     def match_and_search_with_http_info(self, match_and_search_request, **kwargs):  # noqa: E501
         """match and search (1:1 + 1:N)  # noqa: E501
 
-        To compare several images from a document and look up a person in the database in one request, use POST `/api/match_and_search`. In this case, the calculation of the descriptor will be performed only once, as opposed to using two requests for the same operation. If only one person is identified, match is not performed and only search is carried out.  # noqa: E501
+        To compare several images from a document and look up a person in the database in one request, use POST `/api/match_and_search`. In this case, the calculation of the descriptor will be performed only once, as opposed to using two requests for the same operation. At least two photos are required. If, after processing two or more photos, only one face is detected across them, the match step is skipped, and only the search is carried out.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
