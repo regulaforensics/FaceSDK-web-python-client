@@ -98,7 +98,7 @@ class MatchRequest(object):
     def images(self):
         """Gets the images of this MatchRequest.  # noqa: E501
 
-        All images included in the comparison.  # noqa: E501
+        An array of images to be processed. At least two images must be provided.  # noqa: E501
 
         :return: The images of this MatchRequest.  # noqa: E501
         :rtype: [MatchImage]
@@ -109,7 +109,7 @@ class MatchRequest(object):
     def images(self, images):
         """Sets the images of this MatchRequest.
 
-        All images included in the comparison.  # noqa: E501
+        An array of images to be processed. At least two images must be provided.  # noqa: E501
 
         :param images: The images of this MatchRequest.  # noqa: E501
         :type images: [MatchImage]

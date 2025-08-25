@@ -109,7 +109,7 @@ class MatchAndSearchRequest(object):
     def images(self):
         """Gets the images of this MatchAndSearchRequest.  # noqa: E501
 
-        Person's images.  # noqa: E501
+        An array of images to be processed. At least two images must be provided.  # noqa: E501
 
         :return: The images of this MatchAndSearchRequest.  # noqa: E501
         :rtype: [MatchAndSearchRequestImages]
@@ -120,7 +120,7 @@ class MatchAndSearchRequest(object):
     def images(self, images):
         """Sets the images of this MatchAndSearchRequest.
 
-        Person's images.  # noqa: E501
+        An array of images to be processed. At least two images must be provided.  # noqa: E501
 
         :param images: The images of this MatchAndSearchRequest.  # noqa: E501
         :type images: [MatchAndSearchRequestImages]
