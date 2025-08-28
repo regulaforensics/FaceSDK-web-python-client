@@ -74,8 +74,6 @@ from regula.facesdk.webclient.gen.model.person_with_images import PersonWithImag
 from regula.facesdk.webclient.gen.model.person_with_images_all_of import PersonWithImagesAllOf
 from regula.facesdk.webclient.gen.model.persons_page import PersonsPage
 from regula.facesdk.webclient.gen.model.persons_page_all_of import PersonsPageAllOf
-from regula.facesdk.webclient.gen.model.persons_request import PersonsRequest
-from regula.facesdk.webclient.gen.model.persons_request_all_of import PersonsRequestAllOf
 from regula.facesdk.webclient.gen.model.process_param import ProcessParam
 from regula.facesdk.webclient.gen.model.process_param_attributes import ProcessParamAttributes
 from regula.facesdk.webclient.gen.model.quality_config import QualityConfig
@@ -94,6 +92,7 @@ from regula.facesdk.webclient.gen.model.search_parameters_create_person import S
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.search_request_all_of import SearchRequestAllOf
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
 from regula.facesdk.webclient.gen.model.transaction_info import TransactionInfo
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup

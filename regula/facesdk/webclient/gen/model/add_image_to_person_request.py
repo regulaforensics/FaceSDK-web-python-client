@@ -37,6 +37,8 @@ class AddImageToPersonRequest(object):
         'image': 'AddImageToPersonRequestImage',
         'threshold': 'float',
         'limit': 'int',
+        'tenant': 'str',
+        'env': 'str',
     }
 
     attribute_map = {
@@ -44,9 +46,11 @@ class AddImageToPersonRequest(object):
         'image': 'image',
         'threshold': 'threshold',
         'limit': 'limit',
+        'tenant': 'tenant',
+        'env': 'env',
     }
 
-    def __init__(self, tag=None, image=None, threshold=None, limit=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, tag=None, image=None, threshold=None, limit=None, tenant=None, env=None, local_vars_configuration=None):  # noqa: E501
         """AddImageToPersonRequest - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +60,8 @@ class AddImageToPersonRequest(object):
         self._image = None
         self._threshold = None
         self._limit = None
+        self._tenant = None
+        self._env = None
         self.discriminator = None
 
         if tag is not None:
@@ -65,6 +71,10 @@ class AddImageToPersonRequest(object):
             self.threshold = threshold
         if limit is not None:
             self.limit = limit
+        if tenant is not None:
+            self.tenant = tenant
+        if env is not None:
+            self.env = env
 
     @property
     def tag(self):
@@ -157,6 +167,52 @@ class AddImageToPersonRequest(object):
         """
 
         self._limit = limit
+
+    @property
+    def tenant(self):
+        """Gets the tenant of this AddImageToPersonRequest.  # noqa: E501
+
+        A label used to group transactions by customers, applications, or other criteria.  # noqa: E501
+
+        :return: The tenant of this AddImageToPersonRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._tenant
+
+    @tenant.setter
+    def tenant(self, tenant):
+        """Sets the tenant of this AddImageToPersonRequest.
+
+        A label used to group transactions by customers, applications, or other criteria.  # noqa: E501
+
+        :param tenant: The tenant of this AddImageToPersonRequest.  # noqa: E501
+        :type tenant: str
+        """
+
+        self._tenant = tenant
+
+    @property
+    def env(self):
+        """Gets the env of this AddImageToPersonRequest.  # noqa: E501
+
+        A label used to differentiate transactions by development stages.  # noqa: E501
+
+        :return: The env of this AddImageToPersonRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._env
+
+    @env.setter
+    def env(self, env):
+        """Sets the env of this AddImageToPersonRequest.
+
+        A label used to differentiate transactions by development stages.  # noqa: E501
+
+        :param env: The env of this AddImageToPersonRequest.  # noqa: E501
+        :type env: str
+        """
+
+        self._env = env
 
     def to_dict(self):
         """Returns the model properties as a dict"""
