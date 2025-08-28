@@ -187,17 +187,17 @@ class PersonApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def create_person(self, persons_request, **kwargs):  # noqa: E501
+    def create_person(self, person_fields, **kwargs):  # noqa: E501
         """Create person  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_person(persons_request, async_req=True)
+        >>> thread = api.create_person(person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param persons_request: (required)
-        :type persons_request: PersonsRequest
+        :param person_fields: (required)
+        :type person_fields: PersonFields
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -216,19 +216,19 @@ class PersonApi(object):
         :rtype: Person
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_person_with_http_info(persons_request, **kwargs)  # noqa: E501
+        return self.create_person_with_http_info(person_fields, **kwargs)  # noqa: E501
 
-    def create_person_with_http_info(self, persons_request, **kwargs):  # noqa: E501
+    def create_person_with_http_info(self, person_fields, **kwargs):  # noqa: E501
         """Create person  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_person_with_http_info(persons_request, async_req=True)
+        >>> thread = api.create_person_with_http_info(person_fields, async_req=True)
         >>> result = thread.get()
 
-        :param persons_request: (required)
-        :type persons_request: PersonsRequest
+        :param person_fields: (required)
+        :type person_fields: PersonFields
         :param x_request_id: Request header label.
         :type x_request_id: str
         :param async_req: Whether to execute the request asynchronously.
@@ -257,7 +257,7 @@ class PersonApi(object):
         local_var_params = locals()
 
         all_params = [
-            'persons_request',
+            'person_fields',
             'x_request_id',
         ]
         all_params.extend(
@@ -278,10 +278,10 @@ class PersonApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'persons_request' is set
-        if self.api_client.client_side_validation and ('persons_request' not in local_var_params or  # noqa: E501
-                                                        local_var_params['persons_request'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `persons_request` when calling `create_person`")  # noqa: E501
+        # verify the required parameter 'person_fields' is set
+        if self.api_client.client_side_validation and ('person_fields' not in local_var_params or  # noqa: E501
+                                                        local_var_params['person_fields'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `person_fields` when calling `create_person`")  # noqa: E501
 
         collection_formats = {}
 
@@ -297,8 +297,8 @@ class PersonApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'persons_request' in local_var_params:
-            body_params = local_var_params['persons_request']
+        if 'person_fields' in local_var_params:
+            body_params = local_var_params['person_fields']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

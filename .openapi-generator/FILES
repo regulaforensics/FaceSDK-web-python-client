@@ -78,8 +78,6 @@ regula/facesdk/webclient/gen/model/person_with_images.py
 regula/facesdk/webclient/gen/model/person_with_images_all_of.py
 regula/facesdk/webclient/gen/model/persons_page.py
 regula/facesdk/webclient/gen/model/persons_page_all_of.py
-regula/facesdk/webclient/gen/model/persons_request.py
-regula/facesdk/webclient/gen/model/persons_request_all_of.py
 regula/facesdk/webclient/gen/model/process_param.py
 regula/facesdk/webclient/gen/model/process_param_attributes.py
 regula/facesdk/webclient/gen/model/quality_config.py
@@ -98,6 +96,7 @@ regula/facesdk/webclient/gen/model/search_parameters_create_person.py
 regula/facesdk/webclient/gen/model/search_person.py
 regula/facesdk/webclient/gen/model/search_person_all_of.py
 regula/facesdk/webclient/gen/model/search_request.py
+regula/facesdk/webclient/gen/model/search_request_all_of.py
 regula/facesdk/webclient/gen/model/search_result.py
 regula/facesdk/webclient/gen/model/transaction_info.py
 regula/facesdk/webclient/gen/model/update_group.py
