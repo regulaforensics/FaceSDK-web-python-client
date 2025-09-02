@@ -15,6 +15,8 @@ from regula.facesdk.webclient.gen.model.add_image_to_person_response import AddI
 from regula.facesdk.webclient.gen.model.attribute_config import AttributeConfig
 from regula.facesdk.webclient.gen.model.attribute_config_list import AttributeConfigList
 from regula.facesdk.webclient.gen.model.crop import Crop
+from regula.facesdk.webclient.gen.model.detect_attributes_details import DetectAttributesDetails
+from regula.facesdk.webclient.gen.model.detect_details_meta import DetectDetailsMeta
 from regula.facesdk.webclient.gen.model.detect_request import DetectRequest
 from regula.facesdk.webclient.gen.model.detect_response import DetectResponse
 from regula.facesdk.webclient.gen.model.detect_response_all_of import DetectResponseAllOf
@@ -51,8 +53,7 @@ from regula.facesdk.webclient.gen.model.image_page_all_of import ImagePageAllOf
 from regula.facesdk.webclient.gen.model.image_source import ImageSource
 from regula.facesdk.webclient.gen.model.liveness_type import LivenessType
 from regula.facesdk.webclient.gen.model.match_and_search_request import MatchAndSearchRequest
-from regula.facesdk.webclient.gen.model.match_and_search_request_all_of import MatchAndSearchRequestAllOf
-from regula.facesdk.webclient.gen.model.match_and_search_request_all_of_images import MatchAndSearchRequestAllOfImages
+from regula.facesdk.webclient.gen.model.match_and_search_request_images import MatchAndSearchRequestImages
 from regula.facesdk.webclient.gen.model.match_and_search_response import MatchAndSearchResponse
 from regula.facesdk.webclient.gen.model.match_and_search_response_all_of import MatchAndSearchResponseAllOf
 from regula.facesdk.webclient.gen.model.match_and_search_response_all_of_detections import MatchAndSearchResponseAllOfDetections
@@ -91,6 +92,7 @@ from regula.facesdk.webclient.gen.model.search_parameters_create_person import S
 from regula.facesdk.webclient.gen.model.search_person import SearchPerson
 from regula.facesdk.webclient.gen.model.search_person_all_of import SearchPersonAllOf
 from regula.facesdk.webclient.gen.model.search_request import SearchRequest
+from regula.facesdk.webclient.gen.model.search_request_all_of import SearchRequestAllOf
 from regula.facesdk.webclient.gen.model.search_result import SearchResult
 from regula.facesdk.webclient.gen.model.transaction_info import TransactionInfo
 from regula.facesdk.webclient.gen.model.update_group import UpdateGroup

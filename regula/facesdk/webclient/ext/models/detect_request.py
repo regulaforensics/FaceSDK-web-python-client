@@ -11,8 +11,6 @@ class DetectRequest(GetDetectRequest):
             self,
             image: Union[Base64String, bytes],
             process_param: ProcessParam = None,
-            only_central_face=False,
-            thumbnails=False,
             local_vars_configuration=None,
             tag=None,
 
@@ -25,7 +23,6 @@ class DetectRequest(GetDetectRequest):
 
         super().__init__(
             image=image,
-            thumbnails=thumbnails,
             local_vars_configuration=local_vars_configuration,
             tag=tag,
             process_param=process_param
