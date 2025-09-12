@@ -18,6 +18,7 @@ wheel = "*"
 twine = "*"
 chardet = "*"
 packaging = ">=22.0"
+typing-extensions = "*"
 
 [requires]
 python_version = "3.9"
