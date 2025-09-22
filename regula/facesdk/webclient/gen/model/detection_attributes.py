@@ -33,7 +33,7 @@ class DetectionAttributes(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'details': '[bool, date, datetime, dict, float, int, list, str, none_type]',
+        'details': '[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]',
         'elapsed_time': 'float',
     }
 
