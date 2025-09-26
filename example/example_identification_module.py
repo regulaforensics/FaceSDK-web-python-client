@@ -2,14 +2,15 @@ import base64
 import os
 
 from regula.facesdk.webclient.ext import FaceSdk
-from regula.facesdk.webclient.gen.model.image_fields_image import ImageFieldsImage
-from regula.facesdk.webclient.gen.model.image_source import ImageSource
-from regula.facesdk.webclient.gen.model.match_and_search_request_all_of_images import MatchAndSearchRequestAllOfImages
-from regula.facesdk.webclient.gen.model.person_fields import PersonFields
-from regula.facesdk.webclient.gen.model.search_request import SearchRequest
-from regula.facesdk.webclient.gen.model.update_group import UpdateGroup
+from regula.facesdk.webclient.gen.models.image_fields_image import ImageFieldsImage
+from regula.facesdk.webclient.gen.models.image_source import ImageSource
+from regula.facesdk.webclient.gen.models.match_and_search_request_images_item import MatchAndSearchRequestImagesItem
+from regula.facesdk.webclient.gen.models.person_fields import PersonFields
+from regula.facesdk.webclient.gen.models.search_request import SearchRequest
+from regula.facesdk.webclient.gen.models.update_group import UpdateGroup
+from regula.facesdk.webclient.gen.models.match_and_search_request import MatchAndSearchRequest
 
-api_base_path = os.getenv("API_BASE_PATH", "http://127.0.0.1:41101")
+api_base_path = os.getenv("API_BASE_PATH", "http://nightly-faceapi.regula.local")
 
 with open("face1.jpg", "rb") as f:
     face_1_bytes = f.read()
@@ -28,15 +29,15 @@ sdk.person_api.add_image_to_person(person2_id, face_2_bytes)
 person1 = sdk.person_api.get_person(person1_id)
 person2 = sdk.person_api.get_person(person2_id)
 
-group = sdk.group_api.create_group("group1")
+group = sdk.group_api.create_group("group13233")
 
-sdk.group_api.update_persons_in_group(group.id, UpdateGroup([person1.id, person2.id]))
+sdk.group_api.update_persons_in_group(group.id, UpdateGroup(addItems=[person1.id, person2.id]))
 
 result = sdk.search_api.search(
     SearchRequest(
-        group_ids=[],
+        groupIds=[],
         image=ImageFieldsImage(
-            content_type="",
+            contentType="",
             content=face_1_bytes
         ),
         limit=10,
@@ -50,9 +51,11 @@ print(f"Group {group.id} {group.name}")
 print(result)
 
 match_and_search = sdk.match_api.match_and_search(
-    images=[MatchAndSearchRequestAllOfImages(base64.b64encode(face_1_bytes).decode("UTF-8"), ImageSource.LIVE),
-            MatchAndSearchRequestAllOfImages(base64.b64encode(face_2_bytes).decode("UTF-8"), ImageSource.LIVE)],
-    group_ids=[group.id]
+    MatchAndSearchRequest(
+        images=[MatchAndSearchRequestImagesItem(content=base64.b64encode(face_1_bytes).decode("UTF-8"), type=ImageSource.LIVE),
+                MatchAndSearchRequestImagesItem(content=base64.b64encode(face_2_bytes).decode("UTF-8"), type=ImageSource.LIVE)],
+        groupIds=[group.id]
+    ),
 )
 
 print(f"{match_and_search}")
