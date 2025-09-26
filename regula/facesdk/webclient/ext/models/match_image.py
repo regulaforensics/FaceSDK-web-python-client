@@ -2,7 +2,7 @@ from typing import Union
 
 from regula.facesdk.webclient.ext.common import Base64String, bytes_to_base64
 from regula.facesdk.webclient.gen import ApiValueError
-from regula.facesdk.webclient.gen.model.image_source import ImageSource
+from regula.facesdk.webclient.gen.models.image_source import ImageSource
 from regula.facesdk.webclient.gen.models import MatchImage as GenMatchImage
 
 
@@ -16,4 +16,4 @@ class MatchImage(GenMatchImage):
         if isinstance(data, bytes):
             data = bytes_to_base64(data)
 
-        super().__init__(index, type, data, local_vars_configuration)
+        super().__init__(index=index, type=type, data=data, local_vars_configuration)

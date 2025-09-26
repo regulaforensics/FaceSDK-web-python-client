@@ -2,7 +2,7 @@ from typing import Union
 
 from regula.facesdk.webclient.ext.common import Base64String, bytes_to_base64
 from regula.facesdk.webclient.gen import ApiValueError
-from regula.facesdk.webclient.gen.model.process_param import ProcessParam
+from regula.facesdk.webclient.gen.models.process_param import ProcessParam
 from regula.facesdk.webclient.gen.models import DetectRequest as GetDetectRequest
 
 
