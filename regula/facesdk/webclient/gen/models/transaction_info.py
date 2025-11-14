@@ -92,7 +92,7 @@ class TransactionInfo(BaseModel):
             "age": obj.get("age"),
             "portrait": obj.get("portrait"),
             "metadata": obj.get("metadata"),
-            "type": obj.get("type") if obj.get("type") is not None else LivenessType.NUMBER_ACTIVE
+            "type": obj.get("type")
         })
         return _obj
 
