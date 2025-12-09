@@ -22,7 +22,7 @@ class MatchAndSearchResponseDataDetectionsItem(BaseModel):
     MatchAndSearchResponseDataDetectionsItem
     """ # noqa: E501
     faces: SkipValidation[Optional[List[FacesResponse]]] = Field(alias="faces", default=None, description="Detected faces.")
-    image_index: SkipValidation[Optional[int]] = Field(alias="imageIndex", default=None, description="The image index number. Can be given; if not given, the index numbers are set automatically starting from &#x60;0&#x60;. All index numbers must be whole and unique—not repeated.")
+    image_index: SkipValidation[Optional[int]] = Field(alias="imageIndex", default=None, description="The image index number. Can be given; if not given, the index numbers are set automatically starting from `0`. All index numbers must be whole and unique—not repeated.")
     status: SkipValidation[Optional[FaceSDKResultCode]] = Field(alias="status", default=None)
     __properties: ClassVar[List[str]] = ["faces", "imageIndex", "status"]
 

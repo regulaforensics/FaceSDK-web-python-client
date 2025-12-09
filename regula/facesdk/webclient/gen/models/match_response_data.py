@@ -23,7 +23,7 @@ class MatchResponseData(BaseModel):
     """ # noqa: E501
     detections: SkipValidation[Optional[List[MatchImageDetection]]] = Field(alias="detections", default=None, description="The detection results.")
     results: SkipValidation[Optional[List[MatchImageResult]]] = Field(alias="results", default=None, description="The comparison results.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     __properties: ClassVar[List[str]] = ["detections", "results", "metadata"]
 
     model_config = ConfigDict(

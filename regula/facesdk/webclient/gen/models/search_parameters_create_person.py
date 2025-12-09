@@ -19,9 +19,9 @@ class SearchParametersCreatePerson(BaseModel):
     """
     If a person is not found, a new person entry is created using the descriptor calculated while searching.
     """ # noqa: E501
-    name: SkipValidation[Optional[str]] = Field(alias="name", default=None, description="Person&#39;s name.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
-    ttl: SkipValidation[Optional[int]] = Field(alias="ttl", default=None, description="The lifespan of the Person&#39;s records, seconds. Optional.")
+    name: SkipValidation[Optional[str]] = Field(alias="name", default=None, description="Person's name.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
+    ttl: SkipValidation[Optional[int]] = Field(alias="ttl", default=None, description="The lifespan of the Person's records, seconds. Optional.")
     __properties: ClassVar[List[str]] = ["name", "metadata", "ttl"]
 
     model_config = ConfigDict(

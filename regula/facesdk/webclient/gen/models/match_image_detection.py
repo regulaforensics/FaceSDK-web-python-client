@@ -22,7 +22,7 @@ class MatchImageDetection(BaseModel):
     MatchImageDetection
     """ # noqa: E501
     faces: SkipValidation[Optional[List[DetectionFace]]] = Field(alias="faces", default=None, description="Detected faces.")
-    image_index: SkipValidation[int] = Field(alias="imageIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from &#x60;0&#x60;. All index numbers must be whole and unique—not repeated.")
+    image_index: SkipValidation[int] = Field(alias="imageIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from `0`. All index numbers must be whole and unique—not repeated.")
     status: SkipValidation[FaceSDKResultCode] = Field(alias="status")
     __properties: ClassVar[List[str]] = ["faces", "imageIndex", "status"]
 

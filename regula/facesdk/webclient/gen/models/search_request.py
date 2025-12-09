@@ -32,7 +32,7 @@ class SearchRequest(BaseModel):
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator, should be unique for each session.")
     image: SkipValidation[Optional[ImageFieldsImage]] = Field(alias="image", default=None)
     output_image_params: SkipValidation[Optional[OutputImageParams]] = Field(alias="outputImageParams", default=None)
-    detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to &#x60;false&#x60;, only the most central face is detected.")
+    detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to `false`, only the most central face is detected.")
     threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="The similarity threshold.")
     limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
     __properties: ClassVar[List[str]] = ["tenant", "env", "createPerson", "groupIds", "filter", "tag", "image", "outputImageParams", "detectAll", "threshold", "limit"]

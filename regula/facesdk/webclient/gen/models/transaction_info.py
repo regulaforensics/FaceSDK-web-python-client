@@ -21,13 +21,13 @@ class TransactionInfo(BaseModel):
     TransactionInfo
     """ # noqa: E501
     code: SkipValidation[Optional[int]] = Field(alias="code", default=None, description="Result code, see the [FaceSDKResultCode enum](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/).")
-    status: SkipValidation[Optional[int]] = Field(alias="status", default=None, description="Whether the liveness detection is confirmed &#x60;0&#x60; or not &#x60;1&#x60;.")
+    status: SkipValidation[Optional[int]] = Field(alias="status", default=None, description="Whether the liveness detection is confirmed `0` or not `1`.")
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator, should be unique for each session.")
     transaction_id: SkipValidation[Optional[str]] = Field(alias="transactionId", default=None, description="Transaction ID, there can be several transactions within one session.")
     video: SkipValidation[Optional[str]] = Field(alias="video", default=None, description="Link to the session video, depends on the selected storage type. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/administration/storage/)")
     age: SkipValidation[Optional[List[Dict[str, object]]]] = Field(alias="age", default=None, description="Approximate age with an accuracy of +/-3 years.")
     portrait: SkipValidation[Optional[str]] = Field(alias="portrait", default=None, description="Link to the portrait, depends on the selected storage type. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/administration/storage/)")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     type: SkipValidation[Optional[LivenessType]] = Field(alias="type", default=None)
     __properties: ClassVar[List[str]] = ["code", "status", "tag", "transactionId", "video", "age", "portrait", "metadata", "type"]
 

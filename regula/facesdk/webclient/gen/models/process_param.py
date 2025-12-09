@@ -24,7 +24,7 @@ class ProcessParam(BaseModel):
     The processing parameters.
     """ # noqa: E501
     scenario: SkipValidation[Optional[FaceQualityScenarios]] = Field(alias="scenario", default=None)
-    only_central_face: SkipValidation[Optional[bool]] = Field(alias="onlyCentralFace", default=None, description="Whether to process only the central face in the image. If set to &#x60;false&#x60;, all the faces are processed.")
+    only_central_face: SkipValidation[Optional[bool]] = Field(alias="onlyCentralFace", default=None, description="Whether to process only the central face in the image. If set to `false`, all the faces are processed.")
     output_image_params: SkipValidation[Optional[OutputImageParams]] = Field(alias="outputImageParams", default=None)
     quality: SkipValidation[Optional[QualityRequest]] = Field(alias="quality", default=None)
     attributes: SkipValidation[Optional[ProcessParamAttributes]] = Field(alias="attributes", default=None)

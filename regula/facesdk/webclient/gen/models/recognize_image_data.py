@@ -20,7 +20,7 @@ class RecognizeImageData(BaseModel):
     RecognizeImageData
     """ # noqa: E501
     similarity: SkipValidation[Optional[float]] = Field(alias="similarity", default=None, description="Similarity score.")
-    distance: SkipValidation[Optional[float]] = Field(alias="distance", default=None, description="Similarity distance score: the lower the distance, the higher the face&#39;s similarity.")
+    distance: SkipValidation[Optional[float]] = Field(alias="distance", default=None, description="Similarity distance score: the lower the distance, the higher the face's similarity.")
     __properties: ClassVar[List[str]] = ["similarity", "distance"]
 
     model_config = ConfigDict(

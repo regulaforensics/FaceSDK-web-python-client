@@ -20,13 +20,13 @@ class Image(BaseModel):
     Image in the response.
     """ # noqa: E501
     id: SkipValidation[Optional[str]] = Field(alias="id", default=None, description="Response image ID. The list is sorted by decreasing ID value.")
-    content: SkipValidation[Optional[str]] = Field(alias="content", default=None, description="Base64-encoded image. Returned only if &#x60;withImages&#x60; is set to true in the request.")
+    content: SkipValidation[Optional[str]] = Field(alias="content", default=None, description="Base64-encoded image. Returned only if `withImages` is set to true in the request.")
     content_type: SkipValidation[Optional[str]] = Field(alias="contentType", default=None, description="Original media type of the returned image.")
     created_at: SkipValidation[Optional[str]] = Field(alias="createdAt", default=None, description="Returned image creation date.")
     updated_at: SkipValidation[Optional[str]] = Field(alias="updatedAt", default=None, description="Returned image update date.")
     path: SkipValidation[Optional[str]] = Field(alias="path", default=None, description="Returned image path.")
     url: SkipValidation[Optional[str]] = Field(alias="url", default=None, description="Returned image URL.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     __properties: ClassVar[List[str]] = ["id", "content", "contentType", "createdAt", "updatedAt", "path", "url", "metadata"]
 
     model_config = ConfigDict(

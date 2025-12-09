@@ -21,7 +21,7 @@ class Group(BaseModel):
     Group
     """ # noqa: E501
     name: SkipValidation[Optional[str]] = Field(alias="name", default=None, description="Group to create name.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing group&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing group's extended attributes.")
     id: SkipValidation[Optional[str]] = Field(alias="id", default=None, description="Group ID.")
     created_at: SkipValidation[Optional[str]] = Field(alias="createdAt", default=None, description="Group creation date.")
     __properties: ClassVar[List[str]] = ["name", "metadata", "id", "createdAt"]
