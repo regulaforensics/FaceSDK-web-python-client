@@ -25,7 +25,7 @@ class DetectionQuality(BaseModel):
     non_compliant: SkipValidation[Optional[List[FaceQualityConfigName]]] = Field(alias="nonCompliant", default=None, description="Non-compliant assessment characteristics.")
     details_groups: SkipValidation[Optional[List[QualityDetailsGroups]]] = Field(alias="detailsGroups", default=None, description="Assessment results for each [group of characteristics](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-image-quality-groups/).")
     details: SkipValidation[Optional[List[QualityDetail]]] = Field(alias="details", default=None, description="Assessment characteristics that were set in the request.")
-    score: SkipValidation[Optional[float]] = Field(alias="score", default=None, description="Returns the estimated portrait quality assessment result, a number from &#x60;0&#x60; to &#x60;1&#x60;, where &#x60;1&#x60; is for absolute compliance.")
+    score: SkipValidation[Optional[float]] = Field(alias="score", default=None, description="Returns the estimated portrait quality assessment result, a number from `0` to `1`, where `1` is for absolute compliance.")
     elapsed_time: SkipValidation[Optional[float]] = Field(alias="elapsedTime", default=None, description="Server processing time for quality assessment, ms.")
     __properties: ClassVar[List[str]] = ["nonCompliant", "detailsGroups", "details", "score", "elapsedTime"]
 

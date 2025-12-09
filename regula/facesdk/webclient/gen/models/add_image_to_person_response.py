@@ -24,7 +24,7 @@ class AddImageToPersonResponse(BaseModel):
     created_at: SkipValidation[Optional[str]] = Field(alias="createdAt", default=None, description="Returned image creation date.")
     path: SkipValidation[Optional[str]] = Field(alias="path", default=None, description="Returned image path.")
     url: SkipValidation[Optional[str]] = Field(alias="url", default=None, description="Returned image URL.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     __properties: ClassVar[List[str]] = ["id", "contentType", "createdAt", "path", "url", "metadata"]
 
     model_config = ConfigDict(

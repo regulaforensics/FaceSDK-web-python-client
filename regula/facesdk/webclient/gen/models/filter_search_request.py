@@ -21,8 +21,8 @@ class FilterSearchRequest(BaseModel):
     Allows to filter the search results based on the Person's `name`. If enabled, only the search results that meet the filter condition will be returned.
     """ # noqa: E501
     op: SkipValidation[Optional[FilterOp]] = Field(alias="op", default=None)
-    var_field: SkipValidation[Optional[str]] = Field(alias="field", default=None, description="&#x60;name&#x60; of the Person.")
-    value: SkipValidation[Optional[List[str]]] = Field(alias="value", default=None, description="The list of &#x60;name&#x60; values against which the &#x60;field&#x60; is compared.")
+    var_field: SkipValidation[Optional[str]] = Field(alias="field", default=None, description="`name` of the Person.")
+    value: SkipValidation[Optional[List[str]]] = Field(alias="value", default=None, description="The list of `name` values against which the `field` is compared.")
     __properties: ClassVar[List[str]] = ["op", "field", "value"]
 
     model_config = ConfigDict(

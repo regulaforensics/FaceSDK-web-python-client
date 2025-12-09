@@ -20,7 +20,7 @@ class DetectionAttributes(BaseModel):
     """
     The evaluated attributes, see the [Attributes List](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/usage/face-detection/attributes-detection/) for details.
     """ # noqa: E501
-    details: SkipValidation[Optional[List[DetailItem]]] = Field(alias="details", default=None, description="Attributes assessment details. Returns &#x60;DetectDetailsMeta&#x60; or &#x60;DetectAttributesDetails&#x60;.")
+    details: SkipValidation[Optional[List[DetailItem]]] = Field(alias="details", default=None, description="Attributes assessment details. Returns `DetectDetailsMeta` or `DetectAttributesDetails`.")
     elapsed_time: SkipValidation[Optional[float]] = Field(alias="elapsedTime", default=None, description="Server processing time for attribute detection, ms.")
     __properties: ClassVar[List[str]] = ["details", "elapsedTime"]
 

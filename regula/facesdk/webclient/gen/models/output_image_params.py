@@ -21,7 +21,7 @@ class OutputImageParams(BaseModel):
     """
     Allows to process the uploaded image according to the indicated settings.
     """ # noqa: E501
-    background_color: SkipValidation[Optional[List[int]]] = Field(alias="backgroundColor", default=None, description="The RGB value of a color for filling background behind a person&#39;s silhouette and for aligning the image.")
+    background_color: SkipValidation[Optional[List[int]]] = Field(alias="backgroundColor", default=None, description="The RGB value of a color for filling background behind a person's silhouette and for aligning the image.")
     crop: SkipValidation[Optional[Crop]] = Field(alias="crop", default=None)
     __properties: ClassVar[List[str]] = ["backgroundColor", "crop"]
 

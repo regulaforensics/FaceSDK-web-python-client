@@ -23,7 +23,7 @@ class MatchAndSearchResponseData(BaseModel):
     """ # noqa: E501
     results: SkipValidation[Optional[List[MatchImageResult]]] = Field(alias="results", default=None, description="The match and search results.")
     elapsed_time: SkipValidation[Optional[float]] = Field(alias="elapsedTime", default=None, description="Server processing time, ms. Does not include the time taken to receive the request or deliver the response.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     detections: SkipValidation[Optional[List[MatchAndSearchResponseDataDetectionsItem]]] = Field(alias="detections", default=None, description="The detection results.")
     __properties: ClassVar[List[str]] = ["results", "elapsedTime", "metadata", "detections"]
 

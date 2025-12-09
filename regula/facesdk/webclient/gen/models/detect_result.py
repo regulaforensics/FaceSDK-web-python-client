@@ -23,7 +23,7 @@ class DetectResult(BaseModel):
     detections: SkipValidation[List[Detection]] = Field(alias="detections", description="The array of performed checks.")
     detector_type: SkipValidation[Optional[int]] = Field(alias="detectorType", default=None, description="Internal.")
     landmarks_type: SkipValidation[Optional[int]] = Field(alias="landmarksType", default=None, description="Internal.")
-    scenario: SkipValidation[Optional[str]] = Field(alias="scenario", default=None, description="The face detection scenario that was set in the &#x60;processParam.scenario&#x60; field of the request.")
+    scenario: SkipValidation[Optional[str]] = Field(alias="scenario", default=None, description="The face detection scenario that was set in the `processParam.scenario` field of the request.")
     elapsed_time: SkipValidation[Optional[float]] = Field(alias="elapsedTime", default=None, description="Server processing time, ms. Does not include the time taken to receive the request or deliver the response.")
     __properties: ClassVar[List[str]] = ["detections", "detectorType", "landmarksType", "scenario", "elapsedTime"]
 

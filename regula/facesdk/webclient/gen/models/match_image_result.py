@@ -20,10 +20,10 @@ class MatchImageResult(BaseModel):
     """
     MatchImageResult
     """ # noqa: E501
-    first_index: SkipValidation[int] = Field(alias="firstIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from &#x60;0&#x60;. All index numbers must be whole and unique—not repeated.")
+    first_index: SkipValidation[int] = Field(alias="firstIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from `0`. All index numbers must be whole and unique—not repeated.")
     first_face_index: SkipValidation[Optional[float]] = Field(alias="firstFaceIndex", default=None, description="The detected face index number.")
     first: SkipValidation[Optional[ImageSource]] = Field(alias="first", default=None)
-    second_index: SkipValidation[int] = Field(alias="secondIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from &#x60;0&#x60;. All index numbers must be whole and unique—not repeated.")
+    second_index: SkipValidation[int] = Field(alias="secondIndex", description="The image index number. Can be given; if not given, the index numbers are set automatically starting from `0`. All index numbers must be whole and unique—not repeated.")
     second_face_index: SkipValidation[Optional[float]] = Field(alias="secondFaceIndex", default=None, description="The detected face index number.")
     second: SkipValidation[Optional[ImageSource]] = Field(alias="second", default=None)
     score: SkipValidation[Optional[float]] = Field(alias="score", default=None, description="A dimensionless number that shows how similar the compared faces are. 0—absolutely identical faces.")

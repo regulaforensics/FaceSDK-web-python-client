@@ -22,7 +22,7 @@ class OperationLog(BaseModel):
     status_code: SkipValidation[Optional[int]] = Field(alias="statusCode", default=None, description="Status code.")
     type: SkipValidation[Optional[str]] = Field(alias="type", default=None, description="Error type.")
     msg: SkipValidation[Optional[str]] = Field(alias="msg", default=None, description="Error message.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing group&#39;s extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing group's extended attributes.")
     __properties: ClassVar[List[str]] = ["statusCode", "type", "msg", "metadata"]
 
     model_config = ConfigDict(

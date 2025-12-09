@@ -21,7 +21,7 @@ class QualityRequest(BaseModel):
     """
     If set, the face image quality check is performed according to the given list of [characteristics](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/usage/face-detection/face-image-quality-check/) in `quality.config`.
     """ # noqa: E501
-    background_match_color: SkipValidation[Optional[List[int]]] = Field(alias="backgroundMatchColor", default=None, description="The RGB value of a color for filling background behind a person&#39;s silhouette and for aligning the image.")
+    background_match_color: SkipValidation[Optional[List[int]]] = Field(alias="backgroundMatchColor", default=None, description="The RGB value of a color for filling background behind a person's silhouette and for aligning the image.")
     config: SkipValidation[Optional[List[QualityConfig]]] = Field(alias="config", default=None, description="The list of quality check characteristics.")
     __properties: ClassVar[List[str]] = ["backgroundMatchColor", "config"]
 

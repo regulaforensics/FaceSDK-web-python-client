@@ -22,9 +22,9 @@ class SearchPerson(BaseModel):
     """
     SearchPerson
     """ # noqa: E501
-    name: SkipValidation[str] = Field(alias="name", description="Person&#39;s name.")
-    external_id: SkipValidation[Optional[str]] = Field(alias="externalId", default=None, description="Person&#39;s ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    name: SkipValidation[str] = Field(alias="name", description="Person's name.")
+    external_id: SkipValidation[Optional[str]] = Field(alias="externalId", default=None, description="Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     groups: SkipValidation[Optional[List[str]]] = Field(alias="groups", default=None, description="Groups a person should be placed to. If no group is specified in request, a Default group is created and the person is placed to it.")
     expire_at: SkipValidation[Optional[str]] = Field(alias="expireAt", default=None, description="Person expiration date.")
     id: SkipValidation[Optional[str]] = Field(alias="id", default=None, description="Person ID. The list of persons is sorted by decreasing ID value.")

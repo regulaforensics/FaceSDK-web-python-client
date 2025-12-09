@@ -20,7 +20,7 @@ class DetectDetailsMeta(DetailItem):
     """
     DetectDetailsMeta
     """ # noqa: E501
-    confidence: SkipValidation[Optional[float]] = Field(alias="confidence", default=None, description="The confidence in the estimated value, &#x60;1.0&#x60; is for 100% confidence.")
+    confidence: SkipValidation[Optional[float]] = Field(alias="confidence", default=None, description="The confidence in the estimated value, `1.0` is for 100% confidence.")
     value: SkipValidation[Optional[str]] = Field(alias="value", default=None, description="The estimated value for the attribute, see the [Returned values column](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/usage/face-detection/attributes-detection/).")
     __properties: ClassVar[List[str]] = ["name", "confidence", "value"]
 

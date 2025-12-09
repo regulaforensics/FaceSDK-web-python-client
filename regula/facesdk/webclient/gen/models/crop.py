@@ -22,8 +22,8 @@ class Crop(BaseModel):
     Whether to return a Base64-encoded image of each aligned and cropped portrait in the `crop` field. Faces are aligned to a straight vertical line based on the value in the `crop.type` field, correcting any tilt present in the original image. If the image contains multiple faces, the system will detect and process each face separately, returning individual portraits. For example, if there are five people in the photo, five processed portraits will be returned. Each portrait is available for download.
     """ # noqa: E501
     type: SkipValidation[Optional[FaceImageQualityAlignType]] = Field(alias="type", default=None)
-    pad_color: SkipValidation[Optional[List[int]]] = Field(alias="padColor", default=None, description="The RGB value of a color for filling background behind a person&#39;s silhouette and for aligning the image.")
-    size: SkipValidation[Optional[List[int]]] = Field(alias="size", default=None, description="The resize value in case &#x60;type&#x60; matches this value. If it doesn&#39;t, no resize is performed.")
+    pad_color: SkipValidation[Optional[List[int]]] = Field(alias="padColor", default=None, description="The RGB value of a color for filling background behind a person's silhouette and for aligning the image.")
+    size: SkipValidation[Optional[List[int]]] = Field(alias="size", default=None, description="The resize value in case `type` matches this value. If it doesn't, no resize is performed.")
     __properties: ClassVar[List[str]] = ["type", "padColor", "size"]
 
     model_config = ConfigDict(

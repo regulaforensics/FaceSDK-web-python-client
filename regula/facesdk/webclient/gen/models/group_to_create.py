@@ -21,7 +21,7 @@ class GroupToCreate(BaseModel):
     """ # noqa: E501
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator.")
     name: SkipValidation[str] = Field(alias="name", description="Group to create name.")
-    metadata: SkipValidation[Dict[str, object]] = Field(alias="metadata", description="A free-form object containing group&#39;s extended attributes.")
+    metadata: SkipValidation[Dict[str, object]] = Field(alias="metadata", description="A free-form object containing group's extended attributes.")
     __properties: ClassVar[List[str]] = ["tag", "name", "metadata"]
 
     model_config = ConfigDict(

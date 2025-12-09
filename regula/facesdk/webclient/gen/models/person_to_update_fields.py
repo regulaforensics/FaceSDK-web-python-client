@@ -20,9 +20,9 @@ class PersonToUpdateFields(BaseModel):
     """
     Person Request body: name and metadata.
     """ # noqa: E501
-    external_id: SkipValidation[Optional[str]] = Field(alias="externalId", default=None, description="Person&#39;s ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.")
-    name: SkipValidation[Optional[str]] = Field(alias="name", default=None, description="Person&#39;s name.")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person&#39;s extended attributes.")
+    external_id: SkipValidation[Optional[str]] = Field(alias="externalId", default=None, description="Person's ID, used for linking search results to an ID in an external system. Can be set when creating a Person, stored in the database, and included in the search to return only Persons with the specified ID. Optional.")
+    name: SkipValidation[Optional[str]] = Field(alias="name", default=None, description="Person's name.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     groups: SkipValidation[Optional[List[str]]] = Field(alias="groups", default=None, description="Groups a person should be placed to. If no group is specified in request, a Default group is created and the person is placed to it.")
     __properties: ClassVar[List[str]] = ["externalId", "name", "metadata", "groups"]
 
