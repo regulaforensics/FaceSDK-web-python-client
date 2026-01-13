@@ -1,6 +1,19 @@
 #!/bin/sh
 
-docker run --rm --user "$(id -u):$(id -g)" -v "${PWD}:/client" -v "${PWD}/../FaceSDK-web-openapi:/definitions" \
-openapitools/openapi-generator-cli:v5.4.0 generate -g python \
--i /definitions/index.yml -o /client -c /client/generator-config.json \
--t /client/generator-templates
+MODE="$1"
+FACE_DEFINITION_FOLDER="${PWD}/../FaceSDK-web-openapi"
+TEMPLATE_PATH="/client/generator-templates/lenient"
+
+if [ "$MODE" = "strict" ]; then
+    TEMPLATE_PATH="/client/generator-templates/strict"
+fi
+
+docker run --user "$(id -u):$(id -g)" --rm \
+-v "${PWD}:/client" \
+-v "$FACE_DEFINITION_FOLDER:/definitions" \
+openapitools/openapi-generator-cli:v7.15.0 generate \
+-g python \
+-i /definitions/index.yml \
+-o /client \
+-t $TEMPLATE_PATH \
+-c /client/generator-config.json || exit 1

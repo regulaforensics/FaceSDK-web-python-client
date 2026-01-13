@@ -2,7 +2,7 @@ from typing import Union
 
 from regula.facesdk.webclient.ext.common import Base64String, bytes_to_base64
 from regula.facesdk.webclient.gen import ApiValueError
-from regula.facesdk.webclient.gen.model.process_param import ProcessParam
+from regula.facesdk.webclient.gen.models.process_param import ProcessParam
 from regula.facesdk.webclient.gen.models import DetectRequest as GetDetectRequest
 
 
@@ -11,9 +11,9 @@ class DetectRequest(GetDetectRequest):
             self,
             image: Union[Base64String, bytes],
             process_param: ProcessParam = None,
-            local_vars_configuration=None,
             tag=None,
-
+            env=None,
+            tenant=None
     ):
         if not image:
             raise ApiValueError(f"image: expected <not empty> - obtained <{image}>", "image")
@@ -23,7 +23,8 @@ class DetectRequest(GetDetectRequest):
 
         super().__init__(
             image=image,
-            local_vars_configuration=local_vars_configuration,
             tag=tag,
-            process_param=process_param
+            process_param=process_param,
+            env=env,
+            tenant=tenant
         )
