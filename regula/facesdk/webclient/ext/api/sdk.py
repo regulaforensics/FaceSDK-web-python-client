@@ -2,7 +2,7 @@ from regula.facesdk.webclient.ext.api import MatchApi
 from regula.facesdk.webclient.ext.api import PersonApi
 from regula.facesdk.webclient.ext.api.group_api import GroupApi
 from regula.facesdk.webclient.ext.api.search_api import SearchApi
-from regula.facesdk.webclient.gen import ApiClient, Configuration
+from regula.facesdk.webclient.gen import ApiClient, Configuration, HealthcheckApi, Liveness20Api
 
 
 class FaceSdk:
@@ -20,9 +20,11 @@ class FaceSdk:
         self.person_api = PersonApi(api_client=self.__api_client)
         self.group_api = GroupApi(api_client=self.__api_client)
         self.search_api = SearchApi(api_client=self.__api_client)
+        self.healthcheck = HealthcheckApi(api_client=self.__api_client)
+        self.liveness = Liveness20Api(api_client=self.__api_client)
 
     def __enter__(self):
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.__api_client.close()
+    def __exit__(self, exc_type, exc_value, traceback):
+        pass

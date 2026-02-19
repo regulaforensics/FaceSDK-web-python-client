@@ -47,7 +47,7 @@ with FaceSdk(host="http://0.0.0.0:41101") as sdk:
         MatchImage(index=2, data=face_1_bytes, type=ImageSource.DOCUMENT_RFID),
         MatchImage(index=3, data=face_2_bytes)
     ]
-    match_request = MatchRequest(images=images, thumbnails=True)
+    match_request = MatchRequest(images=images)
     match_response = sdk.match_api.match(match_request)
 
     detect_request = DetectRequest(image=face_1_bytes)

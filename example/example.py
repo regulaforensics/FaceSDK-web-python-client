@@ -2,9 +2,9 @@ import os
 
 from regula.facesdk.webclient import MatchImage, MatchRequest
 from regula.facesdk.webclient.ext import FaceSdk, DetectRequest
-from regula.facesdk.webclient.gen.model.face_quality_scenarios import FaceQualityScenarios
-from regula.facesdk.webclient.gen.model.image_source import ImageSource
-from regula.facesdk.webclient.gen.model.process_param import ProcessParam
+from regula.facesdk.webclient.gen.models.face_quality_scenarios import FaceQualityScenarios
+from regula.facesdk.webclient.gen.models.image_source import ImageSource
+from regula.facesdk.webclient.gen.models.process_param import ProcessParam
 
 api_base_path = os.getenv("API_BASE_PATH", "https://faceapi.regulaforensics.com")
 
@@ -48,7 +48,7 @@ with FaceSdk(host=api_base_path) as sdk:
         image=face_1_bytes,
         process_param=ProcessParam(
             scenario=FaceQualityScenarios.QUALITY_ICAO,
-            only_central_face=True
+            onlyCentralFace=True
         )
     )
     detect_image_quality_response = sdk.match_api.detect(detect_image_quality_request)

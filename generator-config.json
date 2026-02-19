@@ -1,4 +1,7 @@
 {
   "packageName": "regula.facesdk.webclient.gen",
-  "extPackageName": "regula.facesdk.webclient.ext"
+  "extPackageName": "regula.facesdk.webclient.ext",
+  "typeMappings" : {
+    "DetectionAttributesDetailsInner": "DetailItem"
+  }
 }
