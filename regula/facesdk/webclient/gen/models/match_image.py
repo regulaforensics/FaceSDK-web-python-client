@@ -24,7 +24,8 @@ class MatchImage(BaseModel):
     type: SkipValidation[Optional[ImageSource]] = Field(alias="type", default=None)
     data: SkipValidation[bytearray] = Field(alias="data", description="Base64-encoded image.")
     detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to `false`, only the most central face is detected.")
-    __properties: ClassVar[List[str]] = ["index", "type", "data", "detectAll"]
+    liveness_transaction_id: SkipValidation[Optional[str]] = Field(alias="livenessTransactionId", default=None, description="Identifier of the completed liveness transaction whose captured face is used as one of the comparison inputs. If this parameter is provided, it replaces one of the images in the matching request.")
+    __properties: ClassVar[List[str]] = ["index", "type", "data", "detectAll", "livenessTransactionId"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,7 +83,8 @@ class MatchImage(BaseModel):
             "index": obj.get("index"),
             "type": obj.get("type"),
             "data": obj.get("data"),
-            "detectAll": obj.get("detectAll") if obj.get("detectAll") is not None else False
+            "detectAll": obj.get("detectAll") if obj.get("detectAll") is not None else False,
+            "livenessTransactionId": obj.get("livenessTransactionId")
         })
         return _obj
 
