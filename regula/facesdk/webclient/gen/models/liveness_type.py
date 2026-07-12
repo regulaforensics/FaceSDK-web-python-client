@@ -12,7 +12,7 @@ from typing_extensions import Self
 
 class LivenessType(int, Enum):
     """
-    Liveness detection can be performed in two modes: active `0` and passive `1`. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/usage/liveness/#active-and-passive-modes)
+    Liveness detection can be performed in three modes: active `0`,  passive `1`, and passive with blink `2`. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/usage/liveness/#active-and-passive-modes)
     """
 
     """
@@ -20,6 +20,7 @@ class LivenessType(int, Enum):
     """
     ACTIVE = 0
     PASSIVE = 1
+    PASSIVE_WITH_BLINK = 2
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
