@@ -26,7 +26,7 @@ class ImageFields(BaseModel):
     output_image_params: SkipValidation[Optional[OutputImageParams]] = Field(alias="outputImageParams", default=None)
     detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to `false`, only the most central face is detected.")
     threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="The similarity threshold.")
-    limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
+    limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned. If not specified, the default value is 100.")
     __properties: ClassVar[List[str]] = ["tag", "image", "outputImageParams", "detectAll", "threshold", "limit"]
 
     model_config = ConfigDict(
@@ -93,7 +93,7 @@ class ImageFields(BaseModel):
             "outputImageParams": OutputImageParams.from_dict(obj["outputImageParams"]) if obj.get("outputImageParams") is not None else None,
             "detectAll": obj.get("detectAll") if obj.get("detectAll") is not None else False,
             "threshold": obj.get("threshold"),
-            "limit": obj.get("limit")
+            "limit": obj.get("limit") if obj.get("limit") is not None else 100
         })
         return _obj
 
