@@ -22,12 +22,16 @@ with FaceSdk(host=api_base_path) as sdk:
     ]
     match_request = MatchRequest(images=images)
     match_response = sdk.match_api.match(match_request)
+    match_results = match_response.results
 
     print("-----------------------------------------------------------------")
     print("                         Matching Results                        ")
     print("-----------------------------------------------------------------")
-    for comparison in match_response.results:
-        print(f"pair({comparison.first_index}, {comparison.second_index}) similarity: {comparison.similarity}")
+    if match_results is not None:
+        for comparison in match_results:
+            print(f"pair({comparison.first_index}, {comparison.second_index}) similarity: {comparison.similarity}")
+    else:
+        print(match_response.to_json())
     print("-----------------------------------------------------------------")
 
     detect_request = DetectRequest(image=face_1_bytes)
@@ -38,10 +42,13 @@ with FaceSdk(host=api_base_path) as sdk:
     print("-----------------------------------------------------------------")
     print(f"detector_type: {detect_results.detector_type}")
     print(f"landmark_type: {detect_results.landmarks_type}")
-    for detection in detect_results.detections:
-        print(f"landmarks: {detection.landmarks}")
-        print(f"roi: {detection.roi}")
-        print(f"attributes: {detection.attributes}")
+    if detect_results is not None:
+        for detection in detect_results.detections:
+            print(f"landmarks: {detection.landmarks}")
+            print(f"roi: {detection.roi}")
+            print(f"attributes: {detection.attributes}")
+    else:
+        print(detect_response.to_json())
     print("-----------------------------------------------------------------")
 
     detect_image_quality_request = DetectRequest(
@@ -53,12 +60,16 @@ with FaceSdk(host=api_base_path) as sdk:
     )
     detect_image_quality_response = sdk.match_api.detect(detect_image_quality_request)
     detect_image_quality_result = detect_image_quality_response.results
+
     print("                   Detect Image Quality Results                  ")
     print("-----------------------------------------------------------------")
-    print(f"Code: {detect_image_quality_response.code}")
-    print(f"Scenario: {detect_image_quality_result.scenario}")
-    for detection in detect_image_quality_result.detections:
-        print(f"Landmarks: {detection.landmarks}")
-        print(f"Quality: [{type(detection).__name__}], count: {len(detection.quality.details)}")
-        print(f"Attributes: {detection.attributes}")
+    if detect_image_quality_result is not None:
+        print(f"Code: {detect_image_quality_response.code}")
+        print(f"Scenario: {detect_image_quality_result.scenario}")
+        for detection in detect_image_quality_result.detections:
+            print(f"Landmarks: {detection.landmarks}")
+            print(f"Quality: [{type(detection).__name__}], count: {len(detection.quality.details)}")
+            print(f"Attributes: {detection.attributes}")
+    else:
+        print(detect_image_quality_response.to_json())
     print("-----------------------------------------------------------------")
