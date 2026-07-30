@@ -23,7 +23,8 @@ class MatchAndSearchRequestImagesItem(BaseModel):
     content: SkipValidation[Optional[bytearray]] = Field(alias="content", default=None, description="Base64-encoded image.")
     image_url: SkipValidation[Optional[str]] = Field(alias="imageUrl", default=None, description="Image URL.")
     type: SkipValidation[Optional[ImageSource]] = Field(alias="type", default=None)
-    __properties: ClassVar[List[str]] = ["content", "imageUrl", "type"]
+    liveness_transaction_id: SkipValidation[Optional[str]] = Field(alias="livenessTransactionId", default=None, description="Identifier of the completed liveness transaction whose captured face is used as one of the comparison inputs. If this parameter is provided, it replaces one of the images in the matching request.")
+    __properties: ClassVar[List[str]] = ["content", "imageUrl", "type", "livenessTransactionId"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,7 +81,8 @@ class MatchAndSearchRequestImagesItem(BaseModel):
         _obj = cls.model_validate({
             "content": obj.get("content"),
             "imageUrl": obj.get("imageUrl"),
-            "type": obj.get("type")
+            "type": obj.get("type"),
+            "livenessTransactionId": obj.get("livenessTransactionId")
         })
         return _obj
 
