@@ -11,7 +11,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from regula.facesdk.webclient.gen.models.enroll_result import EnrollResult
 from regula.facesdk.webclient.gen.models.liveness_type import LivenessType
+from regula.facesdk.webclient.gen.models.verify_result import VerifyResult
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic import SkipValidation, Field
@@ -27,9 +29,11 @@ class TransactionInfo(BaseModel):
     video: SkipValidation[Optional[str]] = Field(alias="video", default=None, description="Link to the session video, depends on the selected storage type. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/administration/storage/)")
     age: SkipValidation[Optional[List[Dict[str, object]]]] = Field(alias="age", default=None, description="Approximate age with an accuracy of +/-3 years.")
     portrait: SkipValidation[Optional[str]] = Field(alias="portrait", default=None, description="Link to the portrait, depends on the selected storage type. [Learn more](https://docs.regulaforensics.com/develop/face-sdk/web-service/administration/storage/)")
-    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
+    metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing the Person's extended attributes.")
     type: SkipValidation[Optional[LivenessType]] = Field(alias="type", default=None)
-    __properties: ClassVar[List[str]] = ["code", "status", "tag", "transactionId", "video", "age", "portrait", "metadata", "type"]
+    enroll_result: SkipValidation[Optional[EnrollResult]] = Field(alias="enrollResult", default=None)
+    verify_result: SkipValidation[Optional[VerifyResult]] = Field(alias="verifyResult", default=None)
+    __properties: ClassVar[List[str]] = ["code", "status", "tag", "transactionId", "video", "age", "portrait", "metadata", "type", "enrollResult", "verifyResult"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,6 +76,12 @@ class TransactionInfo(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of enroll_result
+        if self.enroll_result:
+            _dict['enrollResult'] = self.enroll_result.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of verify_result
+        if self.verify_result:
+            _dict['verifyResult'] = self.verify_result.to_dict()
         return _dict
 
     @classmethod
@@ -92,7 +102,9 @@ class TransactionInfo(BaseModel):
             "age": obj.get("age"),
             "portrait": obj.get("portrait"),
             "metadata": obj.get("metadata"),
-            "type": obj.get("type")
+            "type": obj.get("type"),
+            "enrollResult": EnrollResult.from_dict(obj["enrollResult"]) if obj.get("enrollResult") is not None else None,
+            "verifyResult": VerifyResult.from_dict(obj["verifyResult"]) if obj.get("verifyResult") is not None else None
         })
         return _obj
 

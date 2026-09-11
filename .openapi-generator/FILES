@@ -35,6 +35,8 @@ regula/facesdk/webclient/gen/models/detection_attributes_details_inner.py
 regula/facesdk/webclient/gen/models/detection_face.py
 regula/facesdk/webclient/gen/models/detection_quality.py
 regula/facesdk/webclient/gen/models/device_info.py
+regula/facesdk/webclient/gen/models/enroll_result.py
+regula/facesdk/webclient/gen/models/enroll_search_result.py
 regula/facesdk/webclient/gen/models/face_attribute.py
 regula/facesdk/webclient/gen/models/face_image_quality_align_type.py
 regula/facesdk/webclient/gen/models/face_image_quality_groups.py
@@ -104,5 +106,7 @@ regula/facesdk/webclient/gen/models/search_result.py
 regula/facesdk/webclient/gen/models/transaction_info.py
 regula/facesdk/webclient/gen/models/transaction_labels.py
 regula/facesdk/webclient/gen/models/update_group.py
+regula/facesdk/webclient/gen/models/verify_result.py
+regula/facesdk/webclient/gen/models/verify_result_match.py
 regula/facesdk/webclient/gen/py.typed
 regula/facesdk/webclient/gen/rest.py
