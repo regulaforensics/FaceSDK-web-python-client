@@ -19,7 +19,7 @@ class VerifyResultMatch(BaseModel):
     """
     Face comparison details. Present when the liveness check succeeds.
     """ # noqa: E501
-    verified: SkipValidation[Optional[bool]] = Field(alias="verified", default=None, description="Whether the faces matched according to the specified similarity threshold. `true` when the face similarity meets the threshold; `false` when it does not.")
+    verified: SkipValidation[Optional[bool]] = Field(alias="verified", default=None, description="Whether the faces matched according to the specified threshold. `true` when the distance between the captured and enrolled portraits does not exceed the threshold; `false` when it exceeds the threshold.")
     similarity: SkipValidation[Optional[float]] = Field(alias="similarity", default=None, description="Face similarity score in the range from `0` to `1`.")
     __properties: ClassVar[List[str]] = ["verified", "similarity"]
 

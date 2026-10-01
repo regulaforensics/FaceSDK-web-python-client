@@ -22,7 +22,7 @@ class EnrollResult(BaseModel):
     Result of the enrollment requested at session start via the `enroll` parameter. Returned only when enrollment was requested and the Enroll and Verify feature is enabled. Populated after the liveness check completes successfully.
     """ # noqa: E501
     enrolled: SkipValidation[Optional[bool]] = Field(alias="enrolled", default=None, description="Whether a new Person was created during enrollment. `true` when a new Person was created; `false` when a matching Person was found during the pre-enrollment search and no new Person was created.")
-    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person created during enrollment. Present only when `enrolled` is `true`.")
+    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person created during enrollment. Present only when `enrolled` is `true`. If enrollment was started with an empty person object (`{}`), the Person is created with a randomly generated UUID as its `name`.")
     search: SkipValidation[Optional[EnrollSearchResult]] = Field(alias="search", default=None)
     __properties: ClassVar[List[str]] = ["enrolled", "person", "search"]
 
