@@ -25,7 +25,7 @@ class ImageFields(BaseModel):
     image: SkipValidation[Optional[ImageFieldsImage]] = Field(alias="image", default=None)
     output_image_params: SkipValidation[Optional[OutputImageParams]] = Field(alias="outputImageParams", default=None)
     detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to `false`, only the most central face is detected.")
-    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="The similarity threshold.")
+    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="Maximum distance allowed for a match (lower value = stricter match).")
     limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned. If not specified, the default value is 100.")
     __properties: ClassVar[List[str]] = ["tag", "image", "outputImageParams", "detectAll", "threshold", "limit"]
 
