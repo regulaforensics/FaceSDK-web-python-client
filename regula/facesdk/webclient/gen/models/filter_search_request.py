@@ -18,11 +18,11 @@ from pydantic import SkipValidation, Field
 
 class FilterSearchRequest(BaseModel):
     """
-    Allows to filter the search results based on the Person's `name`. If enabled, only the search results that meet the filter condition will be returned.
+    Allows you to filter search results by Person fields. Currently, filtering is supported only by the `name` field.
     """ # noqa: E501
     op: SkipValidation[Optional[FilterOp]] = Field(alias="op", default=None)
-    var_field: SkipValidation[Optional[str]] = Field(alias="field", default=None, description="`name` of the Person.")
-    value: SkipValidation[Optional[List[str]]] = Field(alias="value", default=None, description="The list of `name` values against which the `field` is compared.")
+    var_field: SkipValidation[Optional[str]] = Field(alias="field", default=None, description="The Person field to which the filter is applied. Currently, only `name` is supported. If another field is specified, the filter is ignored.")
+    value: SkipValidation[Optional[List[str]]] = Field(alias="value", default=None, description="The list of values against which the specified `field` is compared.")
     __properties: ClassVar[List[str]] = ["op", "field", "value"]
 
     model_config = ConfigDict(
