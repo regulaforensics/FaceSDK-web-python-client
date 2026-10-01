@@ -22,7 +22,7 @@ class AddImageToPersonRequestData(BaseModel):
     """ # noqa: E501
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator.")
     image: SkipValidation[AddImageToPersonRequestImage] = Field(alias="image")
-    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="The similarity threshold.")
+    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="Maximum distance allowed for a match (lower value = stricter match).")
     limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
     __properties: ClassVar[List[str]] = ["tag", "image", "threshold", "limit"]
 

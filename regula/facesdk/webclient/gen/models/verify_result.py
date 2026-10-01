@@ -22,7 +22,7 @@ class VerifyResult(BaseModel):
     Result of the verification requested at session start via the `verify` parameter. Returned only when verification was requested and the Enroll and Verify feature is enabled.
     """ # noqa: E501
     verified: SkipValidation[Optional[bool]] = Field(alias="verified", default=None, description="Whether the Person was successfully verified. `true` when the liveness check succeeds and the liveness portrait matches the enrolled Person according to the specified threshold; `false` when the liveness check fails or the faces do not match.")
-    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person the liveness portrait was verified against.")
+    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person the liveness portrait was verified against. Absent when the liveness check fails.")
     match: SkipValidation[Optional[VerifyResultMatch]] = Field(alias="match", default=None)
     __properties: ClassVar[List[str]] = ["verified", "person", "match"]
 
