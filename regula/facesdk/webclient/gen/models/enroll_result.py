@@ -9,21 +9,22 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from regula.facesdk.webclient.gen.models.filter_op import FilterOp
+from regula.facesdk.webclient.gen.models.enroll_search_result import EnrollSearchResult
+from regula.facesdk.webclient.gen.models.person import Person
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic import SkipValidation, Field
 
-class FilterSearchRequest(BaseModel):
+class EnrollResult(BaseModel):
     """
-    Allows you to filter search results by Person fields. Currently, filtering is supported only by the `name` field.
+    Result of the enrollment requested at session start via the `enroll` parameter. Returned only when enrollment was requested and the Enroll and Verify feature is enabled. Populated after the liveness check completes successfully.
     """ # noqa: E501
-    op: SkipValidation[Optional[FilterOp]] = Field(alias="op", default=None)
-    var_field: SkipValidation[Optional[str]] = Field(alias="field", default=None, description="The Person field to which the filter is applied. Currently, only `name` is supported. If another field is specified, the filter is ignored.")
-    value: SkipValidation[Optional[List[str]]] = Field(alias="value", default=None, description="The list of values against which the specified `field` is compared.")
-    __properties: ClassVar[List[str]] = ["op", "field", "value"]
+    enrolled: SkipValidation[Optional[bool]] = Field(alias="enrolled", default=None, description="Whether a new Person was created during enrollment. `true` when a new Person was created; `false` when a matching Person was found during the pre-enrollment search and no new Person was created.")
+    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person created during enrollment. Present only when `enrolled` is `true`. If enrollment was started with an empty person object (`{}`), the Person is created with a randomly generated UUID as its `name`.")
+    search: SkipValidation[Optional[EnrollSearchResult]] = Field(alias="search", default=None)
+    __properties: ClassVar[List[str]] = ["enrolled", "person", "search"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -45,7 +46,7 @@ class FilterSearchRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of FilterSearchRequest from a JSON string"""
+        """Create an instance of EnrollResult from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -66,11 +67,17 @@ class FilterSearchRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of person
+        if self.person:
+            _dict['person'] = self.person.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of search
+        if self.search:
+            _dict['search'] = self.search.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of FilterSearchRequest from a dict"""
+        """Create an instance of EnrollResult from a dict"""
         if obj is None:
             return None
 
@@ -78,9 +85,9 @@ class FilterSearchRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "op": obj.get("op"),
-            "field": obj.get("field"),
-            "value": obj.get("value")
+            "enrolled": obj.get("enrolled"),
+            "person": Person.from_dict(obj["person"]) if obj.get("person") is not None else None,
+            "search": EnrollSearchResult.from_dict(obj["search"]) if obj.get("search") is not None else None
         })
         return _obj
 

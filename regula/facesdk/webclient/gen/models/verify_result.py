@@ -9,22 +9,22 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
-from regula.facesdk.webclient.gen.models.add_image_to_person_request_image import AddImageToPersonRequestImage
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from typing import Any, ClassVar, Dict, List, Optional
+from regula.facesdk.webclient.gen.models.person import Person
+from regula.facesdk.webclient.gen.models.verify_result_match import VerifyResultMatch
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic import SkipValidation, Field
 
-class AddImageToPersonRequestData(BaseModel):
+class VerifyResult(BaseModel):
     """
-    AddImageToPersonRequestData
+    Result of the verification requested at session start via the `verify` parameter. Returned only when verification was requested and the Enroll and Verify feature is enabled.
     """ # noqa: E501
-    tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator.")
-    image: SkipValidation[AddImageToPersonRequestImage] = Field(alias="image")
-    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="Maximum distance allowed for a match (lower value = stricter match).")
-    limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
-    __properties: ClassVar[List[str]] = ["tag", "image", "threshold", "limit"]
+    verified: SkipValidation[Optional[bool]] = Field(alias="verified", default=None, description="Whether the Person was successfully verified. `true` when the liveness check succeeds and the liveness portrait matches the enrolled Person according to the specified threshold; `false` when the liveness check fails or the faces do not match.")
+    person: SkipValidation[Optional[Person]] = Field(alias="person", default=None, description="The Person the liveness portrait was verified against. Absent when the liveness check fails.")
+    match: SkipValidation[Optional[VerifyResultMatch]] = Field(alias="match", default=None)
+    __properties: ClassVar[List[str]] = ["verified", "person", "match"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -46,7 +46,7 @@ class AddImageToPersonRequestData(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AddImageToPersonRequestData from a JSON string"""
+        """Create an instance of VerifyResult from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -67,14 +67,17 @@ class AddImageToPersonRequestData(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of image
-        if self.image:
-            _dict['image'] = self.image.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of person
+        if self.person:
+            _dict['person'] = self.person.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of match
+        if self.match:
+            _dict['match'] = self.match.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AddImageToPersonRequestData from a dict"""
+        """Create an instance of VerifyResult from a dict"""
         if obj is None:
             return None
 
@@ -82,10 +85,9 @@ class AddImageToPersonRequestData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tag": obj.get("tag"),
-            "image": AddImageToPersonRequestImage.from_dict(obj["image"]) if obj.get("image") is not None else None,
-            "threshold": obj.get("threshold"),
-            "limit": obj.get("limit")
+            "verified": obj.get("verified"),
+            "person": Person.from_dict(obj["person"]) if obj.get("person") is not None else None,
+            "match": VerifyResultMatch.from_dict(obj["match"]) if obj.get("match") is not None else None
         })
         return _obj
 
