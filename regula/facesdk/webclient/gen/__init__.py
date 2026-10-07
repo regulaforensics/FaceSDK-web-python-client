@@ -47,6 +47,8 @@ __all__ = [
     "DetectionFace",
     "DetectionQuality",
     "DeviceInfo",
+    "EnrollResult",
+    "EnrollSearchResult",
     "FaceAttribute",
     "FaceImageQualityAlignType",
     "FaceImageQualityGroups",
@@ -116,6 +118,8 @@ __all__ = [
     "TransactionInfo",
     "TransactionLabels",
     "UpdateGroup",
+    "VerifyResult",
+    "VerifyResultMatch",
 ]
 
 if __import__("typing").TYPE_CHECKING:
@@ -161,6 +165,8 @@ if __import__("typing").TYPE_CHECKING:
     from regula.facesdk.webclient.gen.models.detection_face import DetectionFace as DetectionFace
     from regula.facesdk.webclient.gen.models.detection_quality import DetectionQuality as DetectionQuality
     from regula.facesdk.webclient.gen.models.device_info import DeviceInfo as DeviceInfo
+    from regula.facesdk.webclient.gen.models.enroll_result import EnrollResult as EnrollResult
+    from regula.facesdk.webclient.gen.models.enroll_search_result import EnrollSearchResult as EnrollSearchResult
     from regula.facesdk.webclient.gen.models.face_attribute import FaceAttribute as FaceAttribute
     from regula.facesdk.webclient.gen.models.face_image_quality_align_type import FaceImageQualityAlignType as FaceImageQualityAlignType
     from regula.facesdk.webclient.gen.models.face_image_quality_groups import FaceImageQualityGroups as FaceImageQualityGroups
@@ -230,6 +236,8 @@ if __import__("typing").TYPE_CHECKING:
     from regula.facesdk.webclient.gen.models.transaction_info import TransactionInfo as TransactionInfo
     from regula.facesdk.webclient.gen.models.transaction_labels import TransactionLabels as TransactionLabels
     from regula.facesdk.webclient.gen.models.update_group import UpdateGroup as UpdateGroup
+    from regula.facesdk.webclient.gen.models.verify_result import VerifyResult as VerifyResult
+    from regula.facesdk.webclient.gen.models.verify_result_match import VerifyResultMatch as VerifyResultMatch
     
 else:
     from lazy_imports import LazyModule, as_package, load
@@ -281,6 +289,8 @@ from regula.facesdk.webclient.gen.models.detection_attributes_details_inner impo
 from regula.facesdk.webclient.gen.models.detection_face import DetectionFace as DetectionFace
 from regula.facesdk.webclient.gen.models.detection_quality import DetectionQuality as DetectionQuality
 from regula.facesdk.webclient.gen.models.device_info import DeviceInfo as DeviceInfo
+from regula.facesdk.webclient.gen.models.enroll_result import EnrollResult as EnrollResult
+from regula.facesdk.webclient.gen.models.enroll_search_result import EnrollSearchResult as EnrollSearchResult
 from regula.facesdk.webclient.gen.models.face_attribute import FaceAttribute as FaceAttribute
 from regula.facesdk.webclient.gen.models.face_image_quality_align_type import FaceImageQualityAlignType as FaceImageQualityAlignType
 from regula.facesdk.webclient.gen.models.face_image_quality_groups import FaceImageQualityGroups as FaceImageQualityGroups
@@ -350,6 +360,8 @@ from regula.facesdk.webclient.gen.models.search_result import SearchResult as Se
 from regula.facesdk.webclient.gen.models.transaction_info import TransactionInfo as TransactionInfo
 from regula.facesdk.webclient.gen.models.transaction_labels import TransactionLabels as TransactionLabels
 from regula.facesdk.webclient.gen.models.update_group import UpdateGroup as UpdateGroup
+from regula.facesdk.webclient.gen.models.verify_result import VerifyResult as VerifyResult
+from regula.facesdk.webclient.gen.models.verify_result_match import VerifyResultMatch as VerifyResultMatch
 
 """,
             name=__name__,

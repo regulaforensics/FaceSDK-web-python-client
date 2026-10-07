@@ -24,7 +24,7 @@ class MatchAndSearchRequest(BaseModel):
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator, should be unique for each session.")
     images: SkipValidation[Optional[List[MatchAndSearchRequestImagesItem]]] = Field(alias="images", default=None, description="An array of images to be processed. At least two images must be provided.")
     group_ids: SkipValidation[Optional[List[str]]] = Field(alias="groupIds", default=None, description="IDs of the groups in which the search is performed.")
-    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="The similarity threshold.")
+    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="Maximum distance allowed for a match (lower value = stricter match).")
     limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
     tenant: SkipValidation[Optional[str]] = Field(alias="tenant", default=None, description="A label used to group transactions by customers, applications, or other criteria.")
     env: SkipValidation[Optional[str]] = Field(alias="env", default=None, description="A label used to differentiate transactions by development stages.")

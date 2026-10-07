@@ -9,22 +9,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from regula.facesdk.webclient.gen.models.add_image_to_person_request_image import AddImageToPersonRequestImage
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic import SkipValidation, Field
 
-class AddImageToPersonRequestData(BaseModel):
+class VerifyResultMatch(BaseModel):
     """
-    AddImageToPersonRequestData
+    Face comparison details. Present when the liveness check succeeds.
     """ # noqa: E501
-    tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator.")
-    image: SkipValidation[AddImageToPersonRequestImage] = Field(alias="image")
-    threshold: SkipValidation[Optional[float]] = Field(alias="threshold", default=None, description="Maximum distance allowed for a match (lower value = stricter match).")
-    limit: SkipValidation[Optional[int]] = Field(alias="limit", default=None, description="The maximum number of results to be returned.")
-    __properties: ClassVar[List[str]] = ["tag", "image", "threshold", "limit"]
+    verified: SkipValidation[Optional[bool]] = Field(alias="verified", default=None, description="Whether the faces matched according to the specified threshold. `true` when the distance between the captured and enrolled portraits does not exceed the threshold; `false` when it exceeds the threshold.")
+    similarity: SkipValidation[Optional[float]] = Field(alias="similarity", default=None, description="Face similarity score in the range from `0` to `1`.")
+    __properties: ClassVar[List[str]] = ["verified", "similarity"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -46,7 +43,7 @@ class AddImageToPersonRequestData(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AddImageToPersonRequestData from a JSON string"""
+        """Create an instance of VerifyResultMatch from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -67,14 +64,11 @@ class AddImageToPersonRequestData(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of image
-        if self.image:
-            _dict['image'] = self.image.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AddImageToPersonRequestData from a dict"""
+        """Create an instance of VerifyResultMatch from a dict"""
         if obj is None:
             return None
 
@@ -82,10 +76,8 @@ class AddImageToPersonRequestData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tag": obj.get("tag"),
-            "image": AddImageToPersonRequestImage.from_dict(obj["image"]) if obj.get("image") is not None else None,
-            "threshold": obj.get("threshold"),
-            "limit": obj.get("limit")
+            "verified": obj.get("verified"),
+            "similarity": obj.get("similarity")
         })
         return _obj
 
