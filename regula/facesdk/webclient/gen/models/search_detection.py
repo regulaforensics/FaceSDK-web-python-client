@@ -28,7 +28,7 @@ class SearchDetection(BaseModel):
     landmarks: SkipValidation[Optional[List[List[int]]]] = Field(alias="landmarks", default=None, description="Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.")
     landmarks_type: SkipValidation[Optional[int]] = Field(alias="landmarksType", default=None, description="Internal.")
     msg: SkipValidation[Optional[str]] = Field(alias="msg", default=None, description="Internal.")
-    roi: SkipValidation[Optional[List[float]]] = Field(alias="roi", default=None, description="The rectangular area of a detected face that is represented by a set of four elements: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
+    roi: SkipValidation[Optional[List[float]]] = Field(alias="roi", default=None, description="The rectangular area of a detected face that is represented by a set of four elements [x, y, width, height]: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
     version_sdk: SkipValidation[Optional[str]] = Field(alias="versionSDK", default=None)
     __properties: ClassVar[List[str]] = ["code", "crop", "detectorType", "hash", "idx", "image", "landmarks", "landmarksType", "msg", "roi", "versionSDK"]
 

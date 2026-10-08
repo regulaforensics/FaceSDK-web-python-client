@@ -25,7 +25,7 @@ class Detection(BaseModel):
     attributes: SkipValidation[Optional[DetectionAttributes]] = Field(alias="attributes", default=None)
     landmarks: SkipValidation[List[List[int]]] = Field(alias="landmarks", description="Absolute coordinates (X,Y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.")
     quality: SkipValidation[Optional[DetectionQuality]] = Field(alias="quality", default=None)
-    roi: SkipValidation[List[float]] = Field(alias="roi", description="The rectangular area of a detected face that is represented by a set of four elements: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
+    roi: SkipValidation[List[float]] = Field(alias="roi", description="The rectangular area of a detected face that is represented by a set of four elements [x, y, width, height]: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
     __properties: ClassVar[List[str]] = ["crop", "attributes", "landmarks", "quality", "roi"]
 
     model_config = ConfigDict(
