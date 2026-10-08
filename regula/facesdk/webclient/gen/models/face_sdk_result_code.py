@@ -12,7 +12,7 @@ from typing_extensions import Self
 
 class FaceSDKResultCode(int, Enum):
     """
-    The result code, see the [FaceSDKResultCode enum](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/).
+    The result code.
     """
 
     """
@@ -59,6 +59,13 @@ class FaceSDKResultCode(int, Enum):
     FACER_ABORTED_LIVENESS_TRANSACTION = 252
     FACER_GENERAL_ERROR = 253
     FACER_PASSIVE_LIVENESS_FAIL = 254
+    FACER_PRINTED_FACE_DETECTED = 255
+    FACER_BLOCKED_REQUEST = 256
+    FACER_CORRUPTED_REQUEST = 257
+    FACER_GENERAL_CHECK_FAIL_RTD = 258
+    FACER_BLINK_FAILED = 259
+    FACER_BAD_FACE_QUALITY_LIVENESS_TRANSACTION = 260
+    FACER_BAD_FRAME_SIZE = 261
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
