@@ -22,7 +22,7 @@ class MatchImage(BaseModel):
     """ # noqa: E501
     index: SkipValidation[Optional[int]] = Field(alias="index", default=None, description="The image index number. Can be given; if not given, the index numbers are set automatically starting from `0`. All index numbers must be whole and unique—not repeated.")
     type: SkipValidation[Optional[ImageSource]] = Field(alias="type", default=None)
-    data: SkipValidation[bytearray] = Field(alias="data", description="Base64-encoded image.")
+    data: SkipValidation[Optional[bytearray]] = Field(alias="data", default=None, description="Base64-encoded image.")
     detect_all: SkipValidation[Optional[bool]] = Field(alias="detectAll", default=None, description="Whether to detect all faces in the image. If set to `false`, only the most central face is detected.")
     liveness_transaction_id: SkipValidation[Optional[str]] = Field(alias="livenessTransactionId", default=None, description="Identifier of the completed liveness transaction whose captured face is used as one of the comparison inputs. If this parameter is provided, it replaces one of the images in the matching request.")
     __properties: ClassVar[List[str]] = ["index", "type", "data", "detectAll", "livenessTransactionId"]
