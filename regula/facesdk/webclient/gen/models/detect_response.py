@@ -9,8 +9,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
+from uuid import UUID
 from regula.facesdk.webclient.gen.models.detect_result import DetectResult
 from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
 from typing import Optional, Set
@@ -22,8 +23,9 @@ class DetectResponse(BaseModel):
     DetectResponse
     """ # noqa: E501
     code: SkipValidation[FaceSDKResultCode] = Field(alias="code")
+    transaction_id: SkipValidation[str] = Field(alias="transactionId", description="Transaction identifier")
     results: SkipValidation[Optional[DetectResult]] = Field(alias="results", default=None)
-    __properties: ClassVar[List[str]] = ["code", "results"]
+    __properties: ClassVar[List[str]] = ["code", "transactionId", "results"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,6 +84,7 @@ class DetectResponse(BaseModel):
 
         _obj = cls.model_validate({
             "code": obj.get("code"),
+            "transactionId": obj.get("transactionId"),
             "results": DetectResult.from_dict(obj["results"]) if obj.get("results") is not None else None
         })
         return _obj

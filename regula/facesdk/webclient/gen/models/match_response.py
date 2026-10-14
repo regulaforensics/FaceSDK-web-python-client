@@ -11,6 +11,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
+from uuid import UUID
 from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
 from regula.facesdk.webclient.gen.models.match_image_detection import MatchImageDetection
 from regula.facesdk.webclient.gen.models.match_image_result import MatchImageResult
@@ -23,10 +24,11 @@ class MatchResponse(BaseModel):
     MatchResponse
     """ # noqa: E501
     code: SkipValidation[FaceSDKResultCode] = Field(alias="code")
+    transaction_id: SkipValidation[str] = Field(alias="transactionId", description="Transaction identifier")
     detections: SkipValidation[Optional[List[MatchImageDetection]]] = Field(alias="detections", default=None, description="The detection results.")
     results: SkipValidation[Optional[List[MatchImageResult]]] = Field(alias="results", default=None, description="The comparison results.")
     metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
-    __properties: ClassVar[List[str]] = ["code", "detections", "results", "metadata"]
+    __properties: ClassVar[List[str]] = ["code", "transactionId", "detections", "results", "metadata"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -96,6 +98,7 @@ class MatchResponse(BaseModel):
 
         _obj = cls.model_validate({
             "code": obj.get("code"),
+            "transactionId": obj.get("transactionId"),
             "detections": [MatchImageDetection.from_dict(_item) for _item in obj.get("detections", []) if MatchImageDetection.from_dict(_item) is not None],
             "results": [MatchImageResult.from_dict(_item) for _item in obj.get("results", []) if MatchImageResult.from_dict(_item) is not None],
             "metadata": obj.get("metadata")
