@@ -11,6 +11,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
+from uuid import UUID
 from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
 from regula.facesdk.webclient.gen.models.match_and_search_response_data_detections_item import MatchAndSearchResponseDataDetectionsItem
 from regula.facesdk.webclient.gen.models.match_image_result import MatchImageResult
@@ -23,11 +24,12 @@ class MatchAndSearchResponse(BaseModel):
     MatchAndSearchResponse
     """ # noqa: E501
     code: SkipValidation[FaceSDKResultCode] = Field(alias="code")
+    transaction_id: SkipValidation[str] = Field(alias="transactionId", description="Transaction identifier")
     results: SkipValidation[Optional[List[MatchImageResult]]] = Field(alias="results", default=None, description="The match and search results.")
     elapsed_time: SkipValidation[Optional[float]] = Field(alias="elapsedTime", default=None, description="Server processing time, ms. Does not include the time taken to receive the request or deliver the response.")
     metadata: SkipValidation[Optional[Dict[str, object]]] = Field(alias="metadata", default=None, description="A free-form object containing person's extended attributes.")
     detections: SkipValidation[Optional[List[MatchAndSearchResponseDataDetectionsItem]]] = Field(alias="detections", default=None, description="The detection results.")
-    __properties: ClassVar[List[str]] = ["code", "results", "elapsedTime", "metadata", "detections"]
+    __properties: ClassVar[List[str]] = ["code", "transactionId", "results", "elapsedTime", "metadata", "detections"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -97,6 +99,7 @@ class MatchAndSearchResponse(BaseModel):
 
         _obj = cls.model_validate({
             "code": obj.get("code"),
+            "transactionId": obj.get("transactionId"),
             "results": [MatchImageResult.from_dict(_item) for _item in obj.get("results", []) if MatchImageResult.from_dict(_item) is not None],
             "elapsedTime": obj.get("elapsedTime"),
             "metadata": obj.get("metadata"),
