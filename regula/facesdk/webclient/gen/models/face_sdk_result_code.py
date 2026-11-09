@@ -66,6 +66,8 @@ class FaceSDKResultCode(int, Enum):
     FACER_BLINK_FAILED = 259
     FACER_BAD_FACE_QUALITY_LIVENESS_TRANSACTION = 260
     FACER_BAD_FRAME_SIZE = 261
+    FACER_SINGLE_FACE_ERROR = 263
+    FACER_IN_PROCESS_STATUS_SESSION_ERROR = 264
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
