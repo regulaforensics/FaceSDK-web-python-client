@@ -9,6 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
+from typing import Optional
 from typing_extensions import Annotated
 from uuid import UUID
 from regula.facesdk.webclient.gen.models.transaction_info import TransactionInfo
@@ -34,8 +35,8 @@ class Liveness20Api:
     @validate_call
     def delete_liveness_transaction(
         self,
-        transaction_id: Annotated[UUID, Field(description="ID of the current liveness transaction.")],
-        tag: Annotated[StrictStr, Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")],
+        transaction_id: Annotated[Optional[UUID], Field(description="ID of the current liveness transaction.")] = None,
+        tag: Annotated[Optional[StrictStr], Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -53,9 +54,9 @@ class Liveness20Api:
 
         This endpoint deletes a liveness transaction based on either the specified `tag` or `transactionId`. At least one of the parameters must be provided for the operation to be valid.
 
-        :param transaction_id: ID of the current liveness transaction. (required)
+        :param transaction_id: ID of the current liveness transaction.
         :type transaction_id: str
-        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction. (required)
+        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.
         :type tag: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -105,8 +106,8 @@ class Liveness20Api:
     @validate_call
     def delete_liveness_transaction_with_http_info(
         self,
-        transaction_id: Annotated[UUID, Field(description="ID of the current liveness transaction.")],
-        tag: Annotated[StrictStr, Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")],
+        transaction_id: Annotated[Optional[UUID], Field(description="ID of the current liveness transaction.")] = None,
+        tag: Annotated[Optional[StrictStr], Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -124,9 +125,9 @@ class Liveness20Api:
 
         This endpoint deletes a liveness transaction based on either the specified `tag` or `transactionId`. At least one of the parameters must be provided for the operation to be valid.
 
-        :param transaction_id: ID of the current liveness transaction. (required)
+        :param transaction_id: ID of the current liveness transaction.
         :type transaction_id: str
-        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction. (required)
+        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.
         :type tag: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -176,8 +177,8 @@ class Liveness20Api:
     @validate_call
     def delete_liveness_transaction_without_preload_content(
         self,
-        transaction_id: Annotated[UUID, Field(description="ID of the current liveness transaction.")],
-        tag: Annotated[StrictStr, Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")],
+        transaction_id: Annotated[Optional[UUID], Field(description="ID of the current liveness transaction.")] = None,
+        tag: Annotated[Optional[StrictStr], Field(description="A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -195,9 +196,9 @@ class Liveness20Api:
 
         This endpoint deletes a liveness transaction based on either the specified `tag` or `transactionId`. At least one of the parameters must be provided for the operation to be valid.
 
-        :param transaction_id: ID of the current liveness transaction. (required)
+        :param transaction_id: ID of the current liveness transaction.
         :type transaction_id: str
-        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction. (required)
+        :param tag: A unique tag associated with a liveness transaction session. Used to identify and delete the corresponding transaction.
         :type tag: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

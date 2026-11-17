@@ -22,7 +22,7 @@ class DetectionFace(BaseModel):
     face_index: SkipValidation[Optional[float]] = Field(alias="faceIndex", default=None, description="The detected face index number.")
     landmarks: SkipValidation[Optional[List[List[float]]]] = Field(alias="landmarks", default=None, description="Absolute coordinates (x,y) of five points of each detected face: left eye, right eye, nose, left point of lips, right point of lips.")
     rotation_angle: SkipValidation[Optional[float]] = Field(alias="rotationAngle", default=None, description="Angle of rotation of the face from the vertical axis, degrees.")
-    roi: SkipValidation[Optional[List[float]]] = Field(alias="roi", default=None, description="The rectangular area of a detected face that is represented by a set of four elements: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
+    roi: SkipValidation[Optional[List[float]]] = Field(alias="roi", default=None, description="The rectangular area of a detected face that is represented by a set of four elements [x, y, width, height]: the X and Y coordinates of the top-left point, and the width and height dimensions of the rectangle.")
     crop: SkipValidation[Optional[bytearray]] = Field(alias="crop", default=None, description="Base64-encoded aligned and cropped portrait.")
     __properties: ClassVar[List[str]] = ["faceIndex", "landmarks", "rotationAngle", "roi", "crop"]
 

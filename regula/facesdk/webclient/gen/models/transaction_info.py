@@ -12,6 +12,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from regula.facesdk.webclient.gen.models.enroll_result import EnrollResult
+from regula.facesdk.webclient.gen.models.face_sdk_result_code import FaceSDKResultCode
 from regula.facesdk.webclient.gen.models.liveness_type import LivenessType
 from regula.facesdk.webclient.gen.models.verify_result import VerifyResult
 from typing import Optional, Set
@@ -22,7 +23,7 @@ class TransactionInfo(BaseModel):
     """
     TransactionInfo
     """ # noqa: E501
-    code: SkipValidation[Optional[int]] = Field(alias="code", default=None, description="Result code, see the [FaceSDKResultCode enum](https://docs.regulaforensics.com/develop/face-sdk/web-service/development/enums/face-sdk-result-code/).")
+    code: SkipValidation[Optional[FaceSDKResultCode]] = Field(alias="code", default=None)
     status: SkipValidation[Optional[int]] = Field(alias="status", default=None, description="Whether the liveness detection is confirmed `0` or not `1`.")
     tag: SkipValidation[Optional[str]] = Field(alias="tag", default=None, description="Session identificator, should be unique for each session.")
     transaction_id: SkipValidation[Optional[str]] = Field(alias="transactionId", default=None, description="Transaction ID, there can be several transactions within one session.")
@@ -82,6 +83,11 @@ class TransactionInfo(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of verify_result
         if self.verify_result:
             _dict['verifyResult'] = self.verify_result.to_dict()
+        # set to None if status (nullable) is None
+        # and model_fields_set contains the field
+        if self.status is None and "status" in self.model_fields_set:
+            _dict['status'] = None
+
         return _dict
 
     @classmethod
